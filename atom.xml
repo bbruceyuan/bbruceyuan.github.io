@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+  <title>BBruceyuan</title>
+  
+  
+  <link href="/atom.xml" rel="self"/>
+  
+  <link href="https://bbruceyuan.github.io/"/>
+  <updated>2020-03-08T06:45:53.960Z</updated>
+  <id>https://bbruceyuan.github.io/</id>
+  
+  <author>
+    <name>BBruceyuan</name>
+    
+  </author>
+  
+  <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>2020年了，还有必要学习分词算法吗？</title>
+    <link href="https://bbruceyuan.github.io/post/1.html"/>
+    <id>https://bbruceyuan.github.io/post/1.html</id>
+    <published>2020-03-07T12:10:00.000Z</published>
+    <updated>2020-03-08T06:45:53.960Z</updated>
+    
+    <content type="html"><![CDATA[<h1 id="背景"><a href="#背景" class="headerlink" title="背景"></a>背景</h1><p>上周，和某同学聊天的时候提到关于深度学习时代下，分词算法的必要性。这引起了我的一点思考，是的，由于最近深度学习的发展，并且由于机器算力的增加，字级别的模型开始慢慢的展露头角，字级别的的模型效果已经可以说超过词级别的模型了[1]，并且在前沿的自然语言处理中都开始有放弃词级别模型的研究，尤其是在命名实体识别之类的序列标注任务上面，但是，分词真的就没有用了吗？</p><p>答案显然是否定的。我们可以假设一个场景，如果百度或淘宝用户输入了一个句子(query)，难道会拿整个句子去做召回吗？显然是不可能的，肯定要先对 query 进行分词，进行一些纠错，改写，然后去文档库中做尽量多的匹配。</p><p>既然分词分词在真实场景下还是有用的，作为最简单的NLP入门学习算法，分词当然是初学者作为入门练习的最佳实践。那么常见的分词算法有哪些呢？最简单就是前向和后向匹配算法，HMM，CRF等等。下面主要介绍最大匹配算法的思路和代码实现。</p><h1 id="分词是什么？"><a href="#分词是什么？" class="headerlink" title="分词是什么？"></a>分词是什么？</h1><p>这个问题应该是没有必要提的，但是为了任务的定义，还是提一下比较好一点。给定一句话，比如</p><blockquote><p>我硕士阶段在研究生命科学<br>我/硕士/阶段/在/研究/生命科学</p></blockquote><p>有人会说，这不是我们小学的时候学的断句吗？emmmm… 事实好像就是如此，但是这对于一个小学生也能做的事情，对于机器来说确是比较难做到的。</p><h1 id="基于词典的最大匹配算法"><a href="#基于词典的最大匹配算法" class="headerlink" title="基于词典的最大匹配算法"></a>基于词典的最大匹配算法</h1><p>最大匹配算法[2]主要包括正向最大匹配算法、逆向最大匹配算法、双向匹配算法等</p><h2 id="1-最大正向匹配"><a href="#1-最大正向匹配" class="headerlink" title="1. 最大正向匹配"></a>1. 最大正向匹配</h2><p>最大正向匹配是一个非常简单且有效的方法。简单的说对给定的一段话，从左往右找，找到尽可能长的 一个片段，让这个片段存在于给定的词典中，然后讲这个片段找出来，画一条分词线，然后对这句话剩下的部分做同样的操作。如果第一个字符不是词典中任何一个词的前缀，那么这个字符单独作为一个词 (可以用字典树Trie Tree 实现，后续文章 来讲）。如果最后只剩下一个字了，那么这个字也是单独的一个词。继续以前面的“我硕士阶段在研究生命科学”为例。</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">第一步：初始使用整个句子去查找，查看 “我硕士阶段在研究生命科学”在不在词典中？不在。</span><br><span class="line">第二步：去掉最后一个词，变成了“我硕士阶段在研究生命科”在不在词典中？不在。</span><br><span class="line">第三步，再次去掉一个词，操作同理。</span><br><span class="line">........</span><br><span class="line">第12步，只剩下一个词了，“我”，只剩一个字了，进行分词。下次变成从 “硕士阶段在研究生命科学”开始。</span><br><span class="line">第13步，重复第一步，查看 “硕士阶段在研究生命科学”在不在词典中？不在。</span><br><span class="line">........</span><br><span class="line">第 i 步，查看 “硕士”在不在词典中？在。那么就进行分词，下次 变成了 “阶段在研究生命科学”开始。</span><br><span class="line">....... （后面同理，应该能懂了</span><br></pre></td></tr></table></figure><p><strong>算法的实现：</strong></p><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">forward_maximum_match_segmentation</span><span class="params">(string, dictionary)</span>:</span></span><br><span class="line">    <span class="keyword">if</span> string == <span class="string">""</span>:</span><br><span class="line">        <span class="keyword">return</span></span><br><span class="line">    <span class="keyword">for</span> idx <span class="keyword">in</span> range(len(string), <span class="number">0</span>, <span class="number">-1</span>):</span><br><span class="line">        <span class="comment"># tmp words 是前面几个字符</span></span><br><span class="line">        tmp_words = string[:idx]</span><br><span class="line">        remainder_str = string[idx:]</span><br><span class="line">        <span class="keyword">if</span> tmp_words <span class="keyword">in</span> dictionary <span class="keyword">or</span> idx == <span class="number">1</span>:</span><br><span class="line">            <span class="comment"># 使用迭代器，意思你就可以使用</span></span><br><span class="line">            <span class="comment"># for item in forward_maximum_match_segmentation(xx) 遍历分词结果</span></span><br><span class="line">            <span class="keyword">yield</span> tmp_words</span><br><span class="line">            forward_maximum_match_segmentation(</span><br><span class="line">                remainder_str, dictionary)</span><br></pre></td></tr></table></figure><h2 id="2-最大后向匹配算法"><a href="#2-最大后向匹配算法" class="headerlink" title="2 最大后向匹配算法"></a>2 最大后向匹配算法</h2><p>如果你有运行一下前向算法，那么你就可以发现，运用前向算法很容易就把上面提到的例句分错了 。具体体现在：</p><blockquote><p>研究生命科学。<br>因为“研究生”和“生命科学”都会在字典中，那么按照最大前向匹配原则，就会匹配成 研究生，而不是 研究。<br>最次如果使用前向算法，最终结果为“我/硕士/阶段/在/研究生/命/科学”。</p></blockquote><p>运用前向分词算法的结果是错的，最大后向匹配，可以解决一部分这种问题（词语重复问题）。最大后向匹配算法和前向算法是一样的，只是逻辑 变成从后往前了。</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">第一步，和前向一样，</span><br><span class="line">第二步，输入变成了“硕士阶段在研究生命科学”，然后继续查看，</span><br><span class="line">...... （后续逻辑和前向是一样的了</span><br></pre></td></tr></table></figure><p><strong>区别</strong> ：前向是每次都是去掉后一个词，后向是去掉前一个词。</p><p><strong>算法的实现：</strong> </p><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">backward_maximum_match_segmentation</span><span class="params">(string, dictionary)</span>:</span></span><br><span class="line">    <span class="keyword">if</span> string == <span class="string">""</span>:</span><br><span class="line">        <span class="keyword">return</span></span><br><span class="line">    <span class="keyword">for</span> idx <span class="keyword">in</span> range(<span class="number">0</span>, len(string)):</span><br><span class="line">        <span class="comment"># tmp words 是后面几个字符</span></span><br><span class="line">        tmp_words = string[idx:]</span><br><span class="line">        <span class="comment"># 剩下的就是前面的几个单词了</span></span><br><span class="line">        remainder_str = string[:idx]</span><br><span class="line">        <span class="keyword">if</span> tmp_words <span class="keyword">in</span> dictionary <span class="keyword">or</span> idx == len(string) - <span class="number">1</span>:</span><br><span class="line">            <span class="keyword">yield</span> tmp_words</span><br><span class="line">            backward_maximum_match_segmentation(</span><br><span class="line">                remainder_str, dictionary)</span><br></pre></td></tr></table></figure><p>以上两种算法实现参考[3]。</p><h2 id="3-双向匹配算法"><a href="#3-双向匹配算法" class="headerlink" title="3 双向匹配算法"></a>3 双向匹配算法</h2><p>双向匹配算法当然指的是用前向算法分词一遍，用后向算法分词一遍。因为有文献[4]证明，对于中文来说，90%的句子最大正向匹配和最大反向匹配结果是一样的，剩下9%两者其中一个是正确的。剩下的，只有大约1%的句子，两者分词结果相同，但是结果其实是错的。因此双向匹配算法很常用。</p><p>双向匹配算法使用的启发式算法来选择最终结果描述如下：</p><blockquote><p>1.正反向分词结果词数不同，则取分词数量较少的那个。<br>2.分词结果词数相同<br>​    a.分词结果相同，就说明没有歧义，可返回任意一个。<br>​    b.分词结果不同，返回其中单字较少的那个</p></blockquote><p><strong>具体算法实现</strong></p><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">bi_directional_maximum_match_segmentation</span><span class="params">(string, dictionary)</span>:</span></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">_count_single</span><span class="params">(res)</span>:</span></span><br><span class="line">        <span class="comment"># 计算单字的数量</span></span><br><span class="line">        cnt = <span class="number">0</span></span><br><span class="line">        <span class="keyword">for</span> i <span class="keyword">in</span> res:</span><br><span class="line">            <span class="keyword">if</span> len(i) == <span class="number">1</span>:</span><br><span class="line">                cnt += <span class="number">1</span></span><br><span class="line">        <span class="keyword">return</span> cnt</span><br><span class="line"></span><br><span class="line">    fm_res = list(forward_maximum_match_segmentation(string, dictionary))</span><br><span class="line">    bm_res = list(backward_maximum_match_segmentation(string, dictionary))</span><br><span class="line"></span><br><span class="line">    <span class="comment"># 选词少的</span></span><br><span class="line">    <span class="keyword">if</span> len(fm_res) &gt; len(bm_res):</span><br><span class="line">        <span class="keyword">return</span> bm_res</span><br><span class="line">    <span class="keyword">elif</span> len(fm_res) &lt; len(bm_res):</span><br><span class="line">        <span class="keyword">return</span> fm_res</span><br><span class="line"></span><br><span class="line">    <span class="comment"># 如果两个完全相同 (考虑一下两者是相反的</span></span><br><span class="line">    <span class="keyword">if</span> fm_res == reversed(bm_res):</span><br><span class="line">        <span class="keyword">return</span> fm_res</span><br><span class="line">    <span class="keyword">else</span>:</span><br><span class="line">        <span class="keyword">if</span> _count_single(fm_res) &gt; _count_single(bm_res):</span><br><span class="line">            <span class="keyword">return</span> bm_res</span><br><span class="line">        <span class="keyword">else</span>:</span><br><span class="line">            <span class="keyword">return</span> fm_res</span><br></pre></td></tr></table></figure><h1 id="Reference"><a href="#Reference" class="headerlink" title="Reference"></a>Reference</h1><p>[1] Is Word Segmentation Necessary for Deep Learning of Chinese Representations?<br>[2] <a href="https://baike.baidu.com/item/%E6%9C%80%E5%A4%A7%E5%8C%B9%E9%85%8D%E7%AE%97%E6%B3%95" target="_blank" rel="noopener">最大分词算法</a><br>[3] <a href="https://zhuanlan.zhihu.com/p/92102484" target="_blank" rel="noopener">https://zhuanlan.zhihu.com/p/92102484</a><br>[4] <a href="http://59.108.48.5/course/mining/12-13spring/%E5%8F%82%E8%80%83%E6%96%87%E7%8C%AE/02-01%E6%B1%89%E8%AF%AD%E8%87%AA%E5%8A%A8%E5%88%86%E8%AF%8D%E7%A0%94%E7%A9%B6%E8%AF%84%E8%BF%B0.pdf" target="_blank" rel="noopener">汉语自动分词研究评述</a></p>]]></content>
+    
+    <summary type="html">
+    
+      分词算法，最大匹配，最大前向匹配，最大后向匹配。
+    
+    </summary>
+    
+      <category term="分词" scheme="https://bbruceyuan.github.io/categories/%E5%88%86%E8%AF%8D/"/>
+    
+    
+      <category term="分词" scheme="https://bbruceyuan.github.io/tags/%E5%88%86%E8%AF%8D/"/>
+    
+      <category term="入门算法" scheme="https://bbruceyuan.github.io/tags/%E5%85%A5%E9%97%A8%E7%AE%97%E6%B3%95/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>友情链接</title>
+    <link href="https://bbruceyuan.github.io/post/link.html"/>
+    <id>https://bbruceyuan.github.io/post/link.html</id>
+    <published>2019-06-30T14:50:20.000Z</published>
+    <updated>2020-03-08T05:37:26.142Z</updated>
+    
+    <content type="html"><![CDATA[<h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h2><blockquote><p>反正我觉得也不会有人要申请友链</p></blockquote><p>留言可以互换友链 ~</p><h2 id="友情链接"><a href="#友情链接" class="headerlink" title="友情链接"></a>友情链接</h2><table><thead><tr><th>名称</th><th>描述</th></tr></thead><tbody><tr><td><a href="https://www.cnblogs.com/lhsguaigege/" target="_blank" rel="noopener">终未寒冬</a></td><td>生物信息/数学</td></tr><tr><td><a href="https://geektutu.com" target="_blank" rel="noopener">极客兔兔</a></td><td>致力于分享有趣的技术实践</td></tr></tbody></table><h2 id="申明"><a href="#申明" class="headerlink" title="申明"></a>申明</h2><p>留言可以互换友链，不过也需要先将本站添加为友链，谢谢！</p><blockquote><p>本站文章均为原创，要求互换友链的你，也是原创博主。<br>拒绝和聚合站、采集站、转载站做朋友。<br>格式：<br>站点名称：BBruceyuan<br>站点描述：没有故事，写点技术，同时打点酱油!<br>站点地址：<a href="https://bbruceyuan.github.io">https://bbruceyuan.github.io</a><br>已加友链：<a href="https://bbruceyuan.github.io/post/link.html">https://bbruceyuan.github.io/post/link.html</a></p></blockquote>]]></content>
+    
+    <summary type="html">
+    
+      BBruceyuan的友情链接
+    
+    </summary>
+    
+    
+      <category term="友链" scheme="https://bbruceyuan.github.io/tags/%E5%8F%8B%E9%93%BE/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>关于我</title>
+    <link href="https://bbruceyuan.github.io/post/about.html"/>
+    <id>https://bbruceyuan.github.io/post/about.html</id>
+    <published>2019-06-30T14:18:18.000Z</published>
+    <updated>2020-03-08T05:33:31.614Z</updated>
+    
+    <content type="html"><![CDATA[<h2 id="个人介绍"><a href="#个人介绍" class="headerlink" title="个人介绍"></a>个人介绍</h2><p>我是想打酱油与不想打酱油的矛盾体！</p><h2 id="其他申明"><a href="#其他申明" class="headerlink" title="其他申明"></a>其他申明</h2><p>对本站的任何问题都可以直接在文章下进行评论。</p><p>也可以通过<a href="mailto:BBruceyuan<bruceyuan123@gmail.com>?subject=【来自】BBruceyuan的博客" target="_blank" rel="noopener">bruceyuan123@gmail.com</a>联系我。</p><p>为了节省双方的宝贵时间，作如下几点声明：</p><ul><li>邮件会尽量回复，不能做到有问必答。</li><li>请尽量在邮件中将需求或问题叙述清楚。</li></ul><h2 id="版权说明"><a href="#版权说明" class="headerlink" title="版权说明"></a>版权说明</h2><p>若无特别声明，本站文章欢迎链接分享，但禁止全文转载，本站保留一切权利。</p><h2 id="支持本站"><a href="#支持本站" class="headerlink" title="支持本站"></a>支持本站</h2><p>坚持探索、尝试新技术，并作总结并不是一件容易的事情，如能对您有所帮助，我感到非常高兴。</p><p>如果觉得本站文章还不错，欢迎收藏&amp;分享给小伙伴。</p>]]></content>
+    
+    <summary type="html">
+    
+      关于BBruceyuan的一些简介。
+    
+    </summary>
+    
+    
+      <category term="关于我" scheme="https://bbruceyuan.github.io/tags/%E5%85%B3%E4%BA%8E%E6%88%91/"/>
+    
+  </entry>
+  
+</feed>
