@@ -3,7 +3,7 @@
 
 <!-- Head tag -->
 <head><meta name="generator" content="Hexo 3.9.0">
-  <meta charset="utf-8">
+  <!-- hexo-inject:begin --><!-- hexo-inject:end --><meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   
   <meta name="baidu-site-verification" content="undefined">
@@ -57,12 +57,12 @@
     }
     window.getDom = function (str) { return document.querySelector(str) }
   </script>
-  <!-- google ad -->
+  <!-- google ad --><!-- hexo-inject:begin --><!-- hexo-inject:end -->
   
 </head>
 
 <body>
-    <header class="gkt-header col-xs-12 padding-0">
+    <!-- hexo-inject:begin --><!-- hexo-inject:end --><header class="gkt-header col-xs-12 padding-0">
     <div id="gkt-nav" class="gkt-header-container">
         <a href="/" class="gkt-header-title float-left">
             <img class="float-left" src="/img/icon.jpg" alt="">
@@ -86,6 +86,16 @@
                 
                 <li class="gkt-cate-name float-left ">
                     <a class="float-left" href="/post/1.html">分词</a>
+                    
+                </li>
+                
+                <li class="gkt-cate-name float-left ">
+                    <a class="float-left" href="/post/3.html">序列标注</a>
+                    
+                </li>
+                
+                <li class="gkt-cate-name float-left ">
+                    <a class="float-left" href="/post/3.html">实体识别</a>
                     
                 </li>
                 
@@ -151,6 +161,47 @@
 <!-- 普通文章 -->
 
 <div class="post-preview">
+    <div class="post-img" style="background-image: url('/blog_imgs/3/3_1.jpg')"></div>
+    <div class="post-info">
+        <div class="post-info-center">
+            <div class="hidden-xs">
+                
+                
+                <span>/</span>
+                
+                <a class="text-gray" href="/tags/#分词"
+                    title="分词">分词</a>
+                <span>/</span>
+                
+                <a class="text-gray" href="/tags/#入门算法"
+                    title="入门算法">入门算法</a>
+                <span>/</span>
+                
+                <a class="text-gray" href="/tags/#序列标注"
+                    title="序列标注">序列标注</a>
+                <span>/</span>
+                
+                <a class="text-gray" href="/tags/#实体识别"
+                    title="实体识别">实体识别</a>
+                <span>/</span>
+                
+                
+            </div>
+            <a href="/post/3.html" class="title">
+                关于隐马尔可夫模型(HMM)，需要知道什么？
+            </a>
+            <p class="text-gray">
+                <small>
+                    <span>发表于2020-03-12，</span>
+                    <span class="hidden-xs">全文4046字，</span>
+                    <span>阅读约14分钟</span>
+                </small>
+            </p>
+        </div>
+    </div>
+</div>
+
+<div class="post-preview">
     <div class="post-img" style="background-image: url('/blog_imgs/1/1_1_head.png')"></div>
     <div class="post-info">
         <div class="post-info-center">
@@ -175,7 +226,7 @@
             <p class="text-gray">
                 <small>
                     <span>发表于2020-03-07，</span>
-                    <span class="hidden-xs">全文1960字，</span>
+                    <span class="hidden-xs">全文1970字，</span>
                     <span>阅读约7分钟</span>
                 </small>
             </p>
@@ -237,7 +288,7 @@
             <p class="text-gray">
                 <small>
                     <span>发表于2019-06-30，</span>
-                    <span class="hidden-xs">全文516字，</span>
+                    <span class="hidden-xs">全文512字，</span>
                     <span>阅读约2分钟</span>
                 </small>
             </p>
@@ -339,13 +390,13 @@
 <div class="gkt-summary">
     <nav>
         <a href="/" class="col-xs-4">
-            <number class="number">4</number><span>文章</span>
+            <number class="number">5</number><span>文章</span>
         </a>
         <a href="/series" class="col-xs-4 middle">
-            <number class="number">1</number><span>专题</span>
+            <number class="number">3</number><span>专题</span>
         </a>
         <a href="/tags" class="col-xs-4">
-            <number class="number">5</number><span>标签</span>
+            <number class="number">7</number><span>标签</span>
         </a>
     </nav>
 
@@ -380,13 +431,19 @@
 <div id="featured-tag">
     
     <a class="post-tag-item" href="/tags/#分词" title="分词"
-        rel="2">#分词 (2) </a>
+        rel="3">#分词 (3) </a>
+    
+    <a class="post-tag-item" href="/tags/#入门算法" title="入门算法"
+        rel="2">#入门算法 (2) </a>
     
     <a class="post-tag-item" href="/tags/#算法实现" title="算法实现"
         rel="1">#算法实现 (1) </a>
     
-    <a class="post-tag-item" href="/tags/#入门算法" title="入门算法"
-        rel="1">#入门算法 (1) </a>
+    <a class="post-tag-item" href="/tags/#序列标注" title="序列标注"
+        rel="1">#序列标注 (1) </a>
+    
+    <a class="post-tag-item" href="/tags/#实体识别" title="实体识别"
+        rel="1">#实体识别 (1) </a>
     
     <a class="post-tag-item" href="/tags/#关于我" title="关于我"
         rel="1">#关于我 (1) </a>
@@ -546,10 +603,10 @@
     window.dataLayer = window.dataLayer || [];
     function gtag() { dataLayer.push(arguments); }
     gtag('js', new Date());
-    gtag('config', 'UA-141425-1');
+    gtag('config', 'UA-143053780-1');
 
     window.addEventListener('load', function () {
-        globalAddScript('https://www.googletagmanager.com/gtag/js?id=UA-141425-1');
+        globalAddScript('https://www.googletagmanager.com/gtag/js?id=UA-143053780-1');
     });
 </script>
 
@@ -571,7 +628,7 @@
             var article = document.querySelector('article');
             article && article.addEventListener('click', stopBubble, false)
         })();
-    </script>
+    </script><!-- hexo-inject:begin --><!-- hexo-inject:end -->
     
 </body>
 
