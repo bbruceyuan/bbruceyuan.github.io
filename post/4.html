@@ -14,17 +14,17 @@
   <!-- if page has tags, then add tags to keyword -->
   
   
-  <meta name="keywords" content="BBruceyuan,BBruceyuan的博客,动手学编程,打点酱油,分词,入门算法,分词算法,分词算法应用">
+  <meta name="keywords" content="BBruceyuan,BBruceyuan的博客,动手学编程,打点酱油,杂谈,情感-原因对抽取,ECPE,Emotion-Cause Pair Extraction,情感原因发现,Emotion Cause">
   <!-- page.description has higher priority -->
-  <meta name="description" content="分词算法，最大匹配，分词应用实例。">
+  <meta name="description" content="BBruceyuan的EMNLP投稿流水账">
   <link rel="shortcut icon" href="/img/icon.jpg">
   <title>
     
-    深度学习时代，分词算法的真实应用实例 | BBruceyuan
+    记EMNLP2020投稿 | BBruceyuan
     
   </title>
 
-  <link rel="canonical" href="/post/2.html">
+  <link rel="canonical" href="/post/4.html">
   <link rel="stylesheet" href="/css/reset.css">
   <link rel="stylesheet" href="/css/layout.css">
   <link rel="stylesheet" href="/css/markdown.css">
@@ -84,7 +84,7 @@
             <ul>
                 
                 
-                <li class="gkt-cate-name float-left active">
+                <li class="gkt-cate-name float-left ">
                     <a class="float-left" href="/post/1.html">分词</a>
                     
                 </li>
@@ -99,7 +99,7 @@
                     
                 </li>
                 
-                <li class="gkt-cate-name float-left ">
+                <li class="gkt-cate-name float-left active">
                     <a class="float-left" href="/post/4.html">杂谈</a>
                     
                 </li>
@@ -141,35 +141,23 @@
 <div class="float-left post-container box-shadow">
     <div class="u-arrow-wrapper hidden-xs">
         
-        <a class="float-left" href="/post/1.html"><i class="u-arrow-left"></i></a>
+        <a class="float-left" href="/post/3.html"><i class="u-arrow-left"></i></a>
         
-        
-        <a class="float-right" href="/post/3.html"><i class="u-arrow-right"></i></a>
         
     </div>
     <article class="col-xs-12">
-        <h1> 深度学习时代，分词算法的真实应用实例 </h1>
+        <h1> 记EMNLP2020投稿 </h1>
 
         
 
         
         <div class="hidden-lg hidden-md series_links">
-            <p> <strong> 分词系列文章链接：</strong></p>
+            <p> <strong> 杂谈系列文章链接：</strong></p>
             <ul>
                 
                 <li>
-                    <a href="/post/1.html">2020年了，还有必要学习分词算法吗？</a>
-                    <span class="post-item-date">(Mar 6, 2020)</span>
-                </li>
-                
-                <li>
-                    <a href="/post/2.html">深度学习时代，分词算法的真实应用实例</a>
-                    <span class="post-item-date">(Mar 7, 2020)</span>
-                </li>
-                
-                <li>
-                    <a href="/post/3.html">关于隐马尔可夫模型(HMM)，需要知道什么？</a>
-                    <span class="post-item-date">(Mar 12, 2020)</span>
+                    <a href="/post/4.html">记EMNLP2020投稿</a>
+                    <span class="post-item-date">(Jun 12, 2020)</span>
                 </li>
                 
             </ul>
@@ -177,28 +165,13 @@
         
         
         
-        <h1 id="背景"><a href="#背景" class="headerlink" title="背景"></a>背景</h1><p>20年3月6号本人写了一篇文章，”<a href="1.html">2020年了，分词算法真的没用了吗？</a>“，起了这么一个标题是因为我个人看到很多的学术界的模型都不在进行底层的分词，且有很多新入门的同学真的就认为分词一点必要都没有了。昨天虽然举了一个例子，但是确实是我的想象，因为我也没有在百度阿里实习，所以不知道他们真正是怎么做的。</p>
-<p>因此在上一篇文章中，主要是介绍最简单的分词模型，也就是最大匹配算法，那么在深度学习时代，这样的简单算法还能用的上吗？答案是显然能用的上的，因为在去年<a href="https://www.datafountain.cn/competitions/361/ranking?isRedance=0&sch=1433&stage=B" target="_blank" rel="noopener">2019年CCF-BDCI新实体发现赛道</a>，我们就用上了昨天提到的最大匹配算法，并且我们团队获得了第一名的好成绩，在这里首先感谢一下带我飞的队友，鞠躬！</p>
-<p>那么接下来，我讲从为什么，我们要用这个算法开始讲起？</p>
-<h1 id="深度学习不能只会调参"><a href="#深度学习不能只会调参" class="headerlink" title="深度学习不能只会调参"></a>深度学习不能只会调参</h1><p>本人作为一名初级调参仔，在实验室的搬砖流程一般是：在老师布置了任务之后，将Github中的开源代码跑一跑，调一调参数，然后结果还行就任务结束了。但是这样的算法工程师真的有竞争力吗？</p>
-<p>那么要怎么做才算是竞争力呢？我也不知道，但是我知道至少要有以下两个能力？</p>
-<ul>
-<li>代码能力要过关。只有代码能力过关才能快速实现自己的想法，才有验证的机会。</li>
-<li>要根据问题对数据有足够的分析。对数据的理解能决定模型效果的上限。再次以上面的BDCI比赛为例，我们能够超过第二名两个点的原因就是在于，我们通过对数据的分析，设计更合理的模型。</li>
-<li>分析错误的能力？</li>
-</ul>
-<p>第三点我认为是很多人忽视的一点。因为初入门的人好像认为只要模型足够复杂，足够新，足够大，那么就能解决问题，但是在真实场景下，你写的模型很有可能不work，那么这个时候你要怎么办？这个问题大家先停下来思考几分钟。</p>
-<h1 id="错例分析"><a href="#错例分析" class="headerlink" title="错例分析"></a>错例分析</h1><p>针对上面提出的问题，错例分析是一个非常有用的手段。那么我们先回到上面这个比赛的问题，简化之后就变成了一个实体识别(NER)任务。这是一个非常基础的问题，和分词很像。这个比赛大部分人用的模型都差不多(这里不具体介绍NER有那些模型)，结果差距也不是很大，想要拉开与其他队伍的差距，就要对数据进行深入的分析。其中，错误分析非常重要。</p>
-<blockquote>
-<p>任务：识别模型中出现的金融实体<br>输入：<strong>xxxxxx, 京东方科技集团昨日发表简，xxxxx</strong><br>输出：<strong>京东方科技集团</strong></p>
-</blockquote>
-<p>怎么能发现模型有没有错，通过观察直接分错的例子很有效，但是<strong>混淆矩阵</strong>能从统计的角度错误主要集中发生在什么地方，比如实体识别，可能通过标签(BIO/BMES)混淆矩阵确定错误发生在什么地方，在比赛中我们发现模型预测错误主要发生在边界，然后通过分析具体的错误实例，我们发现模型很容易出现的问题是，多预测一两个字或者少预测一两个字。</p>
-<h1 id="使用分词算法纠正模型错误"><a href="#使用分词算法纠正模型错误" class="headerlink" title="使用分词算法纠正模型错误"></a>使用分词算法纠正模型错误</h1><p>针对上一个句子，假设模型预测出的实体是 “<strong>东方科技集团</strong>”，因此预测出来的结果是要了一个字的，实际上应该是 京东方科技集团，那么我们要怎么做才能补全这个实体。</p>
-<p>这个问题是不是就变成了“后向最大匹配问题”，东方和京东方都是词表里面的词，因为很容易就通过前向匹配算法进行补齐。同理，假设模型预测出的实体是 “<strong>京东方科技集</strong>”，因此预测出来的结果少了一个字，因此可以通过前向最大匹配进行补全。 </p>
-<p>但当然你肯定会说，这东西不会过长或者过短吗？有可能会。那么我们是怎么处理这种情况的呢？设置两个字典，一个字典是常见的字典，另外一个是根据训练集样本统计的高频前后缀词。这样就可以在分词的同时判断置信度。如果前向或者后向匹配到了高频前后缀词，则把词补全，就可以得到补全后的实体。</p>
-<p>同理，如果模型预测的比实际实体字数要多，同样也可以根据分词结果把多了字的去掉。</p>
-<p>具体实现就可以参考上一篇文章。说说最终效果，通过词的前后缀最大匹配，在当初比赛的提交分数上，F1值能够提升0.5个百分点。提升的效果数值上不算大，但是这样已经能帮助我们稳住榜上第一的成绩。</p>
-<h1 id="后记"><a href="#后记" class="headerlink" title="后记"></a>后记</h1><p>读者：这篇文章真的是在写分词算法的应用实例吗？<br>我：用到了分词算法就算。不接受反驳！（误</p>
+        <h1 id="小插曲"><a href="#小插曲" class="headerlink" title="小插曲"></a>小插曲</h1><p>这篇文章在投稿完EMNLP2020的晚上就想动手写来着，但是将看了一遍又一遍的文章投出去之后满是疲惫，根本没有精力去完成别的事情。满脑子想的就是睡觉睡觉，且马上要赶去火车站，时间实在是紧迫了一些。等我到达车站已经10点多钟了，不知道是因为疫情原因还是确实时间太晚了，人很少。我很快便在人工窗口取好了票，进去站台等布不知道等了多久，无意间撇了一眼自己的火车票，“深圳站”！才想起来我慌忙改签的时候没有注意到达站是什么，拿起12306刷了一下发现凌晨26分有一趟到深圳东的火车，这样回学校坐地铁就不用换乘了。看到距离火车出发还有一个半个小时，匆忙回到售票处想去退票，“我想退票，然后改签到凌晨12点26分的这一趟”，售票员说了句不让改签，我争辩了一下，我重申我的意思就是“退票，然后重新买下一趟”，售票员有些不耐烦，问我是哪一趟，我说T2331，并把显示这趟的详情页的手机递给了她，说尽量买中铺。拿到票之后看也没看便收了起来。因为很晚了，又困，在站台坐着睡了会，随后车到站了，顺利的到达9号车厢，进车厢才发现刚刚售票员给我的票是第二天早上的票。。。。实在困得受不了，只能上车补票。躺下的时候我就在想，平时打字的时候我就经常打错别字，这次买票是不是也算是一种“错别字”，那些科研上没有成功的idea是不是也是一些“错别字”，有的错别字不影响人理解，有的就会导致语义完全变化，都还没来记及把错别字引申到人生路上的错别字，我就应该已经睡着了。第二天醒来也完全没有了当时的感慨。</p>
+<h1 id="投稿原因"><a href="#投稿原因" class="headerlink" title="投稿原因"></a>投稿原因</h1><p>今年由于疫情缘故，太部分时间都是在家，本应该是好好刷题学习的时间，但是意外的EMNLP准备时间超过了今年上半年准备找实习的时间，这是一件很诡异的事情，因为年初的时候我想的就是好好找实习，然后搞个实习经历，再开心的秋招。计划总是赶不上变化，由于一开始被小蜜打击了之后，就投了一个头条相对边沿的部门，加上头条效率很高，很快就拿到了头条的实习offer。拿到了offer之后，懒散的情绪很快就占据了整个大脑，刷题、复习的事情马上就被我仍到一边，科研热情再次被燃起（可能是因为面试的时候被问了为啥ACL你不是一作），因此想在研究生期间能够自己有一篇顶会，尽管前不久我想的是论文也没啥用。。。</p>
+<h1 id="Pointer-Network-指向了失败"><a href="#Pointer-Network-指向了失败" class="headerlink" title="Pointer Network 指向了失败"></a>Pointer Network 指向了失败</h1><p>不管怎么说，在家干活，都必须要考虑到一个效率低的问题，因此如果在家产出一篇文章的概率就会大打折扣，但是自从很想获得一篇顶会之后，我的思考能力似乎有了一定的提高，很快便在和竹哥、宇瀚哥讨论过程中想到了一个利用Pointer Network去做情感-原因对抽取（Emotion-Cause Pair Extraction，ECPE），直观感觉上还是挺靠谱的，加上和范创师兄一讨论，得到肯定。心里觉得“这事稳了一半了”。马上便动手噗呲噗呲地写了起来，心里想的还挺美，觉得到emnlp截稿还是有时间的，代码一定要往可扩展性上写，一定要可读性高，一定要做对比实验的时候比较方便，一定要…，在代码结构上花了还是挺大的功夫的，大概花了一周多的时间，把网上的Pointer Net在NLP一些有关的文章稍微看了看，并且按照自己的想法，把PointerNet用在了ECPE上，在还没有跑代码之前自我感觉良好，毕竟解决一个又一个的BUG，觉得自己马上就要稳了，但是最终实验结果很不理想，经过多次分析都是觉得在Decoder部分的输入太相似了，没有足够的信息进行解码。期间想了各种办法，包括换结构，利用上一些乱七八杂的信息，终究还是没有用，后续零零散散的时间用在上面皆是失败告终。</p>
+<h1 id="Supervised-Self-Attention不是出路"><a href="#Supervised-Self-Attention不是出路" class="headerlink" title="Supervised Self-Attention不是出路"></a>Supervised Self-Attention不是出路</h1><p>此时在内心是已经放弃了的，要不是师兄不找我让我写一篇ACL推广文约稿（后续我会补上这篇文章），估计这个事情就已经到这里终结了。说来也很凑巧，师兄让我参考的写作规范的一篇文章[1]是做ABSA中实体-意见二元组的，这和我们要做的ECPE任务很相似，我从中收到了一些启发，便开始和师兄说了带监督机制的自我注意力模型去做ECPE，再次得到师兄更加牛逼的肯定。师兄：“这个想法简单，直观，挺好的，赶紧试一下！”我内心觉得有点骄傲，“哇，难道我真的要投顶会了吗？”（尽管只是投，但对我这样的废物也很好了）。倘若这个idea看起来不是那么靠谱就好了，实验之后的差效果也就不会让人如此难受了，加上时间已经非常紧急了，还是有点急躁，另外在准备的过程中，发现了两个和我想法非常相似度的文章，简直让我没法做下去，和师兄商量之后，师兄让我把融合方式改了一下，加上hinge loss来突出文章重点，尽管有那么一点点效果，还是比不上SOTA。假设一个情景，还有两三个星期要截稿了，你的实验还没跑通，你会是什么样的状态？我很急，师兄也急着（毕竟提供了那么多想法让我去实现之后都没有用），我多次怀疑自己代码有问题（让宇瀚哥帮忙review了一下也不行）。此时已经不是放弃不放弃的事情了，接连的两个idea实现都出问题让我对自身水平感到怀疑（这种想法是很糟糕的想法，菜鸡也要有自信好吧？），幸好后面师兄自己实现了一下这个简单idea之后和我实现效果差不多，根本达不到SOTA才让我感到缓和一点（EMNLP可以不投，但是自我怀疑/否定是很让人难受的一件事情）。心里放松了起来，反正还有一个星期就要截稿了，也来不及了，idea没用就没用吧，可以好好玩游戏了。故事本来的结局应该是这样的，毕竟我都已经开始找刘哥打游戏了，安排返校/实习的事情了。</p>
+<h1 id="Sequence-Labeling-过程很曲折"><a href="#Sequence-Labeling-过程很曲折" class="headerlink" title="Sequence Labeling 过程很曲折"></a>Sequence Labeling 过程很曲折</h1><p>岂料，有一个早上师兄打过电话来问我，“咱们ACL文章当初有个Baseline的方法，效果挺好的，可以重新改一下跑一下实验弄起来吗？”“没问题，代码和数据都还有呢”，便开始了第三次启程。尽管这个时候只剩下一个星期了，但是由于以前就写好了代码，也不是很慌，本来我以为压力全在师兄这里，毕竟文章全是师兄负责在写，还是需要修改很多的。岂料真的是屋漏偏逢连夜雨，某天早上八点多查看实验结果的时候，发现服务器登不上了，我一开始怀疑是断网了，需要重连frp，这一推断是基于我早上六点多还起来记录了一次实验结果。但是万万没想到是学校的网络进行光线改造[2]导致无法用外网，千算万算没算到这一茬，内心比较奔溃，但还是师兄心态比较好，让我先干别的，等网好了再跑，尽管等网好了之后就剩三天不到的时间。焦急的等待期过了，到了通知上的时间还是没有好，加上是周日，网络中心没人上班（这到底是什么神仙运气？）第二天上班后打过电话沟通也是让我等着，有人排查去了，一直到了六一下午两点才解决这个问题，距离UTC时间的六一截稿日期就剩二十几个小时。幸好这个实验还算顺利，差不多熬了个通宵，第二天就中午就收尾了。到下午快提交的时候，师兄通知我EMNLP推迟48小时（ps. 美国不愧是世界灯塔国，铁老大了，因为动乱就说延期，要是其他国家怎么可能有这样的权力），就把模型时间分析的实验放到后面再去做了，另外考虑这次EMNLP强调论文的可复现性，就对代码和模型重新整理了一下并且重新跑了部分实验（最后分析来不及做了，没用上，我猜测是因为时间突然的充裕让我有点不适应，好几个安排都很不合理）。在最后的实验结果分析阶段，要感谢一下健哥和竹哥的帮忙，这些帮助让师兄和我终于把这篇文章投出去了。后面几个小时林林总总的论文修改阶段大可不题，毕竟只能算是一些大风大浪中的小雨滴。<br>写流水账还是挺有意思的，都不知不觉写了快两个小时了。这文章就是随便记一下该EMNLP投稿的历程，圆了我的投稿梦。（我个人觉得中的概率取极限值就等于0了。。。为师兄和我合作花太多时间感到不值，不然也许能出更好的工作，而不是把时间花在一篇失败的文章上面）</p>
+<h1 id="备注"><a href="#备注" class="headerlink" title="备注"></a>备注</h1><p>人都会不自觉夸大自己在某份工作中的作用，也许你把我上面提到的东西乘上50%的权重也不过，毕竟这篇文章完全是师兄带我的，感激一下！<br>最后套用一句好听的话，问题不大，一切向好！</p>
+<h1 id="Reference"><a href="#Reference" class="headerlink" title="Reference"></a>Reference</h1><p>[1] <a href="https://mp.weixin.qq.com/s?__biz=MzA5OTQ5MDE0Mw==&amp;mid=2651120945&amp;idx=1&amp;sn=a2b077ad8cdc69473e8de18ebd0f8198&amp;chksm=8b71c501bc064c17600fb1215dd10d3798f15ef8123fcda5c95942474989a4a317d6c7bed9d6&amp;mpshare=1&amp;scene=1&amp;srcid=0428Lx0tLLK9I4xNI1DxUX8Q&amp;sharer_sharetime=1588129898957&amp;sharer_shareid=2e6ae307e6b80236a93fc42b13181c1a&amp;key=bb6c18c4d56ee2e275fec1e5a6e468a566096513c57c6fee7ab95023802ed47a4c72acd4cd32e25cf7e24241a16dd1a5584a59e34ae205b66876c2fbc8ac940d5a4d5b23304ca05129d58176be25d18e&amp;ascene=1&amp;uin=Mjk1NDQxOTkzNQ%3D%3D&amp;devicetype=Windows+10&amp;version=62080079&amp;lang=zh_CN&amp;exportkey=AyOlSVMMyyaKpbJ0Db6A8y8%3D&amp;pass_ticket=hJukV3pEAmQANxFBqLpWQmDsjMEatAI040GnUuL52SvIrf97se5FsEfeEXTszSF2" target="_blank" rel="noopener">https://mp.weixin.qq.com/s?__biz=MzA5OTQ5MDE0Mw==&amp;mid=2651120945&amp;idx=1&amp;sn=a2b077ad8cdc69473e8de18ebd0f8198&amp;chksm=8b71c501bc064c17600fb1215dd10d3798f15ef8123fcda5c95942474989a4a317d6c7bed9d6&amp;mpshare=1&amp;scene=1&amp;srcid=0428Lx0tLLK9I4xNI1DxUX8Q&amp;sharer_sharetime=1588129898957&amp;sharer_shareid=2e6ae307e6b80236a93fc42b13181c1a&amp;key=bb6c18c4d56ee2e275fec1e5a6e468a566096513c57c6fee7ab95023802ed47a4c72acd4cd32e25cf7e24241a16dd1a5584a59e34ae205b66876c2fbc8ac940d5a4d5b23304ca05129d58176be25d18e&amp;ascene=1&amp;uin=Mjk1NDQxOTkzNQ%3D%3D&amp;devicetype=Windows+10&amp;version=62080079&amp;lang=zh_CN&amp;exportkey=AyOlSVMMyyaKpbJ0Db6A8y8%3D&amp;pass_ticket=hJukV3pEAmQANxFBqLpWQmDsjMEatAI040GnUuL52SvIrf97se5FsEfeEXTszSF2</a><br>[2] <a href="https://mp.weixin.qq.com/s?__biz=MzA4NDQyMTE5NA==&amp;mid=2651966072&amp;idx=1&amp;sn=a278668f2c602739d51b954fc1d5a28c&amp;chksm=8402155db3759c4b53fa38a2de239aa9ccff358c3f2314b5394294f87b15475cc28e74bca8ae&amp;mpshare=1&amp;scene=1&amp;srcid=&amp;sharer_sharetime=1590807979934&amp;sharer_shareid=c4a3afaedc5f75f626cda4bb1a2a1f42&amp;key=08eac1696cccb69a54e6828035020e6b24c97de0b482a35e1112b67dd130a9c384a42e48a9af2c71a3488f38cc725fd73e76480f9776bc89efba6d35c650eb18339590c21459347a1a6e0a55496b77e8&amp;ascene=1&amp;uin=Mjk1NDQxOTkzNQ%3D%3D&amp;devicetype=Windows+10&amp;version=62080079&amp;lang=zh_CN&amp;exportkey=A2A5Q2L%2F42O67W5Z3YoY0jQ%3D&amp;pass_ticket=gw7DwuVhFziMPOGtZ2DhaCF4wZcJZfQ9kSF5wdHeqOxH9W%2FGQjJW6WXAC2D%2B2zgM" target="_blank" rel="noopener">https://mp.weixin.qq.com/s?__biz=MzA4NDQyMTE5NA==&amp;mid=2651966072&amp;idx=1&amp;sn=a278668f2c602739d51b954fc1d5a28c&amp;chksm=8402155db3759c4b53fa38a2de239aa9ccff358c3f2314b5394294f87b15475cc28e74bca8ae&amp;mpshare=1&amp;scene=1&amp;srcid=&amp;sharer_sharetime=1590807979934&amp;sharer_shareid=c4a3afaedc5f75f626cda4bb1a2a1f42&amp;key=08eac1696cccb69a54e6828035020e6b24c97de0b482a35e1112b67dd130a9c384a42e48a9af2c71a3488f38cc725fd73e76480f9776bc89efba6d35c650eb18339590c21459347a1a6e0a55496b77e8&amp;ascene=1&amp;uin=Mjk1NDQxOTkzNQ%3D%3D&amp;devicetype=Windows+10&amp;version=62080079&amp;lang=zh_CN&amp;exportkey=A2A5Q2L%2F42O67W5Z3YoY0jQ%3D&amp;pass_ticket=gw7DwuVhFziMPOGtZ2DhaCF4wZcJZfQ9kSF5wdHeqOxH9W%2FGQjJW6WXAC2D%2B2zgM</a></p>
 
         <script src="/js/qrious.min.js"></script>
 
@@ -222,20 +195,20 @@
             <p>
                 <span>专题: </span>
                 
-                <a href="/series/#分词">
-                    <code key="分词" class="post-label">分词</code>
+                <a href="/series/#杂谈">
+                    <code key="杂谈" class="post-label">杂谈</code>
                 </a>
                 
             </p>
             
             <p>
-                <span>本文发表于 2020-03-07，最后修改于 2020-03-31。</span>
+                <span>本文发表于 2020-06-12，最后修改于 2020-06-13。</span>
             </p>
             <!-- 文章末尾的提示 start -->
             
             <p>
                 本站永久域名<strong>「 <a
-                        href="/post/2.html">bbruceyuan.github.io</a>
+                        href="/post/4.html">bbruceyuan.github.io</a>
                     」</strong>，也可搜索<strong>「 BBruceyuan 」</strong>找到我。
             </p>
             
@@ -254,10 +227,8 @@
         <hr />
         <p name="pagination" style="font-size: 1.2em">
     
-    <a class="float-left" href="/post/1.html">上一篇 « 2020年了，还有必要学习分词算法吗？</a>
+    <a class="float-left" href="/post/3.html">上一篇 « 关于隐马尔可夫模型(HMM)，需要知道什么？</a>
     
-    
-    <a class="float-right" href="/post/3.html">下一篇 » 关于隐马尔可夫模型(HMM)，需要知道什么？</a>
     
 </p>
     </article>
@@ -404,7 +375,7 @@
         <h3>推荐阅读</h3>
         
         <div class="post-preview">
-    <div class="post-img" style="background-image: url('/blog_imgs/4/emnlp.png')"></div>
+    <div class="post-img" style="background-image: url('/blog_imgs/3/3_1.jpg')"></div>
     <div class="post-info">
         <div class="post-info-center">
             <div class="hidden-xs">
@@ -412,20 +383,32 @@
                 
                 <span>/</span>
                 
-                <a class="text-gray" href="/tags/#杂谈"
-                    title="杂谈">杂谈</a>
+                <a class="text-gray" href="/tags/#分词"
+                    title="分词">分词</a>
+                <span>/</span>
+                
+                <a class="text-gray" href="/tags/#入门算法"
+                    title="入门算法">入门算法</a>
+                <span>/</span>
+                
+                <a class="text-gray" href="/tags/#序列标注"
+                    title="序列标注">序列标注</a>
+                <span>/</span>
+                
+                <a class="text-gray" href="/tags/#实体识别"
+                    title="实体识别">实体识别</a>
                 <span>/</span>
                 
                 
             </div>
-            <a href="/post/4.html" class="title">
-                记EMNLP2020投稿
+            <a href="/post/3.html" class="title">
+                关于隐马尔可夫模型(HMM)，需要知道什么？
             </a>
             <p class="text-gray">
                 <small>
-                    <span>发表于2020-06-12，</span>
-                    <span class="hidden-xs">全文4892字，</span>
-                    <span>阅读约17分钟</span>
+                    <span>发表于2020-03-12，</span>
+                    <span class="hidden-xs">全文4046字，</span>
+                    <span>阅读约14分钟</span>
                 </small>
             </p>
         </div>
@@ -692,24 +675,18 @@
         
         
         <section class="gkt-sidebar-content box-shadow">
-            <strong>分词</strong>
+            <strong>杂谈</strong>
             <ul>
                 
                 <li>
-                    <a href="/post/1.html"
-                        class="">2020年了，还有必要学习分词算法吗？</a>
-                    
-                </li>
-                
-                <li>
-                    <a href="/post/2.html"
-                        class="gkt-sidebar-active">深度学习时代，分词算法的真实应用实例</a>
+                    <a href="/post/4.html"
+                        class="gkt-sidebar-active">记EMNLP2020投稿</a>
                     
                     <!-- Table of Contents -->
 <div id="sidebar-toc">
   <!-- TOC  -->
   
-  <ol class="toc-nav"><li class="toc-nav-item toc-nav-level-1"><a class="toc-nav-link" href="#背景"><span class="toc-nav-text">背景</span></a></li><li class="toc-nav-item toc-nav-level-1"><a class="toc-nav-link" href="#深度学习不能只会调参"><span class="toc-nav-text">深度学习不能只会调参</span></a></li><li class="toc-nav-item toc-nav-level-1"><a class="toc-nav-link" href="#错例分析"><span class="toc-nav-text">错例分析</span></a></li><li class="toc-nav-item toc-nav-level-1"><a class="toc-nav-link" href="#使用分词算法纠正模型错误"><span class="toc-nav-text">使用分词算法纠正模型错误</span></a></li><li class="toc-nav-item toc-nav-level-1"><a class="toc-nav-link" href="#后记"><span class="toc-nav-text">后记</span></a></li></ol>
+  <ol class="toc-nav"><li class="toc-nav-item toc-nav-level-1"><a class="toc-nav-link" href="#小插曲"><span class="toc-nav-text">小插曲</span></a></li><li class="toc-nav-item toc-nav-level-1"><a class="toc-nav-link" href="#投稿原因"><span class="toc-nav-text">投稿原因</span></a></li><li class="toc-nav-item toc-nav-level-1"><a class="toc-nav-link" href="#Pointer-Network-指向了失败"><span class="toc-nav-text">Pointer Network 指向了失败</span></a></li><li class="toc-nav-item toc-nav-level-1"><a class="toc-nav-link" href="#Supervised-Self-Attention不是出路"><span class="toc-nav-text">Supervised Self-Attention不是出路</span></a></li><li class="toc-nav-item toc-nav-level-1"><a class="toc-nav-link" href="#Sequence-Labeling-过程很曲折"><span class="toc-nav-text">Sequence Labeling 过程很曲折</span></a></li><li class="toc-nav-item toc-nav-level-1"><a class="toc-nav-link" href="#备注"><span class="toc-nav-text">备注</span></a></li><li class="toc-nav-item toc-nav-level-1"><a class="toc-nav-link" href="#Reference"><span class="toc-nav-text">Reference</span></a></li></ol>
   
 </div>
 
@@ -748,12 +725,6 @@
     })
   })();
 </script>
-                    
-                </li>
-                
-                <li>
-                    <a href="/post/3.html"
-                        class="">关于隐马尔可夫模型(HMM)，需要知道什么？</a>
                     
                 </li>
                 
