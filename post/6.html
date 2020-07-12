@@ -14,17 +14,17 @@
   <!-- if page has tags, then add tags to keyword -->
   
   
-  <meta name="keywords" content="BBruceyuan,BBruceyuan的博客,动手学编程,打点酱油,分词,算法实现,分词算法,分词算法实现,最大匹配算法实现,前向最大匹配算法实现,后向最大匹配算法实现">
+  <meta name="keywords" content="BBruceyuan,BBruceyuan的博客,动手学编程,打点酱油,ECPE,情感-原因对抽取,情感原因对抽取,ECPE,Emotion-Cause Pair Extraction,Transition-based Directed Graph Construction for Emotion-Cause Pair Extraction">
   <!-- page.description has higher priority -->
-  <meta name="description" content="分词算法，最大匹配，前向最大匹配，后向最大匹配，双向最大匹配算法的实现。">
+  <meta name="description" content="Must-read papers on ECPE">
   <link rel="shortcut icon" href="/img/icon.jpg">
   <title>
     
-    2020年了，还有必要学习分词算法吗？ | BBruceyuan
+    Must-read Papers on Emotion-Cause Pair Extraction | BBruceyuan
     
   </title>
 
-  <link rel="canonical" href="/post/1.html">
+  <link rel="canonical" href="/post/6.html">
   <link rel="stylesheet" href="/css/reset.css">
   <link rel="stylesheet" href="/css/layout.css">
   <link rel="stylesheet" href="/css/markdown.css">
@@ -84,7 +84,7 @@
             <ul>
                 
                 
-                <li class="gkt-cate-name float-left active">
+                <li class="gkt-cate-name float-left ">
                     <a class="float-left" href="/post/1.html">分词</a>
                     
                 </li>
@@ -99,7 +99,7 @@
                     
                 </li>
                 
-                <li class="gkt-cate-name float-left ">
+                <li class="gkt-cate-name float-left active">
                     <a class="float-left" href="/post/6.html">情感-原因对抽取(ECPE)</a>
                     
                 </li>
@@ -146,35 +146,35 @@
 <div class="float-left post-container box-shadow">
     <div class="u-arrow-wrapper hidden-xs">
         
-        <a class="float-left" href="/post/link.html"><i class="u-arrow-left"></i></a>
+        <a class="float-left" href="/post/3.html"><i class="u-arrow-left"></i></a>
         
         
-        <a class="float-right" href="/post/2.html"><i class="u-arrow-right"></i></a>
+        <a class="float-right" href="/post/6.html"><i class="u-arrow-right"></i></a>
         
     </div>
     <article class="col-xs-12">
-        <h1> 2020年了，还有必要学习分词算法吗？ </h1>
+        <h1> Must-read Papers on Emotion-Cause Pair Extraction </h1>
 
         
 
         
         <div class="hidden-lg hidden-md series_links">
-            <p> <strong> 分词系列文章链接：</strong></p>
+            <p> <strong> 情感-原因对抽取(ECPE)系列文章链接：</strong></p>
             <ul>
                 
                 <li>
-                    <a href="/post/1.html">2020年了，还有必要学习分词算法吗？</a>
-                    <span class="post-item-date">(Mar 6, 2020)</span>
+                    <a href="/post/6.html">Emotion-Cause Pair Extraction: A Survey</a>
+                    <span class="post-item-date">(Jun 12, 2020)</span>
                 </li>
                 
                 <li>
-                    <a href="/post/2.html">深度学习时代，分词算法的真实应用实例</a>
-                    <span class="post-item-date">(Mar 7, 2020)</span>
+                    <a href="/post/6.html">Must-read Papers on Emotion-Cause Pair Extraction</a>
+                    <span class="post-item-date">(Jun 12, 2020)</span>
                 </li>
                 
                 <li>
-                    <a href="/post/3.html">关于隐马尔可夫模型(HMM)，需要知道什么？</a>
-                    <span class="post-item-date">(Mar 12, 2020)</span>
+                    <a href="/post/5.html">Transition-based Directed Graph Construction for Emotion-Cause Pair Extraction (中文介绍)</a>
+                    <span class="post-item-date">(Jun 13, 2020)</span>
                 </li>
                 
             </ul>
@@ -182,42 +182,30 @@
         
         
         
-        <h1 id="背景"><a href="#背景" class="headerlink" title="背景"></a>背景</h1><p>上周，和某同学聊天的时候提到关于深度学习时代下，分词算法的必要性。这引起了我的一点思考，是的，由于最近深度学习的发展，并且由于机器算力的增加，字级别的模型开始慢慢的展露头角，字级别的的模型效果已经可以说超过词级别的模型了[1]，并且在前沿的自然语言处理中都开始有放弃词级别模型的研究，尤其是在命名实体识别之类的序列标注任务上面，但是，分词真的就没有用了吗？</p>
-<p>答案显然是否定的。我们可以假设一个场景，如果百度或淘宝用户输入了一个句子(query)，难道会拿整个句子去做召回吗？显然是不可能的，肯定要先对 query 进行分词，进行一些纠错，改写，然后去文档库中做尽量多的匹配。</p>
-<p>既然分词分词在真实场景下还是有用的，作为最简单的NLP入门学习算法，分词当然是初学者作为入门练习的最佳实践。那么常见的分词算法有哪些呢？最简单就是前向和后向匹配算法，HMM，CRF等等。下面主要介绍最大匹配算法的思路和代码实现。</p>
-<h1 id="分词是什么？"><a href="#分词是什么？" class="headerlink" title="分词是什么？"></a>分词是什么？</h1><p>这个问题应该是没有必要提的，但是为了任务的定义，还是提一下比较好一点。给定一句话，比如</p>
-<blockquote>
-<p>我硕士阶段在研究生命科学<br>我/硕士/阶段/在/研究/生命科学</p>
-</blockquote>
-<p>有人会说，这不是我们小学的时候学的断句吗？emmmm… 事实好像就是如此，但是这对于一个小学生也能做的事情，对于机器来说确是比较难做到的。</p>
-<h1 id="基于词典的最大匹配算法"><a href="#基于词典的最大匹配算法" class="headerlink" title="基于词典的最大匹配算法"></a>基于词典的最大匹配算法</h1><p>最大匹配算法[2]主要包括正向最大匹配算法、逆向最大匹配算法、双向匹配算法等</p>
-<h2 id="1-最大正向匹配"><a href="#1-最大正向匹配" class="headerlink" title="1. 最大正向匹配"></a>1. 最大正向匹配</h2><p>最大正向匹配是一个非常简单且有效的方法。简单的说对给定的一段话，从左往右找，找到尽可能长的 一个片段，让这个片段存在于给定的词典中，然后讲这个片段找出来，画一条分词线，然后对这句话剩下的部分做同样的操作。如果第一个字符不是词典中任何一个词的前缀，那么这个字符单独作为一个词 (可以用字典树Trie Tree 实现，后续文章 来讲）。如果最后只剩下一个字了，那么这个字也是单独的一个词。继续以前面的“我硕士阶段在研究生命科学”为例。</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">第一步：初始使用整个句子去查找，查看 “我硕士阶段在研究生命科学”在不在词典中？不在。</span><br><span class="line">第二步：去掉最后一个词，变成了“我硕士阶段在研究生命科”在不在词典中？不在。</span><br><span class="line">第三步，再次去掉一个词，操作同理。</span><br><span class="line">........</span><br><span class="line">第12步，只剩下一个词了，“我”，只剩一个字了，进行分词。下次变成从 “硕士阶段在研究生命科学”开始。</span><br><span class="line">第13步，重复第一步，查看 “硕士阶段在研究生命科学”在不在词典中？不在。</span><br><span class="line">........</span><br><span class="line">第 i 步，查看 “硕士”在不在词典中？在。那么就进行分词，下次 变成了 “阶段在研究生命科学”开始。</span><br><span class="line">....... （后面同理，应该能懂了</span><br></pre></td></tr></table></figure>
-
-<p><strong>算法的实现：</strong></p>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">forward_maximum_match_segmentation</span><span class="params">(string, dictionary)</span>:</span></span><br><span class="line">    <span class="keyword">if</span> string == <span class="string">""</span>:</span><br><span class="line">        <span class="keyword">return</span></span><br><span class="line">    <span class="keyword">for</span> idx <span class="keyword">in</span> range(len(string), <span class="number">0</span>, <span class="number">-1</span>):</span><br><span class="line">        <span class="comment"># tmp words 是前面几个字符</span></span><br><span class="line">        tmp_words = string[:idx]</span><br><span class="line">        remainder_str = string[idx:]</span><br><span class="line">        <span class="keyword">if</span> tmp_words <span class="keyword">in</span> dictionary <span class="keyword">or</span> idx == <span class="number">1</span>:</span><br><span class="line">            <span class="comment"># 使用迭代器，意思你就可以使用</span></span><br><span class="line">            <span class="comment"># for item in forward_maximum_match_segmentation(xx) 遍历分词结果</span></span><br><span class="line">            <span class="keyword">yield</span> tmp_words</span><br><span class="line">            forward_maximum_match_segmentation(</span><br><span class="line">                remainder_str, dictionary)</span><br></pre></td></tr></table></figure>
-
-<h2 id="2-最大后向匹配算法"><a href="#2-最大后向匹配算法" class="headerlink" title="2 最大后向匹配算法"></a>2 最大后向匹配算法</h2><p>如果你有运行一下前向算法，那么你就可以发现，运用前向算法很容易就把上面提到的例句分错了 。具体体现在：</p>
-<blockquote>
-<p>研究生命科学。<br>因为“研究生”和“生命科学”都会在字典中，那么按照最大前向匹配原则，就会匹配成 研究生，而不是 研究。<br>最次如果使用前向算法，最终结果为“我/硕士/阶段/在/研究生/命/科学”。</p>
-</blockquote>
-<p>运用前向分词算法的结果是错的，最大后向匹配，可以解决一部分这种问题（词语重复问题）。最大后向匹配算法和前向算法是一样的，只是逻辑 变成从后往前了。</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">第一步，和前向一样，</span><br><span class="line">第二步，输入变成了“硕士阶段在研究生命科学”，然后继续查看，</span><br><span class="line">...... （后续逻辑和前向是一样的了</span><br></pre></td></tr></table></figure>
-
-<p><strong>区别</strong> ：前向是每次都是去掉后一个词，后向是去掉前一个词。</p>
-<p><strong>算法的实现：</strong> </p>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">backward_maximum_match_segmentation</span><span class="params">(string, dictionary)</span>:</span></span><br><span class="line">    <span class="keyword">if</span> string == <span class="string">""</span>:</span><br><span class="line">        <span class="keyword">return</span></span><br><span class="line">    <span class="keyword">for</span> idx <span class="keyword">in</span> range(<span class="number">0</span>, len(string)):</span><br><span class="line">        <span class="comment"># tmp words 是后面几个字符</span></span><br><span class="line">        tmp_words = string[idx:]</span><br><span class="line">        <span class="comment"># 剩下的就是前面的几个单词了</span></span><br><span class="line">        remainder_str = string[:idx]</span><br><span class="line">        <span class="keyword">if</span> tmp_words <span class="keyword">in</span> dictionary <span class="keyword">or</span> idx == len(string) - <span class="number">1</span>:</span><br><span class="line">            <span class="keyword">yield</span> tmp_words</span><br><span class="line">            backward_maximum_match_segmentation(</span><br><span class="line">                remainder_str, dictionary)</span><br></pre></td></tr></table></figure>
-
-<p>以上两种算法实现参考[3]。</p>
-<h2 id="3-双向匹配算法"><a href="#3-双向匹配算法" class="headerlink" title="3 双向匹配算法"></a>3 双向匹配算法</h2><p>双向匹配算法当然指的是用前向算法分词一遍，用后向算法分词一遍。因为有文献[4]证明，对于中文来说，90%的句子最大正向匹配和最大反向匹配结果是一样的，剩下9%两者其中一个是正确的。剩下的，只有大约1%的句子，两者分词结果相同，但是结果其实是错的。因此双向匹配算法很常用。</p>
-<p>双向匹配算法使用的启发式算法来选择最终结果描述如下：</p>
-<blockquote>
-<p>1.正反向分词结果词数不同，则取分词数量较少的那个。<br>2.分词结果词数相同<br>​    a.分词结果相同，就说明没有歧义，可返回任意一个。<br>​    b.分词结果不同，返回其中单字较少的那个</p>
-</blockquote>
-<p><strong>具体算法实现</strong></p>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">bi_directional_maximum_match_segmentation</span><span class="params">(string, dictionary)</span>:</span></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">_count_single</span><span class="params">(res)</span>:</span></span><br><span class="line">        <span class="comment"># 计算单字的数量</span></span><br><span class="line">        cnt = <span class="number">0</span></span><br><span class="line">        <span class="keyword">for</span> i <span class="keyword">in</span> res:</span><br><span class="line">            <span class="keyword">if</span> len(i) == <span class="number">1</span>:</span><br><span class="line">                cnt += <span class="number">1</span></span><br><span class="line">        <span class="keyword">return</span> cnt</span><br><span class="line"></span><br><span class="line">    fm_res = list(forward_maximum_match_segmentation(string, dictionary))</span><br><span class="line">    bm_res = list(backward_maximum_match_segmentation(string, dictionary))</span><br><span class="line"></span><br><span class="line">    <span class="comment"># 选词少的</span></span><br><span class="line">    <span class="keyword">if</span> len(fm_res) &gt; len(bm_res):</span><br><span class="line">        <span class="keyword">return</span> bm_res</span><br><span class="line">    <span class="keyword">elif</span> len(fm_res) &lt; len(bm_res):</span><br><span class="line">        <span class="keyword">return</span> fm_res</span><br><span class="line"></span><br><span class="line">    <span class="comment"># 如果两个完全相同 (考虑一下两者是相反的</span></span><br><span class="line">    <span class="keyword">if</span> fm_res == reversed(bm_res):</span><br><span class="line">        <span class="keyword">return</span> fm_res</span><br><span class="line">    <span class="keyword">else</span>:</span><br><span class="line">        <span class="keyword">if</span> _count_single(fm_res) &gt; _count_single(bm_res):</span><br><span class="line">            <span class="keyword">return</span> bm_res</span><br><span class="line">        <span class="keyword">else</span>:</span><br><span class="line">            <span class="keyword">return</span> fm_res</span><br></pre></td></tr></table></figure>
-
-<h1 id="Reference"><a href="#Reference" class="headerlink" title="Reference"></a>Reference</h1><p>[1] Is Word Segmentation Necessary for Deep Learning of Chinese Representations?<br>[2] <a href="https://baike.baidu.com/item/%E6%9C%80%E5%A4%A7%E5%8C%B9%E9%85%8D%E7%AE%97%E6%B3%95" target="_blank" rel="noopener">最大分词算法</a><br>[3] <a href="https://zhuanlan.zhihu.com/p/92102484" target="_blank" rel="noopener">https://zhuanlan.zhihu.com/p/92102484</a><br>[4] <a href="http://59.108.48.5/course/mining/12-13spring/%E5%8F%82%E8%80%83%E6%96%87%E7%8C%AE/02-01%E6%B1%89%E8%AF%AD%E8%87%AA%E5%8A%A8%E5%88%86%E8%AF%8D%E7%A0%94%E7%A9%B6%E8%AF%84%E8%BF%B0.pdf" target="_blank" rel="noopener">汉语自动分词研究评述</a></p>
+        <h1 id="Must-read-papers-on-ECPE"><a href="#Must-read-papers-on-ECPE" class="headerlink" title="Must-read papers on ECPE"></a>Must-read papers on ECPE</h1><p>ECPE: Emotion-Cause Pair Extraction.</p>
+<p>It can be also named by 情感-原因对抽取 or 情感-原因关系抽取 in Chinese.</p>
+<h1 id="Reviews"><a href="#Reviews" class="headerlink" title="Reviews"></a>Reviews</h1><ol>
+<li>Chaofa Yuan, <strong>Emotion-Cause Pair Extraction: A Survey</strong>. <a href="6.html">Paper</a></li>
+</ol>
+<h1 id="Task-amp-Dataset"><a href="#Task-amp-Dataset" class="headerlink" title="Task &amp; Dataset"></a>Task &amp; Dataset</h1><h1 id="Official-Definition"><a href="#Official-Definition" class="headerlink" title="Official Definition"></a>Official Definition</h1><p>Emotion-Cause Pair Extraction: A New Task to Emotion Analysis in Texts R Xia, Z Ding. ACL 2019. [pdf] [data] [code]</p>
+<h2 id="Chinese-Definition-and-Introduction"><a href="#Chinese-Definition-and-Introduction" class="headerlink" title="Chinese Definition and Introduction"></a>Chinese Definition and Introduction</h2><p>Task definition and introduction in Chinese. <a href="6.html">Link</a> <a href="6.html">中文简介</a></p>
+<h1 id="Papers"><a href="#Papers" class="headerlink" title="Papers"></a>Papers</h1><ul>
+<li><p><strong>[ACL-19]</strong>: Emotion-Cause Pair Extraction: A New Task to Emotion Analysis in Texts. <a href="https://www.aclweb.org/anthology/P19-1096.pdf" target="_blank" rel="noopener">[paper]</a> <a href="https://github.com/NUSTM/ECPE" target="_blank" rel="noopener">[code]</a></p>
+</li>
+<li><p><strong>[Arxiv-20]</strong>: End-to-end Emotion-Cause Pair Extraction via Learning to Link. <a href="https://arxiv.org/pdf/2002.10710.pdf" target="_blank" rel="noopener">[paper]</a></p>
+</li>
+<li><p><strong>[Arxiv-20]</strong>: ECSP: A New Task for Emotion-Cause Span-Pair Extraction and Classification<br>. <a href="https://arxiv.org/pdf/2003.03507.pdf" target="_blank" rel="noopener">[paper]</a></p>
+</li>
+<li><p><strong>[Neurocomputing-20]</strong>: Joint Multi-level Attentional Model for Emotion Detection and Emotion-cause Pair Extraction. <a href="https://pdf.sciencedirectassets.com/271597/AIP/1-s2.0-S092523122030566X/main.pdf?X-Amz-Security-Token=IQoJb3JpZ2luX2VjEMz%2F%2F%2F%2F%2F%2F%2F%2F%2F%2FwEaCXVzLWVhc3QtMSJIMEYCIQDvGGHjuKW51z7oT2PyDfPMwGpZ9CPNi%2FQMsvRDWJNabQIhAMs1YK0KP01aZOEXIu3WR26Igdx%2B11L9sfDxrfegkAcMKrQDCCUQAxoMMDU5MDAzNTQ2ODY1IgycwRTbIBZVeZHedqAqkQMcKrAZfhwoR9xI6TFBBoZtH4GkcnO2bQivdHR9sqtemJsc6FjRfO%2B%2B1MUecHPIDHXqClyhVb8uK8eFKXVPUtjXq4Z%2FH%2BQkFNmS7Q4fLVziBLwXYCoQYGcNYnBCE5WmGK%2FiF%2FYURpQpFmitTHYlfIV0VnodnP%2B6UExSO0xnTrZxcf%2B4TBTiBDO7hRdkqhGlrSqRF1OpEQvxp5fKMXhJoEHETMySyqvkXFBRfKf0f3Y2FVI9GZXTbx0bokFy0xMkNInHfnsiVINnTKpnT97pJEwT4vnUsXIGlEJAtdz%2F23GjLGH42%2Bdpbazk0%2F89uxPDW3A%2FnY1Jga%2F%2FtqBl9Mj7CwTinTKJ6GqagUn0NndmdF%2F4XJsnRbnYycnD087FkPUI8Cf%2Fnwtb74hqAgpn6GbqhYao6dPLGWyfqJjF4cA9YyJYGYVSeF7CSk%2Bpq8M1X0Dlvt5zk2kfPsRudrO48dXOSi7WF5VJ0kqp20Fl%2FUMcsbRCxGrzVZBp0od020kuqNaJKIrPv4d%2FkdXfL%2B59%2B%2FrRHrSkbDDn9Zf2BTrqAYvgpdEHjjbHLmideJqInWWRNAloEBWi81LRNcb2ewEKcLwcuQ%2BRMtq85%2FxtoP9JllLmStDUuo6LKC3K%2B3PdXaK%2BVvyZaKl6AQgFUHWr1aIJs3SYyhU46PHoAvst6JR6Af2rvD%2Fw1RRuutEOf2tzBi4IwgoDsMu9avjD0gr%2B0%2FB8CLcqHdBgD7iq1XueDsxAs1DbFZVyPIzGfXliJ3gxk0aYKKgsdKWWTnBJhaNFKzhhRfwJRrf2qNqmhFf9S7Jx13J8ecuq%2Fiq7ZtiDL2H5iVyO8IpwUsUHdVetNNmDQMkeuGbbl8egLnmYrg%3D%3D&X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Date=20200521T051153Z&X-Amz-SignedHeaders=host&X-Amz-Expires=300&X-Amz-Credential=ASIAQ3PHCVTY6YQXFOVL%2F20200521%2Fus-east-1%2Fs3%2Faws4_request&X-Amz-Signature=6aaa174944550b0d43f653eaed1a40702db4bc3a4e6af4f72ab9f26d39fec857&hash=10640ba5e11d24228f8ecd8d97505852736531c4d7b3c4785b69a5b8680f66ef&host=68042c943591013ac2b2430a89b270f6af2c76d8dfd086a07176afe7c76c2c61&pii=S092523122030566X&tid=spdf-927c9896-940e-4856-b987-adbaf7e99ba4&sid=0d9db6c134b3d94ea688a6798916800fa61bgxrqa&type=client" target="_blank" rel="noopener">[paper]</a></p>
+</li>
+<li><p><strong>[ACL-20]</strong>: ECPE-2D: Emotion-Cause Pair Extraction based on Joint Two-Dimensional Representation, Interaction and Prediction. <a href>[paper]</a></p>
+</li>
+<li><p><strong>[ACL-20]</strong>: Effective Inter-Clause Modeling for End-to-End Emotion-Cause Pair Extraction. <a href>[paper]</a> </p>
+</li>
+<li><p><strong>[ACL-20]</strong>: Transition-based Directed Graph Construction for Emotion-Cause Pair Extraction. <a href>[paper]</a> </p>
+</li>
+</ul>
+<h1 id="Reference"><a href="#Reference" class="headerlink" title="Reference"></a>Reference</h1><p>[1] 论文可获得的时候将进行更新</p>
 
         <script src="/js/qrious.min.js"></script>
 
@@ -241,20 +229,20 @@
             <p>
                 <span>专题: </span>
                 
-                <a href="/series/#分词">
-                    <code key="分词" class="post-label">分词</code>
+                <a href="/series/#情感-原因对抽取(ECPE)">
+                    <code key="情感-原因对抽取(ECPE)" class="post-label">情感-原因对抽取(ECPE)</code>
                 </a>
                 
             </p>
             
             <p>
-                <span>本文发表于 2020-03-06，最后修改于 2020-03-08。</span>
+                <span>本文发表于 2020-06-12，最后修改于 2020-07-08。</span>
             </p>
             <!-- 文章末尾的提示 start -->
             
             <p>
                 本站永久域名<strong>「 <a
-                        href="/post/1.html">bbruceyuan.github.io</a>
+                        href="/post/6.html">bbruceyuan.github.io</a>
                     」</strong>，也可搜索<strong>「 BBruceyuan 」</strong>找到我。
             </p>
             
@@ -273,10 +261,10 @@
         <hr />
         <p name="pagination" style="font-size: 1.2em">
     
-    <a class="float-left" href="/post/link.html">上一篇 « 友情链接</a>
+    <a class="float-left" href="/post/3.html">上一篇 « 关于隐马尔可夫模型(HMM)，需要知道什么？</a>
     
     
-    <a class="float-right" href="/post/2.html">下一篇 » 深度学习时代，分词算法的真实应用实例</a>
+    <a class="float-right" href="/post/6.html">下一篇 » Emotion-Cause Pair Extraction: A Survey</a>
     
 </p>
     </article>
@@ -423,35 +411,6 @@
         <h3>推荐阅读</h3>
         
         <div class="post-preview">
-    <div class="post-img" style="background-image: url('/blog_imgs/4/emnlp.png')"></div>
-    <div class="post-info">
-        <div class="post-info-center">
-            <div class="hidden-xs">
-                
-                
-                <span>/</span>
-                
-                <a class="text-gray" href="/tags/#杂谈"
-                    title="杂谈">杂谈</a>
-                <span>/</span>
-                
-                
-            </div>
-            <a href="/post/4.html" class="title">
-                记EMNLP2020投稿
-            </a>
-            <p class="text-gray">
-                <small>
-                    <span>发表于2020-06-12，</span>
-                    <span class="hidden-xs">全文4892字，</span>
-                    <span>阅读约17分钟</span>
-                </small>
-            </p>
-        </div>
-    </div>
-</div>
-        
-        <div class="post-preview">
     <div class="post-img" style="background-image: url('/blog_imgs/5/5_2.png')"></div>
     <div class="post-info">
         <div class="post-info-center">
@@ -481,7 +440,7 @@
 </div>
         
         <div class="post-preview">
-    <div class="post-img" style="background-image: url('/img/link.png')"></div>
+    <div class="post-img" style="background-image: url('/blog_imgs/1/1_1_head.png')"></div>
     <div class="post-info">
         <div class="post-info-center">
             <div class="hidden-xs">
@@ -489,19 +448,52 @@
                 
                 <span>/</span>
                 
-                <a class="text-gray" href="/tags/#友链"
-                    title="友链">友链</a>
+                <a class="text-gray" href="/tags/#分词"
+                    title="分词">分词</a>
+                <span>/</span>
+                
+                <a class="text-gray" href="/tags/#入门算法"
+                    title="入门算法">入门算法</a>
                 <span>/</span>
                 
                 
             </div>
-            <a href="/post/link.html" class="title">
-                友情链接
+            <a href="/post/2.html" class="title">
+                深度学习时代，分词算法的真实应用实例
+            </a>
+            <p class="text-gray">
+                <small>
+                    <span>发表于2020-03-07，</span>
+                    <span class="hidden-xs">全文1970字，</span>
+                    <span>阅读约7分钟</span>
+                </small>
+            </p>
+        </div>
+    </div>
+</div>
+        
+        <div class="post-preview">
+    <div class="post-img" style="background-image: url('/img/icon.jpg')"></div>
+    <div class="post-info">
+        <div class="post-info-center">
+            <div class="hidden-xs">
+                
+                
+                <span>/</span>
+                
+                <a class="text-gray" href="/tags/#关于我"
+                    title="关于我">关于我</a>
+                <span>/</span>
+                
+                
+            </div>
+            <a href="/post/about.html" class="title">
+                关于我
             </a>
             <p class="text-gray">
                 <small>
                     <span>发表于2019-06-30，</span>
-                    <span class="hidden-xs">全文512字，</span>
+                    <span class="hidden-xs">全文476字，</span>
                     <span>阅读约2分钟</span>
                 </small>
             </p>
@@ -710,18 +702,18 @@
         
         
         <section class="gkt-sidebar-content box-shadow">
-            <strong>分词</strong>
+            <strong>情感-原因对抽取(ECPE)</strong>
             <ul>
                 
                 <li>
-                    <a href="/post/1.html"
-                        class="gkt-sidebar-active">2020年了，还有必要学习分词算法吗？</a>
+                    <a href="/post/6.html"
+                        class="gkt-sidebar-active">Emotion-Cause Pair Extraction: A Survey</a>
                     
                     <!-- Table of Contents -->
 <div id="sidebar-toc">
   <!-- TOC  -->
   
-  <ol class="toc-nav"><li class="toc-nav-item toc-nav-level-1"><a class="toc-nav-link" href="#背景"><span class="toc-nav-text">背景</span></a></li><li class="toc-nav-item toc-nav-level-1"><a class="toc-nav-link" href="#分词是什么？"><span class="toc-nav-text">分词是什么？</span></a></li><li class="toc-nav-item toc-nav-level-1"><a class="toc-nav-link" href="#基于词典的最大匹配算法"><span class="toc-nav-text">基于词典的最大匹配算法</span></a><ol class="toc-nav-child"><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#1-最大正向匹配"><span class="toc-nav-text">1. 最大正向匹配</span></a></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#2-最大后向匹配算法"><span class="toc-nav-text">2 最大后向匹配算法</span></a></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#3-双向匹配算法"><span class="toc-nav-text">3 双向匹配算法</span></a></li></ol></li><li class="toc-nav-item toc-nav-level-1"><a class="toc-nav-link" href="#Reference"><span class="toc-nav-text">Reference</span></a></li></ol>
+  <ol class="toc-nav"><li class="toc-nav-item toc-nav-level-1"><a class="toc-nav-link" href="#Must-read-papers-on-ECPE"><span class="toc-nav-text">Must-read papers on ECPE</span></a></li><li class="toc-nav-item toc-nav-level-1"><a class="toc-nav-link" href="#Reviews"><span class="toc-nav-text">Reviews</span></a></li><li class="toc-nav-item toc-nav-level-1"><a class="toc-nav-link" href="#Task-amp-Dataset"><span class="toc-nav-text">Task &amp; Dataset</span></a></li><li class="toc-nav-item toc-nav-level-1"><a class="toc-nav-link" href="#Official-Definition"><span class="toc-nav-text">Official Definition</span></a><ol class="toc-nav-child"><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#Chinese-Definition-and-Introduction"><span class="toc-nav-text">Chinese Definition and Introduction</span></a></li></ol></li><li class="toc-nav-item toc-nav-level-1"><a class="toc-nav-link" href="#Papers"><span class="toc-nav-text">Papers</span></a></li><li class="toc-nav-item toc-nav-level-1"><a class="toc-nav-link" href="#Reference"><span class="toc-nav-text">Reference</span></a></li></ol>
   
 </div>
 
@@ -764,14 +756,58 @@
                 </li>
                 
                 <li>
-                    <a href="/post/2.html"
-                        class="">深度学习时代，分词算法的真实应用实例</a>
+                    <a href="/post/6.html"
+                        class="gkt-sidebar-active">Must-read Papers on Emotion-Cause Pair Extraction</a>
+                    
+                    <!-- Table of Contents -->
+<div id="sidebar-toc">
+  <!-- TOC  -->
+  
+  <ol class="toc-nav"><li class="toc-nav-item toc-nav-level-1"><a class="toc-nav-link" href="#Must-read-papers-on-ECPE"><span class="toc-nav-text">Must-read papers on ECPE</span></a></li><li class="toc-nav-item toc-nav-level-1"><a class="toc-nav-link" href="#Reviews"><span class="toc-nav-text">Reviews</span></a></li><li class="toc-nav-item toc-nav-level-1"><a class="toc-nav-link" href="#Task-amp-Dataset"><span class="toc-nav-text">Task &amp; Dataset</span></a></li><li class="toc-nav-item toc-nav-level-1"><a class="toc-nav-link" href="#Official-Definition"><span class="toc-nav-text">Official Definition</span></a><ol class="toc-nav-child"><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#Chinese-Definition-and-Introduction"><span class="toc-nav-text">Chinese Definition and Introduction</span></a></li></ol></li><li class="toc-nav-item toc-nav-level-1"><a class="toc-nav-link" href="#Papers"><span class="toc-nav-text">Papers</span></a></li><li class="toc-nav-item toc-nav-level-1"><a class="toc-nav-link" href="#Reference"><span class="toc-nav-text">Reference</span></a></li></ol>
+  
+</div>
+
+<script>
+  (function () {
+    var h2 = document.querySelectorAll('article h2');
+    var h3 = document.querySelectorAll('article h3');
+    var linkList = document.querySelectorAll('#sidebar-toc a');
+
+    function findLinkElement(name) {
+      for (var i = 0; i < linkList.length; i++) {
+        var items = linkList[i].href.split('#');
+        if (items && items[items.length - 1] === encodeURIComponent(name)) {
+          return i;
+        }
+      }
+      return -1;
+    }
+
+    function activeLink(titleList) {
+      var scrollTop = document.documentElement.scrollTop || document.body.scrollTop;
+      for (var i = titleList.length - 1; i >= 0; i--) {
+        if (scrollTop - titleList[i].offsetTop > 0) {
+          var index = findLinkElement(titleList[i].id);
+          index != -1 && linkList[index].classList.add('gkt-sidebar-active');
+          break;
+        }
+      }
+    }
+
+    window.addEventListener("scroll", function (e) {
+      [].slice.call(linkList).forEach(function (link) {
+        link.classList.remove('gkt-sidebar-active');
+      })
+      activeLink(h2);
+    })
+  })();
+</script>
                     
                 </li>
                 
                 <li>
-                    <a href="/post/3.html"
-                        class="">关于隐马尔可夫模型(HMM)，需要知道什么？</a>
+                    <a href="/post/5.html"
+                        class="">Transition-based Directed Graph Construction for Emotion-Cause Pair Extraction (中文介绍)</a>
                     
                 </li>
                 
@@ -831,6 +867,36 @@
         window.addEventListener('resize', resizeUArrow);
     })();
 </script>
+
+
+    
+    <script type="text/x-mathjax-config">
+      MathJax.Hub.Config({
+          tex2jax: {
+            inlineMath: [ ['$','$'], ["\\(","\\)"] ],
+            processEscapes: true
+          }
+        });
+      </script>
+
+    <script type="text/x-mathjax-config">
+      MathJax.Hub.Config({
+            tex2jax: {
+              skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code']
+            }
+          });
+      </script>
+
+    <script type="text/x-mathjax-config">
+      MathJax.Hub.Queue(function() {
+              var all = MathJax.Hub.getAllJax(), i;
+              for(i=0; i < all.length; i += 1) {
+                  all[i].SourceElement().parentNode.className += ' has-jax';
+              }
+          });
+      </script>
+
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.6/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
 
 
     
