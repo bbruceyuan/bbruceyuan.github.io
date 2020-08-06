@@ -14,17 +14,17 @@
   <!-- if page has tags, then add tags to keyword -->
   
   
-  <meta name="keywords" content="BBruceyuan,BBruceyuan的博客,动手学编程,打点酱油,分词,算法妙用,分词算法,分词算法应用">
+  <meta name="keywords" content="BBruceyuan,BBruceyuan的博客,动手学编程,打点酱油,算法妙用,Query召回的多样性">
   <!-- page.description has higher priority -->
-  <meta name="description" content="分词算法，最大匹配，分词应用实例。">
+  <meta name="description" content="使用简单方法增加Query召回的多样性">
   <link rel="shortcut icon" href="/img/icon.jpg">
   <title>
     
-    深度学习时代，分词算法的真实应用实例 | BBruceyuan
+    简单方法增加Query召回的多样性 | BBruceyuan
     
   </title>
 
-  <link rel="canonical" href="/post/2.html">
+  <link rel="canonical" href="/post/9.html">
   <link rel="stylesheet" href="/css/reset.css">
   <link rel="stylesheet" href="/css/layout.css">
   <link rel="stylesheet" href="/css/markdown.css">
@@ -156,14 +156,12 @@
 <div class="float-left post-container box-shadow">
     <div class="u-arrow-wrapper hidden-xs">
         
-        <a class="float-left" href="/post/1.html"><i class="u-arrow-left"></i></a>
+        <a class="float-left" href="/post/8.html"><i class="u-arrow-left"></i></a>
         
-        
-        <a class="float-right" href="/post/3.html"><i class="u-arrow-right"></i></a>
         
     </div>
     <article class="col-xs-12">
-        <h1> 深度学习时代，分词算法的真实应用实例 </h1>
+        <h1> 简单方法增加Query召回的多样性 </h1>
 
         
 
@@ -187,28 +185,13 @@
         
         
         
-        <h1 id="背景"><a href="#背景" class="headerlink" title="背景"></a>背景</h1><p>20年3月6号本人写了一篇文章，”<a href="1.html">2020年了，分词算法真的没用了吗？</a>“，起了这么一个标题是因为我个人看到很多的学术界的模型都不在进行底层的分词，且有很多新入门的同学真的就认为分词一点必要都没有了。昨天虽然举了一个例子，但是确实是我的想象，因为我也没有在百度阿里实习，所以不知道他们真正是怎么做的。</p>
-<p>因此在上一篇文章中，主要是介绍最简单的分词模型，也就是最大匹配算法，那么在深度学习时代，这样的简单算法还能用的上吗？答案是显然能用的上的，因为在去年<a href="https://www.datafountain.cn/competitions/361/ranking?isRedance=0&sch=1433&stage=B" target="_blank" rel="noopener">2019年CCF-BDCI新实体发现赛道</a>，我们就用上了昨天提到的最大匹配算法，并且我们团队获得了第一名的好成绩，在这里首先感谢一下带我飞的队友，鞠躬！</p>
-<p>那么接下来，我讲从为什么，我们要用这个算法开始讲起？</p>
-<h1 id="深度学习不能只会调参"><a href="#深度学习不能只会调参" class="headerlink" title="深度学习不能只会调参"></a>深度学习不能只会调参</h1><p>本人作为一名初级调参仔，在实验室的搬砖流程一般是：在老师布置了任务之后，将Github中的开源代码跑一跑，调一调参数，然后结果还行就任务结束了。但是这样的算法工程师真的有竞争力吗？</p>
-<p>那么要怎么做才算是竞争力呢？我也不知道，但是我知道至少要有以下两个能力？</p>
-<ul>
-<li>代码能力要过关。只有代码能力过关才能快速实现自己的想法，才有验证的机会。</li>
-<li>要根据问题对数据有足够的分析。对数据的理解能决定模型效果的上限。再次以上面的BDCI比赛为例，我们能够超过第二名两个点的原因就是在于，我们通过对数据的分析，设计更合理的模型。</li>
-<li>分析错误的能力？</li>
-</ul>
-<p>第三点我认为是很多人忽视的一点。因为初入门的人好像认为只要模型足够复杂，足够新，足够大，那么就能解决问题，但是在真实场景下，你写的模型很有可能不work，那么这个时候你要怎么办？这个问题大家先停下来思考几分钟。</p>
-<h1 id="错例分析"><a href="#错例分析" class="headerlink" title="错例分析"></a>错例分析</h1><p>针对上面提出的问题，错例分析是一个非常有用的手段。那么我们先回到上面这个比赛的问题，简化之后就变成了一个实体识别(NER)任务。这是一个非常基础的问题，和分词很像。这个比赛大部分人用的模型都差不多(这里不具体介绍NER有那些模型)，结果差距也不是很大，想要拉开与其他队伍的差距，就要对数据进行深入的分析。其中，错误分析非常重要。</p>
-<blockquote>
-<p>任务：识别模型中出现的金融实体<br>输入：<strong>xxxxxx, 京东方科技集团昨日发表简，xxxxx</strong><br>输出：<strong>京东方科技集团</strong></p>
-</blockquote>
-<p>怎么能发现模型有没有错，通过观察直接分错的例子很有效，但是<strong>混淆矩阵</strong>能从统计的角度错误主要集中发生在什么地方，比如实体识别，可能通过标签(BIO/BMES)混淆矩阵确定错误发生在什么地方，在比赛中我们发现模型预测错误主要发生在边界，然后通过分析具体的错误实例，我们发现模型很容易出现的问题是，多预测一两个字或者少预测一两个字。</p>
-<h1 id="使用分词算法纠正模型错误"><a href="#使用分词算法纠正模型错误" class="headerlink" title="使用分词算法纠正模型错误"></a>使用分词算法纠正模型错误</h1><p>针对上一个句子，假设模型预测出的实体是 “<strong>东方科技集团</strong>”，因此预测出来的结果是要了一个字的，实际上应该是 京东方科技集团，那么我们要怎么做才能补全这个实体。</p>
-<p>这个问题是不是就变成了“后向最大匹配问题”，东方和京东方都是词表里面的词，因为很容易就通过前向匹配算法进行补齐。同理，假设模型预测出的实体是 “<strong>京东方科技集</strong>”，因此预测出来的结果少了一个字，因此可以通过前向最大匹配进行补全。 </p>
-<p>但当然你肯定会说，这东西不会过长或者过短吗？有可能会。那么我们是怎么处理这种情况的呢？设置两个字典，一个字典是常见的字典，另外一个是根据训练集样本统计的高频前后缀词。这样就可以在分词的同时判断置信度。如果前向或者后向匹配到了高频前后缀词，则把词补全，就可以得到补全后的实体。</p>
-<p>同理，如果模型预测的比实际实体字数要多，同样也可以根据分词结果把多了字的去掉。</p>
-<p>具体实现就可以参考上一篇文章。说说最终效果，通过词的前后缀最大匹配，在当初比赛的提交分数上，F1值能够提升0.5个百分点。提升的效果数值上不算大，但是这样已经能帮助我们稳住榜上第一的成绩。</p>
-<h1 id="后记"><a href="#后记" class="headerlink" title="后记"></a>后记</h1><p>读者：这篇文章真的是在写分词算法的应用实例吗？<br>我：用到了分词算法就算。不接受反驳！（误</p>
+        <h1 id="1-真正的Qeury召回的多样性"><a href="#1-真正的Qeury召回的多样性" class="headerlink" title="1. 真正的Qeury召回的多样性"></a>1. 真正的Qeury召回的多样性</h1><p>对于用的输入的Qeury，对于不同用户输入的同一个Qeury，理论上每一个人感兴趣的点可能是不一样的，所以说可以返回一些多样性的答案来达到满足更多用户需求的目的。</p>
+<h1 id="2-我们所面临的召回多样性问题？"><a href="#2-我们所面临的召回多样性问题？" class="headerlink" title="2. 我们所面临的召回多样性问题？"></a>2. 我们所面临的召回多样性问题？</h1><p>我们现在面临的是一个游戏领域的QA问题，采用的方案是比较传统的检索加召回两段式模型。TODO</p>
+<h1 id="3-分析Query发现的问题？"><a href="#3-分析Query发现的问题？" class="headerlink" title="3. 分析Query发现的问题？"></a>3. 分析Query发现的问题？</h1><p>在分析业务数据的时候，发现有两种比较典型的问题：</p>
+<p>第一种是召回模型检索的出来的Query都是比较相似的，因为QA库里面的Qeury比较丰富，所以我们的模型能发现很多比较相似的Query，假设用户输入的Query是”Hello world”，那么检索出来的模型可能是 1. hello world 2. hello world! 3. hrllo world! 4. hallo world! 5. hello word。那么对于这一个召回模型来说，其实是不合理的，并不需要这么一样的Clauster Question Query, 只要有一两个就OK了。</p>
+<p>第二种是召回模型检索出来的Query都是属于一个簇的，但是这些Query在语言形态上并不是一致，比如用户的input query是“hi”, 那么检索出来的Query可能是 1. hello 2. hi 3. 你好 4. Bonjour 5. こんにちは。那么对于这种不同语言，但是在语义空间上比较相似的Query，其实只要选择一两个，用于后续的精排就可以了。</p>
+<h1 id="4-足够简单的方法"><a href="#4-足够简单的方法" class="headerlink" title="4. 足够简单的方法"></a>4. 足够简单的方法</h1><h2 id="4-1-Question-id多样化"><a href="#4-1-Question-id多样化" class="headerlink" title="4.1 Question id多样化"></a>4.1 Question id多样化</h2><p>据统计，有超过10%的数据，top 16的query的question id都是一样的。那么我们可以加入如果有10个query的Question id都一样了，那么可以一次召回后续的其它Question id的Query。</p>
+<h2 id="4-2-使用最小编辑距离选择Query"><a href="#4-2-使用最小编辑距离选择Query" class="headerlink" title="4.2 使用最小编辑距离选择Query"></a>4.2 使用最小编辑距离选择Query</h2><p>对于第一种情况，可以使用最小编辑距离选择合适的Query。</p>
 
         <script src="/js/qrious.min.js"></script>
 
@@ -239,13 +222,13 @@
             </p>
             
             <p>
-                <span>本文发表于 2020-03-07，最后修改于 2020-08-06。</span>
+                <span>本文发表于 2020-08-03，最后修改于 2020-08-06。</span>
             </p>
             <!-- 文章末尾的提示 start -->
             
             <p>
                 本站永久域名<strong>「 <a
-                        href="/post/2.html">bbruceyuan.github.io</a>
+                        href="/post/9.html">bbruceyuan.github.io</a>
                     」</strong>，也可搜索<strong>「 BBruceyuan 」</strong>找到我。
             </p>
             
@@ -264,10 +247,8 @@
         <hr />
         <p name="pagination" style="font-size: 1.2em">
     
-    <a class="float-left" href="/post/1.html">上一篇 « 2020年了，还有必要学习分词算法吗？</a>
+    <a class="float-left" href="/post/8.html">上一篇 « 01之间均匀分区取两点构成三角形的概率-证明加代码实现</a>
     
-    
-    <a class="float-right" href="/post/3.html">下一篇 » 关于隐马尔可夫模型(HMM)，需要知道什么？</a>
     
 </p>
     </article>
@@ -414,7 +395,7 @@
         <h3>推荐阅读</h3>
         
         <div class="post-preview">
-    <div class="post-img" style="background-image: url('/blog_imgs/8/8_1.jpg')"></div>
+    <div class="post-img" style="background-image: url('/blog_imgs/5/5_2.png')"></div>
     <div class="post-info">
         <div class="post-info-center">
             <div class="hidden-xs">
@@ -422,49 +403,20 @@
                 
                 <span>/</span>
                 
-                <a class="text-gray" href="/tags/#算法妙用"
-                    title="算法妙用">算法妙用</a>
+                <a class="text-gray" href="/tags/#ECPE"
+                    title="ECPE">ECPE</a>
                 <span>/</span>
                 
                 
             </div>
-            <a href="/post/9.html" class="title">
-                简单方法增加Query召回的多样性
-            </a>
-            <p class="text-gray">
-                <small>
-                    <span>发表于2020-08-03，</span>
-                    <span class="hidden-xs">全文1055字，</span>
-                    <span>阅读约4分钟</span>
-                </small>
-            </p>
-        </div>
-    </div>
-</div>
-        
-        <div class="post-preview">
-    <div class="post-img" style="background-image: url('/blog_imgs/4/emnlp.png')"></div>
-    <div class="post-info">
-        <div class="post-info-center">
-            <div class="hidden-xs">
-                
-                
-                <span>/</span>
-                
-                <a class="text-gray" href="/tags/#杂谈"
-                    title="杂谈">杂谈</a>
-                <span>/</span>
-                
-                
-            </div>
-            <a href="/post/4.html" class="title">
-                记EMNLP2020投稿
+            <a href="/post/7.html" class="title">
+                Must-read Papers on Emotion-Cause Pair Extraction
             </a>
             <p class="text-gray">
                 <small>
                     <span>发表于2020-06-12，</span>
-                    <span class="hidden-xs">全文4892字，</span>
-                    <span>阅读约17分钟</span>
+                    <span class="hidden-xs">全文3146字，</span>
+                    <span>阅读约11分钟</span>
                 </small>
             </p>
         </div>
@@ -472,7 +424,36 @@
 </div>
         
         <div class="post-preview">
-    <div class="post-img" style="background-image: url('/blog_imgs/1/1_1_head.png')"></div>
+    <div class="post-img" style="background-image: url('/blog_imgs/5/5_2.png')"></div>
+    <div class="post-info">
+        <div class="post-info-center">
+            <div class="hidden-xs">
+                
+                
+                <span>/</span>
+                
+                <a class="text-gray" href="/tags/#ECPE"
+                    title="ECPE">ECPE</a>
+                <span>/</span>
+                
+                
+            </div>
+            <a href="/post/6.html" class="title">
+                情感-原因对抽取综述 (Emotion-Cause Pair Extraction: A Survey)
+            </a>
+            <p class="text-gray">
+                <small>
+                    <span>发表于2020-06-12，</span>
+                    <span class="hidden-xs">全文441字，</span>
+                    <span>阅读约2分钟</span>
+                </small>
+            </p>
+        </div>
+    </div>
+</div>
+        
+        <div class="post-preview">
+    <div class="post-img" style="background-image: url('/blog_imgs/3/3_1.jpg')"></div>
     <div class="post-info">
         <div class="post-info-center">
             <div class="hidden-xs">
@@ -484,20 +465,28 @@
                     title="分词">分词</a>
                 <span>/</span>
                 
-                <a class="text-gray" href="/tags/#算法妙用"
-                    title="算法妙用">算法妙用</a>
+                <a class="text-gray" href="/tags/#序列标注"
+                    title="序列标注">序列标注</a>
+                <span>/</span>
+                
+                <a class="text-gray" href="/tags/#入门算法"
+                    title="入门算法">入门算法</a>
+                <span>/</span>
+                
+                <a class="text-gray" href="/tags/#实体识别"
+                    title="实体识别">实体识别</a>
                 <span>/</span>
                 
                 
             </div>
-            <a href="/post/2.html" class="title">
-                深度学习时代，分词算法的真实应用实例
+            <a href="/post/3.html" class="title">
+                关于隐马尔可夫模型(HMM)，需要知道什么？
             </a>
             <p class="text-gray">
                 <small>
-                    <span>发表于2020-03-07，</span>
-                    <span class="hidden-xs">全文1972字，</span>
-                    <span>阅读约7分钟</span>
+                    <span>发表于2020-03-12，</span>
+                    <span class="hidden-xs">全文4046字，</span>
+                    <span>阅读约14分钟</span>
                 </small>
             </p>
         </div>
@@ -719,13 +708,19 @@
                 
                 <li>
                     <a href="/post/2.html"
-                        class="gkt-sidebar-active">深度学习时代，分词算法的真实应用实例</a>
+                        class="">深度学习时代，分词算法的真实应用实例</a>
+                    
+                </li>
+                
+                <li>
+                    <a href="/post/9.html"
+                        class="gkt-sidebar-active">简单方法增加Query召回的多样性</a>
                     
                     <!-- Table of Contents -->
 <div id="sidebar-toc">
   <!-- TOC  -->
   
-  <ol class="toc-nav"><li class="toc-nav-item toc-nav-level-1"><a class="toc-nav-link" href="#背景"><span class="toc-nav-text">背景</span></a></li><li class="toc-nav-item toc-nav-level-1"><a class="toc-nav-link" href="#深度学习不能只会调参"><span class="toc-nav-text">深度学习不能只会调参</span></a></li><li class="toc-nav-item toc-nav-level-1"><a class="toc-nav-link" href="#错例分析"><span class="toc-nav-text">错例分析</span></a></li><li class="toc-nav-item toc-nav-level-1"><a class="toc-nav-link" href="#使用分词算法纠正模型错误"><span class="toc-nav-text">使用分词算法纠正模型错误</span></a></li><li class="toc-nav-item toc-nav-level-1"><a class="toc-nav-link" href="#后记"><span class="toc-nav-text">后记</span></a></li></ol>
+  <ol class="toc-nav"><li class="toc-nav-item toc-nav-level-1"><a class="toc-nav-link" href="#1-真正的Qeury召回的多样性"><span class="toc-nav-text">1. 真正的Qeury召回的多样性</span></a></li><li class="toc-nav-item toc-nav-level-1"><a class="toc-nav-link" href="#2-我们所面临的召回多样性问题？"><span class="toc-nav-text">2. 我们所面临的召回多样性问题？</span></a></li><li class="toc-nav-item toc-nav-level-1"><a class="toc-nav-link" href="#3-分析Query发现的问题？"><span class="toc-nav-text">3. 分析Query发现的问题？</span></a></li><li class="toc-nav-item toc-nav-level-1"><a class="toc-nav-link" href="#4-足够简单的方法"><span class="toc-nav-text">4. 足够简单的方法</span></a><ol class="toc-nav-child"><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#4-1-Question-id多样化"><span class="toc-nav-text">4.1 Question id多样化</span></a></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#4-2-使用最小编辑距离选择Query"><span class="toc-nav-text">4.2 使用最小编辑距离选择Query</span></a></li></ol></li></ol>
   
 </div>
 
@@ -764,12 +759,6 @@
     })
   })();
 </script>
-                    
-                </li>
-                
-                <li>
-                    <a href="/post/9.html"
-                        class="">简单方法增加Query召回的多样性</a>
                     
                 </li>
                 
@@ -829,6 +818,36 @@
         window.addEventListener('resize', resizeUArrow);
     })();
 </script>
+
+
+    
+    <script type="text/x-mathjax-config">
+      MathJax.Hub.Config({
+          tex2jax: {
+            inlineMath: [ ['$','$'], ["\\(","\\)"] ],
+            processEscapes: true
+          }
+        });
+      </script>
+
+    <script type="text/x-mathjax-config">
+      MathJax.Hub.Config({
+            tex2jax: {
+              skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code']
+            }
+          });
+      </script>
+
+    <script type="text/x-mathjax-config">
+      MathJax.Hub.Queue(function() {
+              var all = MathJax.Hub.getAllJax(), i;
+              for(i=0; i < all.length; i += 1) {
+                  all[i].SourceElement().parentNode.className += ' has-jax';
+              }
+          });
+      </script>
+
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.6/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
 
 
     
