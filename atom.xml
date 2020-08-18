@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://bbruceyuan.github.io/"/>
-  <updated>2020-08-06T14:59:38.221Z</updated>
+  <updated>2020-08-18T13:07:46.649Z</updated>
   <id>https://bbruceyuan.github.io/</id>
   
   <author>
@@ -17,11 +17,33 @@
   <generator uri="http://hexo.io/">Hexo</generator>
   
   <entry>
+    <title>Python实现蓄水池算法</title>
+    <link href="https://bbruceyuan.github.io/post/10.html"/>
+    <id>https://bbruceyuan.github.io/post/10.html</id>
+    <published>2020-08-15T04:00:00.000Z</published>
+    <updated>2020-08-18T13:07:46.649Z</updated>
+    
+    <content type="html"><![CDATA[<h1 id="蓄水池算法"><a href="#蓄水池算法" class="headerlink" title="蓄水池算法"></a>蓄水池算法</h1><p>蓄水池算法采样算法难的点不在于怎么实现蓄水池算法，难的点在于证明每一个点都能被同等的概率抽取。</p><p>蓄水池算法证明最好的两个教程是：</p><ol><li><a href="https://www.cnblogs.com/snowInPluto/p/5996269.html" target="_blank" rel="noopener">https://www.cnblogs.com/snowInPluto/p/5996269.html</a></li><li><a href="https://www.jianshu.com/p/7a9ea6ece2af" target="_blank" rel="noopener">https://www.jianshu.com/p/7a9ea6ece2af</a></li></ol><p>其他的感觉说的不是很清楚。</p><p>蓄水池算法的主要逻辑：<br><img src="/blog_imgs/10/10_1.png" alt="image.png"></p><p>蓄水池算法的Pthon实现：</p><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> random</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">reservior_sampling</span><span class="params">(n, k)</span>:</span></span><br><span class="line">    <span class="string">"""</span></span><br><span class="line"><span class="string">    表示有 n 个数，随机采样 k 个</span></span><br><span class="line"><span class="string">    """</span></span><br><span class="line">    nums = [i <span class="keyword">for</span> i <span class="keyword">in</span> range(<span class="number">1</span>, n + <span class="number">1</span>)]</span><br><span class="line"></span><br><span class="line">    res = []</span><br><span class="line">    <span class="keyword">for</span> i <span class="keyword">in</span> range(k):</span><br><span class="line">        <span class="comment"># 前K个数字可以直接填充</span></span><br><span class="line">        res.append(nums[i])</span><br><span class="line">    </span><br><span class="line">    <span class="keyword">for</span> i <span class="keyword">in</span> range(k, len(nums)):</span><br><span class="line">        <span class="comment"># 假设 i == k (也是说这是 第 k + 1个元素), 那么 该数字有  k / (k + 1) 的概率被选中去去换</span></span><br><span class="line">        replace_idx = random.randint(<span class="number">0</span>, i)</span><br><span class="line">        <span class="keyword">if</span> replace_idx &lt; k:</span><br><span class="line">            res[replace_idx] = nums[i]</span><br><span class="line">    <span class="keyword">return</span> res</span><br><span class="line"></span><br><span class="line">pool = reservior_sampling(<span class="number">100</span>, <span class="number">10</span>)</span><br><span class="line">print(pool)</span><br><span class="line"><span class="comment"># [78, 52, 41, 84, 66, 43, 25, 71, 45, 24]</span></span><br></pre></td></tr></table></figure>]]></content>
+    
+    <summary type="html">
+    
+      用Python实现蓄水池算法
+    
+    </summary>
+    
+      <category term="面试锦囊" scheme="https://bbruceyuan.github.io/categories/%E9%9D%A2%E8%AF%95%E9%94%A6%E5%9B%8A/"/>
+    
+    
+      <category term="面试锦囊" scheme="https://bbruceyuan.github.io/tags/%E9%9D%A2%E8%AF%95%E9%94%A6%E5%9B%8A/"/>
+    
+  </entry>
+  
+  <entry>
     <title>简单方法增加Query召回的多样性</title>
     <link href="https://bbruceyuan.github.io/post/9.html"/>
     <id>https://bbruceyuan.github.io/post/9.html</id>
     <published>2020-08-03T04:00:00.000Z</published>
-    <updated>2020-08-06T14:59:38.221Z</updated>
+    <updated>2020-08-07T14:06:03.934Z</updated>
     
     <content type="html"><![CDATA[<h1 id="1-真正的Qeury召回的多样性"><a href="#1-真正的Qeury召回的多样性" class="headerlink" title="1. 真正的Qeury召回的多样性"></a>1. 真正的Qeury召回的多样性</h1><p>对于用的输入的Qeury，对于不同用户输入的同一个Qeury，理论上每一个人感兴趣的点可能是不一样的，所以说可以返回一些多样性的答案来达到满足更多用户需求的目的。</p><h1 id="2-我们所面临的召回多样性问题？"><a href="#2-我们所面临的召回多样性问题？" class="headerlink" title="2. 我们所面临的召回多样性问题？"></a>2. 我们所面临的召回多样性问题？</h1><p>我们现在面临的是一个游戏领域的QA问题，采用的方案是比较传统的检索加召回两段式模型。TODO</p><h1 id="3-分析Query发现的问题？"><a href="#3-分析Query发现的问题？" class="headerlink" title="3. 分析Query发现的问题？"></a>3. 分析Query发现的问题？</h1><p>在分析业务数据的时候，发现有两种比较典型的问题：</p><p>第一种是召回模型检索的出来的Query都是比较相似的，因为QA库里面的Qeury比较丰富，所以我们的模型能发现很多比较相似的Query，假设用户输入的Query是”Hello world”，那么检索出来的模型可能是 1. hello world 2. hello world! 3. hrllo world! 4. hallo world! 5. hello word。那么对于这一个召回模型来说，其实是不合理的，并不需要这么一样的Clauster Question Query, 只要有一两个就OK了。</p><p>第二种是召回模型检索出来的Query都是属于一个簇的，但是这些Query在语言形态上并不是一致，比如用户的input query是“hi”, 那么检索出来的Query可能是 1. hello 2. hi 3. 你好 4. Bonjour 5. こんにちは。那么对于这种不同语言，但是在语义空间上比较相似的Query，其实只要选择一两个，用于后续的精排就可以了。</p><h1 id="4-足够简单的方法"><a href="#4-足够简单的方法" class="headerlink" title="4. 足够简单的方法"></a>4. 足够简单的方法</h1><h2 id="4-1-Question-id多样化"><a href="#4-1-Question-id多样化" class="headerlink" title="4.1 Question id多样化"></a>4.1 Question id多样化</h2><p>据统计，有超过10%的数据，top 16的query的question id都是一样的。那么我们可以加入如果有10个query的Question id都一样了，那么可以一次召回后续的其它Question id的Query。</p><h2 id="4-2-使用最小编辑距离选择Query"><a href="#4-2-使用最小编辑距离选择Query" class="headerlink" title="4.2 使用最小编辑距离选择Query"></a>4.2 使用最小编辑距离选择Query</h2><p>对于第一种情况，可以使用最小编辑距离选择合适的Query。</p>]]></content>
     
@@ -56,9 +78,9 @@
       <category term="面试锦囊" scheme="https://bbruceyuan.github.io/categories/%E9%9D%A2%E8%AF%95%E9%94%A6%E5%9B%8A/"/>
     
     
-      <category term="数学题" scheme="https://bbruceyuan.github.io/tags/%E6%95%B0%E5%AD%A6%E9%A2%98/"/>
-    
       <category term="面试锦囊" scheme="https://bbruceyuan.github.io/tags/%E9%9D%A2%E8%AF%95%E9%94%A6%E5%9B%8A/"/>
+    
+      <category term="数学题" scheme="https://bbruceyuan.github.io/tags/%E6%95%B0%E5%AD%A6%E9%A2%98/"/>
     
   </entry>
   

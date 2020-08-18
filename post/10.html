@@ -14,17 +14,17 @@
   <!-- if page has tags, then add tags to keyword -->
   
   
-  <meta name="keywords" content="BBruceyuan,BBruceyuan的博客,动手学编程,打点酱油,面试锦囊,数学题,面试锦囊">
+  <meta name="keywords" content="BBruceyuan,BBruceyuan的博客,动手学编程,打点酱油,面试锦囊,蓄水池算法">
   <!-- page.description has higher priority -->
-  <meta name="description" content="木棒折两次构成三角形的概率-证明加代码实现">
+  <meta name="description" content="用Python实现蓄水池算法">
   <link rel="shortcut icon" href="/img/icon.jpg">
   <title>
     
-    01之间均匀分区取两点构成三角形的概率-证明加代码实现 | BBruceyuan
+    Python实现蓄水池算法 | BBruceyuan
     
   </title>
 
-  <link rel="canonical" href="/post/8.html">
+  <link rel="canonical" href="/post/10.html">
   <link rel="stylesheet" href="/css/reset.css">
   <link rel="stylesheet" href="/css/layout.css">
   <link rel="stylesheet" href="/css/markdown.css">
@@ -156,14 +156,12 @@
 <div class="float-left post-container box-shadow">
     <div class="u-arrow-wrapper hidden-xs">
         
-        <a class="float-left" href="/post/5.html"><i class="u-arrow-left"></i></a>
+        <a class="float-left" href="/post/9.html"><i class="u-arrow-left"></i></a>
         
-        
-        <a class="float-right" href="/post/9.html"><i class="u-arrow-right"></i></a>
         
     </div>
     <article class="col-xs-12">
-        <h1> 01之间均匀分区取两点构成三角形的概率-证明加代码实现 </h1>
+        <h1> Python实现蓄水池算法 </h1>
 
         
 
@@ -187,24 +185,17 @@
         
         
         
-        <h1 id="1-背景"><a href="#1-背景" class="headerlink" title="1. 背景"></a>1. 背景</h1><p>这是一道我面试字节Data某搜索部门NLP算法工程师岗位出的一道题，可能是由于前面回答问题不是尽如人意，所以一看到这题的时候有点紧张，大概嗯嗯啊啊半分钟，直接心里面觉得自己不会做，便对面试官说想换一个题。等我面试完和同学交流的时候，念完题目就差不多想到了该怎么做，就是个高中的简单整数线性规划问题。</p>
-<h1 id="2-题目描述"><a href="#2-题目描述" class="headerlink" title="2. 题目描述"></a>2. 题目描述</h1><p>假设有一个区间 [0, 1]，通过均匀分布取两个点，把区间分成三段，那么这三段构成三角形的概率是多少？</p>
-<h1 id="3-代码解法"><a href="#3-代码解法" class="headerlink" title="3. 代码解法"></a>3. 代码解法</h1><p>既然这是一道编程题，那么其实这个解法就太简单了，根本什么也不用想，直接用代码实现就行了。</p>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> numpy <span class="keyword">as</span> np</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">can_construct_triangle</span><span class="params">(a, b)</span>:</span></span><br><span class="line">    <span class="comment"># 使用 任意两边之和大于第三边的性质</span></span><br><span class="line">    a, b = min(a, b), max(a, b)</span><br><span class="line"></span><br><span class="line">    x = a</span><br><span class="line">    y = b - a</span><br><span class="line">    z = <span class="number">1</span> - b</span><br><span class="line"></span><br><span class="line">    <span class="keyword">if</span> x + y &gt; z <span class="keyword">and</span> x + z &gt; y <span class="keyword">and</span> y + z &gt; x:</span><br><span class="line">        <span class="keyword">return</span> <span class="literal">True</span></span><br><span class="line">    <span class="keyword">else</span>:</span><br><span class="line">        <span class="keyword">return</span> <span class="literal">False</span></span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">main</span><span class="params">()</span>:</span></span><br><span class="line">    total_cnt = <span class="number">0</span></span><br><span class="line">    cnt_be_triangle = <span class="number">0</span></span><br><span class="line">    <span class="keyword">for</span> _ <span class="keyword">in</span> range(<span class="number">1000000</span>):</span><br><span class="line">        <span class="comment"># 大量随机试验</span></span><br><span class="line">        a = np.random.uniform(<span class="number">0</span>, <span class="number">1</span>)</span><br><span class="line">        b = np.random.uniform(<span class="number">0</span>, <span class="number">1</span>)</span><br><span class="line">        <span class="keyword">if</span> can_construct_triangle(a, b):</span><br><span class="line">            cnt_be_triangle += <span class="number">1</span></span><br><span class="line">        total_cnt += <span class="number">1</span></span><br><span class="line">    </span><br><span class="line">    print(cnt_be_triangle / total_cnt)</span><br><span class="line">	<span class="comment"># answer is approximate 1/4</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">if</span> __name__ == <span class="string">"__main__"</span>:</span><br><span class="line">    main()</span><br></pre></td></tr></table></figure>
+        <h1 id="蓄水池算法"><a href="#蓄水池算法" class="headerlink" title="蓄水池算法"></a>蓄水池算法</h1><p>蓄水池算法采样算法难的点不在于怎么实现蓄水池算法，难的点在于证明每一个点都能被同等的概率抽取。</p>
+<p>蓄水池算法证明最好的两个教程是：</p>
+<ol>
+<li><a href="https://www.cnblogs.com/snowInPluto/p/5996269.html" target="_blank" rel="noopener">https://www.cnblogs.com/snowInPluto/p/5996269.html</a></li>
+<li><a href="https://www.jianshu.com/p/7a9ea6ece2af" target="_blank" rel="noopener">https://www.jianshu.com/p/7a9ea6ece2af</a></li>
+</ol>
+<p>其他的感觉说的不是很清楚。</p>
+<p>蓄水池算法的主要逻辑：<br><img src="/blog_imgs/10/10_1.png" alt="image.png"></p>
+<p>蓄水池算法的Pthon实现：</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> random</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">reservior_sampling</span><span class="params">(n, k)</span>:</span></span><br><span class="line">    <span class="string">"""</span></span><br><span class="line"><span class="string">    表示有 n 个数，随机采样 k 个</span></span><br><span class="line"><span class="string">    """</span></span><br><span class="line">    nums = [i <span class="keyword">for</span> i <span class="keyword">in</span> range(<span class="number">1</span>, n + <span class="number">1</span>)]</span><br><span class="line"></span><br><span class="line">    res = []</span><br><span class="line">    <span class="keyword">for</span> i <span class="keyword">in</span> range(k):</span><br><span class="line">        <span class="comment"># 前K个数字可以直接填充</span></span><br><span class="line">        res.append(nums[i])</span><br><span class="line">    </span><br><span class="line">    <span class="keyword">for</span> i <span class="keyword">in</span> range(k, len(nums)):</span><br><span class="line">        <span class="comment"># 假设 i == k (也是说这是 第 k + 1个元素), 那么 该数字有  k / (k + 1) 的概率被选中去去换</span></span><br><span class="line">        replace_idx = random.randint(<span class="number">0</span>, i)</span><br><span class="line">        <span class="keyword">if</span> replace_idx &lt; k:</span><br><span class="line">            res[replace_idx] = nums[i]</span><br><span class="line">    <span class="keyword">return</span> res</span><br><span class="line"></span><br><span class="line">pool = reservior_sampling(<span class="number">100</span>, <span class="number">10</span>)</span><br><span class="line">print(pool)</span><br><span class="line"><span class="comment"># [78, 52, 41, 84, 66, 43, 25, 71, 45, 24]</span></span><br></pre></td></tr></table></figure>
 
-<p>用程序跑一下，答案大概是 0.24968，把循环放大一点，就能得到更接近1/4的答案，所以这题的答案应该是1/4。以后遇到不会的数学题，直接用过大量试验求近似解是一个很好的想法。（比如计算机实现牛顿迭代其实就是这么一个思想）</p>
-<h1 id="4-数学解法"><a href="#4-数学解法" class="headerlink" title="4. 数学解法"></a>4. 数学解法</h1><h2 id="4-1-抽丝剥茧看条件"><a href="#4-1-抽丝剥茧看条件" class="headerlink" title="4.1 抽丝剥茧看条件"></a>4.1 抽丝剥茧看条件</h2><p>均匀分布取两个点，那么说明两个点是独立同分布，两个点有可能出现在任意位置，任意两个不重合的点可以构成三条边，那么如果要构成三角形，就需要满足构成三角形的条件。</p>
-<blockquote>
-<p>任意两边之和大于第三边 或者是 任意两边之差小于第三边，且每条边大于0。</p>
-</blockquote>
-<p>因此该问题可以转化为不等式求解问题。</p>
-<h2 id="4-2-转化为数学表达式"><a href="#4-2-转化为数学表达式" class="headerlink" title="4.2 转化为数学表达式"></a>4.2 转化为数学表达式</h2><p>假设随机抽样的两点把 [0, 1] 分成三段，分别是 x, y, 1 - x - y。<br>因此可以构成一个公式<br>$$x &gt; 0;\  y &gt; 0;\  1 - x -y &gt; 0\tag{1}$$</p>
-<p>然后要满足构成三角形的条件，两边之和大于第三边，所以就相当于在上述可行域中找到问题的解空间，这不就是高中非常熟悉的整数线性规划问题吗？只是套了一个均匀分布取两个点的背景。那么看一下三角形两边之和大于第三边的公式是什么？</p>
-<p>$$x + y &gt; 1 - x - y;\  x + 1 - x - y &gt; y;\  y + 1 - x - y &gt; x\tag{2}$$  </p>
-<p>公式（2）可以进行化简，可以推导出公式（3）</p>
-<p>$$x &lt; 1/2;\  y &lt; 1/2;\  x + y &gt; 1/2\tag{3}$$</p>
-<p>结合公式（1）（3），那么该问题显然是一个简单的数学问题，只要画出图，问题就可以轻易的求解。我的解法配图如下<br><img src="/blog_imgs/8/8_1.jpg" alt="image.png"></p>
-<h1 id="5-Reference"><a href="#5-Reference" class="headerlink" title="5. Reference"></a>5. Reference</h1><p>[1] <a href="https://www.cnblogs.com/xudong-bupt/p/4032639.html" target="_blank" rel="noopener">https://www.cnblogs.com/xudong-bupt/p/4032639.html</a><br>[2] <a href="https://blog.csdn.net/nickkissbaby_/article/details/95621403" target="_blank" rel="noopener">https://blog.csdn.net/nickkissbaby_/article/details/95621403</a></p>
 
         <script src="/js/qrious.min.js"></script>
 
@@ -235,13 +226,13 @@
             </p>
             
             <p>
-                <span>本文发表于 2020-08-02，最后修改于 2020-08-06。</span>
+                <span>本文发表于 2020-08-15，最后修改于 2020-08-18。</span>
             </p>
             <!-- 文章末尾的提示 start -->
             
             <p>
                 本站永久域名<strong>「 <a
-                        href="/post/8.html">bbruceyuan.github.io</a>
+                        href="/post/10.html">bbruceyuan.github.io</a>
                     」</strong>，也可搜索<strong>「 BBruceyuan 」</strong>找到我。
             </p>
             
@@ -260,10 +251,8 @@
         <hr />
         <p name="pagination" style="font-size: 1.2em">
     
-    <a class="float-left" href="/post/5.html">上一篇 « Transition-based Directed Graph Construction for Emotion-Cause Pair Extraction (中文介绍)</a>
+    <a class="float-left" href="/post/9.html">上一篇 « 简单方法增加Query召回的多样性</a>
     
-    
-    <a class="float-right" href="/post/9.html">下一篇 » 简单方法增加Query召回的多样性</a>
     
 </p>
     </article>
@@ -410,6 +399,39 @@
         <h3>推荐阅读</h3>
         
         <div class="post-preview">
+    <div class="post-img" style="background-image: url('/blog_imgs/8/8_1.jpg')"></div>
+    <div class="post-info">
+        <div class="post-info-center">
+            <div class="hidden-xs">
+                
+                
+                <span>/</span>
+                
+                <a class="text-gray" href="/tags/#面试锦囊"
+                    title="面试锦囊">面试锦囊</a>
+                <span>/</span>
+                
+                <a class="text-gray" href="/tags/#数学题"
+                    title="数学题">数学题</a>
+                <span>/</span>
+                
+                
+            </div>
+            <a href="/post/8.html" class="title">
+                01之间均匀分区取两点构成三角形的概率-证明加代码实现
+            </a>
+            <p class="text-gray">
+                <small>
+                    <span>发表于2020-08-02，</span>
+                    <span class="hidden-xs">全文2133字，</span>
+                    <span>阅读约8分钟</span>
+                </small>
+            </p>
+        </div>
+    </div>
+</div>
+        
+        <div class="post-preview">
     <div class="post-img" style="background-image: url('/blog_imgs/5/5_2.png')"></div>
     <div class="post-info">
         <div class="post-info-center">
@@ -473,39 +495,6 @@
                     <span>发表于2020-03-12，</span>
                     <span class="hidden-xs">全文4046字，</span>
                     <span>阅读约14分钟</span>
-                </small>
-            </p>
-        </div>
-    </div>
-</div>
-        
-        <div class="post-preview">
-    <div class="post-img" style="background-image: url('/blog_imgs/1/1_1_head.png')"></div>
-    <div class="post-info">
-        <div class="post-info-center">
-            <div class="hidden-xs">
-                
-                
-                <span>/</span>
-                
-                <a class="text-gray" href="/tags/#分词"
-                    title="分词">分词</a>
-                <span>/</span>
-                
-                <a class="text-gray" href="/tags/#算法妙用"
-                    title="算法妙用">算法妙用</a>
-                <span>/</span>
-                
-                
-            </div>
-            <a href="/post/2.html" class="title">
-                深度学习时代，分词算法的真实应用实例
-            </a>
-            <p class="text-gray">
-                <small>
-                    <span>发表于2020-03-07，</span>
-                    <span class="hidden-xs">全文1972字，</span>
-                    <span>阅读约7分钟</span>
                 </small>
             </p>
         </div>
@@ -727,13 +716,19 @@
                 
                 <li>
                     <a href="/post/8.html"
-                        class="gkt-sidebar-active">01之间均匀分区取两点构成三角形的概率-证明加代码实现</a>
+                        class="">01之间均匀分区取两点构成三角形的概率-证明加代码实现</a>
+                    
+                </li>
+                
+                <li>
+                    <a href="/post/10.html"
+                        class="gkt-sidebar-active">Python实现蓄水池算法</a>
                     
                     <!-- Table of Contents -->
 <div id="sidebar-toc">
   <!-- TOC  -->
   
-  <ol class="toc-nav"><li class="toc-nav-item toc-nav-level-1"><a class="toc-nav-link" href="#1-背景"><span class="toc-nav-text">1. 背景</span></a></li><li class="toc-nav-item toc-nav-level-1"><a class="toc-nav-link" href="#2-题目描述"><span class="toc-nav-text">2. 题目描述</span></a></li><li class="toc-nav-item toc-nav-level-1"><a class="toc-nav-link" href="#3-代码解法"><span class="toc-nav-text">3. 代码解法</span></a></li><li class="toc-nav-item toc-nav-level-1"><a class="toc-nav-link" href="#4-数学解法"><span class="toc-nav-text">4. 数学解法</span></a><ol class="toc-nav-child"><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#4-1-抽丝剥茧看条件"><span class="toc-nav-text">4.1 抽丝剥茧看条件</span></a></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#4-2-转化为数学表达式"><span class="toc-nav-text">4.2 转化为数学表达式</span></a></li></ol></li><li class="toc-nav-item toc-nav-level-1"><a class="toc-nav-link" href="#5-Reference"><span class="toc-nav-text">5. Reference</span></a></li></ol>
+  <ol class="toc-nav"><li class="toc-nav-item toc-nav-level-1"><a class="toc-nav-link" href="#蓄水池算法"><span class="toc-nav-text">蓄水池算法</span></a></li></ol>
   
 </div>
 
@@ -772,12 +767,6 @@
     })
   })();
 </script>
-                    
-                </li>
-                
-                <li>
-                    <a href="/post/10.html"
-                        class="">Python实现蓄水池算法</a>
                     
                 </li>
                 
@@ -837,36 +826,6 @@
         window.addEventListener('resize', resizeUArrow);
     })();
 </script>
-
-
-    
-    <script type="text/x-mathjax-config">
-      MathJax.Hub.Config({
-          tex2jax: {
-            inlineMath: [ ['$','$'], ["\\(","\\)"] ],
-            processEscapes: true
-          }
-        });
-      </script>
-
-    <script type="text/x-mathjax-config">
-      MathJax.Hub.Config({
-            tex2jax: {
-              skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code']
-            }
-          });
-      </script>
-
-    <script type="text/x-mathjax-config">
-      MathJax.Hub.Queue(function() {
-              var all = MathJax.Hub.getAllJax(), i;
-              for(i=0; i < all.length; i += 1) {
-                  all[i].SourceElement().parentNode.className += ' has-jax';
-              }
-          });
-      </script>
-
-    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.6/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
 
 
     
