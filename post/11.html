@@ -14,17 +14,17 @@
   <!-- if page has tags, then add tags to keyword -->
   
   
-  <meta name="keywords" content="BBruceyuan,BBruceyuan的博客,动手学编程,打点酱油,面试锦囊,数学题,面试锦囊">
+  <meta name="keywords" content="BBruceyuan,BBruceyuan的博客,动手学编程,打点酱油,杂谈,我为什么没有offer">
   <!-- page.description has higher priority -->
-  <meta name="description" content="木棒折两次构成三角形的概率-证明加代码实现">
+  <meta name="description" content="我为什么没有offer">
   <link rel="shortcut icon" href="/img/icon.jpg">
   <title>
     
-    01之间均匀分区取两点构成三角形的概率-证明加代码实现 | BBruceyuan
+    我为什么没有offer? | BBruceyuan
     
   </title>
 
-  <link rel="canonical" href="/post/8.html">
+  <link rel="canonical" href="/post/11.html">
   <link rel="stylesheet" href="/css/reset.css">
   <link rel="stylesheet" href="/css/layout.css">
   <link rel="stylesheet" href="/css/markdown.css">
@@ -109,12 +109,12 @@
                     
                 </li>
                 
-                <li class="gkt-cate-name float-left ">
+                <li class="gkt-cate-name float-left active">
                     <a class="float-left" href="/post/4.html">杂谈</a>
                     
                 </li>
                 
-                <li class="gkt-cate-name float-left active">
+                <li class="gkt-cate-name float-left ">
                     <a class="float-left" href="/post/8.html">面试锦囊</a>
                     
                 </li>
@@ -156,30 +156,28 @@
 <div class="float-left post-container box-shadow">
     <div class="u-arrow-wrapper hidden-xs">
         
-        <a class="float-left" href="/post/5.html"><i class="u-arrow-left"></i></a>
+        <a class="float-left" href="/post/10.html"><i class="u-arrow-left"></i></a>
         
-        
-        <a class="float-right" href="/post/9.html"><i class="u-arrow-right"></i></a>
         
     </div>
     <article class="col-xs-12">
-        <h1> 01之间均匀分区取两点构成三角形的概率-证明加代码实现 </h1>
+        <h1> 我为什么没有offer? </h1>
 
         
 
         
         <div class="hidden-lg hidden-md series_links">
-            <p> <strong> 面试锦囊系列文章链接：</strong></p>
+            <p> <strong> 杂谈系列文章链接：</strong></p>
             <ul>
                 
                 <li>
-                    <a href="/post/8.html">01之间均匀分区取两点构成三角形的概率-证明加代码实现</a>
-                    <span class="post-item-date">(Aug 2, 2020)</span>
+                    <a href="/post/4.html">记EMNLP2020投稿</a>
+                    <span class="post-item-date">(Jun 12, 2020)</span>
                 </li>
                 
                 <li>
-                    <a href="/post/10.html">Python实现蓄水池算法</a>
-                    <span class="post-item-date">(Aug 15, 2020)</span>
+                    <a href="/post/11.html">我为什么没有offer?</a>
+                    <span class="post-item-date">(Sep 20, 2020)</span>
                 </li>
                 
             </ul>
@@ -187,24 +185,18 @@
         
         
         
-        <h1 id="1-背景"><a href="#1-背景" class="headerlink" title="1. 背景"></a>1. 背景</h1><p>这是一道我面试字节Data某搜索部门NLP算法工程师岗位出的一道题，可能是由于前面回答问题不是尽如人意，所以一看到这题的时候有点紧张，大概嗯嗯啊啊半分钟，直接心里面觉得自己不会做，便对面试官说想换一个题。等我面试完和同学交流的时候，念完题目就差不多想到了该怎么做，就是个高中的简单整数线性规划问题。</p>
-<h1 id="2-题目描述"><a href="#2-题目描述" class="headerlink" title="2. 题目描述"></a>2. 题目描述</h1><p>假设有一个区间 [0, 1]，通过均匀分布取两个点，把区间分成三段，那么这三段构成三角形的概率是多少？</p>
-<h1 id="3-代码解法"><a href="#3-代码解法" class="headerlink" title="3. 代码解法"></a>3. 代码解法</h1><p>既然这是一道编程题，那么其实这个解法就太简单了，根本什么也不用想，直接用代码实现就行了。</p>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> numpy <span class="keyword">as</span> np</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">can_construct_triangle</span><span class="params">(a, b)</span>:</span></span><br><span class="line">    <span class="comment"># 使用 任意两边之和大于第三边的性质</span></span><br><span class="line">    a, b = min(a, b), max(a, b)</span><br><span class="line"></span><br><span class="line">    x = a</span><br><span class="line">    y = b - a</span><br><span class="line">    z = <span class="number">1</span> - b</span><br><span class="line"></span><br><span class="line">    <span class="keyword">if</span> x + y &gt; z <span class="keyword">and</span> x + z &gt; y <span class="keyword">and</span> y + z &gt; x:</span><br><span class="line">        <span class="keyword">return</span> <span class="literal">True</span></span><br><span class="line">    <span class="keyword">else</span>:</span><br><span class="line">        <span class="keyword">return</span> <span class="literal">False</span></span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">main</span><span class="params">()</span>:</span></span><br><span class="line">    total_cnt = <span class="number">0</span></span><br><span class="line">    cnt_be_triangle = <span class="number">0</span></span><br><span class="line">    <span class="keyword">for</span> _ <span class="keyword">in</span> range(<span class="number">1000000</span>):</span><br><span class="line">        <span class="comment"># 大量随机试验</span></span><br><span class="line">        a = np.random.uniform(<span class="number">0</span>, <span class="number">1</span>)</span><br><span class="line">        b = np.random.uniform(<span class="number">0</span>, <span class="number">1</span>)</span><br><span class="line">        <span class="keyword">if</span> can_construct_triangle(a, b):</span><br><span class="line">            cnt_be_triangle += <span class="number">1</span></span><br><span class="line">        total_cnt += <span class="number">1</span></span><br><span class="line">    </span><br><span class="line">    print(cnt_be_triangle / total_cnt)</span><br><span class="line">	<span class="comment"># answer is approximate 1/4</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">if</span> __name__ == <span class="string">"__main__"</span>:</span><br><span class="line">    main()</span><br></pre></td></tr></table></figure>
-
-<p>用程序跑一下，答案大概是 0.24968，把循环放大一点，就能得到更接近1/4的答案，所以这题的答案应该是1/4。以后遇到不会的数学题，直接用过大量试验求近似解是一个很好的想法。（比如计算机实现牛顿迭代其实就是这么一个思想）</p>
-<h1 id="4-数学解法"><a href="#4-数学解法" class="headerlink" title="4. 数学解法"></a>4. 数学解法</h1><h2 id="4-1-抽丝剥茧看条件"><a href="#4-1-抽丝剥茧看条件" class="headerlink" title="4.1 抽丝剥茧看条件"></a>4.1 抽丝剥茧看条件</h2><p>均匀分布取两个点，那么说明两个点是独立同分布，两个点有可能出现在任意位置，任意两个不重合的点可以构成三条边，那么如果要构成三角形，就需要满足构成三角形的条件。</p>
-<blockquote>
-<p>任意两边之和大于第三边 或者是 任意两边之差小于第三边，且每条边大于0。</p>
+        <h1 id="1-错位成就感"><a href="#1-错位成就感" class="headerlink" title="1. 错位成就感"></a>1. 错位成就感</h1><blockquote>
+<p>错误成就感有两类：① 习惯于拿自己擅长的东西和别人不擅长的东西比较，从来获得「比别人强」的错觉（如：和运动员比学习成绩，和学霸比体育）；② 习惯于拿别人做事情 A 的时间来做事情 B，来假装自己在事情 B 上做得好（如：「炫耀」自己在节假日做了比别人更多的工作，但也仅仅是在节假日才能如此）。</p>
 </blockquote>
-<p>因此该问题可以转化为不等式求解问题。</p>
-<h2 id="4-2-转化为数学表达式"><a href="#4-2-转化为数学表达式" class="headerlink" title="4.2 转化为数学表达式"></a>4.2 转化为数学表达式</h2><p>假设随机抽样的两点把 [0, 1] 分成三段，分别是 x, y, 1 - x - y。<br>因此可以构成一个公式<br>$$x &gt; 0;\  y &gt; 0;\  1 - x -y &gt; 0\tag{1}$$</p>
-<p>然后要满足构成三角形的条件，两边之和大于第三边，所以就相当于在上述可行域中找到问题的解空间，这不就是高中非常熟悉的整数线性规划问题吗？只是套了一个均匀分布取两个点的背景。那么看一下三角形两边之和大于第三边的公式是什么？</p>
-<p>$$x + y &gt; 1 - x - y;\  x + 1 - x - y &gt; y;\  y + 1 - x - y &gt; x\tag{2}$$  </p>
-<p>公式（2）可以进行化简，可以推导出公式（3）</p>
-<p>$$x &lt; 1/2;\  y &lt; 1/2;\  x + y &gt; 1/2\tag{3}$$</p>
-<p>结合公式（1）（3），那么该问题显然是一个简单的数学问题，只要画出图，问题就可以轻易的求解。我的解法配图如下<br><img src="/blog_imgs/8/8_1.jpg" alt="image.png"></p>
-<h1 id="5-Reference"><a href="#5-Reference" class="headerlink" title="5. Reference"></a>5. Reference</h1><p>[1] <a href="https://www.cnblogs.com/xudong-bupt/p/4032639.html" target="_blank" rel="noopener">https://www.cnblogs.com/xudong-bupt/p/4032639.html</a><br>[2] <a href="https://blog.csdn.net/nickkissbaby_/article/details/95621403" target="_blank" rel="noopener">https://blog.csdn.net/nickkissbaby_/article/details/95621403</a></p>
+<p>说来，我在读研期间提出不少傻逼自我安慰理论，其中包括“混子理论”：<strong>任何一个群体中都存在一定的混子，假设你身边有一半的混子，假设你不想过得太差又不想太累，那么你需要做的就是找到这一半的混子，然后按照混子的努力程度 + 1，那么大概率你就能超过不止一半的人</strong>。假设评价指标只有一个维度，那么这个理论似乎没有多大的问题，因为确实你能在某个指标上超过一半人，但是越接近社会，评价的维度变得越来越多，如果没有很好的抓住主要的维度，而为一些细枝末节上的超越而沾沾自喜，丝毫不自知危机将近，这最终导致的只有挫败。这是一种典型的错位成就感。</p>
+<p>而我是一个很容易陷入错位成就感中的人，我举个我错误的想法：我在实习，比别人有实习优势，但是我却容易忽略了不在实习的同学是一直在进步的，无论是基础知识还是刷题水平都是日新月异的。</p>
+<p>而对于找工作来说，实际上就是一个逻辑回归(logistic regression)的过程，不同维度的方面的能力只是决定能不能拿到offer的一部分。比如刷题能力，这个应该是在找工作过程中占比比较大的一个变量，就我面试经验来看，大部分人基础知识水平都相差不了太多，因此我一般挂了都是因为写不出题；其次就是这里提到的基础知识，如果基础知识足够好，面试又有什么好担心呢？比如自己因为有了实习、论文，就把刷题能力和基础知识拉下来，而这些权重又比较小，加权求和之后发现自己变成了负样本了。</p>
+<h1 id="2-注意力不集中"><a href="#2-注意力不集中" class="headerlink" title="2. 注意力不集中"></a>2. 注意力不集中</h1><p>仔细回想，从高中毕业以来，我的精神不集中现象已经到了没有办法忽视的地步了。我做过很多尝试，比如关闭朋友圈入口，卸载虎扑快手等，但是时间总是会被新的软件所填充。注意力不能集中，是指琐碎信息获取时间占据超过一天的2/3。最近我开启了手机的统计，每天手机平均使用时间约为6.5小时，这说明我每天除了睡觉，大部分时候都在使用手机刷帖子、聊天水群等，系统性的学习时间太少了。</p>
+<p>记得大三/四的时候，和健哥讨论过，他说：“我最近只要是有老师在上面讲课超过十分钟，我就不想听了”。我对于上课还好，能尽量控制自己稍微听一听，但是对于平时自己看书，看书超过10分钟，就想看一下手机，电脑划两下，尽管没有什么目的，但是这么做就能让自己暂时的摆脱集中思绪带来的痛苦。</p>
+<p>如果我不能改掉这种坏问题，那么我的未来应该也没什么可以值得期待的吧？</p>
+<h1 id="3-里程碑失去时效性"><a href="#3-里程碑失去时效性" class="headerlink" title="3. 里程碑失去时效性"></a>3. 里程碑失去时效性</h1><p>毫不夸张的说，这两天EMNLP的录取通知，是我最近以来最最最让我开心的一件事情了，对我来说应该算是一个里程碑的事情（我原来读研就是想发一个顶会，在师兄的帮助下完成了）。但是目前我已经是硕士三年级的学生了，还有4个月就要毕业了，它能给我带来的作用已经相对于几个月前来说更少了，为什么这么说？因为目前大部分小公司，完全不看你论文的，而对于大公司来说，已经基本没有 HC 了，这篇文章能发挥的作用就变得比较有限了。</p>
+<p>里程碑固然是一个让人开心的事情，但是如果你不能在固定时间内完成，它带给你的收益是非常明显的，就像人人都会注意到15岁的数学天才，但是对于一个老教授求解出某个问题，关注却相对较少，这就是里程碑的作用。提前完成里程碑，一般来说就会走的比一般人更快更远。如果你能很早就发了一篇顶会，那么你就可以早早的跑去实习，那么你早早的跑去实习，就不必拘泥于秋招前暑假刷实习。这就是所谓的里程碑的时效性，这东西只有在一定的时间范围内才是有效的，如果你在过了它的时效期，那么对你来说，用处几乎为0。就像毕业后中的顶会，对你的offer不会有任何帮助了。</p>
+<h1 id="4-总结"><a href="#4-总结" class="headerlink" title="4. 总结"></a>4. 总结</h1><p>踏实努力，提早完成里程碑。</p>
 
         <script src="/js/qrious.min.js"></script>
 
@@ -228,20 +220,20 @@
             <p>
                 <span>专题: </span>
                 
-                <a href="/series/#面试锦囊">
-                    <code key="面试锦囊" class="post-label">面试锦囊</code>
+                <a href="/series/#杂谈">
+                    <code key="杂谈" class="post-label">杂谈</code>
                 </a>
                 
             </p>
             
             <p>
-                <span>本文发表于 2020-08-02，最后修改于 2020-08-06。</span>
+                <span>本文发表于 2020-09-20，最后修改于 2020-09-20。</span>
             </p>
             <!-- 文章末尾的提示 start -->
             
             <p>
                 本站永久域名<strong>「 <a
-                        href="/post/8.html">bbruceyuan.github.io</a>
+                        href="/post/11.html">bbruceyuan.github.io</a>
                     」</strong>，也可搜索<strong>「 BBruceyuan 」</strong>找到我。
             </p>
             
@@ -260,10 +252,8 @@
         <hr />
         <p name="pagination" style="font-size: 1.2em">
     
-    <a class="float-left" href="/post/5.html">上一篇 « Transition-based Directed Graph Construction for Emotion-Cause Pair Extraction (中文介绍)</a>
+    <a class="float-left" href="/post/10.html">上一篇 « Python实现蓄水池算法</a>
     
-    
-    <a class="float-right" href="/post/9.html">下一篇 » 简单方法增加Query召回的多样性</a>
     
 </p>
     </article>
@@ -410,7 +400,7 @@
         <h3>推荐阅读</h3>
         
         <div class="post-preview">
-    <div class="post-img" style="background-image: url('/blog_imgs/5/5_2.png')"></div>
+    <div class="post-img" style="background-image: url('/blog_imgs/8/8_1.jpg')"></div>
     <div class="post-info">
         <div class="post-info-center">
             <div class="hidden-xs">
@@ -418,20 +408,20 @@
                 
                 <span>/</span>
                 
-                <a class="text-gray" href="/tags/#ECPE"
-                    title="ECPE">ECPE</a>
+                <a class="text-gray" href="/tags/#面试锦囊"
+                    title="面试锦囊">面试锦囊</a>
                 <span>/</span>
                 
                 
             </div>
-            <a href="/post/7.html" class="title">
-                Must-read Papers on Emotion-Cause Pair Extraction
+            <a href="/post/10.html" class="title">
+                Python实现蓄水池算法
             </a>
             <p class="text-gray">
                 <small>
-                    <span>发表于2020-06-12，</span>
-                    <span class="hidden-xs">全文3146字，</span>
-                    <span>阅读约11分钟</span>
+                    <span>发表于2020-08-15，</span>
+                    <span class="hidden-xs">全文1092字，</span>
+                    <span>阅读约4分钟</span>
                 </small>
             </p>
         </div>
@@ -439,7 +429,7 @@
 </div>
         
         <div class="post-preview">
-    <div class="post-img" style="background-image: url('/blog_imgs/3/3_1.jpg')"></div>
+    <div class="post-img" style="background-image: url('/blog_imgs/8/8_1.jpg')"></div>
     <div class="post-info">
         <div class="post-info-center">
             <div class="hidden-xs">
@@ -447,32 +437,20 @@
                 
                 <span>/</span>
                 
-                <a class="text-gray" href="/tags/#分词"
-                    title="分词">分词</a>
-                <span>/</span>
-                
-                <a class="text-gray" href="/tags/#序列标注"
-                    title="序列标注">序列标注</a>
-                <span>/</span>
-                
-                <a class="text-gray" href="/tags/#入门算法"
-                    title="入门算法">入门算法</a>
-                <span>/</span>
-                
-                <a class="text-gray" href="/tags/#实体识别"
-                    title="实体识别">实体识别</a>
+                <a class="text-gray" href="/tags/#算法妙用"
+                    title="算法妙用">算法妙用</a>
                 <span>/</span>
                 
                 
             </div>
-            <a href="/post/3.html" class="title">
-                关于隐马尔可夫模型(HMM)，需要知道什么？
+            <a href="/post/9.html" class="title">
+                简单方法增加Query召回的多样性
             </a>
             <p class="text-gray">
                 <small>
-                    <span>发表于2020-03-12，</span>
-                    <span class="hidden-xs">全文4046字，</span>
-                    <span>阅读约14分钟</span>
+                    <span>发表于2020-08-03，</span>
+                    <span class="hidden-xs">全文1055字，</span>
+                    <span>阅读约4分钟</span>
                 </small>
             </p>
         </div>
@@ -480,7 +458,7 @@
 </div>
         
         <div class="post-preview">
-    <div class="post-img" style="background-image: url('/img/link.png')"></div>
+    <div class="post-img" style="background-image: url('/img/icon.jpg')"></div>
     <div class="post-info">
         <div class="post-info-center">
             <div class="hidden-xs">
@@ -488,19 +466,19 @@
                 
                 <span>/</span>
                 
-                <a class="text-gray" href="/tags/#友链"
-                    title="友链">友链</a>
+                <a class="text-gray" href="/tags/#关于我"
+                    title="关于我">关于我</a>
                 <span>/</span>
                 
                 
             </div>
-            <a href="/post/link.html" class="title">
-                友情链接
+            <a href="/post/about.html" class="title">
+                关于我
             </a>
             <p class="text-gray">
                 <small>
                     <span>发表于2019-06-30，</span>
-                    <span class="hidden-xs">全文512字，</span>
+                    <span class="hidden-xs">全文476字，</span>
                     <span>阅读约2分钟</span>
                 </small>
             </p>
@@ -718,18 +696,24 @@
         
         
         <section class="gkt-sidebar-content box-shadow">
-            <strong>面试锦囊</strong>
+            <strong>杂谈</strong>
             <ul>
                 
                 <li>
-                    <a href="/post/8.html"
-                        class="gkt-sidebar-active">01之间均匀分区取两点构成三角形的概率-证明加代码实现</a>
+                    <a href="/post/4.html"
+                        class="">记EMNLP2020投稿</a>
+                    
+                </li>
+                
+                <li>
+                    <a href="/post/11.html"
+                        class="gkt-sidebar-active">我为什么没有offer?</a>
                     
                     <!-- Table of Contents -->
 <div id="sidebar-toc">
   <!-- TOC  -->
   
-  <ol class="toc-nav"><li class="toc-nav-item toc-nav-level-1"><a class="toc-nav-link" href="#1-背景"><span class="toc-nav-text">1. 背景</span></a></li><li class="toc-nav-item toc-nav-level-1"><a class="toc-nav-link" href="#2-题目描述"><span class="toc-nav-text">2. 题目描述</span></a></li><li class="toc-nav-item toc-nav-level-1"><a class="toc-nav-link" href="#3-代码解法"><span class="toc-nav-text">3. 代码解法</span></a></li><li class="toc-nav-item toc-nav-level-1"><a class="toc-nav-link" href="#4-数学解法"><span class="toc-nav-text">4. 数学解法</span></a><ol class="toc-nav-child"><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#4-1-抽丝剥茧看条件"><span class="toc-nav-text">4.1 抽丝剥茧看条件</span></a></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#4-2-转化为数学表达式"><span class="toc-nav-text">4.2 转化为数学表达式</span></a></li></ol></li><li class="toc-nav-item toc-nav-level-1"><a class="toc-nav-link" href="#5-Reference"><span class="toc-nav-text">5. Reference</span></a></li></ol>
+  <ol class="toc-nav"><li class="toc-nav-item toc-nav-level-1"><a class="toc-nav-link" href="#1-错位成就感"><span class="toc-nav-text">1. 错位成就感</span></a></li><li class="toc-nav-item toc-nav-level-1"><a class="toc-nav-link" href="#2-注意力不集中"><span class="toc-nav-text">2. 注意力不集中</span></a></li><li class="toc-nav-item toc-nav-level-1"><a class="toc-nav-link" href="#3-里程碑失去时效性"><span class="toc-nav-text">3. 里程碑失去时效性</span></a></li><li class="toc-nav-item toc-nav-level-1"><a class="toc-nav-link" href="#4-总结"><span class="toc-nav-text">4. 总结</span></a></li></ol>
   
 </div>
 
@@ -768,12 +752,6 @@
     })
   })();
 </script>
-                    
-                </li>
-                
-                <li>
-                    <a href="/post/10.html"
-                        class="">Python实现蓄水池算法</a>
                     
                 </li>
                 
@@ -833,36 +811,6 @@
         window.addEventListener('resize', resizeUArrow);
     })();
 </script>
-
-
-    
-    <script type="text/x-mathjax-config">
-      MathJax.Hub.Config({
-          tex2jax: {
-            inlineMath: [ ['$','$'], ["\\(","\\)"] ],
-            processEscapes: true
-          }
-        });
-      </script>
-
-    <script type="text/x-mathjax-config">
-      MathJax.Hub.Config({
-            tex2jax: {
-              skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code']
-            }
-          });
-      </script>
-
-    <script type="text/x-mathjax-config">
-      MathJax.Hub.Queue(function() {
-              var all = MathJax.Hub.getAllJax(), i;
-              for(i=0; i < all.length; i += 1) {
-                  all[i].SourceElement().parentNode.className += ' has-jax';
-              }
-          });
-      </script>
-
-    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.6/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
 
 
     
