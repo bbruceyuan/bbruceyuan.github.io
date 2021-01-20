@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://bbruceyuan.github.io/"/>
-  <updated>2020-12-20T04:55:48.509Z</updated>
+  <updated>2021-01-20T14:05:39.310Z</updated>
   <id>https://bbruceyuan.github.io/</id>
   
   <author>
@@ -17,11 +17,33 @@
   <generator uri="http://hexo.io/">Hexo</generator>
   
   <entry>
+    <title>2020年过去了，我不怀念它</title>
+    <link href="https://bbruceyuan.github.io/post/15.html"/>
+    <id>https://bbruceyuan.github.io/post/15.html</id>
+    <published>2020-12-31T12:20:20.000Z</published>
+    <updated>2021-01-20T14:05:39.310Z</updated>
+    
+    <content type="html"><![CDATA[<h1 id="这一切都不是我们的选择"><a href="#这一切都不是我们的选择" class="headerlink" title="这一切都不是我们的选择"></a>这一切都不是我们的选择</h1><blockquote><p>我们登上并非我们所选择的舞台，演出并非我们所选择的剧本。</p></blockquote><p>2020年，也许是近些年最特殊的一年了。席卷全球的疫情、东非蝗灾、疯狂的美股熔断、原油事件… 除了这些国际上的大事件，对于个人来说，也可以称得上是关键的一年，毕业前的最后一年，即将完成身份的转换。</p><p>这些都不是我们所选择的2020，而是这些事件构成了2020。这一切都不是我们的选择，所以我一点也不怀念它。</p><h1 id="我的2020"><a href="#我的2020" class="headerlink" title="我的2020"></a>我的2020</h1><p>尽管想了很久怎么写一篇2020年的总结，但是每次写了一些东西都会被我删去。因为实在是没有办法将自己的想法完整的表述出来，所以我打算写一点算不上总结的东西。</p><blockquote><p>TODO，等我有时间我要把以前写的总结也贴出来。</p></blockquote><h2 id="读书"><a href="#读书" class="headerlink" title="读书"></a>读书</h2><p>今年读书相对于去年来说是少了一些。和大多数程序员一样，我看的书大部分也是技术书籍，由于自身是个彩笔，对于技术书籍没啥好评价的，总能或多或少的学到一点东西（因为看不下去就弃了）。今年基本把去年618买的书全部看完了，尽管我个人对于小说更感兴趣，但是今年让我更加印象深刻的是两本非小说书籍，一本是《人类简史》，另一本是《激荡的三十年》。这两本书有一个共同的特点，语言都非常简单易懂。尤其是对于第一本，提出了很多有意思的观点，“国家，制度，财富等都是建立在人们相信的故事上”。我清楚的记着刚看完这本书的时候想写一个读后感来着，后面忙于找实习就搁置了。对于第二本书，则讲的是中国近现代各个大佬的发家致富的小故事。尽管每一个都很简略，但是还是能看出时代的背影，毕竟“一个人的命运，当然要靠自我奋斗，但也要考虑到历史的进程”。</p><p>我对竹哥说过，能在书上找到认同的感觉真好，找到某些情感共鸣实在是读书的一大乐事。而蛇神则准确的表述为：可以从书里找到自己内心认可只是不能精确表达的道理[1]。以后我应该多看一些非技术书籍，<strong>此外对于方法论的书，也许我不该这么排斥它，万一它真的有用呢？</strong></p><h2 id="娱乐"><a href="#娱乐" class="headerlink" title="娱乐"></a>娱乐</h2><p>娱乐真是一种天赋技能。我发现我近两年对于快乐的感知能力急速的下降，而且快乐维持的时间极其短暂，往往在热闹之后回去的路上突然伤感起来，已然快变成祥林嫂了。无论做什么事情，很容易就感到乏味，缺乏必要的激情。日常觉得无事可做，日常觉得琐事不想做，日常觉得事情没有意义。</p><p>感受事情的本质，也许是让一个人心情愉悦的好办法。在某截图中看到蒋方舟提到要认真咀嚼大米的味道，这样会让生活过得更开心。这应该算作是认真的对待食物本身。我时常会感慨，“为啥LGQ总是觉得这东西这么好吃？为啥LHS能觉得这个游戏这么好玩？”。沉浸到一个事情中，无论是吃饭、游戏，都能得到很大的快乐。这点我似乎要好好学习一下。</p><p>说来今年最大的变化是，在月底的时候，我的每天入睡前听得不再是音乐了，我开始习惯于听别人的播客。听别人分享各种观点、有趣的事情。对于程序员来说，播客真的是一个很好的消遣途径，一整天都是对着电脑，玩手机刷视频并算不得是真正的休息，而闭上眼睛什么都不想又不是很现实，因为播客这种信息密度不是非常高的对话方式就非常适合作为一种休闲娱乐方式，只要你把它当成另一种形式的浏览帖子或视频。</p><blockquote><p>希望能有人推荐一个好的播客频道，题材不限。（但是并不会有人看到这个没有任何信息的年终总结）</p></blockquote><h2 id="科研"><a href="#科研" class="headerlink" title="科研"></a>科研</h2><p>今年科研算是比较顺利的一年，在师兄的全力辅助下发表了一篇EMNLP，这也许是今年最开心的一件事了。我读研的时候目标就是希望能发表一篇NLP领域里面的顶会，这算是达到了之前的目标，是一种少有的完成目标的成就感。在这里，我只想感恩，客观上我硕士期间运气真的很好。有的时候心理上觉得不愉快也只是因为人总是会放大悲伤的情绪。</p><p>对于论文这件事，给我带来的最大的收益是心里成就感。也许本质上我是想做一些具有成就感的东西，而目前来说，我所能接触到的、相对比较简单的，也就只有“科研”，至少我是认可它的。在我看来，能在论文中留下名字，是一件非常值得开心的事情。因为万一，有一个科研工作者，因为你这边灌水的文章收到一丝的启发，而后又有后序的工作在此上面进行改进，万一要是搞出个大新闻，那也算是为社会创造了一丝的价值。毕竟“蝴蝶效应”是不可预测的。</p><h2 id="工作"><a href="#工作" class="headerlink" title="工作"></a>工作</h2><p>对于工作来说，今年去了实习，也最终在秋招找到了一份工作。尽管在外人看来我拿的offer还是不错的，但是我个人对此确实远远称不上满意（我想的是要我是Xxx计划就好了，想屁吃）。我即将也要入职了，希望工作了能给我带来一些新的东西，无论是知识层面还是技能层面，这也是我对于工作所抱有的期待。尽管有在公司实习过，但是工作是和实习全然不同的心态，在工作的时候，我所需要思考的就是如何干活自己的本职工作，而对于实习则总是会有一些琐事所干扰，也许并不能全身心投入工作中。在其他方面，我觉得工作可能没有什么好说的，因为这工作这事情总会慢慢变好吧？</p><h2 id="改变"><a href="#改变" class="headerlink" title="改变"></a>改变</h2><p>最近我沉溺于看各种大佬写的年终总结，寄希望于从别人的成长经历中窥得一丝玄机，让自己的人生可以得到一些指引。经过我不负责任的总结，我觉得我需要做的改变的有三个点：</p><ul><li>规划</li><li>行动力</li><li>专注度</li></ul><p>我可以说是一个很没有规划的人，无论面对什么事情，我很容易囿于自己的想象之中。由于想象是一个很不具体的东西，所以总是容易夸大或者弱化其中的需要付出努力。前些时间和高博聊天的时候，他提出了一些我以前没有想过的东西。比如，大家都想赚钱，那么你的目标是赚多少钱？那么肯定会有人说越多越好，但是这本质上是偷懒的回答，因为如果我们没有一个很明确的目标，那么就比较难长时间的为此付出努力。因此，我们可以定一个非常具体化的目标，比如今年希望月薪能达到20K。而对于其他事情来说，也存在同样的想象和实际中的GAP，我们应该定义一些过程目标，从而使得目标清晰一点。当然这只是规划的一种，我们可以称之为目标规划。除了目标规划之外，过程规划同样非常重要，能够合理地安排自己在每个过程中需要做的事情，将任务、目标进行肢解将能够有效地提升工作效率。</p><p>行动力是LGQ一个另外一个让我很佩服的点。似乎每一个人都喜欢为自己不想做某件事找借口。“今天我头晕，不是很想读论文。明天再看也是一样的。”而任何时候我们都能找到一个合适的借口推脱，哪怕实际上并不是一个很好的借口，我们也会很容易就接受这个借口，因为不管怎么说，大部分人都是个懒惰的人呢。“种一棵树最好的时光是十年前，其次是现在!” 因此接下来，对于一些无法避免要处理的事情，我将更快速的行动起来。（嗯，实际上我已经在拖了，比如这篇废话总结）</p><p>我时常对自己心猿意马而感到苦恼，因此也曾尝试过一些弱智办法，比如前面也有文章提到过的长时间关闭朋友圈入口（近期因为临近毕业有了新的想法而再次活跃起来），但是这些方式都改变不了自己不够专注的本质。专注度决定了我们做一件事情的效率，前面的文章里面就提到过很多次对于自己的一些不满来自于“不专注”，而自己也因此感到极大的痛苦。（实际上划水是真的开心，事后才是痛苦的。）</p><p>为了应对这三个改变，我开始尝试了使用清单和番茄钟，对我来说算是初有成效，无论是对于行动力、还是专注力相对于之前弱鸡的我，都有了一定的提升。而在使用任务清单的过程中，就会不自觉地进行目标的规划和任务的肢解，因此在任务完成度有了明显的提升。此外我开始尝试使用使用番茄钟，至少在一个番茄钟的25分钟内，不玩手机，只做一件事情。毕竟哪怕只学习25分钟，也算是好事啊。。目前“规划”、“行动力”、“专注度”这三个点都有了一定的提升，接下来需要进行的就是得到足够的投入。“种一棵树最好的时光是十年前”说的另外一件事是“长成一棵树需要很长的时间”。在清晰合理的目标推动下，我们的投入那么就会被赋予更加深入的一层意义，这就是常说的过程财富。（当然大概率其实是沉没成本）</p><h1 id="Reference"><a href="#Reference" class="headerlink" title="Reference"></a>Reference</h1><p>[1] <a href="https://www.yuque.com/xcodebuild/thinking/pogui1" target="_blank" rel="noopener">https://www.yuque.com/xcodebuild/thinking/pogui1</a></p>]]></content>
+    
+    <summary type="html">
+    
+      2020年度总结
+    
+    </summary>
+    
+      <category term="杂谈" scheme="https://bbruceyuan.github.io/categories/%E6%9D%82%E8%B0%88/"/>
+    
+    
+      <category term="杂谈" scheme="https://bbruceyuan.github.io/tags/%E6%9D%82%E8%B0%88/"/>
+    
+  </entry>
+  
+  <entry>
     <title>BBruceyuan的近期不靠谱事件</title>
     <link href="https://bbruceyuan.github.io/post/14.html"/>
     <id>https://bbruceyuan.github.io/post/14.html</id>
     <published>2020-12-19T07:20:00.000Z</published>
-    <updated>2020-12-20T04:55:48.509Z</updated>
+    <updated>2020-12-26T03:05:19.022Z</updated>
     
     <content type="html"><![CDATA[<h1 id="1-我不想成为一个不靠谱的人儿"><a href="#1-我不想成为一个不靠谱的人儿" class="headerlink" title="1. 我不想成为一个不靠谱的人儿"></a>1. 我不想成为一个不靠谱的人儿</h1><p><strong>靠谱</strong>，表示可靠，值得相信和托付的意思。</p><p>我时常觉得自己是个不靠谱的人儿。好像不管是在什么地方，总是会出现各种各样的问题，记录一下一些小事情，看看自己是多么的不靠谱。</p><h1 id="2-这些事本可以做的更好"><a href="#2-这些事本可以做的更好" class="headerlink" title="2. 这些事本可以做的更好"></a>2. 这些事本可以做的更好</h1><h2 id="2-1-我的六级"><a href="#2-1-我的六级" class="headerlink" title="2.1 我的六级"></a>2.1 我的六级</h2><p>昨晚(2020.12.11)在帮忙（划水）布置今天的粤港澳青年会场的时候，</p><p>“什么，明天就是双十二了？”我说，“那有什么可以买的东西？”</p><p>朋友回答：“嗯，是的。又到了你该考六级的时候了。”</p><p>“对，又是我应该考六级的一天。”</p><p>我希望四六级都能达到500分以上，这是曾经在读本科的时候就定下过目标，但是我只做了一些伪努力。就是假装背一背单词什么的，并不是按照备战考试的方式复习。以至于我考过八九次六级了，也没能上500。甚至有两次还是低于及格线的。研究生快要毕业了，实际上手头的事情并不是很多，便买了星火六级试题。为了这次考试，我还是做了好几套试卷，单词也背了一些，包括一些作文的句型范式，也进行了一些总结和归纳。自己心里感受下来就是除了听力没啥感觉之外，其他一些题型应该不会做的太差。</p><p>但是由于当天由于要去搞志愿者活动，起的有点早了。中午睡觉的时候睡的久了一些。去考场考试的时候也没检查东西，就匆忙过去了。等我到达考场的时候，被通知要带上学生证。因此我按照物业的指示，去打印了学生在读证明（由于有很多其他人也忘记带学生证的同学，排队打印算是比较久的）。打印完之后觉得自己稳了，内心总是觉得很自信，心想“以前只要带学生证就行了，这次应该就可以了”（记忆真是具有欺骗性啊）；然后等我再次想进入考场的时候，被告知还需要身份证，但此刻我再回寝室取身份证已经是绝对来不及了，<strong>因此我最后的一次六级就以缺考告终了</strong>。尽管后面因为没去成考试而发生了一些好事就是后话了，但这件事本身是因为粗心导致的一个遗憾。</p><h2 id="2-2-崭新的饭卡"><a href="#2-2-崭新的饭卡" class="headerlink" title="2.2 崭新的饭卡"></a>2.2 崭新的饭卡</h2><p><strong>和我熟悉一点的人都会知道，我总是有一张崭新的饭卡，因为我是一个换饭卡称得上频繁的人。</strong>在本科期间，我一共换了八张饭卡，平均每学期都要补办一张；在硕士期间，几乎也保持着一样的传统。昨天（12.18）和宇瀚哥、强哥跑步回来，发现自己的饭卡又不见了。由于这次知道自己的饭卡是在跑步的时候脱/穿衣服弄丢的，便后面回去操场上打车手电找了一圈，幸运的是真的找完一圈就找回来了。</p><blockquote><p>这张饭卡补办就两个月左右，上次还不小心把它坐弯了。</p></blockquote><p>我也一直在思考，为啥我的饭卡总是会消失呢？对于以前，客观原因是因为一直喜欢把饭卡夹到书里面；而现在是因为频繁的掏手机容易把口袋里的饭卡带出来。但归根结底应该是太粗心了，总是没把这东西当做一回事，有不喜欢用卡套，导致这东西频繁的丢失。因为我想到的应对措施是把饭卡装到有带子的卡套里。希望以后工作了不会掉了工牌吧。</p><blockquote><p>写到这里又想到在实习期间，有一次把工卡和通行证都落在出租车上了。两者都是有带子和卡套的。（这点我可能没救了）</p></blockquote><h2 id="2-3-答辩PPT"><a href="#2-3-答辩PPT" class="headerlink" title="2.3 答辩PPT"></a>2.3 答辩PPT</h2><p>哈工大深圳的预答辩号称是比正式答辩更加严格的一关，但是由于心中一直想着其他的事情，倚仗着师兄带出来的成果，并没有非常认真地准备。但实际上答辩的时候老师还是挺和蔼的，提的问题都是一些无关痛痒的东西，理论上我可以完全不care，毕竟这些老师也不是做这个方向的，对于论文的技术细节并不是很了解。但是刘洋老师提出了一个很尖锐的问题，“<strong>你PPT和论文里面自己的名字写错了</strong>”。这个错误确实还算是比较搞笑的错误。比“的地得分不清”之类的错误更能反映我的不靠谱。还有一些比较搞笑的错误就是：师兄投稿的期刊名字也写错了（说明我果然没有参与，只是挂名而已），”Submit的过去式应该是submitted而不是submited”（英语垃圾显露无疑）。</p><h2 id="2-4-核酸预约"><a href="#2-4-核酸预约" class="headerlink" title="2.4 核酸预约"></a>2.4 核酸预约</h2><p>今年(2020)做核酸可以看做是一个很流行的事情，也许以后核酸检测可能会成为2020年一个独有的印记。因为我要去拔牙，需要提前一天做核酸。似乎我做事情总是喜欢踩点、卡时间，我去清华社康挂了转诊单之后已经跨到快到中午了，匆忙的挂了一个“上午”的核酸预约单。等我打车前往西丽人民医院的时候，<strong>负责登记的小姐姐告知我挂的是“第二天上午的号”而不是“当天的号”</strong>。该小姐姐把退号、重新挂号、检查之类的流程告诉我了一遍，我以为自己记住了，跑去操作。然后很显然，等我操作回来，又被告知流程有点问题。这个小姐姐似乎很开心看到我这么一个很逗的人，竟然非常有耐心的在我的挂号单上面写了一遍流程，防止我再次弄错。</p><blockquote><p>喜欢踩点的人总是会付出代价的。比如多年前我错过的那一次火车。东大南门的244汽车，为啥恰好就要堵车几分钟。</p></blockquote><h2 id="2-5-其他的一些琐事"><a href="#2-5-其他的一些琐事" class="headerlink" title="2.5 其他的一些琐事"></a>2.5 其他的一些琐事</h2><ul><li>去顺德玩的时候，差点把师兄的Switch落在动车上了。</li><li>想去接人误了时间（这类事情就太多了吧，虽然其他的都忘了，但是接妹子还能没赶上就有点问题了？）</li><li>由于各类原因而导致的失约。</li><li>做T由于睡觉忘记了接回来。</li><li>《<a href="4.html">记EMNLP2020投稿</a>》中提到的小插曲</li><li>….</li></ul><p>这类事情实在是太多了。哪怕仅仅是在会议一下这几个月内发生的事情，就会觉得有很多小事本可以做得更好。其他一些重大决策就更不用说了，可能就不是明面上的不靠谱了，而是真正的遗憾了。只是我现在还不想去分析和思考。</p><h1 id="3-突然想到一件很逗的事情"><a href="#3-突然想到一件很逗的事情" class="headerlink" title="3. 突然想到一件很逗的事情"></a>3. 突然想到一件很逗的事情</h1><p>说到海飞丝，包括我在内的大部分人想到的应该是“洗发水”。多年前抱着这样的想法在超市买了一瓶海飞丝。买回来之后用了一个星期，天天在寝室洗头的时候抱怨这个洗发水没泡泡，用很多也不行，头发也洗不干净。直到有一天早上，有个同学借用我的洗发水用了之后，发出同样的疑问。查看之后才知道这是海飞丝新出的沐浴露。。。把沐浴露当洗发水一个星期都没有发现。。。</p>]]></content>
     
@@ -83,17 +105,17 @@
   </entry>
   
   <entry>
-    <title>我为什么没有offer?</title>
+    <title>我为什么没有满意的offer?</title>
     <link href="https://bbruceyuan.github.io/post/11.html"/>
     <id>https://bbruceyuan.github.io/post/11.html</id>
     <published>2020-09-20T04:00:00.000Z</published>
-    <updated>2020-09-20T13:23:15.749Z</updated>
+    <updated>2021-01-20T13:56:40.111Z</updated>
     
     <content type="html"><![CDATA[<h1 id="1-错位成就感"><a href="#1-错位成就感" class="headerlink" title="1. 错位成就感"></a>1. 错位成就感</h1><blockquote><p>错误成就感有两类：① 习惯于拿自己擅长的东西和别人不擅长的东西比较，从来获得「比别人强」的错觉（如：和运动员比学习成绩，和学霸比体育）；② 习惯于拿别人做事情 A 的时间来做事情 B，来假装自己在事情 B 上做得好（如：「炫耀」自己在节假日做了比别人更多的工作，但也仅仅是在节假日才能如此）。</p></blockquote><p>说来，我在读研期间提出不少傻逼自我安慰理论，其中包括“混子理论”：<strong>任何一个群体中都存在一定的混子，假设你身边有一半的混子，假设你不想过得太差又不想太累，那么你需要做的就是找到这一半的混子，然后按照混子的努力程度 + 1，那么大概率你就能超过不止一半的人</strong>。假设评价指标只有一个维度，那么这个理论似乎没有多大的问题，因为确实你能在某个指标上超过一半人，但是越接近社会，评价的维度变得越来越多，如果没有很好的抓住主要的维度，而为一些细枝末节上的超越而沾沾自喜，丝毫不自知危机将近，这最终导致的只有挫败。这是一种典型的错位成就感。</p><p>而我是一个很容易陷入错位成就感中的人，我举个我错误的想法：我在实习，比别人有实习优势，但是我却容易忽略了不在实习的同学是一直在进步的，无论是基础知识还是刷题水平都是日新月异的。</p><p>而对于找工作来说，实际上就是一个逻辑回归(logistic regression)的过程，不同维度的方面的能力只是决定能不能拿到offer的一部分。比如刷题能力，这个应该是在找工作过程中占比比较大的一个变量，就我面试经验来看，大部分人基础知识水平都相差不了太多，因此我一般挂了都是因为写不出题；其次就是这里提到的基础知识，如果基础知识足够好，面试又有什么好担心呢？比如自己因为有了实习、论文，就把刷题能力和基础知识拉下来，而这些权重又比较小，加权求和之后发现自己变成了负样本了。</p><h1 id="2-注意力不集中"><a href="#2-注意力不集中" class="headerlink" title="2. 注意力不集中"></a>2. 注意力不集中</h1><p>仔细回想，从高中毕业以来，我的精神不集中现象已经到了没有办法忽视的地步了。我做过很多尝试，比如关闭朋友圈入口，卸载虎扑快手等，但是时间总是会被新的软件所填充。注意力不能集中，是指琐碎信息获取时间占据超过一天的2/3。最近我开启了手机的统计，每天手机平均使用时间约为6.5小时，这说明我每天除了睡觉，大部分时候都在使用手机刷帖子、聊天水群等，系统性的学习时间太少了。</p><p>记得大三/四的时候，和健哥讨论过，他说：“我最近只要是有老师在上面讲课超过十分钟，我就不想听了”。我对于上课还好，能尽量控制自己稍微听一听，但是对于平时自己看书，看书超过10分钟，就想看一下手机，电脑划两下，尽管没有什么目的，但是这么做就能让自己暂时的摆脱集中思绪带来的痛苦。</p><p>如果我不能改掉这种坏问题，那么我的未来应该也没什么可以值得期待的吧？</p><h1 id="3-里程碑失去时效性"><a href="#3-里程碑失去时效性" class="headerlink" title="3. 里程碑失去时效性"></a>3. 里程碑失去时效性</h1><p>毫不夸张的说，这两天EMNLP的录取通知，是我最近以来最最最让我开心的一件事情了，对我来说应该算是一个里程碑的事情（我原来读研就是想发一个顶会，在师兄的帮助下完成了）。但是目前我已经是硕士三年级的学生了，还有4个月就要毕业了，它能给我带来的作用已经相对于几个月前来说更少了，为什么这么说？因为目前大部分小公司，完全不看你论文的，而对于大公司来说，已经基本没有 HC 了，这篇文章能发挥的作用就变得比较有限了。</p><p>里程碑固然是一个让人开心的事情，但是如果你不能在固定时间内完成，它带给你的收益是非常明显的，就像人人都会注意到15岁的数学天才，但是对于一个老教授求解出某个问题，关注却相对较少，这就是里程碑的作用。提前完成里程碑，一般来说就会走的比一般人更快更远。如果你能很早就发了一篇顶会，那么你就可以早早的跑去实习，那么你早早的跑去实习，就不必拘泥于秋招前暑假刷实习。这就是所谓的里程碑的时效性，这东西只有在一定的时间范围内才是有效的，如果你在过了它的时效期，那么对你来说，用处几乎为0。就像毕业后中的顶会，对你的offer不会有任何帮助了。</p><h1 id="4-总结"><a href="#4-总结" class="headerlink" title="4. 总结"></a>4. 总结</h1><p>踏实努力，提早完成里程碑。</p>]]></content>
     
     <summary type="html">
     
-      我为什么没有offer
+      我为什么没有满意的offer
     
     </summary>
     
@@ -217,28 +239,6 @@
   </entry>
   
   <entry>
-    <title>Must-read Papers on Emotion-Cause Pair Extraction</title>
-    <link href="https://bbruceyuan.github.io/post/7.html"/>
-    <id>https://bbruceyuan.github.io/post/7.html</id>
-    <published>2020-06-12T04:00:00.000Z</published>
-    <updated>2020-07-12T08:27:00.871Z</updated>
-    
-    <content type="html"><![CDATA[<h1 id="Must-read-papers-on-ECPE"><a href="#Must-read-papers-on-ECPE" class="headerlink" title="Must-read papers on ECPE"></a>Must-read papers on ECPE</h1><p><strong>ECPE: Emotion-Cause Pair Extraction</strong>.</p><p>It can be also named by 情感-原因对抽取 or 情感-原因关系抽取 in Chinese.</p><h1 id="Reviews"><a href="#Reviews" class="headerlink" title="Reviews"></a>Reviews</h1><blockquote><p>Chaofa Yuan, <a href="6.html"><strong>Emotion-Cause Pair Extraction: A Survey</strong></a>.</p></blockquote><h1 id="Task-amp-Dataset"><a href="#Task-amp-Dataset" class="headerlink" title="Task &amp; Dataset"></a>Task &amp; Dataset</h1><h2 id="Official-Definition"><a href="#Official-Definition" class="headerlink" title="Official Definition"></a>Official Definition</h2><p>Emotion-Cause Pair Extraction: A New Task to Emotion Analysis in Texts R Xia, Z Ding. ACL 2019. <a href="https://arxiv.org/pdf/1906.01267.pdf" target="_blank" rel="noopener">[paper]</a> <a href="https://github.com/NUSTM/ECPE/tree/master/data_combine" target="_blank" rel="noopener">[data]</a> <a href="https://github.com/NUSTM/ECPE" target="_blank" rel="noopener">[official code]</a> <a href="https://github.com/bbruceyuan/ECPE-PyTorch" target="_blank" rel="noopener">[PyTorch implementation]</a></p><h2 id="Chinese-Definition-and-Introduction"><a href="#Chinese-Definition-and-Introduction" class="headerlink" title="Chinese Definition and Introduction"></a>Chinese Definition and Introduction</h2><p>Task definition and introduction in Chinese. <a href="6.html">[Link]</a> <a href="6.html">[中文简介]</a></p><h1 id="Papers"><a href="#Papers" class="headerlink" title="Papers"></a>Papers</h1><ol><li>Rui Xia, Zixiang Ding. <strong>Emotion-Cause Pair Extraction: A New Task to Emotion Analysis in Texts.</strong> ACL (1) 2019: 1003-1012 <a href="https://arxiv.org/pdf/1906.01267.pdf" target="_blank" rel="noopener">[pdf]</a> <a href="https://github.com/NUSTM/ECPE/tree/master/data_combine" target="_blank" rel="noopener">[data]</a> <a href="https://github.com/NUSTM/ECPE" target="_blank" rel="noopener">[official code]</a> <a href="https://github.com/bbruceyuan/ECPE-PyTorch" target="_blank" rel="noopener">[PyTorch implementation]</a></li><li>Haolin Song, et al. <strong>End-to-end Emotion-Cause Pair Extraction via Learning to Link.</strong> arXiv preprint arXiv:2002.10710 (2020). <a href="https://arxiv.org/pdf/2002.10710.pdf" target="_blank" rel="noopener">[paper]</a></li><li>Hongliang Bi, and Pengyuan Liu. <strong>ECSP: A New Task for Emotion-Cause Span-Pair Extraction and Classification.</strong> arXiv preprint arXiv:2003.03507 (2020). <a href="https://arxiv.org/pdf/2003.03507.pdf" target="_blank" rel="noopener">[paper]</a></li><li>Hao Tang, Donghong Ji, and Qiji Zhou. <strong>Joint Multi-level Attentional Model for Emotion Detection and Emotion-cause Pair Extraction.</strong> Neurocomputing (2020). <a href="https://www.sciencedirect.com/science/article/abs/pii/S092523122030566X" target="_blank" rel="noopener">[paper]</a> <a href="https://github.com/tomsonsgs/LVE-joint-MANN-master" target="_blank" rel="noopener">[code]</a></li><li>Zixiang Ding, Rui Xia, Jianfei Yu. <strong>ECPE-2D: Emotion-Cause Pair Extraction based on Joint Two-Dimensional Representation, Interaction and Prediction.</strong> ACL 2020: 3161-3170 <a href="https://www.aclweb.org/anthology/2020.acl-main.288.pdf" target="_blank" rel="noopener">[paper]</a> <a href="https://github.com/NUSTM/ECPE-2D" target="_blank" rel="noopener">[code]</a></li><li>Penghui Wei, Jiahao Zhao, Wenji Mao: <strong>Effective Inter-Clause Modeling for End-to-End Emotion-Cause Pair Extraction.</strong> ACL 2020: 3171-3181 <a href="https://www.aclweb.org/anthology/2020.acl-main.289.pdf" target="_blank" rel="noopener">[paper]</a> <a href="https://github.com/Determined22/Rank-Emotion-Cause" target="_blank" rel="noopener">[code]</a></li><li>Chuang Fan, Chaofa Yuan, Jiachen Du, Lin Gui, Min Yang, Ruifeng Xu. <strong>Transition-based Directed Graph Construction for Emotion-Cause Pair Extraction.</strong> ACL 2020: 3707-3717 <a href="https://www.aclweb.org/anthology/2020.acl-main.342.pdf" target="_blank" rel="noopener">[paper]</a> <a href="https://github.com/HLT-HITSZ/TransECPE" target="_blank" rel="noopener">[code]</a></li><li>Wu S, Chen F, Wu F, et al. <strong>A Multi-Task Learning Neural Network for Emotion-Cause Pair Extraction</strong>[J]. <a href="http://ecai2020.eu/papers/583_paper.pdf" target="_blank" rel="noopener">[paper]</a> <a href="https://github.com/wusx00/MTNECP" target="_blank" rel="noopener">[code]</a></li></ol>]]></content>
-    
-    <summary type="html">
-    
-      Must-read Papers on Emotion-Cause Pair Extraction
-    
-    </summary>
-    
-      <category term="情感-原因对抽取(ECPE)" scheme="https://bbruceyuan.github.io/categories/%E6%83%85%E6%84%9F-%E5%8E%9F%E5%9B%A0%E5%AF%B9%E6%8A%BD%E5%8F%96-ECPE/"/>
-    
-    
-      <category term="ECPE" scheme="https://bbruceyuan.github.io/tags/ECPE/"/>
-    
-  </entry>
-  
-  <entry>
     <title>情感-原因对抽取综述 (Emotion-Cause Pair Extraction: A Survey)</title>
     <link href="https://bbruceyuan.github.io/post/6.html"/>
     <id>https://bbruceyuan.github.io/post/6.html</id>
@@ -250,6 +250,28 @@
     <summary type="html">
     
       情感原因对抽取综述, Emotion-Cause Pair Extraction: A Survey
+    
+    </summary>
+    
+      <category term="情感-原因对抽取(ECPE)" scheme="https://bbruceyuan.github.io/categories/%E6%83%85%E6%84%9F-%E5%8E%9F%E5%9B%A0%E5%AF%B9%E6%8A%BD%E5%8F%96-ECPE/"/>
+    
+    
+      <category term="ECPE" scheme="https://bbruceyuan.github.io/tags/ECPE/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Must-read Papers on Emotion-Cause Pair Extraction</title>
+    <link href="https://bbruceyuan.github.io/post/7.html"/>
+    <id>https://bbruceyuan.github.io/post/7.html</id>
+    <published>2020-06-12T04:00:00.000Z</published>
+    <updated>2020-07-12T08:27:00.871Z</updated>
+    
+    <content type="html"><![CDATA[<h1 id="Must-read-papers-on-ECPE"><a href="#Must-read-papers-on-ECPE" class="headerlink" title="Must-read papers on ECPE"></a>Must-read papers on ECPE</h1><p><strong>ECPE: Emotion-Cause Pair Extraction</strong>.</p><p>It can be also named by 情感-原因对抽取 or 情感-原因关系抽取 in Chinese.</p><h1 id="Reviews"><a href="#Reviews" class="headerlink" title="Reviews"></a>Reviews</h1><blockquote><p>Chaofa Yuan, <a href="6.html"><strong>Emotion-Cause Pair Extraction: A Survey</strong></a>.</p></blockquote><h1 id="Task-amp-Dataset"><a href="#Task-amp-Dataset" class="headerlink" title="Task &amp; Dataset"></a>Task &amp; Dataset</h1><h2 id="Official-Definition"><a href="#Official-Definition" class="headerlink" title="Official Definition"></a>Official Definition</h2><p>Emotion-Cause Pair Extraction: A New Task to Emotion Analysis in Texts R Xia, Z Ding. ACL 2019. <a href="https://arxiv.org/pdf/1906.01267.pdf" target="_blank" rel="noopener">[paper]</a> <a href="https://github.com/NUSTM/ECPE/tree/master/data_combine" target="_blank" rel="noopener">[data]</a> <a href="https://github.com/NUSTM/ECPE" target="_blank" rel="noopener">[official code]</a> <a href="https://github.com/bbruceyuan/ECPE-PyTorch" target="_blank" rel="noopener">[PyTorch implementation]</a></p><h2 id="Chinese-Definition-and-Introduction"><a href="#Chinese-Definition-and-Introduction" class="headerlink" title="Chinese Definition and Introduction"></a>Chinese Definition and Introduction</h2><p>Task definition and introduction in Chinese. <a href="6.html">[Link]</a> <a href="6.html">[中文简介]</a></p><h1 id="Papers"><a href="#Papers" class="headerlink" title="Papers"></a>Papers</h1><ol><li>Rui Xia, Zixiang Ding. <strong>Emotion-Cause Pair Extraction: A New Task to Emotion Analysis in Texts.</strong> ACL (1) 2019: 1003-1012 <a href="https://arxiv.org/pdf/1906.01267.pdf" target="_blank" rel="noopener">[pdf]</a> <a href="https://github.com/NUSTM/ECPE/tree/master/data_combine" target="_blank" rel="noopener">[data]</a> <a href="https://github.com/NUSTM/ECPE" target="_blank" rel="noopener">[official code]</a> <a href="https://github.com/bbruceyuan/ECPE-PyTorch" target="_blank" rel="noopener">[PyTorch implementation]</a></li><li>Haolin Song, et al. <strong>End-to-end Emotion-Cause Pair Extraction via Learning to Link.</strong> arXiv preprint arXiv:2002.10710 (2020). <a href="https://arxiv.org/pdf/2002.10710.pdf" target="_blank" rel="noopener">[paper]</a></li><li>Hongliang Bi, and Pengyuan Liu. <strong>ECSP: A New Task for Emotion-Cause Span-Pair Extraction and Classification.</strong> arXiv preprint arXiv:2003.03507 (2020). <a href="https://arxiv.org/pdf/2003.03507.pdf" target="_blank" rel="noopener">[paper]</a></li><li>Hao Tang, Donghong Ji, and Qiji Zhou. <strong>Joint Multi-level Attentional Model for Emotion Detection and Emotion-cause Pair Extraction.</strong> Neurocomputing (2020). <a href="https://www.sciencedirect.com/science/article/abs/pii/S092523122030566X" target="_blank" rel="noopener">[paper]</a> <a href="https://github.com/tomsonsgs/LVE-joint-MANN-master" target="_blank" rel="noopener">[code]</a></li><li>Zixiang Ding, Rui Xia, Jianfei Yu. <strong>ECPE-2D: Emotion-Cause Pair Extraction based on Joint Two-Dimensional Representation, Interaction and Prediction.</strong> ACL 2020: 3161-3170 <a href="https://www.aclweb.org/anthology/2020.acl-main.288.pdf" target="_blank" rel="noopener">[paper]</a> <a href="https://github.com/NUSTM/ECPE-2D" target="_blank" rel="noopener">[code]</a></li><li>Penghui Wei, Jiahao Zhao, Wenji Mao: <strong>Effective Inter-Clause Modeling for End-to-End Emotion-Cause Pair Extraction.</strong> ACL 2020: 3171-3181 <a href="https://www.aclweb.org/anthology/2020.acl-main.289.pdf" target="_blank" rel="noopener">[paper]</a> <a href="https://github.com/Determined22/Rank-Emotion-Cause" target="_blank" rel="noopener">[code]</a></li><li>Chuang Fan, Chaofa Yuan, Jiachen Du, Lin Gui, Min Yang, Ruifeng Xu. <strong>Transition-based Directed Graph Construction for Emotion-Cause Pair Extraction.</strong> ACL 2020: 3707-3717 <a href="https://www.aclweb.org/anthology/2020.acl-main.342.pdf" target="_blank" rel="noopener">[paper]</a> <a href="https://github.com/HLT-HITSZ/TransECPE" target="_blank" rel="noopener">[code]</a></li><li>Wu S, Chen F, Wu F, et al. <strong>A Multi-Task Learning Neural Network for Emotion-Cause Pair Extraction</strong>[J]. <a href="http://ecai2020.eu/papers/583_paper.pdf" target="_blank" rel="noopener">[paper]</a> <a href="https://github.com/wusx00/MTNECP" target="_blank" rel="noopener">[code]</a></li></ol>]]></content>
+    
+    <summary type="html">
+    
+      Must-read Papers on Emotion-Cause Pair Extraction
     
     </summary>
     
