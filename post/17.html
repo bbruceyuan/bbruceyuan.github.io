@@ -14,17 +14,17 @@
   <!-- if page has tags, then add tags to keyword -->
   
   
-  <meta name="keywords" content="BBruceyuan,BBruceyuan的博客,动手学编程,打点酱油,杂谈,情感-原因对抽取,ECPE,Emotion-Cause Pair Extraction,情感原因发现,Emotion Cause">
+  <meta name="keywords" content="BBruceyuan,BBruceyuan的博客,动手学编程,打点酱油,NER,BBruceyuan">
   <!-- page.description has higher priority -->
-  <meta name="description" content="BBruceyuan的EMNLP投稿流水账">
+  <meta name="description" content="NER上分利器：实体边界重定位;Don’t Eclipse Your Arts Due to Small Discrepancies: Boundary Repositioning with a Pointer Network for Aspect Extraction">
   <link rel="shortcut icon" href="/img/icon.jpg">
   <title>
     
-    记EMNLP2020投稿 | BBruceyuan
+    NER上分利器：实体边界重定位 | BBruceyuan
     
   </title>
 
-  <link rel="canonical" href="/post/4.html">
+  <link rel="canonical" href="/post/17.html">
   <link rel="stylesheet" href="/css/reset.css">
   <link rel="stylesheet" href="/css/layout.css">
   <link rel="stylesheet" href="/css/markdown.css">
@@ -94,7 +94,7 @@
                     
                 </li>
                 
-                <li class="gkt-cate-name float-left ">
+                <li class="gkt-cate-name float-left active">
                     <a class="float-left" href="/post/3.html">序列标注</a>
                     
                 </li>
@@ -109,7 +109,7 @@
                     
                 </li>
                 
-                <li class="gkt-cate-name float-left active">
+                <li class="gkt-cate-name float-left ">
                     <a class="float-left" href="/post/4.html">杂谈</a>
                     
                 </li>
@@ -156,55 +156,28 @@
 <div class="float-left post-container box-shadow">
     <div class="u-arrow-wrapper hidden-xs">
         
-        <a class="float-left" href="/post/7.html"><i class="u-arrow-left"></i></a>
+        <a class="float-left" href="/post/16.html"><i class="u-arrow-left"></i></a>
         
-        
-        <a class="float-right" href="/post/5.html"><i class="u-arrow-right"></i></a>
         
     </div>
     <article class="col-xs-12">
-        <h1> 记EMNLP2020投稿 </h1>
+        <h1> NER上分利器：实体边界重定位 </h1>
 
         
 
         
         <div class="hidden-lg hidden-md series_links">
-            <p> <strong> 杂谈系列文章链接：</strong></p>
+            <p> <strong> 序列标注系列文章链接：</strong></p>
             <ul>
                 
                 <li>
-                    <a href="/post/4.html">记EMNLP2020投稿</a>
-                    <span class="post-item-date">(Jun 12, 2020)</span>
+                    <a href="/post/3.html">关于隐马尔可夫模型(HMM)，需要知道什么？</a>
+                    <span class="post-item-date">(Mar 12, 2020)</span>
                 </li>
                 
                 <li>
-                    <a href="/post/11.html">我为什么没有满意的offer?</a>
-                    <span class="post-item-date">(Sep 20, 2020)</span>
-                </li>
-                
-                <li>
-                    <a href="/post/12.html">我不喜欢失眠</a>
-                    <span class="post-item-date">(Oct 16, 2020)</span>
-                </li>
-                
-                <li>
-                    <a href="/post/13.html">倒着写的文章</a>
-                    <span class="post-item-date">(Nov 20, 2020)</span>
-                </li>
-                
-                <li>
-                    <a href="/post/14.html">BBruceyuan的近期不靠谱事件</a>
-                    <span class="post-item-date">(Dec 19, 2020)</span>
-                </li>
-                
-                <li>
-                    <a href="/post/15.html">2020年过去了，我不怀念它</a>
-                    <span class="post-item-date">(Dec 31, 2020)</span>
-                </li>
-                
-                <li>
-                    <a href="/post/16.html">周四，又见周四</a>
-                    <span class="post-item-date">(Jan 28, 2021)</span>
+                    <a href="/post/17.html">NER上分利器：实体边界重定位</a>
+                    <span class="post-item-date">(Feb 10, 2021)</span>
                 </li>
                 
             </ul>
@@ -212,13 +185,34 @@
         
         
         
-        <h1 id="小插曲"><a href="#小插曲" class="headerlink" title="小插曲"></a>小插曲</h1><p>这篇文章在投稿完EMNLP2020的晚上就想动手写来着，但是将看了一遍又一遍的文章投出去之后满是疲惫，根本没有精力去完成别的事情。满脑子想的就是睡觉睡觉，且马上要赶去火车站，时间实在是紧迫了一些。等我到达车站已经10点多钟了，不知道是因为疫情原因还是确实时间太晚了，人很少。我很快便在人工窗口取好了票，进去站台等布不知道等了多久，无意间撇了一眼自己的火车票，“深圳站”！才想起来我慌忙改签的时候没有注意到达站是什么，拿起12306刷了一下发现凌晨26分有一趟到深圳东的火车，这样回学校坐地铁就不用换乘了。看到距离火车出发还有一个半个小时，匆忙回到售票处想去退票，“我想退票，然后改签到凌晨12点26分的这一趟”，售票员说了句不让改签，我争辩了一下，我重申我的意思就是“退票，然后重新买下一趟”，售票员有些不耐烦，问我是哪一趟，我说T2331，并把显示这趟的详情页的手机递给了她，说尽量买中铺。拿到票之后看也没看便收了起来。因为很晚了，又困，在站台坐着睡了会，随后车到站了，顺利的到达9号车厢，进车厢才发现刚刚售票员给我的票是第二天早上的票。。。。实在困得受不了，只能上车补票。躺下的时候我就在想，平时打字的时候我就经常打错别字，这次买票是不是也算是一种“错别字”，那些科研上没有成功的idea是不是也是一些“错别字”，有的错别字不影响人理解，有的就会导致语义完全变化，都还没来记及把错别字引申到人生路上的错别字，我就应该已经睡着了。第二天醒来也完全没有了当时的感慨。</p>
-<h1 id="投稿原因"><a href="#投稿原因" class="headerlink" title="投稿原因"></a>投稿原因</h1><p>今年由于疫情缘故，太部分时间都是在家，本应该是好好刷题学习的时间，但是意外的EMNLP准备时间超过了今年上半年准备找实习的时间，这是一件很诡异的事情，因为年初的时候我想的就是好好找实习，然后搞个实习经历，再开心的秋招。计划总是赶不上变化，由于一开始被小蜜打击了之后，就投了一个头条相对边沿的部门，加上头条效率很高，很快就拿到了头条的实习offer。拿到了offer之后，懒散的情绪很快就占据了整个大脑，刷题、复习的事情马上就被我仍到一边，科研热情再次被燃起（可能是因为面试的时候被问了为啥ACL你不是一作），因此想在研究生期间能够自己有一篇顶会，尽管前不久我想的是论文也没啥用。。。</p>
-<h1 id="Pointer-Network-指向了失败"><a href="#Pointer-Network-指向了失败" class="headerlink" title="Pointer Network 指向了失败"></a>Pointer Network 指向了失败</h1><p>不管怎么说，在家干活，都必须要考虑到一个效率低的问题，因此如果在家产出一篇文章的概率就会大打折扣，但是自从很想获得一篇顶会之后，我的思考能力似乎有了一定的提高，很快便在和竹哥、宇瀚哥讨论过程中想到了一个利用Pointer Network去做情感-原因对抽取（Emotion-Cause Pair Extraction，ECPE），直观感觉上还是挺靠谱的，加上和范创师兄一讨论，得到肯定。心里觉得“这事稳了一半了”。马上便动手噗呲噗呲地写了起来，心里想的还挺美，觉得到emnlp截稿还是有时间的，代码一定要往可扩展性上写，一定要可读性高，一定要做对比实验的时候比较方便，一定要…，在代码结构上花了还是挺大的功夫的，大概花了一周多的时间，把网上的Pointer Net在NLP一些有关的文章稍微看了看，并且按照自己的想法，把PointerNet用在了ECPE上，在还没有跑代码之前自我感觉良好，毕竟解决一个又一个的BUG，觉得自己马上就要稳了，但是最终实验结果很不理想，经过多次分析都是觉得在Decoder部分的输入太相似了，没有足够的信息进行解码。期间想了各种办法，包括换结构，利用上一些乱七八杂的信息，终究还是没有用，后续零零散散的时间用在上面皆是失败告终。</p>
-<h1 id="Supervised-Self-Attention不是出路"><a href="#Supervised-Self-Attention不是出路" class="headerlink" title="Supervised Self-Attention不是出路"></a>Supervised Self-Attention不是出路</h1><p>此时在内心是已经放弃了的，要不是师兄不找我让我写一篇ACL推广文约稿（后续我会补上这篇文章），估计这个事情就已经到这里终结了。说来也很凑巧，师兄让我参考的写作规范的一篇文章[1]是做ABSA中实体-意见二元组的，这和我们要做的ECPE任务很相似，我从中收到了一些启发，便开始和师兄说了带监督机制的自我注意力模型去做ECPE，再次得到师兄更加牛逼的肯定。师兄：“这个想法简单，直观，挺好的，赶紧试一下！”我内心觉得有点骄傲，“哇，难道我真的要投顶会了吗？”（尽管只是投，但对我这样的废物也很好了）。倘若这个idea看起来不是那么靠谱就好了，实验之后的差效果也就不会让人如此难受了，加上时间已经非常紧急了，还是有点急躁，另外在准备的过程中，发现了两个和我想法非常相似度的文章，简直让我没法做下去，和师兄商量之后，师兄让我把融合方式改了一下，加上hinge loss来突出文章重点，尽管有那么一点点效果，还是比不上SOTA。假设一个情景，还有两三个星期要截稿了，你的实验还没跑通，你会是什么样的状态？我很急，师兄也急着（毕竟提供了那么多想法让我去实现之后都没有用），我多次怀疑自己代码有问题（让宇瀚哥帮忙review了一下也不行）。此时已经不是放弃不放弃的事情了，接连的两个idea实现都出问题让我对自身水平感到怀疑（这种想法是很糟糕的想法，菜鸡也要有自信好吧？），幸好后面师兄自己实现了一下这个简单idea之后和我实现效果差不多，根本达不到SOTA才让我感到缓和一点（EMNLP可以不投，但是自我怀疑/否定是很让人难受的一件事情）。心里放松了起来，反正还有一个星期就要截稿了，也来不及了，idea没用就没用吧，可以好好玩游戏了。故事本来的结局应该是这样的，毕竟我都已经开始找刘哥打游戏了，安排返校/实习的事情了。</p>
-<h1 id="Sequence-Labeling-过程很曲折"><a href="#Sequence-Labeling-过程很曲折" class="headerlink" title="Sequence Labeling 过程很曲折"></a>Sequence Labeling 过程很曲折</h1><p>岂料，有一个早上师兄打过电话来问我，“咱们ACL文章当初有个Baseline的方法，效果挺好的，可以重新改一下跑一下实验弄起来吗？”“没问题，代码和数据都还有呢”，便开始了第三次启程。尽管这个时候只剩下一个星期了，但是由于以前就写好了代码，也不是很慌，本来我以为压力全在师兄这里，毕竟文章全是师兄负责在写，还是需要修改很多的。岂料真的是屋漏偏逢连夜雨，某天早上八点多查看实验结果的时候，发现服务器登不上了，我一开始怀疑是断网了，需要重连frp，这一推断是基于我早上六点多还起来记录了一次实验结果。但是万万没想到是学校的网络进行光线改造[2]导致无法用外网，千算万算没算到这一茬，内心比较奔溃，但还是师兄心态比较好，让我先干别的，等网好了再跑，尽管等网好了之后就剩三天不到的时间。焦急的等待期过了，到了通知上的时间还是没有好，加上是周日，网络中心没人上班（这到底是什么神仙运气？）第二天上班后打过电话沟通也是让我等着，有人排查去了，一直到了六一下午两点才解决这个问题，距离UTC时间的六一截稿日期就剩二十几个小时。幸好这个实验还算顺利，差不多熬了个通宵，第二天就中午就收尾了。到下午快提交的时候，师兄通知我EMNLP推迟48小时（ps. 美国不愧是世界灯塔国，铁老大了，因为动乱就说延期，要是其他国家怎么可能有这样的权力），就把模型时间分析的实验放到后面再去做了，另外考虑这次EMNLP强调论文的可复现性，就对代码和模型重新整理了一下并且重新跑了部分实验（最后分析来不及做了，没用上，我猜测是因为时间突然的充裕让我有点不适应，好几个安排都很不合理）。在最后的实验结果分析阶段，要感谢一下健哥和竹哥的帮忙，这些帮助让师兄和我终于把这篇文章投出去了。后面几个小时林林总总的论文修改阶段大可不题，毕竟只能算是一些大风大浪中的小雨滴。<br>写流水账还是挺有意思的，都不知不觉写了快两个小时了。这文章就是随便记一下该EMNLP投稿的历程，圆了我的投稿梦。（我个人觉得中的概率取极限值就等于0了。。。为师兄和我合作花太多时间感到不值，不然也许能出更好的工作，而不是把时间花在一篇失败的文章上面）</p>
-<h1 id="备注"><a href="#备注" class="headerlink" title="备注"></a>备注</h1><p>人都会不自觉夸大自己在某份工作中的作用，也许你把我上面提到的东西乘上50%的权重也不过，毕竟这篇文章完全是师兄带我的，感激一下！<br>最后套用一句好听的话，问题不大，一切向好！</p>
-<h1 id="Reference"><a href="#Reference" class="headerlink" title="Reference"></a>Reference</h1><p>[1] <a href="https://mp.weixin.qq.com/s?__biz=MzA5OTQ5MDE0Mw==&amp;mid=2651120945&amp;idx=1&amp;sn=a2b077ad8cdc69473e8de18ebd0f8198&amp;chksm=8b71c501bc064c17600fb1215dd10d3798f15ef8123fcda5c95942474989a4a317d6c7bed9d6&amp;mpshare=1&amp;scene=1&amp;srcid=0428Lx0tLLK9I4xNI1DxUX8Q&amp;sharer_sharetime=1588129898957&amp;sharer_shareid=2e6ae307e6b80236a93fc42b13181c1a&amp;key=bb6c18c4d56ee2e275fec1e5a6e468a566096513c57c6fee7ab95023802ed47a4c72acd4cd32e25cf7e24241a16dd1a5584a59e34ae205b66876c2fbc8ac940d5a4d5b23304ca05129d58176be25d18e&amp;ascene=1&amp;uin=Mjk1NDQxOTkzNQ%3D%3D&amp;devicetype=Windows+10&amp;version=62080079&amp;lang=zh_CN&amp;exportkey=AyOlSVMMyyaKpbJ0Db6A8y8%3D&amp;pass_ticket=hJukV3pEAmQANxFBqLpWQmDsjMEatAI040GnUuL52SvIrf97se5FsEfeEXTszSF2" target="_blank" rel="noopener">https://mp.weixin.qq.com/s?__biz=MzA5OTQ5MDE0Mw==&amp;mid=2651120945&amp;idx=1&amp;sn=a2b077ad8cdc69473e8de18ebd0f8198&amp;chksm=8b71c501bc064c17600fb1215dd10d3798f15ef8123fcda5c95942474989a4a317d6c7bed9d6&amp;mpshare=1&amp;scene=1&amp;srcid=0428Lx0tLLK9I4xNI1DxUX8Q&amp;sharer_sharetime=1588129898957&amp;sharer_shareid=2e6ae307e6b80236a93fc42b13181c1a&amp;key=bb6c18c4d56ee2e275fec1e5a6e468a566096513c57c6fee7ab95023802ed47a4c72acd4cd32e25cf7e24241a16dd1a5584a59e34ae205b66876c2fbc8ac940d5a4d5b23304ca05129d58176be25d18e&amp;ascene=1&amp;uin=Mjk1NDQxOTkzNQ%3D%3D&amp;devicetype=Windows+10&amp;version=62080079&amp;lang=zh_CN&amp;exportkey=AyOlSVMMyyaKpbJ0Db6A8y8%3D&amp;pass_ticket=hJukV3pEAmQANxFBqLpWQmDsjMEatAI040GnUuL52SvIrf97se5FsEfeEXTszSF2</a><br>[2] <a href="https://mp.weixin.qq.com/s?__biz=MzA4NDQyMTE5NA==&amp;mid=2651966072&amp;idx=1&amp;sn=a278668f2c602739d51b954fc1d5a28c&amp;chksm=8402155db3759c4b53fa38a2de239aa9ccff358c3f2314b5394294f87b15475cc28e74bca8ae&amp;mpshare=1&amp;scene=1&amp;srcid=&amp;sharer_sharetime=1590807979934&amp;sharer_shareid=c4a3afaedc5f75f626cda4bb1a2a1f42&amp;key=08eac1696cccb69a54e6828035020e6b24c97de0b482a35e1112b67dd130a9c384a42e48a9af2c71a3488f38cc725fd73e76480f9776bc89efba6d35c650eb18339590c21459347a1a6e0a55496b77e8&amp;ascene=1&amp;uin=Mjk1NDQxOTkzNQ%3D%3D&amp;devicetype=Windows+10&amp;version=62080079&amp;lang=zh_CN&amp;exportkey=A2A5Q2L%2F42O67W5Z3YoY0jQ%3D&amp;pass_ticket=gw7DwuVhFziMPOGtZ2DhaCF4wZcJZfQ9kSF5wdHeqOxH9W%2FGQjJW6WXAC2D%2B2zgM" target="_blank" rel="noopener">https://mp.weixin.qq.com/s?__biz=MzA4NDQyMTE5NA==&amp;mid=2651966072&amp;idx=1&amp;sn=a278668f2c602739d51b954fc1d5a28c&amp;chksm=8402155db3759c4b53fa38a2de239aa9ccff358c3f2314b5394294f87b15475cc28e74bca8ae&amp;mpshare=1&amp;scene=1&amp;srcid=&amp;sharer_sharetime=1590807979934&amp;sharer_shareid=c4a3afaedc5f75f626cda4bb1a2a1f42&amp;key=08eac1696cccb69a54e6828035020e6b24c97de0b482a35e1112b67dd130a9c384a42e48a9af2c71a3488f38cc725fd73e76480f9776bc89efba6d35c650eb18339590c21459347a1a6e0a55496b77e8&amp;ascene=1&amp;uin=Mjk1NDQxOTkzNQ%3D%3D&amp;devicetype=Windows+10&amp;version=62080079&amp;lang=zh_CN&amp;exportkey=A2A5Q2L%2F42O67W5Z3YoY0jQ%3D&amp;pass_ticket=gw7DwuVhFziMPOGtZ2DhaCF4wZcJZfQ9kSF5wdHeqOxH9W%2FGQjJW6WXAC2D%2B2zgM</a></p>
+        <h1 id="1-背景"><a href="#1-背景" class="headerlink" title="1. 背景"></a>1. 背景</h1><p>在做命名实体识别的时候，模型识别错误的很大一部分原因是边界识别不好。因此如何将命名实体的边界进行重定向是进一步提升NER性能的利器。其中一种方法是可以利用词典和规则的方法进行边界重定向，如前文提到的《<a href="https://bbruceyuan.github.io/post/2.html">利用前后向算法</a>》，第二种方法可以用下文提到了指针网络进行边界重定向。此方法参考于《<a href="17.html">Don’t Eclipse Your Arts Due to Small Discrepancies: Boundary Repositioning with a Pointer Network for Aspect Extraction</a>》。</p>
+<!-- todo: 替换成 该篇文章的解读 -->
+
+
+<h1 id="2-NER错误类型"><a href="#2-NER错误类型" class="headerlink" title="2. NER错误类型"></a>2. NER错误类型</h1><p><img src="https://cdn.nlark.com/yuque/0/2021/png/257808/1612344306669-acb3a94d-edf4-4ed9-9489-29a29d2688de.png#align=left&display=inline&height=249&margin=%5Bobject%20Object%5D&name=image.png&originHeight=498&originWidth=1020&size=83899&status=done&style=none&width=510" alt="image.png"><br>该方法可以处理上面提到的两种错误类型，一种是模型识别的实体短了，比如错误类型1），少预测了两个字。而对于错误类型2），则是多预测了两个字。因此我们的想法就是将少预测的部分补全，将多预测的部分去除。而使用的方法就是重新训练一个指针网络识别新的实体边界。</p>
+<blockquote>
+<p>Ground-truth表示模型应该识别的边界。</p>
+</blockquote>
+<h1 id="3-具体样例"><a href="#3-具体样例" class="headerlink" title="3. 具体样例"></a>3. 具体样例</h1><blockquote>
+<p>他爱吃苹果派。</p>
+</blockquote>
+<p>目的是为了识别商品实体词：苹果派</p>
+<h1 id="4-实体边界重定位方法"><a href="#4-实体边界重定位方法" class="headerlink" title="4. 实体边界重定位方法"></a>4. 实体边界重定位方法</h1><h2 id="步骤1：实体抽取模型的训练"><a href="#步骤1：实体抽取模型的训练" class="headerlink" title="步骤1：实体抽取模型的训练"></a>步骤1：实体抽取模型的训练</h2><h3 id="4-1-1-模型结构"><a href="#4-1-1-模型结构" class="headerlink" title="4.1.1 模型结构"></a>4.1.1 模型结构</h3><p>训练命名实体识别（NER）模型，这里可以是任何一种模型。可以使用常见的 <code>CNN+Bi-LSTM+CRF</code> ，也可以是 <code>BERT+CRF</code> 总之，在这个步骤里面训练的模型可以是任意一个NER模型。比如<code>BERT+SoftMax</code><br><img src="https://cdn.nlark.com/yuque/0/2021/png/257808/1612344777358-183b44e8-ffdd-454c-936f-47385c3db702.png#align=left&display=inline&height=243&margin=%5Bobject%20Object%5D&name=image.png&originHeight=243&originWidth=283&size=60303&status=done&style=none&width=283" alt="image.png"></p>
+<h3 id="4-1-2-模型输入输出"><a href="#4-1-2-模型输入输出" class="headerlink" title="4.1.2 模型输入输出"></a>4.1.2 模型输入输出</h3><p>输入是一段 sentence。输出是实体列表。比如：【苹果】。</p>
+<h2 id="步骤2：边界重定向模型的训练"><a href="#步骤2：边界重定向模型的训练" class="headerlink" title="步骤2：边界重定向模型的训练"></a>步骤2：边界重定向模型的训练</h2><p>假设第一步的模型输出了NER结果是：【苹果】</p>
+<h3 id="4-2-1-模型结构"><a href="#4-2-1-模型结构" class="headerlink" title="4.2.1 模型结构"></a>4.2.1 模型结构</h3><p>BERT的双句分类模型结构。<br><img src="https://cdn.nlark.com/yuque/0/2021/png/257808/1612519149191-477ecca9-76f2-4aa4-b57e-bf9f6064fe06.png#align=left&display=inline&height=418&margin=%5Bobject%20Object%5D&name=image.png&originHeight=836&originWidth=1200&size=100620&status=done&style=none&width=600" alt="image.png"></p>
+<h3 id="4-2-2-模型的输入输出"><a href="#4-2-2-模型的输入输出" class="headerlink" title="4.2.2 模型的输入输出"></a>4.2.2 模型的输入输出</h3><p><strong>模型的输入</strong>：<br>回顾BERT双句分类，我们的sentence1应该改成步骤一里面的输出的实体。sentence2就是原来的输入的sentence。假设步骤一中一共输出了两个实体，那么我们就构建两个训练样本。</p>
+<blockquote>
+<p>预测正确和错误的实体都用于构建训练样本。</p>
+</blockquote>
+<p><strong>模型的输出</strong>：<br>对于这里，模型是对边界进行重定位，因此就是对 sentence2中的每一个字预测它start和end的概率，然后取start和end最大的中间那一部分当做最终预测的实体。</p>
+<h3 id="4-2-3-模型优化目标"><a href="#4-2-3-模型优化目标" class="headerlink" title="4.2.3 模型优化目标"></a>4.2.3 模型优化目标</h3><p>这里使用是负log对数函数，当然使用其他的loss也是可以的。</p>
+<h3 id="4-2-4-细节（重点重点）"><a href="#4-2-4-细节（重点重点）" class="headerlink" title="4.2.4 细节（重点重点）"></a>4.2.4 <strong>细节（重点重点）</strong></h3><p><strong>Question</strong>：对于步骤2，最重要的就是如何构建 实体样本，也就是说在步骤二中应该如何获得sentence1，sentence1应该在那里获得。<br><strong>Answer</strong>：候选实体的负样本通过步骤一的模型产生。具体做法是：生成一个字典(map)，当真实的实体当做key, value 是一个负样本列表。</p>
+<p>每一个真实的实体都对应一个负样本列表。 <code>{&#39;true entity&#39;: [&#39;wrong entity1&#39;, &#39;wrong entiry2&#39;]}</code> 。把每一个训练的epoch中产生的wrong entity都加入到对应的true entity里面。wrong entiry应该和 true entity 有重合。</p>
+<p>比如“苹果”和“苹果派”之间有重合，而“爱吃”和“苹果派”之间没有重合，因此“苹果”应该当做训练样例，而“爱吃”不应该当做负的训练样例。</p>
+<p>Reposition 模型的正样例就是：<cls> 正确的实体 <sep> 要判断的sentence <sep>。</sep></sep></cls></p>
+<h2 id="步骤3：测试样例的推理预测"><a href="#步骤3：测试样例的推理预测" class="headerlink" title="步骤3：测试样例的推理预测"></a>步骤3：测试样例的推理预测</h2><p>模型训练部分已经讲完了，预测时候就只需要将要预测的句子输入到步骤一种的实体抽取模型中。然后对输出的实体构造样本，送入到步骤二中的实体边界重定向模型中。最后将每一个句子对应的实体都找出来，就完成了 <strong>通过实体边界重定向提高NER性能</strong> 。</p>
+<h1 id="5-Reference"><a href="#5-Reference" class="headerlink" title="5. Reference"></a>5. Reference</h1><p>[1] Don’t Eclipse Your Arts Due to Small Discrepancies: Boundary Repositioning with a Pointer Network for Aspect Extraction</p>
 
         <script src="/js/qrious.min.js"></script>
 
@@ -242,20 +236,20 @@
             <p>
                 <span>专题: </span>
                 
-                <a href="/series/#杂谈">
-                    <code key="杂谈" class="post-label">杂谈</code>
+                <a href="/series/#序列标注">
+                    <code key="序列标注" class="post-label">序列标注</code>
                 </a>
                 
             </p>
             
             <p>
-                <span>本文发表于 2020-06-12，最后修改于 2020-12-20。</span>
+                <span>本文发表于 2021-02-10，最后修改于 2021-02-11。</span>
             </p>
             <!-- 文章末尾的提示 start -->
             
             <p>
                 本站永久域名<strong>「 <a
-                        href="/post/4.html">bbruceyuan.github.io</a>
+                        href="/post/17.html">bbruceyuan.github.io</a>
                     」</strong>，也可搜索<strong>「 BBruceyuan 」</strong>找到我。
             </p>
             
@@ -274,10 +268,8 @@
         <hr />
         <p name="pagination" style="font-size: 1.2em">
     
-    <a class="float-left" href="/post/7.html">上一篇 « Must-read Papers on Emotion-Cause Pair Extraction</a>
+    <a class="float-left" href="/post/16.html">上一篇 « 周四，又见周四</a>
     
-    
-    <a class="float-right" href="/post/5.html">下一篇 » Transition-based Directed Graph Construction for Emotion-Cause Pair Extraction (中文介绍)</a>
     
 </p>
     </article>
@@ -424,6 +416,35 @@
         <h3>推荐阅读</h3>
         
         <div class="post-preview">
+    <div class="post-img" style="background-image: url('/blog_imgs/17/17_1.png')"></div>
+    <div class="post-info">
+        <div class="post-info-center">
+            <div class="hidden-xs">
+                
+                
+                <span>/</span>
+                
+                <a class="text-gray" href="/tags/#NER"
+                    title="NER">NER</a>
+                <span>/</span>
+                
+                
+            </div>
+            <a href="/post/17.html" class="title">
+                NER上分利器：实体边界重定位
+            </a>
+            <p class="text-gray">
+                <small>
+                    <span>发表于2021-02-10，</span>
+                    <span class="hidden-xs">全文3031字，</span>
+                    <span>阅读约11分钟</span>
+                </small>
+            </p>
+        </div>
+    </div>
+</div>
+        
+        <div class="post-preview">
     <div class="post-img" style="background-image: url('/blog_imgs/8/8_1.jpg')"></div>
     <div class="post-info">
         <div class="post-info-center">
@@ -438,14 +459,14 @@
                 
                 
             </div>
-            <a href="/post/14.html" class="title">
-                BBruceyuan的近期不靠谱事件
+            <a href="/post/16.html" class="title">
+                周四，又见周四
             </a>
             <p class="text-gray">
                 <small>
-                    <span>发表于2020-12-19，</span>
-                    <span class="hidden-xs">全文2607字，</span>
-                    <span>阅读约9分钟</span>
+                    <span>发表于2021-01-28，</span>
+                    <span class="hidden-xs">全文2235字，</span>
+                    <span>阅读约8分钟</span>
                 </small>
             </p>
         </div>
@@ -453,7 +474,7 @@
 </div>
         
         <div class="post-preview">
-    <div class="post-img" style="background-image: url('/blog_imgs/4/emnlp.png')"></div>
+    <div class="post-img" style="background-image: url('/blog_imgs/8/8_1.jpg')"></div>
     <div class="post-info">
         <div class="post-info-center">
             <div class="hidden-xs">
@@ -467,43 +488,14 @@
                 
                 
             </div>
-            <a href="/post/4.html" class="title">
-                记EMNLP2020投稿
+            <a href="/post/11.html" class="title">
+                我为什么没有满意的offer?
             </a>
             <p class="text-gray">
                 <small>
-                    <span>发表于2020-06-12，</span>
-                    <span class="hidden-xs">全文4892字，</span>
-                    <span>阅读约17分钟</span>
-                </small>
-            </p>
-        </div>
-    </div>
-</div>
-        
-        <div class="post-preview">
-    <div class="post-img" style="background-image: url('/blog_imgs/5/5_2.png')"></div>
-    <div class="post-info">
-        <div class="post-info-center">
-            <div class="hidden-xs">
-                
-                
-                <span>/</span>
-                
-                <a class="text-gray" href="/tags/#ECPE"
-                    title="ECPE">ECPE</a>
-                <span>/</span>
-                
-                
-            </div>
-            <a href="/post/6.html" class="title">
-                情感-原因对抽取综述 (Emotion-Cause Pair Extraction: A Survey)
-            </a>
-            <p class="text-gray">
-                <small>
-                    <span>发表于2020-06-12，</span>
-                    <span class="hidden-xs">全文441字，</span>
-                    <span>阅读约2分钟</span>
+                    <span>发表于2020-09-20，</span>
+                    <span class="hidden-xs">全文1835字，</span>
+                    <span>阅读约7分钟</span>
                 </small>
             </p>
         </div>
@@ -723,18 +715,24 @@
         
         
         <section class="gkt-sidebar-content box-shadow">
-            <strong>杂谈</strong>
+            <strong>序列标注</strong>
             <ul>
                 
                 <li>
-                    <a href="/post/4.html"
-                        class="gkt-sidebar-active">记EMNLP2020投稿</a>
+                    <a href="/post/3.html"
+                        class="">关于隐马尔可夫模型(HMM)，需要知道什么？</a>
+                    
+                </li>
+                
+                <li>
+                    <a href="/post/17.html"
+                        class="gkt-sidebar-active">NER上分利器：实体边界重定位</a>
                     
                     <!-- Table of Contents -->
 <div id="sidebar-toc">
   <!-- TOC  -->
   
-  <ol class="toc-nav"><li class="toc-nav-item toc-nav-level-1"><a class="toc-nav-link" href="#小插曲"><span class="toc-nav-text">小插曲</span></a></li><li class="toc-nav-item toc-nav-level-1"><a class="toc-nav-link" href="#投稿原因"><span class="toc-nav-text">投稿原因</span></a></li><li class="toc-nav-item toc-nav-level-1"><a class="toc-nav-link" href="#Pointer-Network-指向了失败"><span class="toc-nav-text">Pointer Network 指向了失败</span></a></li><li class="toc-nav-item toc-nav-level-1"><a class="toc-nav-link" href="#Supervised-Self-Attention不是出路"><span class="toc-nav-text">Supervised Self-Attention不是出路</span></a></li><li class="toc-nav-item toc-nav-level-1"><a class="toc-nav-link" href="#Sequence-Labeling-过程很曲折"><span class="toc-nav-text">Sequence Labeling 过程很曲折</span></a></li><li class="toc-nav-item toc-nav-level-1"><a class="toc-nav-link" href="#备注"><span class="toc-nav-text">备注</span></a></li><li class="toc-nav-item toc-nav-level-1"><a class="toc-nav-link" href="#Reference"><span class="toc-nav-text">Reference</span></a></li></ol>
+  <ol class="toc-nav"><li class="toc-nav-item toc-nav-level-1"><a class="toc-nav-link" href="#1-背景"><span class="toc-nav-text">1. 背景</span></a></li><li class="toc-nav-item toc-nav-level-1"><a class="toc-nav-link" href="#2-NER错误类型"><span class="toc-nav-text">2. NER错误类型</span></a></li><li class="toc-nav-item toc-nav-level-1"><a class="toc-nav-link" href="#3-具体样例"><span class="toc-nav-text">3. 具体样例</span></a></li><li class="toc-nav-item toc-nav-level-1"><a class="toc-nav-link" href="#4-实体边界重定位方法"><span class="toc-nav-text">4. 实体边界重定位方法</span></a><ol class="toc-nav-child"><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#步骤1：实体抽取模型的训练"><span class="toc-nav-text">步骤1：实体抽取模型的训练</span></a></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#步骤2：边界重定向模型的训练"><span class="toc-nav-text">步骤2：边界重定向模型的训练</span></a></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#步骤3：测试样例的推理预测"><span class="toc-nav-text">步骤3：测试样例的推理预测</span></a></li></ol></li><li class="toc-nav-item toc-nav-level-1"><a class="toc-nav-link" href="#5-Reference"><span class="toc-nav-text">5. Reference</span></a></li></ol>
   
 </div>
 
@@ -773,42 +771,6 @@
     })
   })();
 </script>
-                    
-                </li>
-                
-                <li>
-                    <a href="/post/11.html"
-                        class="">我为什么没有满意的offer?</a>
-                    
-                </li>
-                
-                <li>
-                    <a href="/post/12.html"
-                        class="">我不喜欢失眠</a>
-                    
-                </li>
-                
-                <li>
-                    <a href="/post/13.html"
-                        class="">倒着写的文章</a>
-                    
-                </li>
-                
-                <li>
-                    <a href="/post/14.html"
-                        class="">BBruceyuan的近期不靠谱事件</a>
-                    
-                </li>
-                
-                <li>
-                    <a href="/post/15.html"
-                        class="">2020年过去了，我不怀念它</a>
-                    
-                </li>
-                
-                <li>
-                    <a href="/post/16.html"
-                        class="">周四，又见周四</a>
                     
                 </li>
                 
