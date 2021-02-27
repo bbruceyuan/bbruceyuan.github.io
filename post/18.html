@@ -14,17 +14,17 @@
   <!-- if page has tags, then add tags to keyword -->
   
   
-  <meta name="keywords" content="BBruceyuan,BBruceyuan的博客,动手学编程,打点酱油,分词,算法实现,分词算法,分词算法实现,最大匹配算法实现,前向最大匹配算法实现,后向最大匹配算法实现">
+  <meta name="keywords" content="BBruceyuan,BBruceyuan的博客,动手学编程,打点酱油,杂谈,BBruceyuan">
   <!-- page.description has higher priority -->
-  <meta name="description" content="分词算法，最大匹配，前向最大匹配，后向最大匹配，双向最大匹配算法的实现。">
+  <meta name="description" content="BBruceyuan的博客,动手学编程系列,打点酱油。">
   <link rel="shortcut icon" href="/img/icon.jpg">
   <title>
     
-    2020年了，还有必要学习分词算法吗？ | BBruceyuan
+    我从没这么喜欢待在家里 | BBruceyuan
     
   </title>
 
-  <link rel="canonical" href="/post/1.html">
+  <link rel="canonical" href="/post/18.html">
   <link rel="stylesheet" href="/css/reset.css">
   <link rel="stylesheet" href="/css/layout.css">
   <link rel="stylesheet" href="/css/markdown.css">
@@ -84,7 +84,7 @@
             <ul>
                 
                 
-                <li class="gkt-cate-name float-left active">
+                <li class="gkt-cate-name float-left ">
                     <a class="float-left" href="/post/1.html">分词</a>
                     
                 </li>
@@ -109,7 +109,7 @@
                     
                 </li>
                 
-                <li class="gkt-cate-name float-left ">
+                <li class="gkt-cate-name float-left active">
                     <a class="float-left" href="/post/4.html">杂谈</a>
                     
                 </li>
@@ -156,30 +156,58 @@
 <div class="float-left post-container box-shadow">
     <div class="u-arrow-wrapper hidden-xs">
         
-        <a class="float-left" href="/post/link.html"><i class="u-arrow-left"></i></a>
+        <a class="float-left" href="/post/17.html"><i class="u-arrow-left"></i></a>
         
-        
-        <a class="float-right" href="/post/2.html"><i class="u-arrow-right"></i></a>
         
     </div>
     <article class="col-xs-12">
-        <h1> 2020年了，还有必要学习分词算法吗？ </h1>
+        <h1> 我从没这么喜欢待在家里 </h1>
 
         
 
         
         <div class="hidden-lg hidden-md series_links">
-            <p> <strong> 分词系列文章链接：</strong></p>
+            <p> <strong> 杂谈系列文章链接：</strong></p>
             <ul>
                 
                 <li>
-                    <a href="/post/1.html">2020年了，还有必要学习分词算法吗？</a>
-                    <span class="post-item-date">(Mar 6, 2020)</span>
+                    <a href="/post/4.html">记EMNLP2020投稿</a>
+                    <span class="post-item-date">(Jun 12, 2020)</span>
                 </li>
                 
                 <li>
-                    <a href="/post/3.html">关于隐马尔可夫模型(HMM)，需要知道什么？</a>
-                    <span class="post-item-date">(Mar 12, 2020)</span>
+                    <a href="/post/11.html">我为什么没有满意的offer?</a>
+                    <span class="post-item-date">(Sep 20, 2020)</span>
+                </li>
+                
+                <li>
+                    <a href="/post/12.html">我不喜欢失眠</a>
+                    <span class="post-item-date">(Oct 16, 2020)</span>
+                </li>
+                
+                <li>
+                    <a href="/post/13.html">倒着写的文章</a>
+                    <span class="post-item-date">(Nov 20, 2020)</span>
+                </li>
+                
+                <li>
+                    <a href="/post/14.html">BBruceyuan的近期不靠谱事件</a>
+                    <span class="post-item-date">(Dec 19, 2020)</span>
+                </li>
+                
+                <li>
+                    <a href="/post/15.html">2020年过去了，我不怀念它</a>
+                    <span class="post-item-date">(Dec 31, 2020)</span>
+                </li>
+                
+                <li>
+                    <a href="/post/16.html">周四，又见周四</a>
+                    <span class="post-item-date">(Jan 28, 2021)</span>
+                </li>
+                
+                <li>
+                    <a href="/post/18.html">我从没这么喜欢待在家里</a>
+                    <span class="post-item-date">(Feb 13, 2021)</span>
                 </li>
                 
             </ul>
@@ -187,42 +215,48 @@
         
         
         
-        <h1 id="背景"><a href="#背景" class="headerlink" title="背景"></a>背景</h1><p>上周，和某同学聊天的时候提到关于深度学习时代下，分词算法的必要性。这引起了我的一点思考，是的，由于最近深度学习的发展，并且由于机器算力的增加，字级别的模型开始慢慢的展露头角，字级别的的模型效果已经可以说超过词级别的模型了[1]，并且在前沿的自然语言处理中都开始有放弃词级别模型的研究，尤其是在命名实体识别之类的序列标注任务上面，但是，分词真的就没有用了吗？</p>
-<p>答案显然是否定的。我们可以假设一个场景，如果百度或淘宝用户输入了一个句子(query)，难道会拿整个句子去做召回吗？显然是不可能的，肯定要先对 query 进行分词，进行一些纠错，改写，然后去文档库中做尽量多的匹配。</p>
-<p>既然分词分词在真实场景下还是有用的，作为最简单的NLP入门学习算法，分词当然是初学者作为入门练习的最佳实践。那么常见的分词算法有哪些呢？最简单就是前向和后向匹配算法，HMM，CRF等等。下面主要介绍最大匹配算法的思路和代码实现。</p>
-<h1 id="分词是什么？"><a href="#分词是什么？" class="headerlink" title="分词是什么？"></a>分词是什么？</h1><p>这个问题应该是没有必要提的，但是为了任务的定义，还是提一下比较好一点。给定一句话，比如</p>
+        <h1 id="2月5日"><a href="#2月5日" class="headerlink" title="2月5日"></a>2月5日</h1><p>坐上杨老板的车的那一刻，感觉自己轻松了许多，所有的烦恼都留在了深圳。当然更多的是杨老板和XJ的热情感染了，很久没见面交流的人一点也没有陌生感。</p>
+<p>从深圳到赣州距离算不得近，我们走的是武深高速，在路上一共行驶了8个小时。由于前一天晚上睡太晚了，大部分时间都是在睡觉中度过的。而杨老板和XJ总能找到很多乐子，无论上在路上“飙车”、还是“看其他车上的妹子”，心态非常好。相较于我以往做火车回家，时间不仅过得欢乐，也过得很快。</p>
+<p>约莫6点，我们就到了赣县。由于后期不顺路，我便自己打车回家了。唯一没想到的是，现在去乡下也很快就有人接单了。一共不到30分钟的车程，我没有说一句话。不是因为我不想和司机说话，而是因为我上车后他放得第一首歌就是许巍的《<a href="https://music.163.com/#/song?id=406730280" target="_blank" rel="noopener">那一年</a>》。（内心已经泪流满面的说不出话）</p>
+<h1 id="2月6日"><a href="#2月6日" class="headerlink" title="2月6日"></a>2月6日</h1><p>回家之后我是感到如此的放松。大脑得到近一个月来前所未有地放空，睡眠质量如此之好，让我有点忘记了自己失眠是多么狼狈。</p>
+<h1 id="2月7日"><a href="#2月7日" class="headerlink" title="2月7日"></a>2月7日</h1><p>在去赣州的公交车上，嘈杂的声音里面有一个小男孩的声音格外的吸引我。一个看着还很年轻的妈妈在教他背李清照的《<a href="https://baike.baidu.com/item/%E5%A6%82%E6%A2%A6%E4%BB%A4%C2%B7%E5%B8%B8%E8%AE%B0%E6%BA%AA%E4%BA%AD%E6%97%A5%E6%9A%AE/2508753?fromtitle=%E5%A6%82%E6%A2%A6%E4%BB%A4&fromid=16549201" target="_blank" rel="noopener">如梦令.常记溪亭日暮</a>》。</p>
 <blockquote>
-<p>我硕士阶段在研究生命科学<br>我/硕士/阶段/在/研究/生命科学</p>
+<p>常记溪亭日暮，沉醉不知归路。兴尽晚回舟，误入藕花深出。争渡，争渡，惊起一滩鸥鹭。</p>
 </blockquote>
-<p>有人会说，这不是我们小学的时候学的断句吗？emmmm… 事实好像就是如此，但是这对于一个小学生也能做的事情，对于机器来说确是比较难做到的。</p>
-<h1 id="基于词典的最大匹配算法"><a href="#基于词典的最大匹配算法" class="headerlink" title="基于词典的最大匹配算法"></a>基于词典的最大匹配算法</h1><p>最大匹配算法[2]主要包括正向最大匹配算法、逆向最大匹配算法、双向匹配算法等</p>
-<h2 id="1-最大正向匹配"><a href="#1-最大正向匹配" class="headerlink" title="1. 最大正向匹配"></a>1. 最大正向匹配</h2><p>最大正向匹配是一个非常简单且有效的方法。简单的说对给定的一段话，从左往右找，找到尽可能长的 一个片段，让这个片段存在于给定的词典中，然后讲这个片段找出来，画一条分词线，然后对这句话剩下的部分做同样的操作。如果第一个字符不是词典中任何一个词的前缀，那么这个字符单独作为一个词 (可以用字典树Trie Tree 实现，后续文章 来讲）。如果最后只剩下一个字了，那么这个字也是单独的一个词。继续以前面的“我硕士阶段在研究生命科学”为例。</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">第一步：初始使用整个句子去查找，查看 “我硕士阶段在研究生命科学”在不在词典中？不在。</span><br><span class="line">第二步：去掉最后一个词，变成了“我硕士阶段在研究生命科”在不在词典中？不在。</span><br><span class="line">第三步，再次去掉一个词，操作同理。</span><br><span class="line">........</span><br><span class="line">第12步，只剩下一个词了，“我”，只剩一个字了，进行分词。下次变成从 “硕士阶段在研究生命科学”开始。</span><br><span class="line">第13步，重复第一步，查看 “硕士阶段在研究生命科学”在不在词典中？不在。</span><br><span class="line">........</span><br><span class="line">第 i 步，查看 “硕士”在不在词典中？在。那么就进行分词，下次 变成了 “阶段在研究生命科学”开始。</span><br><span class="line">....... （后面同理，应该能懂了</span><br></pre></td></tr></table></figure>
-
-<p><strong>算法的实现：</strong></p>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">forward_maximum_match_segmentation</span><span class="params">(string, dictionary)</span>:</span></span><br><span class="line">    <span class="keyword">if</span> string == <span class="string">""</span>:</span><br><span class="line">        <span class="keyword">return</span></span><br><span class="line">    <span class="keyword">for</span> idx <span class="keyword">in</span> range(len(string), <span class="number">0</span>, <span class="number">-1</span>):</span><br><span class="line">        <span class="comment"># tmp words 是前面几个字符</span></span><br><span class="line">        tmp_words = string[:idx]</span><br><span class="line">        remainder_str = string[idx:]</span><br><span class="line">        <span class="keyword">if</span> tmp_words <span class="keyword">in</span> dictionary <span class="keyword">or</span> idx == <span class="number">1</span>:</span><br><span class="line">            <span class="comment"># 使用迭代器，意思你就可以使用</span></span><br><span class="line">            <span class="comment"># for item in forward_maximum_match_segmentation(xx) 遍历分词结果</span></span><br><span class="line">            <span class="keyword">yield</span> tmp_words</span><br><span class="line">            forward_maximum_match_segmentation(</span><br><span class="line">                remainder_str, dictionary)</span><br></pre></td></tr></table></figure>
-
-<h2 id="2-最大后向匹配算法"><a href="#2-最大后向匹配算法" class="headerlink" title="2 最大后向匹配算法"></a>2 最大后向匹配算法</h2><p>如果你有运行一下前向算法，那么你就可以发现，运用前向算法很容易就把上面提到的例句分错了 。具体体现在：</p>
+<p>当“兴尽晚回舟，误入藕花深处！”响起的时候，突然非常的怀念高中的日子。尽管当时并没有任何事情浮现在我大脑中，只是感觉以前很美好。</p>
+<p>本以为会让我泪流满面的《<a href="https://movie.douban.com/subject/24733428/" target="_blank" rel="noopener">心灵奇旅</a>》竟然完全不符合我的期待，让我感动的不是成功的男主，而是22。</p>
+<h1 id="2月8-9日"><a href="#2月8-9日" class="headerlink" title="2月8-9日"></a>2月8-9日</h1><p>头皮上长了毛囊炎，在医院花费了好多时间，每天还要涂药在头上，为此还理了一个及其短的头发。让本就很丑的脸更加雪上加霜。因此每天多了一个操作就是，我会在洗完澡之后帮我涂药。在家由于烦恼少很多，和我妈聊天也更多了。</p>
+<h1 id="2月10日"><a href="#2月10日" class="headerlink" title="2月10日"></a>2月10日</h1><p>L同学让我推荐电影来着，我回顾了好多自己看过的电影，发现自己果然喜欢的电影竟然是两种截然不同的风格。一方面，我非常喜欢讲述人内心黑暗的电影；一方面，我又为高雅温情的电影所吸引。（题外话：我果然是不会聊天，没救了）</p>
+<p>由于推荐电影这件事让我有些不开心。当晚看了竹哥推荐的“喜剧”《<a href="https://movie.douban.com/subject/33400376/" target="_blank" rel="noopener">平原上的夏洛克</a>》，抱着喜剧的态度去看，却觉得更悲伤了。而今晚，我开始意识到，我是个会被很奇怪的点所吸引的人，正如当初看脱口秀，喜欢上大张伟就是因为他说自己会被一些很“无厘头”的东西戳中，而他也是这么做得。</p>
+<h1 id="2月11日"><a href="#2月11日" class="headerlink" title="2月11日"></a>2月11日</h1><p>可能是因为天气的原因，今年的年味似乎有点沉闷，邻里来放鞭炮拜神的人都比以往少了。</p>
+<p>今年我姐是在家里吃的年夜饭，嗯是的，已经很久没和我姐一块吃年夜饭了。我姐比我大六岁，我已经很久没和她聊天了。在我印象里只有在很小的时候才是无话不谈的，而后来她实在不想读书了，出去打工，加上本身不爱说话，双方经历也完全不一致，后面聊天越来越少了。因为我实在是不知道说什么，我只能给外甥（女）买点东西的时候稍微说上几句话。（以后我试着多联系一下吧）</p>
+<h1 id="2月12日"><a href="#2月12日" class="headerlink" title="2月12日"></a>2月12日</h1><p>正月初一，家里来了很多人，很热闹。今年我好喜欢热闹。我让自己去参加各种活动，去做各种不同的事情，但和大四想做各种不同事情不同的是：我只是不想在安静中想乱七八糟没用的东西而已，不如笑一笑。希望每一天都是开心的！</p>
+<h1 id="2月13日"><a href="#2月13日" class="headerlink" title="2月13日"></a>2月13日</h1><p>今天本不是特殊的日子，21年2月13日，正月初二，大家还沉浸在过年的喜庆氛围中，可以说没有任何的特殊。</p>
+<p>今晚和L同学聊天的时候，我说去了走亲戚了。当听到我没有去外婆家的时候，L同学说正月初一初二应该是去外婆家的。哦，对哦，本来应该是去外婆家的。</p>
+<p>21年1月份，我毕业了，开始工作了。虽然工作不到20天，但是我觉得她能见到这一天，她一定会开心地说：“终于可以享福了！”</p>
+<p>但是我再也见不到我外婆了，外婆在19年1月5日去世了。永远的离开了我。</p>
+<p>我的记忆停留在了她去世那年的年纪，我一直以为2021年外婆应该是96岁了，而实际上如果按照老家过完新年加一岁的方式，今年应该是99岁了。</p>
+<p>最近还是一直在听<a href="https://music.163.com/#/artist?id=29393033" target="_blank" rel="noopener">福禄寿</a>，想到最初喜欢上这个乐队就是因为在乐队的夏天的一首《<a href="https://music.163.com/#/song?id=1412597751" target="_blank" rel="noopener">玉珍</a>》。今晚再次听到的时候眼泪止不住往下流。</p>
+<p>不要再让我哭泣了，外婆一定不喜欢我哭。我想和外婆聊天了。我很喜欢和外婆聊天，她总是能说很多话，说着重复的话，我想您了。</p>
+<h1 id="2月14日"><a href="#2月14日" class="headerlink" title="2月14日"></a>2月14日</h1><p>外婆并没有来到我的梦里。我决定堵住我的耳朵，不听悲伤的声音；捂住眼睛，不看悲伤的事情，清空大脑，不想悲伤的事情。</p>
+<p>尽管今天是情人节，但是到了晚上十点多我才给L同学发第一条消息。今天<strong>本来</strong>有个很有趣的时候可以分享的，今天有个原来想找我叫他编程的高中小哥（在国外），突然来找我，说让帮他下单一份鲜花送到他女朋友那里。对于这种事情，我当然是非常乐意帮忙了。（看，是不是还是很无厘头，那一刻我突然都想有个可以送花的妹子，但健哥说我没有BGM。）</p>
+<h1 id="2月15日"><a href="#2月15日" class="headerlink" title="2月15日"></a>2月15日</h1><p>今晚的星星真多、真亮！</p>
+<p>是我前些天去房间太早没注意到吗？</p>
+<h1 id="2月16日"><a href="#2月16日" class="headerlink" title="2月16日"></a>2月16日</h1><p>和富哥、杨老板、修吉、凯子一块吃饭玩了一趟，上一次好像是两年前。感觉今年大家的烦恼瞬间都多了起来，每个人都在烦恼各种各样的事情，大家都不是那么的开心。晚上在电竞酒店住的时候也都睡的好早，大家都熬不了夜了啊。</p>
+<h1 id="2月17日"><a href="#2月17日" class="headerlink" title="2月17日"></a>2月17日</h1><p>城市的公交车有末班车，农村客运来的更早一些。比如去我家的公交车，最晚一趟是下午五点。而且由于原来农村客运出过车祸之后，已经不让超载了。只能按照座位，一人一座。</p>
+<p>在我自己有很紧急的事情的情况[1]下，我选择了给别人让座。这次让座和地铁城市公交让座不同，是我需要下车等下一趟。中途到站的可以等下一趟，而到终点站下车的那些人，如果没人让座，他们就回不了家。</p>
 <blockquote>
-<p>研究生命科学。<br>因为“研究生”和“生命科学”都会在字典中，那么按照最大前向匹配原则，就会匹配成 研究生，而不是 研究。<br>最次如果使用前向算法，最终结果为“我/硕士/阶段/在/研究生/命/科学”。</p>
+<p>公交目的地有 A和B。AB两地相距很远。而去AB两地的公交都会经过我家，去A地的公交最晚一趟是4:30，去B的最晚一趟是5:00。</p>
 </blockquote>
-<p>运用前向分词算法的结果是错的，最大后向匹配，可以解决一部分这种问题（词语重复问题）。最大后向匹配算法和前向算法是一样的，只是逻辑 变成从后往前了。</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">第一步，和前向一样，</span><br><span class="line">第二步，输入变成了“硕士阶段在研究生命科学”，然后继续查看，</span><br><span class="line">...... （后续逻辑和前向是一样的了</span><br></pre></td></tr></table></figure>
-
-<p><strong>区别</strong> ：前向是每次都是去掉后一个词，后向是去掉前一个词。</p>
-<p><strong>算法的实现：</strong> </p>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">backward_maximum_match_segmentation</span><span class="params">(string, dictionary)</span>:</span></span><br><span class="line">    <span class="keyword">if</span> string == <span class="string">""</span>:</span><br><span class="line">        <span class="keyword">return</span></span><br><span class="line">    <span class="keyword">for</span> idx <span class="keyword">in</span> range(<span class="number">0</span>, len(string)):</span><br><span class="line">        <span class="comment"># tmp words 是后面几个字符</span></span><br><span class="line">        tmp_words = string[idx:]</span><br><span class="line">        <span class="comment"># 剩下的就是前面的几个单词了</span></span><br><span class="line">        remainder_str = string[:idx]</span><br><span class="line">        <span class="keyword">if</span> tmp_words <span class="keyword">in</span> dictionary <span class="keyword">or</span> idx == len(string) - <span class="number">1</span>:</span><br><span class="line">            <span class="keyword">yield</span> tmp_words</span><br><span class="line">            backward_maximum_match_segmentation(</span><br><span class="line">                remainder_str, dictionary)</span><br></pre></td></tr></table></figure>
-
-<p>以上两种算法实现参考[3]。</p>
-<h2 id="3-双向匹配算法"><a href="#3-双向匹配算法" class="headerlink" title="3 双向匹配算法"></a>3 双向匹配算法</h2><p>双向匹配算法当然指的是用前向算法分词一遍，用后向算法分词一遍。因为有文献[4]证明，对于中文来说，90%的句子最大正向匹配和最大反向匹配结果是一样的，剩下9%两者其中一个是正确的。剩下的，只有大约1%的句子，两者分词结果相同，但是结果其实是错的。因此双向匹配算法很常用。</p>
-<p>双向匹配算法使用的启发式算法来选择最终结果描述如下：</p>
+<p>由于自己的事情也很重要。本来我是闭上了眼睛，不让悲伤的景象进入我的眼里。但是我忘记带上降噪耳机了，售票员向一对说话不利索的兄弟说，你们上一个，另一个就明天回吧。听到这个，我忍不住睁开眼睛看了一下，是一对中年的兄弟，看的出来应该是患有过疾病。我立刻提出要下车，但是此时他已经转过去多米了（也许听力也有问题，喊他没听到）。本以为这个事情就此了结，但此刻又出现了一个背着很多行李的大爷，肯定也是不会舍得打车回家的人。因为我选择了下车，让他们上车回家吧。（从某种意义上，我应该也算得上是个好人吧）</p>
+<p>坐上下一趟公交，约莫5:30到家了。回到家中便有很多亲切感，就算自己闭着眼睛也能摸索出走的路。而明天我确实要出发去工作了，心中难免有些抵触感和不舍。晚上也是平常的饭菜，今天早早地吃完饭了，如果是平时，我已经回去自己的房间了，但是今天我很想和我妈呆在一块，尽管是没有什么要说的，但是陪在我妈身边的时候自己却感觉很安心。这是我以前少有的感觉，以前我总是嫌弃我妈天天说我，很多东西都是天天重复说，但此刻我觉得好安心。（也许是我最近真的太烦了，想太多无意义的事情了，而家里是一种很安定的感觉，我此刻是多想在家多呆几天。）</p>
+<h1 id="2月18日"><a href="#2月18日" class="headerlink" title="2月18日"></a>2月18日</h1><p>这也许是我最不想离开家的一次了。因为以后再也不会有寒暑假了。早上出门的时候想起来伊坂幸太郎的小说《<a href="https://book.douban.com/subject/25892399/" target="_blank" rel="noopener">余生皆假期</a>》，只不过我剩下的人生不是暑假，而是工作，而且天天都有“作业”。</p>
 <blockquote>
-<p>1.正反向分词结果词数不同，则取分词数量较少的那个。<br>2.分词结果词数相同<br>​    a.分词结果相同，就说明没有歧义，可返回任意一个。<br>​    b.分词结果不同，返回其中单字较少的那个</p>
+<p><strong>“不过人啊，一旦积攒了过多压力，就会想吃甜食。”</strong></p>
 </blockquote>
-<p><strong>具体算法实现</strong></p>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">bi_directional_maximum_match_segmentation</span><span class="params">(string, dictionary)</span>:</span></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">_count_single</span><span class="params">(res)</span>:</span></span><br><span class="line">        <span class="comment"># 计算单字的数量</span></span><br><span class="line">        cnt = <span class="number">0</span></span><br><span class="line">        <span class="keyword">for</span> i <span class="keyword">in</span> res:</span><br><span class="line">            <span class="keyword">if</span> len(i) == <span class="number">1</span>:</span><br><span class="line">                cnt += <span class="number">1</span></span><br><span class="line">        <span class="keyword">return</span> cnt</span><br><span class="line"></span><br><span class="line">    fm_res = list(forward_maximum_match_segmentation(string, dictionary))</span><br><span class="line">    bm_res = list(backward_maximum_match_segmentation(string, dictionary))</span><br><span class="line"></span><br><span class="line">    <span class="comment"># 选词少的</span></span><br><span class="line">    <span class="keyword">if</span> len(fm_res) &gt; len(bm_res):</span><br><span class="line">        <span class="keyword">return</span> bm_res</span><br><span class="line">    <span class="keyword">elif</span> len(fm_res) &lt; len(bm_res):</span><br><span class="line">        <span class="keyword">return</span> fm_res</span><br><span class="line"></span><br><span class="line">    <span class="comment"># 如果两个完全相同 (考虑一下两者是相反的</span></span><br><span class="line">    <span class="keyword">if</span> fm_res == reversed(bm_res):</span><br><span class="line">        <span class="keyword">return</span> fm_res</span><br><span class="line">    <span class="keyword">else</span>:</span><br><span class="line">        <span class="keyword">if</span> _count_single(fm_res) &gt; _count_single(bm_res):</span><br><span class="line">            <span class="keyword">return</span> bm_res</span><br><span class="line">        <span class="keyword">else</span>:</span><br><span class="line">            <span class="keyword">return</span> fm_res</span><br></pre></td></tr></table></figure>
-
-<h1 id="Reference"><a href="#Reference" class="headerlink" title="Reference"></a>Reference</h1><p>[1] Is Word Segmentation Necessary for Deep Learning of Chinese Representations?<br>[2] <a href="https://baike.baidu.com/item/%E6%9C%80%E5%A4%A7%E5%8C%B9%E9%85%8D%E7%AE%97%E6%B3%95" target="_blank" rel="noopener">最大分词算法</a><br>[3] <a href="https://zhuanlan.zhihu.com/p/92102484" target="_blank" rel="noopener">https://zhuanlan.zhihu.com/p/92102484</a><br>[4] <a href="http://59.108.48.5/course/mining/12-13spring/%E5%8F%82%E8%80%83%E6%96%87%E7%8C%AE/02-01%E6%B1%89%E8%AF%AD%E8%87%AA%E5%8A%A8%E5%88%86%E8%AF%8D%E7%A0%94%E7%A9%B6%E8%AF%84%E8%BF%B0.pdf" target="_blank" rel="noopener">汉语自动分词研究评述</a></p>
+<p>以前从没去过赣州汽车站，因此错误的估计了去赣州汽车站的时间。来太早了，因此去超市逛了逛买些东西，但是发现自己只想买甜食，曲奇奥利奥芒果干等。结账的时候又大顺手拿了一根巧乐兹，送进了9点钟的胃里。</p>
+<p>做长途大巴是难受的，不仅是生理难受，各种外放的抖音快手声音让我心理上也很煎熬。以后我就算站六七个小时也不会再做这么久的长途大巴了。这十个小时的长途大巴把我半条命都消耗在了路上，剩下半条命也在各种情绪中消磨殆尽，等我到达房间躺下的时候已经只是一具行尸走肉的“尸体”了。</p>
+<p>[1] 后续再写，目前不方便公开。</p>
 
         <script src="/js/qrious.min.js"></script>
 
@@ -246,20 +280,20 @@
             <p>
                 <span>专题: </span>
                 
-                <a href="/series/#分词">
-                    <code key="分词" class="post-label">分词</code>
+                <a href="/series/#杂谈">
+                    <code key="杂谈" class="post-label">杂谈</code>
                 </a>
                 
             </p>
             
             <p>
-                <span>本文发表于 2020-03-06，最后修改于 2020-03-08。</span>
+                <span>本文发表于 2021-02-13，最后修改于 2021-02-27。</span>
             </p>
             <!-- 文章末尾的提示 start -->
             
             <p>
                 本站永久域名<strong>「 <a
-                        href="/post/1.html">bbruceyuan.github.io</a>
+                        href="/post/18.html">bbruceyuan.github.io</a>
                     」</strong>，也可搜索<strong>「 BBruceyuan 」</strong>找到我。
             </p>
             
@@ -278,10 +312,8 @@
         <hr />
         <p name="pagination" style="font-size: 1.2em">
     
-    <a class="float-left" href="/post/link.html">上一篇 « 友情链接</a>
+    <a class="float-left" href="/post/17.html">上一篇 « NER上分利器：实体边界重定位</a>
     
-    
-    <a class="float-right" href="/post/2.html">下一篇 » 深度学习时代，分词算法的真实应用实例</a>
     
 </p>
     </article>
@@ -457,7 +489,7 @@
 </div>
         
         <div class="post-preview">
-    <div class="post-img" style="background-image: url('/blog_imgs/8/8_1.jpg')"></div>
+    <div class="post-img" style="background-image: url('/blog_imgs/17/17_1.png')"></div>
     <div class="post-info">
         <div class="post-info-center">
             <div class="hidden-xs">
@@ -465,20 +497,20 @@
                 
                 <span>/</span>
                 
-                <a class="text-gray" href="/tags/#杂谈"
-                    title="杂谈">杂谈</a>
+                <a class="text-gray" href="/tags/#NER"
+                    title="NER">NER</a>
                 <span>/</span>
                 
                 
             </div>
-            <a href="/post/12.html" class="title">
-                我不喜欢失眠
+            <a href="/post/17.html" class="title">
+                NER上分利器：实体边界重定位
             </a>
             <p class="text-gray">
                 <small>
-                    <span>发表于2020-10-16，</span>
-                    <span class="hidden-xs">全文1868字，</span>
-                    <span>阅读约7分钟</span>
+                    <span>发表于2021-02-10，</span>
+                    <span class="hidden-xs">全文2793字，</span>
+                    <span>阅读约10分钟</span>
                 </small>
             </p>
         </div>
@@ -494,20 +526,24 @@
                 
                 <span>/</span>
                 
-                <a class="text-gray" href="/tags/#算法妙用"
-                    title="算法妙用">算法妙用</a>
+                <a class="text-gray" href="/tags/#面试锦囊"
+                    title="面试锦囊">面试锦囊</a>
+                <span>/</span>
+                
+                <a class="text-gray" href="/tags/#数学题"
+                    title="数学题">数学题</a>
                 <span>/</span>
                 
                 
             </div>
-            <a href="/post/9.html" class="title">
-                简单方法增加Query召回的多样性
+            <a href="/post/8.html" class="title">
+                01之间均匀分区取两点构成三角形的概率-证明加代码实现
             </a>
             <p class="text-gray">
                 <small>
-                    <span>发表于2020-08-03，</span>
-                    <span class="hidden-xs">全文1055字，</span>
-                    <span>阅读约4分钟</span>
+                    <span>发表于2020-08-02，</span>
+                    <span class="hidden-xs">全文2133字，</span>
+                    <span>阅读约8分钟</span>
                 </small>
             </p>
         </div>
@@ -727,18 +763,60 @@
         
         
         <section class="gkt-sidebar-content box-shadow">
-            <strong>分词</strong>
+            <strong>杂谈</strong>
             <ul>
                 
                 <li>
-                    <a href="/post/1.html"
-                        class="gkt-sidebar-active">2020年了，还有必要学习分词算法吗？</a>
+                    <a href="/post/4.html"
+                        class="">记EMNLP2020投稿</a>
+                    
+                </li>
+                
+                <li>
+                    <a href="/post/11.html"
+                        class="">我为什么没有满意的offer?</a>
+                    
+                </li>
+                
+                <li>
+                    <a href="/post/12.html"
+                        class="">我不喜欢失眠</a>
+                    
+                </li>
+                
+                <li>
+                    <a href="/post/13.html"
+                        class="">倒着写的文章</a>
+                    
+                </li>
+                
+                <li>
+                    <a href="/post/14.html"
+                        class="">BBruceyuan的近期不靠谱事件</a>
+                    
+                </li>
+                
+                <li>
+                    <a href="/post/15.html"
+                        class="">2020年过去了，我不怀念它</a>
+                    
+                </li>
+                
+                <li>
+                    <a href="/post/16.html"
+                        class="">周四，又见周四</a>
+                    
+                </li>
+                
+                <li>
+                    <a href="/post/18.html"
+                        class="gkt-sidebar-active">我从没这么喜欢待在家里</a>
                     
                     <!-- Table of Contents -->
 <div id="sidebar-toc">
   <!-- TOC  -->
   
-  <ol class="toc-nav"><li class="toc-nav-item toc-nav-level-1"><a class="toc-nav-link" href="#背景"><span class="toc-nav-text">背景</span></a></li><li class="toc-nav-item toc-nav-level-1"><a class="toc-nav-link" href="#分词是什么？"><span class="toc-nav-text">分词是什么？</span></a></li><li class="toc-nav-item toc-nav-level-1"><a class="toc-nav-link" href="#基于词典的最大匹配算法"><span class="toc-nav-text">基于词典的最大匹配算法</span></a><ol class="toc-nav-child"><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#1-最大正向匹配"><span class="toc-nav-text">1. 最大正向匹配</span></a></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#2-最大后向匹配算法"><span class="toc-nav-text">2 最大后向匹配算法</span></a></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#3-双向匹配算法"><span class="toc-nav-text">3 双向匹配算法</span></a></li></ol></li><li class="toc-nav-item toc-nav-level-1"><a class="toc-nav-link" href="#Reference"><span class="toc-nav-text">Reference</span></a></li></ol>
+  <ol class="toc-nav"><li class="toc-nav-item toc-nav-level-1"><a class="toc-nav-link" href="#2月5日"><span class="toc-nav-text">2月5日</span></a></li><li class="toc-nav-item toc-nav-level-1"><a class="toc-nav-link" href="#2月6日"><span class="toc-nav-text">2月6日</span></a></li><li class="toc-nav-item toc-nav-level-1"><a class="toc-nav-link" href="#2月7日"><span class="toc-nav-text">2月7日</span></a></li><li class="toc-nav-item toc-nav-level-1"><a class="toc-nav-link" href="#2月8-9日"><span class="toc-nav-text">2月8-9日</span></a></li><li class="toc-nav-item toc-nav-level-1"><a class="toc-nav-link" href="#2月10日"><span class="toc-nav-text">2月10日</span></a></li><li class="toc-nav-item toc-nav-level-1"><a class="toc-nav-link" href="#2月11日"><span class="toc-nav-text">2月11日</span></a></li><li class="toc-nav-item toc-nav-level-1"><a class="toc-nav-link" href="#2月12日"><span class="toc-nav-text">2月12日</span></a></li><li class="toc-nav-item toc-nav-level-1"><a class="toc-nav-link" href="#2月13日"><span class="toc-nav-text">2月13日</span></a></li><li class="toc-nav-item toc-nav-level-1"><a class="toc-nav-link" href="#2月14日"><span class="toc-nav-text">2月14日</span></a></li><li class="toc-nav-item toc-nav-level-1"><a class="toc-nav-link" href="#2月15日"><span class="toc-nav-text">2月15日</span></a></li><li class="toc-nav-item toc-nav-level-1"><a class="toc-nav-link" href="#2月16日"><span class="toc-nav-text">2月16日</span></a></li><li class="toc-nav-item toc-nav-level-1"><a class="toc-nav-link" href="#2月17日"><span class="toc-nav-text">2月17日</span></a></li><li class="toc-nav-item toc-nav-level-1"><a class="toc-nav-link" href="#2月18日"><span class="toc-nav-text">2月18日</span></a></li></ol>
   
 </div>
 
@@ -777,12 +855,6 @@
     })
   })();
 </script>
-                    
-                </li>
-                
-                <li>
-                    <a href="/post/3.html"
-                        class="">关于隐马尔可夫模型(HMM)，需要知道什么？</a>
                     
                 </li>
                 

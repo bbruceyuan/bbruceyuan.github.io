@@ -105,7 +105,7 @@
                 </li>
                 
                 <li class="gkt-cate-name float-left ">
-                    <a class="float-left" href="/post/7.html">情感-原因对抽取(ECPE)</a>
+                    <a class="float-left" href="/post/6.html">情感-原因对抽取(ECPE)</a>
                     
                 </li>
                 
@@ -159,6 +159,8 @@
         <a class="float-left" href="/post/16.html"><i class="u-arrow-left"></i></a>
         
         
+        <a class="float-right" href="/post/18.html"><i class="u-arrow-right"></i></a>
+        
     </div>
     <article class="col-xs-12">
         <h1> NER上分利器：实体边界重定位 </h1>
@@ -200,7 +202,7 @@
 <h1 id="4-实体边界重定位方法"><a href="#4-实体边界重定位方法" class="headerlink" title="4. 实体边界重定位方法"></a>4. 实体边界重定位方法</h1><h2 id="步骤1：实体抽取模型的训练"><a href="#步骤1：实体抽取模型的训练" class="headerlink" title="步骤1：实体抽取模型的训练"></a>步骤1：实体抽取模型的训练</h2><h3 id="4-1-1-模型结构"><a href="#4-1-1-模型结构" class="headerlink" title="4.1.1 模型结构"></a>4.1.1 模型结构</h3><p>训练命名实体识别（NER）模型，这里可以是任何一种模型。可以使用常见的 <code>CNN+Bi-LSTM+CRF</code> ，也可以是 <code>BERT+CRF</code> 总之，在这个步骤里面训练的模型可以是任意一个NER模型。比如<code>BERT+SoftMax</code><br><img src="https://cdn.nlark.com/yuque/0/2021/png/257808/1612344777358-183b44e8-ffdd-454c-936f-47385c3db702.png#align=left&display=inline&height=243&margin=%5Bobject%20Object%5D&name=image.png&originHeight=243&originWidth=283&size=60303&status=done&style=none&width=283" alt="image.png"></p>
 <h3 id="4-1-2-模型输入输出"><a href="#4-1-2-模型输入输出" class="headerlink" title="4.1.2 模型输入输出"></a>4.1.2 模型输入输出</h3><p>输入是一段 sentence。输出是实体列表。比如：【苹果】。</p>
 <h2 id="步骤2：边界重定向模型的训练"><a href="#步骤2：边界重定向模型的训练" class="headerlink" title="步骤2：边界重定向模型的训练"></a>步骤2：边界重定向模型的训练</h2><p>假设第一步的模型输出了NER结果是：【苹果】</p>
-<h3 id="4-2-1-模型结构"><a href="#4-2-1-模型结构" class="headerlink" title="4.2.1 模型结构"></a>4.2.1 模型结构</h3><p>BERT的双句分类模型结构。<br><img src="https://cdn.nlark.com/yuque/0/2021/png/257808/1612519149191-477ecca9-76f2-4aa4-b57e-bf9f6064fe06.png#align=left&display=inline&height=418&margin=%5Bobject%20Object%5D&name=image.png&originHeight=836&originWidth=1200&size=100620&status=done&style=none&width=600" alt="image.png"></p>
+<h3 id="4-2-1-模型结构"><a href="#4-2-1-模型结构" class="headerlink" title="4.2.1 模型结构"></a>4.2.1 模型结构</h3><p>BERT的双句分类模型结构。<br><img src="/blog_imgs/17/17_1.png" alt="image.png"></p>
 <h3 id="4-2-2-模型的输入输出"><a href="#4-2-2-模型的输入输出" class="headerlink" title="4.2.2 模型的输入输出"></a>4.2.2 模型的输入输出</h3><p><strong>模型的输入</strong>：<br>回顾BERT双句分类，我们的sentence1应该改成步骤一里面的输出的实体。sentence2就是原来的输入的sentence。假设步骤一中一共输出了两个实体，那么我们就构建两个训练样本。</p>
 <blockquote>
 <p>预测正确和错误的实体都用于构建训练样本。</p>
@@ -243,7 +245,7 @@
             </p>
             
             <p>
-                <span>本文发表于 2021-02-10，最后修改于 2021-02-11。</span>
+                <span>本文发表于 2021-02-10，最后修改于 2021-02-19。</span>
             </p>
             <!-- 文章末尾的提示 start -->
             
@@ -270,6 +272,8 @@
     
     <a class="float-left" href="/post/16.html">上一篇 « 周四，又见周四</a>
     
+    
+    <a class="float-right" href="/post/18.html">下一篇 » 我从没这么喜欢待在家里</a>
     
 </p>
     </article>
@@ -416,7 +420,7 @@
         <h3>推荐阅读</h3>
         
         <div class="post-preview">
-    <div class="post-img" style="background-image: url('/blog_imgs/17/17_1.png')"></div>
+    <div class="post-img" style="background-image: url('/blog_imgs/18/18_1.png')"></div>
     <div class="post-info">
         <div class="post-info-center">
             <div class="hidden-xs">
@@ -424,20 +428,20 @@
                 
                 <span>/</span>
                 
-                <a class="text-gray" href="/tags/#NER"
-                    title="NER">NER</a>
+                <a class="text-gray" href="/tags/#杂谈"
+                    title="杂谈">杂谈</a>
                 <span>/</span>
                 
                 
             </div>
-            <a href="/post/17.html" class="title">
-                NER上分利器：实体边界重定位
+            <a href="/post/18.html" class="title">
+                我从没这么喜欢待在家里
             </a>
             <p class="text-gray">
                 <small>
-                    <span>发表于2021-02-10，</span>
-                    <span class="hidden-xs">全文3031字，</span>
-                    <span>阅读约11分钟</span>
+                    <span>发表于2021-02-13，</span>
+                    <span class="hidden-xs">全文3932字，</span>
+                    <span>阅读约14分钟</span>
                 </small>
             </p>
         </div>
@@ -459,43 +463,43 @@
                 
                 
             </div>
-            <a href="/post/16.html" class="title">
-                周四，又见周四
+            <a href="/post/12.html" class="title">
+                我不喜欢失眠
             </a>
             <p class="text-gray">
                 <small>
-                    <span>发表于2021-01-28，</span>
-                    <span class="hidden-xs">全文2235字，</span>
-                    <span>阅读约8分钟</span>
-                </small>
-            </p>
-        </div>
-    </div>
-</div>
-        
-        <div class="post-preview">
-    <div class="post-img" style="background-image: url('/blog_imgs/8/8_1.jpg')"></div>
-    <div class="post-info">
-        <div class="post-info-center">
-            <div class="hidden-xs">
-                
-                
-                <span>/</span>
-                
-                <a class="text-gray" href="/tags/#杂谈"
-                    title="杂谈">杂谈</a>
-                <span>/</span>
-                
-                
-            </div>
-            <a href="/post/11.html" class="title">
-                我为什么没有满意的offer?
-            </a>
-            <p class="text-gray">
-                <small>
-                    <span>发表于2020-09-20，</span>
-                    <span class="hidden-xs">全文1835字，</span>
+                    <span>发表于2020-10-16，</span>
+                    <span class="hidden-xs">全文1868字，</span>
                     <span>阅读约7分钟</span>
+                </small>
+            </p>
+        </div>
+    </div>
+</div>
+        
+        <div class="post-preview">
+    <div class="post-img" style="background-image: url('/blog_imgs/8/8_1.jpg')"></div>
+    <div class="post-info">
+        <div class="post-info-center">
+            <div class="hidden-xs">
+                
+                
+                <span>/</span>
+                
+                <a class="text-gray" href="/tags/#面试锦囊"
+                    title="面试锦囊">面试锦囊</a>
+                <span>/</span>
+                
+                
+            </div>
+            <a href="/post/10.html" class="title">
+                Python实现蓄水池算法
+            </a>
+            <p class="text-gray">
+                <small>
+                    <span>发表于2020-08-15，</span>
+                    <span class="hidden-xs">全文1092字，</span>
+                    <span>阅读约4分钟</span>
                 </small>
             </p>
         </div>
@@ -525,23 +529,23 @@
 </style>
 <div id="featured-tag">
     
+    <a class="post-tag-item" href="/tags/#面试锦囊" title="面试锦囊"
+        rel="2">#面试锦囊 (2) </a>
+    
+    <a class="post-tag-item" href="/tags/#杂谈" title="杂谈"
+        rel="8">#杂谈 (8) </a>
+    
     <a class="post-tag-item" href="/tags/#分词" title="分词"
         rel="3">#分词 (3) </a>
     
     <a class="post-tag-item" href="/tags/#算法实现" title="算法实现"
         rel="1">#算法实现 (1) </a>
     
-    <a class="post-tag-item" href="/tags/#面试锦囊" title="面试锦囊"
-        rel="2">#面试锦囊 (2) </a>
-    
-    <a class="post-tag-item" href="/tags/#杂谈" title="杂谈"
-        rel="7">#杂谈 (7) </a>
+    <a class="post-tag-item" href="/tags/#算法妙用" title="算法妙用"
+        rel="2">#算法妙用 (2) </a>
     
     <a class="post-tag-item" href="/tags/#NER" title="NER"
         rel="1">#NER (1) </a>
-    
-    <a class="post-tag-item" href="/tags/#算法妙用" title="算法妙用"
-        rel="2">#算法妙用 (2) </a>
     
     <a class="post-tag-item" href="/tags/#序列标注" title="序列标注"
         rel="1">#序列标注 (1) </a>
@@ -692,7 +696,7 @@
 <div class="gkt-summary">
     <nav>
         <a href="/" class="col-xs-4">
-            <number class="number">19</number><span>文章</span>
+            <number class="number">20</number><span>文章</span>
         </a>
         <a href="/series" class="col-xs-4 middle">
             <number class="number">7</number><span>专题</span>
@@ -783,15 +787,15 @@
             <ul>
                 
                 <li>
+                    <a href="/post/18.html">我从没这么喜欢待在家里</a>
+                </li>
+                
+                <li>
                     <a href="/post/17.html">NER上分利器：实体边界重定位</a>
                 </li>
                 
                 <li>
                     <a href="/post/16.html">周四，又见周四</a>
-                </li>
-                
-                <li>
-                    <a href="/post/15.html">2020年过去了，我不怀念它</a>
                 </li>
                 
             </ul>
