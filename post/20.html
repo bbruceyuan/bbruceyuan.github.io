@@ -14,17 +14,17 @@
   <!-- if page has tags, then add tags to keyword -->
   
   
-  <meta name="keywords" content="BBruceyuan,BBruceyuan的博客,动手学编程,打点酱油,NER,BBruceyuan">
+  <meta name="keywords" content="BBruceyuan,BBruceyuan的博客,动手学编程,打点酱油,杂谈,BBruceyuan">
   <!-- page.description has higher priority -->
-  <meta name="description" content="NER上分利器：实体边界重定位;Don’t Eclipse Your Arts Due to Small Discrepancies: Boundary Repositioning with a Pointer Network for Aspect Extraction">
+  <meta name="description" content="BBruceyuan的黄金时代已经过去">
   <link rel="shortcut icon" href="/img/icon.jpg">
   <title>
     
-    NER上分利器：实体边界重定位 | BBruceyuan
+    三月的三分之一 | BBruceyuan
     
   </title>
 
-  <link rel="canonical" href="/post/17.html">
+  <link rel="canonical" href="/post/20.html">
   <link rel="stylesheet" href="/css/reset.css">
   <link rel="stylesheet" href="/css/layout.css">
   <link rel="stylesheet" href="/css/markdown.css">
@@ -94,7 +94,7 @@
                     
                 </li>
                 
-                <li class="gkt-cate-name float-left active">
+                <li class="gkt-cate-name float-left ">
                     <a class="float-left" href="/post/3.html">序列标注</a>
                     
                 </li>
@@ -109,7 +109,7 @@
                     
                 </li>
                 
-                <li class="gkt-cate-name float-left ">
+                <li class="gkt-cate-name float-left active">
                     <a class="float-left" href="/post/4.html">杂谈</a>
                     
                 </li>
@@ -156,30 +156,68 @@
 <div class="float-left post-container box-shadow">
     <div class="u-arrow-wrapper hidden-xs">
         
-        <a class="float-left" href="/post/16.html"><i class="u-arrow-left"></i></a>
+        <a class="float-left" href="/post/19.html"><i class="u-arrow-left"></i></a>
         
-        
-        <a class="float-right" href="/post/18.html"><i class="u-arrow-right"></i></a>
         
     </div>
     <article class="col-xs-12">
-        <h1> NER上分利器：实体边界重定位 </h1>
+        <h1> 三月的三分之一 </h1>
 
         
 
         
         <div class="hidden-lg hidden-md series_links">
-            <p> <strong> 序列标注系列文章链接：</strong></p>
+            <p> <strong> 杂谈系列文章链接：</strong></p>
             <ul>
                 
                 <li>
-                    <a href="/post/3.html">关于隐马尔可夫模型(HMM)，需要知道什么？</a>
-                    <span class="post-item-date">(Mar 12, 2020)</span>
+                    <a href="/post/4.html">记EMNLP2020投稿</a>
+                    <span class="post-item-date">(Jun 12, 2020)</span>
                 </li>
                 
                 <li>
-                    <a href="/post/17.html">NER上分利器：实体边界重定位</a>
-                    <span class="post-item-date">(Feb 10, 2021)</span>
+                    <a href="/post/11.html">我为什么没有满意的offer?</a>
+                    <span class="post-item-date">(Sep 20, 2020)</span>
+                </li>
+                
+                <li>
+                    <a href="/post/12.html">我不喜欢失眠</a>
+                    <span class="post-item-date">(Oct 16, 2020)</span>
+                </li>
+                
+                <li>
+                    <a href="/post/13.html">倒着写的文章</a>
+                    <span class="post-item-date">(Nov 20, 2020)</span>
+                </li>
+                
+                <li>
+                    <a href="/post/14.html">BBruceyuan的近期不靠谱事件</a>
+                    <span class="post-item-date">(Dec 19, 2020)</span>
+                </li>
+                
+                <li>
+                    <a href="/post/15.html">2020年过去了，我不怀念它</a>
+                    <span class="post-item-date">(Dec 31, 2020)</span>
+                </li>
+                
+                <li>
+                    <a href="/post/16.html">周四，又见周四</a>
+                    <span class="post-item-date">(Jan 28, 2021)</span>
+                </li>
+                
+                <li>
+                    <a href="/post/18.html">我从没这么喜欢待在家里</a>
+                    <span class="post-item-date">(Feb 19, 2021)</span>
+                </li>
+                
+                <li>
+                    <a href="/post/19.html">我的黄金时代已经过去</a>
+                    <span class="post-item-date">(Feb 28, 2021)</span>
+                </li>
+                
+                <li>
+                    <a href="/post/20.html">三月的三分之一</a>
+                    <span class="post-item-date">(Mar 10, 2021)</span>
                 </li>
                 
             </ul>
@@ -187,34 +225,18 @@
         
         
         
-        <h1 id="1-背景"><a href="#1-背景" class="headerlink" title="1. 背景"></a>1. 背景</h1><p>在做命名实体识别的时候，模型识别错误的很大一部分原因是边界识别不好。因此如何将命名实体的边界进行重定向是进一步提升NER性能的利器。其中一种方法是可以利用词典和规则的方法进行边界重定向，如前文提到的《<a href="https://bbruceyuan.github.io/post/2.html">利用前后向算法</a>》，第二种方法可以用下文提到了指针网络进行边界重定向。此方法参考于《<a href="17.html">Don’t Eclipse Your Arts Due to Small Discrepancies: Boundary Repositioning with a Pointer Network for Aspect Extraction</a>》。</p>
-<!-- todo: 替换成 该篇文章的解读 -->
-
-
-<h1 id="2-NER错误类型"><a href="#2-NER错误类型" class="headerlink" title="2. NER错误类型"></a>2. NER错误类型</h1><p><img src="https://cdn.nlark.com/yuque/0/2021/png/257808/1612344306669-acb3a94d-edf4-4ed9-9489-29a29d2688de.png#align=left&display=inline&height=249&margin=%5Bobject%20Object%5D&name=image.png&originHeight=498&originWidth=1020&size=83899&status=done&style=none&width=510" alt="image.png"><br>该方法可以处理上面提到的两种错误类型，一种是模型识别的实体短了，比如错误类型1），少预测了两个字。而对于错误类型2），则是多预测了两个字。因此我们的想法就是将少预测的部分补全，将多预测的部分去除。而使用的方法就是重新训练一个指针网络识别新的实体边界。</p>
+        <h1 id="我“病”了"><a href="#我“病”了" class="headerlink" title="我“病”了"></a>我“病”了</h1><p>我“病”了。不到十天的时间里，我去了两次“医院”。一次是心理咨询，一次是皮肤门诊。</p>
+<h2 id="心理咨询"><a href="#心理咨询" class="headerlink" title="心理咨询"></a>心理咨询</h2><p>2.28号从广州回来就已经很晚了，等我躺下的时候已经属于三月份了。入睡“没多久”就被楼下送小孩上学的声音吵醒了，这次我没有习惯性的带上降噪耳机，选择了起床，坐在床上拿出手机读双雪涛的短篇小说<a href="https://book.douban.com/subject/27116235/" target="_blank" rel="noopener">《刺杀小说家》</a>。我很喜欢下面这段话。</p>
 <blockquote>
-<p>Ground-truth表示模型应该识别的边界。</p>
+<p>若是在从前，恐怕一定会给妻子去个电话，妻子是善于决断那种人，无论面对何种状况，用不了三五秒时间，就把手掌当胸一拍说：就这么办吧，这么办一定不会有错。而事实证明，绝大多数情况妻子都是正确的，或许不是正确那么简单，而是一旦她做出选择之后，就与自己所做的选择融为一体，患难与共，即使有时和预期略微有些小出入，她也会冷静地告知我：所有事后认为并不是完全明智的选择，在事前都是必须的，这个道理你懂吧。妻子就是这样的人，小到一卷卫生纸的牌子，大到是不是忤逆父母与我结婚，都会用两只灵巧的手掌在胸前一拍，然后绝不后悔，那一拍与其说是对自己的鼓舞，不如说是与其他可能性的告别，一别之后，再无瓜葛。</p>
 </blockquote>
-<h1 id="3-具体样例"><a href="#3-具体样例" class="headerlink" title="3. 具体样例"></a>3. 具体样例</h1><blockquote>
-<p>他爱吃苹果派。</p>
-</blockquote>
-<p>目的是为了识别商品实体词：苹果派</p>
-<h1 id="4-实体边界重定位方法"><a href="#4-实体边界重定位方法" class="headerlink" title="4. 实体边界重定位方法"></a>4. 实体边界重定位方法</h1><h2 id="步骤1：实体抽取模型的训练"><a href="#步骤1：实体抽取模型的训练" class="headerlink" title="步骤1：实体抽取模型的训练"></a>步骤1：实体抽取模型的训练</h2><h3 id="4-1-1-模型结构"><a href="#4-1-1-模型结构" class="headerlink" title="4.1.1 模型结构"></a>4.1.1 模型结构</h3><p>训练命名实体识别（NER）模型，这里可以是任何一种模型。可以使用常见的 <code>CNN+Bi-LSTM+CRF</code> ，也可以是 <code>BERT+CRF</code> 总之，在这个步骤里面训练的模型可以是任意一个NER模型。比如<code>BERT+SoftMax</code><br><img src="https://cdn.nlark.com/yuque/0/2021/png/257808/1612344777358-183b44e8-ffdd-454c-936f-47385c3db702.png#align=left&display=inline&height=243&margin=%5Bobject%20Object%5D&name=image.png&originHeight=243&originWidth=283&size=60303&status=done&style=none&width=283" alt="image.png"></p>
-<h3 id="4-1-2-模型输入输出"><a href="#4-1-2-模型输入输出" class="headerlink" title="4.1.2 模型输入输出"></a>4.1.2 模型输入输出</h3><p>输入是一段 sentence。输出是实体列表。比如：【苹果】。</p>
-<h2 id="步骤2：边界重定向模型的训练"><a href="#步骤2：边界重定向模型的训练" class="headerlink" title="步骤2：边界重定向模型的训练"></a>步骤2：边界重定向模型的训练</h2><p>假设第一步的模型输出了NER结果是：【苹果】</p>
-<h3 id="4-2-1-模型结构"><a href="#4-2-1-模型结构" class="headerlink" title="4.2.1 模型结构"></a>4.2.1 模型结构</h3><p>BERT的双句分类模型结构。<br><img src="/blog_imgs/17/17_1.png" alt="image.png"></p>
-<h3 id="4-2-2-模型的输入输出"><a href="#4-2-2-模型的输入输出" class="headerlink" title="4.2.2 模型的输入输出"></a>4.2.2 模型的输入输出</h3><p><strong>模型的输入</strong>：<br>回顾BERT双句分类，我们的sentence1应该改成步骤一里面的输出的实体。sentence2就是原来的输入的sentence。假设步骤一中一共输出了两个实体，那么我们就构建两个训练样本。</p>
-<blockquote>
-<p>预测正确和错误的实体都用于构建训练样本。</p>
-</blockquote>
-<p><strong>模型的输出</strong>：<br>对于这里，模型是对边界进行重定位，因此就是对 sentence2中的每一个字预测它start和end的概率，然后取start和end最大的中间那一部分当做最终预测的实体。</p>
-<h3 id="4-2-3-模型优化目标"><a href="#4-2-3-模型优化目标" class="headerlink" title="4.2.3 模型优化目标"></a>4.2.3 模型优化目标</h3><p>这里使用是负log对数函数，当然使用其他的loss也是可以的。</p>
-<h3 id="4-2-4-细节（重点重点）"><a href="#4-2-4-细节（重点重点）" class="headerlink" title="4.2.4 细节（重点重点）"></a>4.2.4 <strong>细节（重点重点）</strong></h3><p><strong>Question</strong>：对于步骤2，最重要的就是如何构建 实体样本，也就是说在步骤二中应该如何获得sentence1，sentence1应该在那里获得。<br><strong>Answer</strong>：候选实体的负样本通过步骤一的模型产生。具体做法是：生成一个字典(map)，当真实的实体当做key, value 是一个负样本列表。</p>
-<p>每一个真实的实体都对应一个负样本列表。 <code>{&#39;true entity&#39;: [&#39;wrong entity1&#39;, &#39;wrong entiry2&#39;]}</code> 。把每一个训练的epoch中产生的wrong entity都加入到对应的true entity里面。wrong entiry应该和 true entity 有重合。</p>
-<p>比如“苹果”和“苹果派”之间有重合，而“爱吃”和“苹果派”之间没有重合，因此“苹果”应该当做训练样例，而“爱吃”不应该当做负的训练样例。</p>
-<p>Reposition 模型的正样例就是：<cls> 正确的实体 <sep> 要判断的sentence <sep>。</sep></sep></cls></p>
-<h2 id="步骤3：测试样例的推理预测"><a href="#步骤3：测试样例的推理预测" class="headerlink" title="步骤3：测试样例的推理预测"></a>步骤3：测试样例的推理预测</h2><p>模型训练部分已经讲完了，预测时候就只需要将要预测的句子输入到步骤一种的实体抽取模型中。然后对输出的实体构造样本，送入到步骤二中的实体边界重定向模型中。最后将每一个句子对应的实体都找出来，就完成了 <strong>通过实体边界重定向提高NER性能</strong> 。</p>
-<h1 id="5-Reference"><a href="#5-Reference" class="headerlink" title="5. Reference"></a>5. Reference</h1><p>[1] Don’t Eclipse Your Arts Due to Small Discrepancies: Boundary Repositioning with a Pointer Network for Aspect Extraction</p>
+<p>如果不是要上班，按照彼时的状态大概能一口气看上好几个短篇。时钟好像上了发条，在压抑沉闷的过程中也是过得飞快。当晚十点多在楼下跑步，逆时针方向。耳朵上挂着耳机，非常应景的听着「<a href="https://www.xiaoyuzhoufm.com/podcast/5e280fb8418a84a0461fd076" target="_blank" rel="noopener">不合时宜</a>」的一期播客<a href="https://www.xiaoyuzhoufm.com/episode/600beca11248f7fde55744b1" target="_blank" rel="noopener">《反思过劳时代里「工作」的意义》</a>。运动三十分钟并没有让身体分泌更多的多巴胺，运动完停下来的时候依然很难受。尤其是当我看到大晚上睡在地铁边上的爷孙俩，有些心疼。我摸了摸口袋，有我爸给我的一百块，便递给了他们。本以为开始运动后，情绪会好很多，事实上第二天依然很糟糕，中午吃完饭的时候走回来的时候，眼泪不受自己控制的留了下来。</p>
+<p>我说了很多次我觉得最近的情绪状态不太好，而且我知道这次不一样。当天中午我预约了公司的心理咨询。我并不期待得到什么建议，只是觉得和心理咨询师说话很安全，可以说自己的“问题”。这些问题在我说出来的时候，我甚至自己也不觉得是什么严重的问题，但我着实为此难受。常老师提了一个很好的观点，“我总是习惯于用静态的眼光看待动态的事务”。这也是导致我经常觉得自己无能为力的重要原因。但是我并不很接受这个观点，因为我还没完全想通这一事情。</p>
+<p>真正的“心理咨询”其实是3.4日，勇昊哥要来找我聊以后工作的事情，竹哥也过来了。我们吃了一个日式拉面，饭后吃了一大杯甜品。如果不是因为晚上要和产品同步一个结论，大概这一天会更开心一点。等我们回到住的地方已经很晚了，聊会天之后就已经更是到了理论上该睡觉的时刻。竹哥折腾了一下我从来没有看过的大电视，说是为了提升我的幸福感。（但是我想说，如果是我一个人的话，我宁愿一个人躺在床上在手机上看）。有朋友的感觉真的很好，我们一起看了宅舞，一起看了<a href="https://www.bilibili.com/video/BV1uf4y127Ab?p=2" target="_blank" rel="noopener">人生哲学家派大星</a>，一起看了<a href="https://movie.douban.com/subject/35068230/" target="_blank" rel="noopener">《吉祥如意》</a>。我们聊了很多，以前的生活，以后的想法。面对各种事情的态度，无论是什么话题都可以说出一堆话。勇昊哥对我说：“再活一次的话，好像真的没那个必要。”我也慢慢开始这么想了，确实好像没有那个必要。到了晚上三四点，我也没有一丝的困意，我还想着<a href="https://www.bilibili.com/video/BV1uf4y127Ab?p=2" target="_blank" rel="noopener">时间可以停留在这一刻</a>。我和竹哥睡一张床的，睡前突然又有好多话想说，我像是和心理咨询师交流一样说出我的问题。竹哥像是个老先生一样引用了罗翔老师的话，“我们自己一生中能够决定的东西很少，可能只有百分之五的剧本，百分之九十五的东西是我们决定不了的”。他想让我意识到我的运气已经很好了。我觉得在研究生阶段这么说没什么问题，但是从近期的角度思考，我觉得可能还是不够，离我的预期差距有点大。我也不知道自己说了几分钟话，没有回应，才发现竹哥已经睡着了。此刻是凌晨五点多，该快要上班了。</p>
+<h2 id="皮肤门诊"><a href="#皮肤门诊" class="headerlink" title="皮肤门诊"></a>皮肤门诊</h2><p>那天晚上心理是得到很大的放松，但生理上却是一次很大的负担。第二天晚上睡觉的时候就感觉头皮上再次长了很多痘痘。而我到了3.10日才去处理它。这天是周三，尽管是工作日，但是医院里的人还是很多，加上疫情的影响要扫各种码进行行程确认，光是从我进入医院到达到门诊部就已经花费了15分钟。等我取完号之后排队了已经接近9点了。</p>
+<p>排队的人很多，排队大厅的椅子上写了隔座等待，但是人太多了，完全无法做到隔座。门诊医生是一个女医生，带着一个年轻的围观实习生。简单询问了我症状之后，看了一下我的后脑勺。问了一个一针见血的问题，“是不是压力太大了？经常熬夜”。我只能非常无奈的说确实经常睡的很晚。这些日子确实压力很大，我的心里很少有安宁的感觉。医生对我说：“你以后需要早睡，不然还是很容易经常复发的。”</p>
+<p>这确实算不上一个很严重的问题，只是开了一些消炎药进行消炎。等我拿到药单和医嘱的时候，发现医生替我写了“保持良好的心情”这么一条。尽管也许是无意识的，就是一些非常术语的医疗文本。但是看到这条医嘱的时候心情却变好了一些。很感激！</p>
+<h1 id="三月属于春天"><a href="#三月属于春天" class="headerlink" title="三月属于春天"></a>三月属于春天</h1><p>我走出医院的时候已经十点半了。持续一周多灰蒙蒙的天气已经散去了，见到让人舒适的、温和的阳光。我的心情真的有变得好很多，因为我注意到了天桥上的花，和当初在五山看到的似乎是一样的。</p>
 
         <script src="/js/qrious.min.js"></script>
 
@@ -238,20 +260,20 @@
             <p>
                 <span>专题: </span>
                 
-                <a href="/series/#序列标注">
-                    <code key="序列标注" class="post-label">序列标注</code>
+                <a href="/series/#杂谈">
+                    <code key="杂谈" class="post-label">杂谈</code>
                 </a>
                 
             </p>
             
             <p>
-                <span>本文发表于 2021-02-10，最后修改于 2021-02-19。</span>
+                <span>本文发表于 2021-03-10，最后修改于 2021-03-13。</span>
             </p>
             <!-- 文章末尾的提示 start -->
             
             <p>
                 本站永久域名<strong>「 <a
-                        href="/post/17.html">bbruceyuan.github.io</a>
+                        href="/post/20.html">bbruceyuan.github.io</a>
                     」</strong>，也可搜索<strong>「 BBruceyuan 」</strong>找到我。
             </p>
             
@@ -270,10 +292,8 @@
         <hr />
         <p name="pagination" style="font-size: 1.2em">
     
-    <a class="float-left" href="/post/16.html">上一篇 « 周四，又见周四</a>
+    <a class="float-left" href="/post/19.html">上一篇 « 我的黄金时代已经过去</a>
     
-    
-    <a class="float-right" href="/post/18.html">下一篇 » 我从没这么喜欢待在家里</a>
     
 </p>
     </article>
@@ -420,35 +440,6 @@
         <h3>推荐阅读</h3>
         
         <div class="post-preview">
-    <div class="post-img" style="background-image: url('/blog_imgs/18/18_1.png')"></div>
-    <div class="post-info">
-        <div class="post-info-center">
-            <div class="hidden-xs">
-                
-                
-                <span>/</span>
-                
-                <a class="text-gray" href="/tags/#杂谈"
-                    title="杂谈">杂谈</a>
-                <span>/</span>
-                
-                
-            </div>
-            <a href="/post/18.html" class="title">
-                我从没这么喜欢待在家里
-            </a>
-            <p class="text-gray">
-                <small>
-                    <span>发表于2021-02-19，</span>
-                    <span class="hidden-xs">全文3942字，</span>
-                    <span>阅读约14分钟</span>
-                </small>
-            </p>
-        </div>
-    </div>
-</div>
-        
-        <div class="post-preview">
     <div class="post-img" style="background-image: url('/blog_imgs/8/8_1.jpg')"></div>
     <div class="post-info">
         <div class="post-info-center">
@@ -463,14 +454,14 @@
                 
                 
             </div>
-            <a href="/post/15.html" class="title">
-                2020年过去了，我不怀念它
+            <a href="/post/12.html" class="title">
+                我不喜欢失眠
             </a>
             <p class="text-gray">
                 <small>
-                    <span>发表于2020-12-31，</span>
-                    <span class="hidden-xs">全文3456字，</span>
-                    <span>阅读约12分钟</span>
+                    <span>发表于2020-10-16，</span>
+                    <span class="hidden-xs">全文1868字，</span>
+                    <span>阅读约7分钟</span>
                 </small>
             </p>
         </div>
@@ -492,14 +483,43 @@
                 
                 
             </div>
-            <a href="/post/5.html" class="title">
-                Transition-based Directed Graph Construction for Emotion-Cause Pair Extraction (中文介绍)
+            <a href="/post/7.html" class="title">
+                Must-read Papers on Emotion-Cause Pair Extraction
             </a>
             <p class="text-gray">
                 <small>
-                    <span>发表于2020-06-13，</span>
-                    <span class="hidden-xs">全文6938字，</span>
-                    <span>阅读约24分钟</span>
+                    <span>发表于2020-06-12，</span>
+                    <span class="hidden-xs">全文3146字，</span>
+                    <span>阅读约11分钟</span>
+                </small>
+            </p>
+        </div>
+    </div>
+</div>
+        
+        <div class="post-preview">
+    <div class="post-img" style="background-image: url('/img/icon.jpg')"></div>
+    <div class="post-info">
+        <div class="post-info-center">
+            <div class="hidden-xs">
+                
+                
+                <span>/</span>
+                
+                <a class="text-gray" href="/tags/#关于我"
+                    title="关于我">关于我</a>
+                <span>/</span>
+                
+                
+            </div>
+            <a href="/post/about.html" class="title">
+                关于我
+            </a>
+            <p class="text-gray">
+                <small>
+                    <span>发表于2019-06-30，</span>
+                    <span class="hidden-xs">全文476字，</span>
+                    <span>阅读约2分钟</span>
                 </small>
             </p>
         </div>
@@ -719,24 +739,72 @@
         
         
         <section class="gkt-sidebar-content box-shadow">
-            <strong>序列标注</strong>
+            <strong>杂谈</strong>
             <ul>
                 
                 <li>
-                    <a href="/post/3.html"
-                        class="">关于隐马尔可夫模型(HMM)，需要知道什么？</a>
+                    <a href="/post/4.html"
+                        class="">记EMNLP2020投稿</a>
                     
                 </li>
                 
                 <li>
-                    <a href="/post/17.html"
-                        class="gkt-sidebar-active">NER上分利器：实体边界重定位</a>
+                    <a href="/post/11.html"
+                        class="">我为什么没有满意的offer?</a>
+                    
+                </li>
+                
+                <li>
+                    <a href="/post/12.html"
+                        class="">我不喜欢失眠</a>
+                    
+                </li>
+                
+                <li>
+                    <a href="/post/13.html"
+                        class="">倒着写的文章</a>
+                    
+                </li>
+                
+                <li>
+                    <a href="/post/14.html"
+                        class="">BBruceyuan的近期不靠谱事件</a>
+                    
+                </li>
+                
+                <li>
+                    <a href="/post/15.html"
+                        class="">2020年过去了，我不怀念它</a>
+                    
+                </li>
+                
+                <li>
+                    <a href="/post/16.html"
+                        class="">周四，又见周四</a>
+                    
+                </li>
+                
+                <li>
+                    <a href="/post/18.html"
+                        class="">我从没这么喜欢待在家里</a>
+                    
+                </li>
+                
+                <li>
+                    <a href="/post/19.html"
+                        class="">我的黄金时代已经过去</a>
+                    
+                </li>
+                
+                <li>
+                    <a href="/post/20.html"
+                        class="gkt-sidebar-active">三月的三分之一</a>
                     
                     <!-- Table of Contents -->
 <div id="sidebar-toc">
   <!-- TOC  -->
   
-  <ol class="toc-nav"><li class="toc-nav-item toc-nav-level-1"><a class="toc-nav-link" href="#1-背景"><span class="toc-nav-text">1. 背景</span></a></li><li class="toc-nav-item toc-nav-level-1"><a class="toc-nav-link" href="#2-NER错误类型"><span class="toc-nav-text">2. NER错误类型</span></a></li><li class="toc-nav-item toc-nav-level-1"><a class="toc-nav-link" href="#3-具体样例"><span class="toc-nav-text">3. 具体样例</span></a></li><li class="toc-nav-item toc-nav-level-1"><a class="toc-nav-link" href="#4-实体边界重定位方法"><span class="toc-nav-text">4. 实体边界重定位方法</span></a><ol class="toc-nav-child"><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#步骤1：实体抽取模型的训练"><span class="toc-nav-text">步骤1：实体抽取模型的训练</span></a></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#步骤2：边界重定向模型的训练"><span class="toc-nav-text">步骤2：边界重定向模型的训练</span></a></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#步骤3：测试样例的推理预测"><span class="toc-nav-text">步骤3：测试样例的推理预测</span></a></li></ol></li><li class="toc-nav-item toc-nav-level-1"><a class="toc-nav-link" href="#5-Reference"><span class="toc-nav-text">5. Reference</span></a></li></ol>
+  <ol class="toc-nav"><li class="toc-nav-item toc-nav-level-1"><a class="toc-nav-link" href="#我“病”了"><span class="toc-nav-text">我“病”了</span></a><ol class="toc-nav-child"><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#心理咨询"><span class="toc-nav-text">心理咨询</span></a></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#皮肤门诊"><span class="toc-nav-text">皮肤门诊</span></a></li></ol></li><li class="toc-nav-item toc-nav-level-1"><a class="toc-nav-link" href="#三月属于春天"><span class="toc-nav-text">三月属于春天</span></a></li></ol>
   
 </div>
 
