@@ -396,28 +396,6 @@
   </entry>
   
   <entry>
-    <title>情感-原因对抽取综述 (Emotion-Cause Pair Extraction: A Survey)</title>
-    <link href="https://bbruceyuan.github.io/post/6.html"/>
-    <id>https://bbruceyuan.github.io/post/6.html</id>
-    <published>2020-06-12T04:00:00.000Z</published>
-    <updated>2020-07-12T08:19:35.119Z</updated>
-    
-    <content type="html"><![CDATA[<h1 id="任务定义"><a href="#任务定义" class="headerlink" title="任务定义"></a>任务定义</h1><p>这里主要写任务定义. 具体可以简单的先参考一下<a href="7.html">这篇文章</a></p><h1 id="数据集"><a href="#数据集" class="headerlink" title="数据集"></a>数据集</h1><p>TODO</p>]]></content>
-    
-    <summary type="html">
-    
-      情感原因对抽取综述, Emotion-Cause Pair Extraction: A Survey
-    
-    </summary>
-    
-      <category term="情感-原因对抽取(ECPE)" scheme="https://bbruceyuan.github.io/categories/%E6%83%85%E6%84%9F-%E5%8E%9F%E5%9B%A0%E5%AF%B9%E6%8A%BD%E5%8F%96-ECPE/"/>
-    
-    
-      <category term="ECPE" scheme="https://bbruceyuan.github.io/tags/ECPE/"/>
-    
-  </entry>
-  
-  <entry>
     <title>Must-read Papers on Emotion-Cause Pair Extraction</title>
     <link href="https://bbruceyuan.github.io/post/7.html"/>
     <id>https://bbruceyuan.github.io/post/7.html</id>
@@ -429,6 +407,28 @@
     <summary type="html">
     
       Must-read Papers on Emotion-Cause Pair Extraction
+    
+    </summary>
+    
+      <category term="情感-原因对抽取(ECPE)" scheme="https://bbruceyuan.github.io/categories/%E6%83%85%E6%84%9F-%E5%8E%9F%E5%9B%A0%E5%AF%B9%E6%8A%BD%E5%8F%96-ECPE/"/>
+    
+    
+      <category term="ECPE" scheme="https://bbruceyuan.github.io/tags/ECPE/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>情感-原因对抽取综述 (Emotion-Cause Pair Extraction: A Survey)</title>
+    <link href="https://bbruceyuan.github.io/post/6.html"/>
+    <id>https://bbruceyuan.github.io/post/6.html</id>
+    <published>2020-06-12T04:00:00.000Z</published>
+    <updated>2020-07-12T08:19:35.119Z</updated>
+    
+    <content type="html"><![CDATA[<h1 id="任务定义"><a href="#任务定义" class="headerlink" title="任务定义"></a>任务定义</h1><p>这里主要写任务定义. 具体可以简单的先参考一下<a href="7.html">这篇文章</a></p><h1 id="数据集"><a href="#数据集" class="headerlink" title="数据集"></a>数据集</h1><p>TODO</p>]]></content>
+    
+    <summary type="html">
+    
+      情感原因对抽取综述, Emotion-Cause Pair Extraction: A Survey
     
     </summary>
     
