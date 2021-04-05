@@ -341,6 +341,6 @@
   list-style-type: square;
 }
 
-/* .markdown-it ol {
+.markdown-it ol {
   list-style-type: circle;
-} */
+}
