@@ -30,6 +30,13 @@ export default defineUserConfig({
     sidebarDepth: 3,
     sidebar: [
       {
+        text: '年终总结',
+        children: [
+            "/post/年终总结/15.2020年过去了，我不怀念它.md",
+            "/post/年终总结/34.2021，乌云与曙光.md",
+        ]
+      },
+      {
         text: '随笔',
         collapsible: false,
         children: [
