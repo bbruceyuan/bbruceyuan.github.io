@@ -1,0 +1,24 @@
+{
+  "name": "bbruceyuan.github.io",
+  "version": "1.0.0",
+  "description": "my blog source",
+  "main": "index.js",
+  "scripts": {
+    "docs:dev": "vuepress dev docs",
+    "docs:build": "vuepress build docs"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/bbruceyuan/bbruceyuan.github.io.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/bbruceyuan/bbruceyuan.github.io/issues"
+  },
+  "homepage": "https://github.com/bbruceyuan/bbruceyuan.github.io#readme",
+  "devDependencies": {
+    "vuepress": "^2.0.0-beta.51",
+    "vuepress-plugin-md-enhance": "^2.0.0-beta.97"
+  }
+}
