@@ -8,6 +8,7 @@ export default sidebar({
         children: [
             "/post/年终总结/15.2020年过去了，我不怀念它.md",
             "/post/年终总结/34.2021，乌云与曙光.md",
+            "/post/年终总结/35.2022，激荡中的平淡.md"
         ]
     },
     {

@@ -7,6 +7,7 @@ export default hopeTheme({
     logo: "/img/icon.jpg",
     pure: true,
     editLink: true,
+    hotReload: true,
     navbarLayout: {
         left: ["Brand"],
         center: [],
