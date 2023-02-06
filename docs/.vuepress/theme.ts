@@ -6,12 +6,19 @@ export default hopeTheme({
     darkmode: "toggle",
     logo: "/img/icon.jpg",
     pure: true,
-    editLink: true,
+    // 假如你的文档仓库和项目本身不在一个仓库:
+    docsRepo: "bbruceyuan/bbruceyuan.github.io",
+    // 假如文档不是放在仓库的根目录下:
+    docsDir: "docs",
+    // 假如文档放在一个特定的分支下，默认为 'main':
+    docsBranch: "source",
+    // 默认是 false, 设置为 true 来启用
+    
     hotReload: true,
     navbarLayout: {
-        left: ["Brand"],
+        start: ["Brand"],
         center: [],
-        right: ["Links", "Repo", "Search"]
+        end: ["Links", "Repo", "Search"]
     },
     navbar: nav,
     sidebar: sidebar,
@@ -31,6 +38,8 @@ export default hopeTheme({
         mdEnhance: {
           // 使用 KaTeX 启用 TeX 支持
           katex: true,
+          footnote: true,
+          tasklist: true,
         },
       },
 })

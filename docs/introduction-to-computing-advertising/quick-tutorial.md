@@ -1,5 +1,7 @@
 ---
 title: 快速入门
+timeline: false
+article: false
 ---
 
 ## 认识广告
