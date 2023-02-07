@@ -11,7 +11,7 @@ export default hopeTheme({
     // 假如文档不是放在仓库的根目录下:
     docsDir: "docs",
     // 假如文档放在一个特定的分支下，默认为 'main':
-    docsBranch: "source",
+    docsBranch: "main",
     // 默认是 false, 设置为 true 来启用
     
     hotReload: true,
