@@ -33,5 +33,5 @@ image: img/link.png
 > 格式：<br/>
 > 站点名称：BBruceyuan<br/>
 > 站点描述：没有故事，写点技术，同时打点酱油!<br/>
-> 站点地址：https://bbruceyuan.github.io<br/>
-> 已加友链：https://bbruceyuan.github.io/link.html/<br/>
+> 站点地址：https://bbruceyuan.com<br/>
+> 已加友链：https://bbruceyuan.com/link.html/<br/>
