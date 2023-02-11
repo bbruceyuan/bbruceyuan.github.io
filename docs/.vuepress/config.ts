@@ -10,7 +10,9 @@ export default defineUserConfig({
     title: 'BBruceyuan',
     description: '欢迎查看 BBruceyuan 的博客',
     head: [
-      ['meta', { name: 'baidu-site-verification', content: 'code-8mNFhNa5tZ' }]
+      ['meta', { name: 'baidu-site-verification', content: 'code-8mNFhNa5tZ' }],
+      ['meta', { name: '360-site-verification', content: 'b5c713d816b0111fd6e0f0a416d598b3' }],
+      ['meta', { name: 'sogou_site_verification', content: 'UBtsNHFicS' }]
     ],
     theme,
     plugins: [
