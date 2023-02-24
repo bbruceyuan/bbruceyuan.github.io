@@ -2,7 +2,8 @@
 title: Raycast使用指南（一）--基本用法
 id: 36
 date: 2023-02-11 15:06:00
-categories: 
+description: Raycast 使用指南第一篇，基本用法
+category: 
   - raycast-turorial
 permalink: /post/raycast-tutorial-1.html/
 head:
