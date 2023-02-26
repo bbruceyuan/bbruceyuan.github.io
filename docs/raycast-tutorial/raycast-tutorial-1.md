@@ -2,7 +2,7 @@
 title: Raycast使用指南（一）--基本用法
 id: 36
 date: 2023-02-11 15:06:00
-description: Raycast 使用指南第一篇，基本用法
+description: Raycast使用指南第一篇，介绍raycast基本用法，包括文件应用查找，剪贴板历史，窗口管理等功能
 category: 
   - raycast-turorial
 permalink: /post/raycast-tutorial-1.html/
