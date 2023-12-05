@@ -32,7 +32,7 @@ export default sidebar({
             '/post/随笔/28.我没想到我会误入相亲素材.md',
             '/post/随笔/30.崔同学视角的「我没想到我会误入相亲素材」.md',
             '/post/随笔/31.和崔同学日常段子集锦.md',
-            {text: 'How-I-Met-Bruce?', link: '/post/32.html/'},
+            {text: 'How-I-Met-Bruce', link: '/post/32.html/'},
             '/post/随笔/33.Life-Influenced-By-Point.md',
             '/post/随笔/4.记EMNLP2020投稿.md',
         ],
