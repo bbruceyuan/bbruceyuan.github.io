@@ -5,6 +5,7 @@ import sidebar from './sidebar';
 export default hopeTheme({
     darkmode: "toggle",
     logo: "/img/icon.jpg",
+    print: false,
     pure: true,
     // 假如你的文档仓库和项目本身不在一个仓库:
     docsRepo: "bbruceyuan/bbruceyuan.github.io",
@@ -13,17 +14,19 @@ export default hopeTheme({
     // 假如文档放在一个特定的分支下，默认为 'main':
     docsBranch: "main",
     // 默认是 false, 设置为 true 来启用
+    contributors: false,
     
     hotReload: true,
+ 
+    navbar: nav,
     navbarLayout: {
         start: ["Brand"],
         center: [],
-        end: ["Links", "Repo", "Search"]
+        end: ["Links", "Repo", "Search", "Outlook"]
     },
-    navbar: nav,
     sidebar: sidebar,
     blog: {
-        description: "这人不想打酱油",
+        description: "一个不想打酱油却又一直在打酱油的人~",
         medias: {
             Github: "https://github.com/bbruceyuan",
             BiliBili: "https://space.bilibili.com/12420432",
@@ -31,15 +34,26 @@ export default hopeTheme({
         },
     },
     plugins: {
+        seo: {},
+        comment: {
+            provider: "Giscus",
+            repo: "bbruceyuan/bbruceyuan.github.io",
+            repoId: "MDEwOlJlcG9zaXRvcnkyNDU3Njc0NzU=",
+            category: "Announcements",
+            categoryId: "DIC_kwDODqYdM84Cbg9U",
+        },
         blog: {
             excerptLength: 0,
             excerpt: false,
         },
         mdEnhance: {
           // 使用 KaTeX 启用 TeX 支持
-          katex: true,
+        //   katex: true,
+          mathjax: true,
           footnote: true,
           tasklist: true,
+          imgLazyload: true,
         },
+        
       },
 })
