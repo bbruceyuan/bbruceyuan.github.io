@@ -3,7 +3,7 @@ title: 关于我
 date: 2019-06-30 22:18:18
 description: 关于BBruceyuan的一些简介。
 id: about
-permalink: /about/
+permalink: /about.html
 article: false
 tags:
 - 关于我
