@@ -15,9 +15,8 @@ export default hopeTheme({
     docsBranch: "main",
     // 默认是 false, 设置为 true 来启用
     contributors: false,
-    
+
     hotReload: true,
- 
     navbar: nav,
     navbarLayout: {
         start: ["Brand"],
@@ -47,13 +46,13 @@ export default hopeTheme({
             excerpt: false,
         },
         mdEnhance: {
-          // 使用 KaTeX 启用 TeX 支持
-        //   katex: true,
-          mathjax: true,
-          footnote: true,
-          tasklist: true,
-          imgLazyload: true,
+            // 使用 KaTeX 启用 TeX 支持
+            //   katex: true,
+            mathjax: true,
+            footnote: true,
+            tasklist: true,
+            imgLazyload: true,
         },
-        
-      },
+
+    },
 })

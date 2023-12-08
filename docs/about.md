@@ -1,12 +1,12 @@
 ---
 title: 关于我
 date: 2019-06-30 22:18:18
-description: 关于BBruceyuan的一些简介。
+description: 关于 BBruceyuan 的一些简介，随便写一些
 id: about
 permalink: /about.html
 article: false
-tags:
-- 关于我
+tag:
+  - 关于我
 image: img/icon.jpg
 ---
 
