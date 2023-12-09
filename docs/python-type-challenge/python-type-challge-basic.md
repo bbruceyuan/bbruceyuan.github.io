@@ -19,11 +19,11 @@ permalink: /post/python-type-challge-basic.html
 	- Python 类型有哪些常见的关键词？
 
 这篇文章按照 [Python-Type-Challenges](https://github.com/laike9m/Python-Type-Challenges)[1]库的划分，一共分为四个部分。
-- [Python 类型体操训练（一）-- 基础篇](https://bbruceyuan.com/post/python-type-challge-basic.html)
-- [Python 类型体操训练（二）-- 中级篇] TODO
+- [Python 类型体操训练（一）-- 基础篇](https://bbruceyuan.com/post/python-type-challge-basic.html) （**本篇文章**）
+- [Python 类型体操训练（二）-- 中级篇](https://bbruceyuan.com/post/python-type-challge-intermediate.html)
 - [Python 类型体操训练（三）-- 高级篇] TODO
 - [Python 类型体操训练（四）-- 究极篇] TODO
-<!-- - [Python 类型体操训练（二）-- 中级篇](https://bbruceyuan.com/post/python-type-challge-intermediate.html)
+<!-- 
 - [Python 类型体操训练（三）-- 高级篇](https://bbruceyuan.com/post/python-type-challge-advanced.html)
 - [Python 类型体操训练（四）-- 究极篇](https://bbruceyuan.com/post/python-type-challge-extreme.html) -->
 
@@ -49,7 +49,7 @@ permalink: /post/python-type-challge-basic.html
 	- 如果这个变量作为一个返回值，而 func 又没有定义类型，建议写上
 
 ```python
-# good case
+# good case (推荐)
 a: int = 1
 b: float = 1.2
 c: str = 'hello chaofa'
@@ -60,7 +60,7 @@ f: None = None  # 这种很少见到有人这么写
 # 注意：str 和 byte 的 区别 
 # assert c.encode("utf-8") == e, "两者类型一样"
 
-# bad case
+# bad case (不推荐)
 a = 1
 b = 1.2
 c = 'hello chaofa'
@@ -77,7 +77,7 @@ e = b'hello chaofa'
 	- 这样可以让代码更可读
 
 ```python
-# good case
+# good case (推荐)
 int_arr: list[int] = [1, 2, 3, 4]
 str_arr: list[str] = ['h', 'e', 'l', 'l', 'o']
 float_arr: list[float] = [1.2, 1.3, 3.14]
@@ -92,7 +92,7 @@ three_value_tuple: tuple[int, float, str] = (1, 3.14, 'PI')
 url_map: dict[str, str] = {"chaofa": "bbruceyuan.com"}
 embedding_lookup: dict[str, list[float]] = {"chaofa": [1.2, 3.4, 5.6]}
 
-# bad case
+# bad case (不推荐)
 from typing import List, Set, Tuple, Dict
 
 int_arr: List[int] = [1, 2, 3, 4]
@@ -125,11 +125,11 @@ Python 写类型注释，更重要的使用场景是函数。当你写一个函�
 	- 请相信：绝大部分时候我们不需要考虑输入可能是多种类型，所以前期我觉得可以勇敢的写上类型。
 
 ```python
-# good case
+# good case (推荐)
 def foo(a: int, b: str) -> tuple[str, int]:
 	return (b, a)
 
-# bad case
+# bad case (不推荐)
 from typing import Any
 
 def foo(a: Any, b: Any) -> Any:
@@ -166,7 +166,7 @@ a: Optional[str] = None
 b: str | None = None
 # a / b 两个变量申明的类型是一样的
 
-# 一般用于 设置默认值
+# !!!注意：一般用于 设置默认值
 ```
 
 ### TypeAlias (type)
@@ -175,7 +175,7 @@ b: str | None = None
 ```python
 # 假设要创建一个 Vector 类型，是一个 只有 float 类型的数组
 
-# bad case
+# bad case (不推荐)
 Vector = list[float]
 # 虽然语法支持，但是不推荐这么做，看上去不是很直观
 
@@ -230,8 +230,8 @@ my_list = []      # 失败，因为这里重新对 my_list 进行了赋值
 可以说阅读完本节内容，我们就可以非常轻易地在工作学习中用上，而且一定会极大的减少一些因为粗心带来的错误。
 
 
->  `AnyStr`, `Literal`, `Generic` 等更高级的关键字将在 中级教程 介绍。
+>  `TypeDict`, `Literal`, `Generic` 等更高级的关键字将在 中级教程 介绍。
 
 ## Reference
 - [1]. [Python-Type-Challenges](https://github.com/laike9m/Python-Type-Challenges)
-- [2]. https://docs.python.org/3/library/typing.html
+- [2]. [https://docs.python.org/3/library/typing.html](https://docs.python.org/3/library/typing.html)

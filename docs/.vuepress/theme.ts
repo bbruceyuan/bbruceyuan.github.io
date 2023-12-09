@@ -24,6 +24,11 @@ export default hopeTheme({
         end: ["Links", "Repo", "Search", "Outlook"]
     },
     sidebar: sidebar,
+
+    author: {
+        name: "bbruceyuan",
+        url: 'https://bbruceyuan.com',
+    },
     blog: {
         description: "一个不想打酱油却又一直在打酱油的人~",
         medias: {
