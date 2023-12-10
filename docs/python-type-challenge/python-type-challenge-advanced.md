@@ -12,15 +12,15 @@ publish: true
 ---
 ## 阅读提示
 - 面向读者群体
-	- 有一定Python基础，需要进阶开发中大型项目
-	- 有其他静态类型语言开发经验的人，需要快速了解 Python 类型注释（type hint）
-	- 如果没有太多基础，可以**先阅读前两篇文章**
+    - 有一定Python基础，需要进阶开发中大型项目
+    - 有其他静态类型语言开发经验的人，需要快速了解 Python 类型注释（type hint）
+    - 如果没有太多基础，可以**先阅读前两篇文章**
 - 你能学到什么？
-	- Python 如何定义 `protocol`
-	- Python 如何重载类方法和函数签名
-	- Python 前向推导、生成器、Nerver等类型的使用
-	- ...
-	- 推荐自己完成 [Python-Type-Challenges](https://github.com/laike9m/Python-Type-Challenges) 上面的练习。
+    - Python 如何定义 `protocol`
+    - Python 如何重载类方法和函数签名
+    - Python 前向推导、生成器、Nerver等类型的使用
+    - ...
+    - 推荐自己完成 [Python-Type-Challenges](https://github.com/laike9m/Python-Type-Challenges) 上面的练习。
 
 这篇文章按照 [Python-Type-Challenges](https://github.com/laike9m/Python-Type-Challenges)[1]库的划分，一共分为四个部分。
 - [Python 类型体操训练（一）-- 基础篇](/post/python-type-challenge-basic.html)
@@ -44,14 +44,14 @@ class SupportsQuack(Protocol):
         ...
 
 class Duck:
-	def quack(self) -> None:
-		print('quack!')
+    def quack(self) -> None:
+        print('quack!')
 
 duck: SupportsQuack = Duck()  # 正确
 
 class Dog:
-	def bark(self) -> None:
-	    print("bark!")
+    def bark(self) -> None:
+        print("bark!")
 dog: SupportsQuack = Dog()   # 错误，因为 dog 类没有 `quack` 方法
 ```
 
@@ -61,18 +61,18 @@ dog: SupportsQuack = Dog()   # 错误，因为 dog 类没有 `quack` 方法
 - 例子 
 ```python
 class Animal:
-	def say(self) -> str:
-		return 'hello world'
+    def say(self) -> str:
+        return 'hello world'
 
 class Dog(Animal):
-	# 正确
-	def say(self) -> str:
-		return "bake bake!!"
+    # 正确
+    def say(self) -> str:
+        return "bake bake!!"
 
 class Duck(Animal):
-	# 这里可能写错了方法的名字，类型检查器也不会报错
-	def sey(self) -> str:
-		return "quack quack!!"
+    # 这里可能写错了方法的名字，类型检查器也不会报错
+    def sey(self) -> str:
+        return "quack quack!!"
 
 animal1: Animal = Dog()
 animal1.say()  # 返回 'bake bake!!'，对 say 方法进行重载了
@@ -84,27 +84,27 @@ animal2.say()  # 返回 'hello world'，因为没有正确的对 say 重载
 而现在有了 `override` 关键字之后，就不会发生上面的问题了
 ```python
 class Animal:
-	def say(self) -> str:
-		return 'hello world'
+    def say(self) -> str:
+        return 'hello world'
 
 class Dog(Animal):
-	# 正确，重载 Animal.say 方法
-	@override
-	def say(self) -> str:
-		return "bake bake!!"
+    # 正确，重载 Animal.say 方法
+    @override
+    def say(self) -> str:
+        return "bake bake!!"
 
 class Duck(Animal):
-	# !!!!这里会报错，因为 Animal 类里面没有 sey 方法
-	@override
-	def sey(self) -> str:
-		return "quack quack!!"
+    # !!!!这里会报错，因为 Animal 类里面没有 sey 方法
+    @override
+    def sey(self) -> str:
+        return "quack quack!!"
 ```
 
 #### overload -函数签名重载
 这里的重载并不是真正的函数重载，因为**重载的时候并不需要做真正的实现**，而仅仅是重载签名。
 - 下面的 snippet code 来自于 [Python-Type-Challenges](https://github.com/laike9m/Python-Type-Challenges/blob/main/challenges/advanced-overload/solution.py)
-	- `process` 方法并没有真正的重写
-	- `overload` 要在 `process` 实现之前
+    - `process` 方法并没有真正的重写
+    - `overload` 要在 `process` 实现之前
 
 ```python
 from typing import overload
