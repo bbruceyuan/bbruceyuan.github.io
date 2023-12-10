@@ -5,7 +5,7 @@ date: 2023-12-08 23:57:00
 description: Python 类型体操训练（一）-- 基础篇，本篇文章介绍了 Python 基础类型、容器类型、 Python function 如何写类型注释，此外详细讲解了常见 Python Type 常见的关键字，包括 Union, Any, Optional, TypeAlias(type), NewType, Final，通过这 5 个最常用的关键字类型增强我们类型注释的表达能力。
 category: 
   - python-type-challenge
-permalink: /post/python-type-challge-basic.html
+permalink: /post/python-type-challenge-basic.html
 ---
 
 ## 阅读提示
@@ -18,16 +18,15 @@ permalink: /post/python-type-challge-basic.html
     - Python 函数如何写类型注释？
     - Python 类型有哪些常见的关键词？
 - 建议
-    - 注释部分非常的重要，阅读过程中请关注代码注释部分
+    - 注释部分非常的重要，阅读过程中**请关注代码注释部分**
+
 
 这篇文章按照 [Python-Type-Challenges](https://github.com/laike9m/Python-Type-Challenges)[1]库的划分，一共分为四个部分。
-- [Python 类型体操训练（一）-- 基础篇](https://bbruceyuan.com/post/python-type-challge-basic.html) （**本篇文章**）
-- [Python 类型体操训练（二）-- 中级篇](https://bbruceyuan.com/post/python-type-challge-intermediate.html)
-- [Python 类型体操训练（三）-- 高级篇] TODO
+- [Python 类型体操训练（一）-- 基础篇](/post/python-type-challenge-basic.html) （**本篇文章**）
+- [Python 类型体操训练（二）-- 中级篇](/post/python-type-challenge-intermediate.html)
+- [Python 类型体操训练（三）-- 高级篇](/post/python-type-challenge-advanced.html)
 - [Python 类型体操训练（四）-- 究极篇] TODO
-<!-- 
-- [Python 类型体操训练（三）-- 高级篇](https://bbruceyuan.com/post/python-type-challge-advanced.html)
-- [Python 类型体操训练（四）-- 究极篇](https://bbruceyuan.com/post/python-type-challge-extreme.html) -->
+
 
 ## Python为什么要写类型
 大家都知道 Python 语言的灵活性，能写出非常简单灵活的代码，似乎在 Python 里面不需要类型推断，但是代码的灵活性恰好是重构和维护的杀手。 **绝大部分开源的 Python package，都是写了类型注释**。因为代码复杂之后，不可避免的会出现各类错误，而类型提示就可以很好的提前暴露相关的问题，从而在一开始就把问题扼杀在摇篮之中。

@@ -61,4 +61,5 @@ export default hopeTheme({
             imgLazyload: true,
         },
     },
+    headerDepth: 3
 })

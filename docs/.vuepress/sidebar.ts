@@ -58,8 +58,9 @@ export default sidebar({
             "text": "Python 类型体操",
             "collapsible": true,
             children: [
-                "/python-type-challenge/python-type-challge-basic.md",
-                "/python-type-challenge/python-type-challge-intermediate.md"
+                "/python-type-challenge/python-type-challenge-basic.md",
+                "/python-type-challenge/python-type-challenge-intermediate.md",
+                "/python-type-challenge/python-type-challenge-advanced.md"
             ]
         }
     ],
