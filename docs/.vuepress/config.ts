@@ -2,7 +2,7 @@ import { defineUserConfig } from 'vuepress'
 import { googleAnalyticsPlugin } from '@vuepress/plugin-google-analytics'
 import { sitemapPlugin } from "vuepress-plugin-sitemap2";
 import { searchProPlugin } from "vuepress-plugin-search-pro";
-import { cut } from "nodejs-jieba";
+// import { cut } from "nodejs-jieba";
 import theme from "./theme";
 
 
@@ -30,10 +30,10 @@ export default defineUserConfig({
     searchProPlugin({
       // indexContent: true,
       autoSuggestions: false,
-      indexOptions: {
-        tokenize: (text, fieldName) =>
-          fieldName === "id" ? [text] : cut(text, true),
-      },
+      // indexOptions: {
+      //   tokenize: (text, fieldName) =>
+      //     fieldName === "id" ? [text] : cut(text, true),
+      // },
     }),
   ],
 })
