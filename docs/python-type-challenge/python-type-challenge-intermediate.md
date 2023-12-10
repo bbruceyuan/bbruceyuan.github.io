@@ -29,7 +29,7 @@ publish: true
 这篇文章按照 [Python-Type-Challenges](https://github.com/laike9m/Python-Type-Challenges)[1]库的划分，一共分为四个部分。
 - [Python 类型体操训练（一）-- 基础篇](/post/python-type-challenge-basic.html)
 - [Python 类型体操训练（二）-- 中级篇](/post/python-type-challenge-intermediate.html) （**本篇文章**）
-- [Python 类型体操训练（三）-- 高级篇][Python 类型体操训练（三）-- 高级篇](/post/python-type-challenge-advanced.html)
+- [Python 类型体操训练（三）-- 高级篇](/post/python-type-challenge-advanced.html)
 - [Python 类型体操训练（四）-- 究极篇] TODO
 <!-- - 
 - [Python 类型体操训练（四）-- 究极篇](/post/python-type-challenge-extreme.html) -->
