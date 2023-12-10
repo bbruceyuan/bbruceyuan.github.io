@@ -2,21 +2,23 @@
 title: Python 类型体操训练（一）-- 基础篇
 id: 37
 date: 2023-12-08 23:57:00
-description: Python 类型体操训练（一）-- 基础篇，本篇文章介绍了 Python 基础类型、容器类型、 Python function 如何写类型注释，此外详细讲解了常见 Python Type 常见的关键字，包括 `Union`, `Optional`, `TypeAlias(type)`, `NewType`, `Final`，通过这 5 个最常用的关键字类型增强我们类型注释的表达能力。
+description: Python 类型体操训练（一）-- 基础篇，本篇文章介绍了 Python 基础类型、容器类型、 Python function 如何写类型注释，此外详细讲解了常见 Python Type 常见的关键字，包括 Union, Any, Optional, TypeAlias(type), NewType, Final，通过这 5 个最常用的关键字类型增强我们类型注释的表达能力。
 category: 
   - python-type-challenge
 permalink: /post/python-type-challge-basic.html
 ---
 
-## 阅读题要
+## 阅读提示
 - 面向读者群体
-	- 有一定Python基础，需要进阶开发中大型项目
-	- 有其他静态类型语言开发经验的人，需要快速了解 Python 类型注释（type hint）
+    - 有一定Python基础，需要进阶开发中大型项目
+    - 有其他静态类型语言开发经验的人，需要快速了解 Python 类型注释（type hint）
 - 你能学到什么？
-	- Python 基础变量如何写类型注释（type hint）？
-	- Python 容器变量如何写类型注释？
-	- Python 函数如何写类型注释？
-	- Python 类型有哪些常见的关键词？
+    - Python 基础变量如何写类型注释（type hint）？
+    - Python 容器变量如何写类型注释？
+    - Python 函数如何写类型注释？
+    - Python 类型有哪些常见的关键词？
+- 建议
+    - 注释部分非常的重要，阅读过程中请关注代码注释部分
 
 这篇文章按照 [Python-Type-Challenges](https://github.com/laike9m/Python-Type-Challenges)[1]库的划分，一共分为四个部分。
 - [Python 类型体操训练（一）-- 基础篇](https://bbruceyuan.com/post/python-type-challge-basic.html) （**本篇文章**）
@@ -44,9 +46,9 @@ permalink: /post/python-type-challge-basic.html
 简单变量指的是： `int`, `float`, `str`, `bool`, `bytes`, `None` 等类型变量
 
 - 建议
-	- 简单变量类型申明不要有压力，最好能写，不想写省略也没问题
-	- 简单变量类型不写也可以很好的被 IDE 推断
-	- 如果这个变量作为一个返回值，而 func 又没有定义类型，建议写上
+    - 简单变量类型申明不要有压力，最好能写，不想写省略也没问题
+    - 简单变量类型不写也可以很好的被 IDE 推断
+    - 如果这个变量作为一个返回值，而 func 又没有定义类型，建议写上
 
 ```python
 # good case (推荐)
@@ -73,8 +75,8 @@ e = b'hello chaofa'
 容器变量指的是： `list`, `tuple`, `dict`, `set` 等
 
 - 建议
-	- 容器变量强烈建议写上类型
-	- 这样可以让代码更可读
+    - 容器变量强烈建议写上类型
+    - 这样可以让代码更可读
 
 ```python
 # good case (推荐)
@@ -120,20 +122,20 @@ embedding_lookup: Dict[str, list[float]] = {"chaofa": [1.2, 3.4, 5.6]}
 Python 写类型注释，更重要的使用场景是函数。当你写一个函数（类）的时候，说明你需要抽象一些东西，意味着你的场景更复杂。
 
 - 建议
-	- 建议写清楚每一个函数的 入参，类型返回值
-	- 这样有助于后续自己 debug。
-	- 请相信：绝大部分时候我们不需要考虑输入可能是多种类型，所以前期我觉得可以勇敢的写上类型。
+    - 建议写清楚每一个函数的 入参，类型返回值
+    - 这样有助于后续自己 debug。
+    - 请相信：绝大部分时候我们不需要考虑输入可能是多种类型，所以前期我觉得可以勇敢的写上类型。
 
 ```python
 # good case (推荐)
 def foo(a: int, b: str) -> tuple[str, int]:
-	return (b, a)
+    return (b, a)
 
 # bad case (不推荐)
 from typing import Any
 
 def foo(a: Any, b: Any) -> Any:
-	return (b, a)
+    return (b, a)
 
 # Any 在 typing 表示任意类型，上面这种写法，写了等于没写
 ```

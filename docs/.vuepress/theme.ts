@@ -7,6 +7,8 @@ export default hopeTheme({
     logo: "/img/icon.jpg",
     print: false,
     pure: true,
+    repo: "bbruceyuan",
+
     // 假如你的文档仓库和项目本身不在一个仓库:
     docsRepo: "bbruceyuan/bbruceyuan.github.io",
     // 假如文档不是放在仓库的根目录下:
@@ -24,6 +26,7 @@ export default hopeTheme({
         end: ["Links", "Repo", "Search", "Outlook"]
     },
     sidebar: sidebar,
+    hostname: "https://bbruceyuan.com",
 
     author: {
         name: "bbruceyuan",
@@ -38,7 +41,6 @@ export default hopeTheme({
         },
     },
     plugins: {
-        seo: {},
         comment: {
             provider: "Giscus",
             repo: "bbruceyuan/bbruceyuan.github.io",
@@ -58,6 +60,5 @@ export default hopeTheme({
             tasklist: true,
             imgLazyload: true,
         },
-
     },
 })

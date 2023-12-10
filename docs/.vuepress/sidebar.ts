@@ -54,5 +54,13 @@ export default sidebar({
                 '/post/技术/29.倒排索引原理与python实现.md'
             ],
         },
+        {
+            "text": "Python 类型体操",
+            "collapsible": true,
+            children: [
+                "/python-type-challenge/python-type-challge-basic.md",
+                "/python-type-challenge/python-type-challge-intermediate.md"
+            ]
+        }
     ],
 });

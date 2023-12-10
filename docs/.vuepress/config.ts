@@ -1,6 +1,8 @@
 import { defineUserConfig } from 'vuepress'
 import { googleAnalyticsPlugin } from '@vuepress/plugin-google-analytics'
 import { sitemapPlugin } from "vuepress-plugin-sitemap2";
+import { searchProPlugin } from "vuepress-plugin-search-pro";
+import { cut } from "nodejs-jieba";
 import theme from "./theme";
 
 
@@ -20,9 +22,18 @@ export default defineUserConfig({
     googleAnalyticsPlugin({
       id: 'G-H2HX76V70M',
     }),
-
     sitemapPlugin({
       hostname: "https://bbruceyuan.com",
+    }),
+    // 配置参考：https://github.com/miniapp-tool/mptool/blob/main/docs/.vuepress/config.ts
+    // commid id: da07ca8
+    searchProPlugin({
+      // indexContent: true,
+      autoSuggestions: false,
+      indexOptions: {
+        tokenize: (text, fieldName) =>
+          fieldName === "id" ? [text] : cut(text, true),
+      },
     }),
   ],
 })

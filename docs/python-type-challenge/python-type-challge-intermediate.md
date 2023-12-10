@@ -2,7 +2,7 @@
 title: Python 类型体操训练（二）-- 中级篇
 id: 38
 date: 2023-12-10 12:57:00
-description: Python 类型体操训练（二）-- 中级篇，这篇文章介绍了 Python Class Variable 可以使用 `ClassVar` 定义一个只能由 `Class` 修改的类变量，并且介绍了 `Self` 类型；此外，着重了解 `TypedDict` 如何定义特定 `Key` 的字典类型，了解 `Required` 和 `NotRequired` 的区别；然后介绍 Python Generic Type（泛型）的写法，明确了 Python 3.12 之后方括号 `[T]` 注释的写法，以及如何在 3.12 版本以前通过 `TypeVar` 定义通用类型；最后介绍了 `Literal` 和 `Callable` 两个重要且基础的 Python 类型。
+description: Python 类型体操训练（二）-- 中级篇，这篇文章介绍了 Python Class Variable 可以使用 ClassVar 定义一个只能由 Class 修改的类变量，并且介绍了 Self 类型；此外，着重了解 TypedDict 如何定义特定 Key 的字典类型，了解 Required 和 NotRequired 的区别；然后介绍 Python Generic Type（泛型）的写法，明确了 Python 3.12 之后方括号 [T] 注释的写法，以及如何在 3.12 版本以前通过 TypeVar 定义通用类型；最后介绍了 Literal 和 Callable 两个重要且基础的 Python 类型。
 category: python-type-challenge
 permalink: /post/python-type-challge-intermediate.html
 publish: true
@@ -10,17 +10,17 @@ publish: true
 
 ## 阅读提示
 - 面向读者群体
-	- 有一定Python基础，需要进阶开发中大型项目
-	- 有其他静态类型语言开发经验的人，需要快速了解 Python 类型注释（type hint）
-	- 如果没有太多基础，可以先阅读 [Python 类型体操训练（一）-- 基础篇](https://bbruceyuan.com/post/python-type-challge-basic.html)
+    - 有一定Python基础，需要进阶开发中大型项目
+    - 有其他静态类型语言开发经验的人，需要快速了解 Python 类型注释（type hint）
+    - 如果没有太多基础，可以先阅读 [Python 类型体操训练（一）-- 基础篇](https://bbruceyuan.com/post/python-type-challge-basic.html)
 - 你能学到什么？
-	- Python **类变量**如何写类型注释（type hint）？
-	- Python **字典类型**如何写类型注释？
-	- Python **通用类型（Generic）** 如何写类型注释？
-	- Python 类型中的一些高级关键字（Literal, Callable）？
+    - Python **类变量**如何写类型注释（type hint）？
+    - Python **字典类型**如何写类型注释？
+    - Python **通用类型（Generic）** 如何写类型注释？
+    - Python 类型中的一些高级关键字（Literal, Callable）？
 - 结论
-	- 完成这篇文章的阅读，基本上已经可以适应 Python 日常项目的开发需求
-	- 强烈推荐自己进行[类型训练]((https://github.com/laike9m/Python-Type-Challenges))
+    - 完成这篇文章的阅读，基本上已经可以适应 Python 日常项目的开发需求
+    - 强烈推荐自己进行[类型训练]((https://github.com/laike9m/Python-Type-Challenges))
 
 
 这篇文章按照 [Python-Type-Challenges](https://github.com/laike9m/Python-Type-Challenges)[1]库的划分，一共分为四个部分。
@@ -43,8 +43,8 @@ publish: true
 from pathlib import Path
 
 def get_cur_path() -> Path:
-	cur_path: Path = Path('.')
-	return cur_path
+    cur_path: Path = Path('.')
+    return cur_path
 
 pwd_path = get_cur_path()
 
@@ -55,15 +55,15 @@ pwd_path = get_cur_path()
 - Example 2，自定义类
 ```python
 class Person:
-	name: str
-	age: int
+    name: str
+    age: int
 
 class FakePerson:
-	name: str
-	age: int
+    name: str
+    age: int
 
 def print_user_info(user: Person) -> None:
-	print(user.name, str(user.age))
+    print(user.name, str(user.age))
 
 user1 = Person('chaofa', '28')
 user2 = FakePerson('chaofa', '25')
@@ -79,7 +79,7 @@ print_user_info(user2)   # 无法通过检查（失败）
 from typing import ClassVar
 
 class Person:
-	# 类变量，只能被类修改，不能被实例修改
+    # 类变量，只能被类修改，不能被实例修改
     name: ClassVar[str] = "chaofa"
     # 实例变量，instance variable，可以被实例修改
     age: int = 28
@@ -137,7 +137,7 @@ reveal_type(SubclassOfFoo().return_self())  # !!!!!最终类型是 "Foo"
 
 class Foo:
     def return_self(self) -> 'Foo':
-	    ...
+        ...
         return Foo()
 
 class SubclassOfFoo(Foo):
@@ -151,16 +151,16 @@ reveal_type(SubclassOfFoo().return_self())  # !!!!!最终类型是 "Foo"
 ## 字典类型（TypedDict）
 在上一篇文章 [Python 类型体操训练（一）-- 基础篇](https://bbruceyuan.com/post/python-type-challge-basic.html)，介绍了 `dict[key_type, value_type]`，定义一个字典，拥有特定的 `key_type` 和 `value_type`，这个字典可以拥有无数的 `key`。`TypedDict` 是为了定义【**拥有特定 key**】的字典类型，`key` 的数量是确定的。
 
-#### TypedDict-基础用法
+### TypedDict-基础用法
 基础定义，定义一个字典类型，叫做 `Programer`（程序员），有三个 `key`，分别是 `name`, `age`, `github` 分别是 `str`, `int`, `str`类型。
 
 ```python
 from typing import TypedDict
 
 class Programer(TypedDict):
-	name: str
-	age: int
-	github: str
+    name: str
+    age: int
+    github: str
 
 # a 正确，所有类型匹配
 a: Programer = {"name": "chaofa", "age": 28, "github": "github.com/bbruceyuan"}
@@ -176,15 +176,15 @@ d: Programer = {"name": 'bruce', "github": "github.com/bbruceyuan"}
 # 现在有 dataclasses 之后，我个人觉得用一个 dataclass 会是更好的选择
 ```
 
-#### TypedDict-NotRequired
+### TypedDict-NotRequired
 还是上面这个例子，想定义一个程序员类（Programer），但是并不是每一个程序员都有自己的 `Github` 账号，这个时候 `github` 就不是一个必填的 key。这时候就可以使用 `NotRequired` 关键字。
 ```python
 from typing import TypedDict, NotRequired
 
 class Programer(TypedDict):
-	name: str
-	age: int
-	github: NotRequired[str]
+    name: str
+    age: int
+    github: NotRequired[str]
 
 # a 正确，所有类型匹配
 a: Programer = {"name": "chaofa", "age": 28, "github": "github.com/bbruceyuan"}
@@ -197,17 +197,17 @@ d: Programer = {"name": 'bruce', "github": "github.com/bbruceyuan"}
 
 ```
 
-#### TypedDict-Required
+### TypedDict-Required
 还是上面这个例子，想定义一个程序员类（Programer），有 `name`, `age`, `github`, `address`, `email` 这些 `Key`, 但只有 `name` 是必须得，其他的都属于隐私不想公开，如果按照上面 `NotRequired` 的方式，就需要写很多 `NotRequired`。因此可以使用 `Required` 替代，具体见 case。
 ```python
 from typing import TypedDict, Required
 
 class Programer(TypedDict, total=False):
-	name: Required[str]
-	age: int
-	github: str
-	address: str
-	email: str
+    name: Required[str]
+    age: int
+    github: str
+    address: str
+    email: str
 
 # a 正确，所有类型匹配
 a: Programer = {"name": "chaofa", "age": 28, "github": "github.com/bbruceyuan", 'address': 'address', 'email': 'email'}
@@ -225,16 +225,16 @@ d: Programer = {"age": 28, "github": "github.com/bbruceyuan", 'address': 'addres
 而 [Python 的写法](https://docs.python.org/3/library/typing.html#typing.Generic)和 [Scala 语言的泛型](https://docs.scala-lang.org/zh-cn/tour/generic-classes.html)更为接近，语法是几乎是一样的，用 `[T]` 来表示泛型，方括号 `[]` 是用来接收泛型参数，`T` 是一个通用的参数标识符。
 
 以下为 泛型参数的基本语法讲解，更高级用法见下一篇文章[Python 类型体操训练（三）-- 高级篇](https://bbruceyuan.com/post/python-type-challge-advanced.html)。
-#### 推荐写法 --方括号语法 (Python >= 3.12)
+### 推荐写法 --方括号语法 (Python >= 3.12)
 - 例子 1，定义一个函数，**输入和输出都是一个类型**，不指定具体类型
 ```python
 # !!! good case （推荐）
 def foo1[T](a: T, b: T) -> T:
-	...
+    ...
 
 # bad case (不推荐，实际上就是错的)
 def foo2(a: Any, b: T) -> Any:
-	...
+    ...
 
 # 在这个例子看起来 T 有点像 Any 的用法
 # foo1 表示 参数 和 返回值 的一样的类型
@@ -243,14 +243,14 @@ def foo2(a: Any, b: T) -> Any:
 - 例子 2， 如果需要输入和输出都是一个类型，这个类型就是 `str` 类型，那么可以写成
 ```python
 def foo1[T: str](a: T, b: T) -> T:
-	...
+    ...
 # 表示 T 可以是 str 
 ```
 
 - 例子 3，定义一个函数，输入和输出都是一个类型，这个类型只能是 `int` 或者 `str`
 ```python
 def foo1[T: (int, str)](a: T, b: T) -> T:
-	...
+    ...
 # 表示 T 可以是 int or str 
 ```
 
@@ -259,11 +259,11 @@ def foo1[T: (int, str)](a: T, b: T) -> T:
 from collections.abc import Callable
 
 def decorator[T: Callable](func: T) -> T:
-	...
+    ...
 # 表示 T 可以是 函数, 这也是定义装饰器的方法
 ```
 
-#### Python 3.12 之前的写法
+### Python 3.12 之前的写法
 在 Python 3.12 之前，还不支持方括号 `[T]` 语法，因此需要使用一个叫做 `TypeVar` 的函数定义泛型，具体见[链接](https://docs.python.org/3/library/typing.html#typing.TypeVar)。
 
 - 例子 1
@@ -273,7 +273,7 @@ from typing import TypeVar
 T = TypeVar("T")
 
 def foo1[T](a: T, b: T) -> T:
-	...
+    ...
 ```
 - 例子 2
 ```python
@@ -283,7 +283,7 @@ from typing import TypeVar
 T = TypeVar("T", bound=str)
 
 def foo1[T](a: T, b: T) -> T:
-	...
+    ...
 ```
 
 - 例子 3
@@ -294,7 +294,7 @@ from typing import TypeVar
 T = TypeVar("T", str, int)
 
 def foo1[T: (int, str)](a: T, b: T) -> T:
-	...
+    ...
 ```
 
 - 例子 4
@@ -306,7 +306,7 @@ from typing import TypeVar
 T = TypeVar("T", bound=Callable)
 
 def decorator[T: Callable](func: T) -> T:
-	...
+    ...
 ```
 
 ## 其他
@@ -331,14 +331,14 @@ def go(direction: Literal['left', 'right']):
 from collections.abc import Callable
 
 def foo1(name: str) -> None:
-	print(name)
+    print(name)
 
 def foo2(name: int) -> None
-	print(name)
+    print(name)
 
 def accept_a_func(func: Callable[[str], None]) -> None:
-	name = 'chaofa'
-	func(name)
+    name = 'chaofa'
+    func(name)
 
 accept_a_func(foo1)   # 成功，符合 Callable 类型定义
 accpet_a_func(foo2)   # 失败，因为 Callable 定义了，func 参数应该接受一个 str 类型
@@ -348,3 +348,5 @@ accpet_a_func(foo2)   # 失败，因为 Callable 定义了，func 参数应该�
 通过阅读这一篇文章，可以知道 Python Class Variable 可以使用 `ClassVar` 定一个一个只能由 `Class` 修改的类变量，并且介绍了 `Self` 类型（这里已经看到了 前向注释的影子，具体可以参考[下一篇](https://bbruceyuan.com/post/python-type-challge-advanced.html)）；此外，着重了解 `TypedDict` 如何定义特定 `Key` 的字典类型，了解 `Required` 和 `NotRequired` 的区别；然后介绍 Python Generic Type（泛型）的写法，明确了 Python 3.12 之后方括号 `[T]` 注释的写法，以及如何在 3.12 版本以前通过 `TypeVar` 定义通用类型；最后介绍了 `Literal` 和 `Callable` 两个重要且基础的 Python 类型。
 
 
+## Reference
+- [1]. [Python-Type-Challenges](https://github.com/laike9m/Python-Type-Challenges)

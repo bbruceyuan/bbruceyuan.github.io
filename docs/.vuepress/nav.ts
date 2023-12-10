@@ -8,16 +8,12 @@ export default navbar([
     link: "/blog.md"
   },
   {
-      text: '友链',
-      link: "/link.html",
-    },
-    
-    {
-      text: '关于我',
-      link: '/about.html',
-    },
-    {
-      text: 'GitHub',
-      link: 'https://github.com/bbruceyuan'
-    }
+    text: '友链',
+    link: "/link.html",
+  },
+
+  {
+    text: '关于我',
+    link: '/about.html',
+  },
 ]);
