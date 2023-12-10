@@ -2,8 +2,11 @@
 title: Python 类型体操训练（三）-- 高级篇
 id: 39
 date: 2023-12-11 14:54:00
-description: Python 类型体操训练（三）-- 高级篇，这篇文章介绍了 Python 类型的一些高级用法，包括 protocol, override, overload, forwardref, generator...。通过实际案例解释了每一种类型的使用场景和使用建议。
+description: python typing tutorial 高级篇。这篇文章介绍了 Python 类型的一些高级用法，包括 protocol, override, overload, forwardref, generator... 通过实际案例解释了每一种类型的使用场景和使用建议。
 category: python-type-challenge
+tag:
+  - python-typing-tutorial
+  - python-type-tutorial
 permalink: /post/python-type-challenge-advanced.html
 publish: true
 ---

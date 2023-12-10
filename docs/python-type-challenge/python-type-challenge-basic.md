@@ -2,9 +2,12 @@
 title: Python 类型体操训练（一）-- 基础篇
 id: 37
 date: 2023-12-08 23:57:00
-description: Python 类型体操训练（一）-- 基础篇，本篇文章介绍了 Python 基础类型、容器类型、 Python function 如何写类型注释，此外详细讲解了常见 Python Type 常见的关键字，包括 Union, Any, Optional, TypeAlias(type), NewType, Final，通过这 5 个最常用的关键字类型增强我们类型注释的表达能力。
+description: python typing tutorial 基础篇。本篇文章介绍了 Python 基础类型、容器类型、 Python function 如何写类型注释，此外详细讲解了常见 Python Type 常见的关键字，包括 Union, Any, Optional, TypeAlias(type), NewType, Final，通过这 5 个最常用的关键字类型增强我们类型注释的表达能力。
 category: 
   - python-type-challenge
+tag:
+  - python-typing-tutorial
+  - python-type-tutorial
 permalink: /post/python-type-challenge-basic.html
 ---
 

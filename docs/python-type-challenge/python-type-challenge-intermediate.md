@@ -2,8 +2,11 @@
 title: Python 类型体操训练（二）-- 中级篇
 id: 38
 date: 2023-12-10 12:57:00
-description: Python 类型体操训练（二）-- 中级篇，这篇文章介绍了 Python Class Variable 可以使用 ClassVar 定义一个只能由 Class 修改的类变量，并且介绍了 Self 类型；此外，着重了解 TypedDict 如何定义特定 Key 的字典类型，了解 Required 和 NotRequired 的区别；然后介绍 Python Generic Type（泛型）的写法，明确了 Python 3.12 之后方括号 [T] 注释的写法，以及如何在 3.12 版本以前通过 TypeVar 定义通用类型；最后介绍了 Literal 和 Callable 两个重要且基础的 Python 类型。
+description: python typing tutorial 中级篇。这篇文章介绍了 Python Class Variable 可以使用 ClassVar 定义一个只能由 Class 修改的类变量，并且介绍了 Self 类型；此外，着重了解 TypedDict 如何定义特定 Key 的字典类型，了解 Required 和 NotRequired 的区别；然后介绍 Python Generic Type（泛型）的写法，明确了 Python 3.12 之后方括号 [T] 注释的写法，以及如何在 3.12 版本以前通过 TypeVar 定义通用类型；最后介绍了 Literal 和 Callable 两个重要且基础的 Python 类型。
 category: python-type-challenge
+tag:
+  - python-typing-tutorial
+  - python-type-tutorial
 permalink: /post/python-type-challenge-intermediate.html
 publish: true
 ---
