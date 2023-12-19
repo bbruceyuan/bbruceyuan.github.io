@@ -12,11 +12,11 @@ export default defineUserConfig({
   description: '做了一个播客叫做打点酱油，平常写 Python, 对NLP、计算广告、大模型感兴趣',
 
   // 这是我的 一些搜索 相关的配置
-  // head: [
-  //   ['meta', { name: 'baidu-site-verification', content: 'code-8mNFhNa5tZ' }],
-  //   ['meta', { name: '360-site-verification', content: 'b5c713d816b0111fd6e0f0a416d598b3' }],
-  //   ['meta', { name: 'sogou_site_verification', content: 'UBtsNHFicS' }]
-  // ],
+  head: [
+    ['meta', { name: 'baidu-site-verification', content: 'codeva-6UT5nFOXMY' }],
+    // ['meta', { name: '360-site-verification', content: 'b5c713d816b0111fd6e0f0a416d598b3' }],
+    // ['meta', { name: 'sogou_site_verification', content: 'UBtsNHFicS' }]
+  ],
   theme,
   plugins: [
     googleAnalyticsPlugin({
