@@ -27,13 +27,14 @@ export default hopeTheme({
     },
     sidebar: sidebar,
     hostname: "https://bbruceyuan.com",
+    favicon: "/img/icon.jpg",
 
     author: {
         name: "bbruceyuan",
         url: 'https://bbruceyuan.com',
     },
     blog: {
-        description: "一个不想打酱油却又一直在打酱油的人~",
+        description: "想要开始做一点有意义的事情~",
         medias: {
             Github: "https://github.com/bbruceyuan",
             BiliBili: "https://space.bilibili.com/12420432",
