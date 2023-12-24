@@ -19,10 +19,13 @@
   "homepage": "https://github.com/bbruceyuan/bbruceyuan.github.io#readme",
   "devDependencies": {
     "@vuepress/plugin-google-analytics": "v2.0.0-rc.0",
-    "vuepress": "2.0.0-rc.0",
-    "vuepress-plugin-sitemap2": "2.0.0-rc.2",
-    "vuepress-theme-hope": "v2.0.0-rc.2",
     "mathjax-full": "3.2.2",
-    "vuepress-plugin-search-pro": "2.0.0-rc.2"
+    "vuepress": "2.0.0-rc.0",
+    "vuepress-plugin-search-pro": "2.0.0-rc.2",
+    "vuepress-plugin-sitemap2": "2.0.0-rc.2",
+    "vuepress-theme-hope": "v2.0.0-rc.2"
+  },
+  "dependencies": {
+    "vuepress-plugin-umami-analytics": "^1.7.0"
   }
 }

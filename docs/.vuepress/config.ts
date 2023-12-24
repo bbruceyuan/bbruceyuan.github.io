@@ -2,6 +2,7 @@ import { defineUserConfig } from 'vuepress'
 import { googleAnalyticsPlugin } from '@vuepress/plugin-google-analytics'
 import { sitemapPlugin } from "vuepress-plugin-sitemap2";
 import { searchProPlugin } from "vuepress-plugin-search-pro";
+import { umamiAnalyticsPlugin } from 'vuepress-plugin-umami-analytics'
 // import { cut } from "nodejs-jieba";
 import theme from "./theme";
 
@@ -19,6 +20,10 @@ export default defineUserConfig({
   ],
   theme,
   plugins: [
+    umamiAnalyticsPlugin({
+      id: "49c459cd-c18c-4d96-bde9-e6f3bb5517e9",
+      src: "https://ana.bbruceyuan.com/script.js"
+    }),
     googleAnalyticsPlugin({
       id: 'G-H2HX76V70M',
     }),
