@@ -21,7 +21,7 @@ export default defineUserConfig({
   theme,
   plugins: [
     umamiAnalyticsPlugin({
-      id: "49c459cd-c18c-4d96-bde9-e6f3bb5517e9",
+      id: "e2ad596a-fc3c-4271-9d2c-4be7713aa68f",
       src: "https://ana.bbruceyuan.com/script.js"
     }),
     googleAnalyticsPlugin({
