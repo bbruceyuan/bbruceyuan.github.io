@@ -1,0 +1,166 @@
+import{_ as o}from"./plugin-vue_export-helper-x3n3nnut.js";import{r as l,o as c,c as p,b as n,d as s,e,w as r,a as i}from"./app--eszq-0O.js";const d="/blog_imgs/23/23_2.png",u="/blog_imgs/23/23_3.png",v="/blog_imgs/23/23_4.png",b={},m=n("h2",{id:"_1-摘要",tabindex:"-1"},[n("a",{class:"header-anchor",href:"#_1-摘要","aria-hidden":"true"},"#"),s(" 1. 摘要")],-1),_=i('<p><strong>关键词：</strong> bilibili, B站UP主，QQ聊天机器人，B站开播提醒QQ机器人，粉丝的自我修养。</p><h2 id="_2-1-作为一个粉丝能为爱豆做什么" tabindex="-1"><a class="header-anchor" href="#_2-1-作为一个粉丝能为爱豆做什么" aria-hidden="true">#</a> 2.1 作为一个粉丝能为爱豆做什么</h2><p>作为一个一无是处，也没有办法给爱豆刷火箭、充舰长的普通粉丝，能为你的爱豆做什么？</p><h3 id="_1-1-刷数据" tabindex="-1"><a class="header-anchor" href="#_1-1-刷数据" aria-hidden="true">#</a> 1.1 刷数据</h3><p>作为一个idol，她（他）需要的是曝光。需要积累更多的人气，那么在视频推荐里面完播率、转发率、弹幕、收藏、回播等信息都是一些非常重要的参考因素，因此如果你没有钱，你可以多看看idol的视频。这样对于视频网站也来，也不算是作弊，因为你本来就是喜欢这个视频，希望给idol的视频带来更大的曝光量。</p><h3 id="_1-2-用户拉活" tabindex="-1"><a class="header-anchor" href="#_1-2-用户拉活" aria-hidden="true">#</a> 1.2 用户拉活</h3><p>「用户拉活」是指提高用户活跃度的意思。和它相关还有「用户拉新」，也就是增加新的用户。只要对于一个稍微有一点点名字的UP主、主播或者各类大V，都会有自己的宣传渠道，形成自己的「私域流量」，包括但不限于微信群、QQ群、公众号、抖音号等。那么显然，很多粉丝都会选择去加相应的粉丝群，但是如果不是铁粉，那么也不一定会开直播/动态提醒。那么我们就需要通过各种渠道就告诉这些「粉丝」（伪粉），你曾经喜欢的UP主开播了。那么显然会存在一部分粉丝收到提醒后就会去看直播，刷礼物，点赞相关动态。那么这种行为就是一种「用户拉活」，可以让一部分粉丝重新变得活跃起来。如果你的「私域流量」足够大，那么这种用户拉活的效果是非常显著的，可能马上就有人来给你喜欢的UP新发的动态点赞、刚开的直播刷舰长。</p><h3 id="_1-3-qq群开播提醒机器人" tabindex="-1"><a class="header-anchor" href="#_1-3-qq群开播提醒机器人" aria-hidden="true">#</a> 1.3 QQ群开播提醒机器人</h3>',8),k={href:"https://space.bilibili.com/244057180/",target:"_blank",rel:"noopener noreferrer"},h={href:"https://github.com/7sDream/",target:"_blank",rel:"noopener noreferrer"},g={href:"https://space.bilibili.com/375504219/",target:"_blank",rel:"noopener noreferrer"},f={href:"https://github.com/7sDream/nonebot-plugin-bam",target:"_blank",rel:"noopener noreferrer"},q=n("strong",null,"一个是直播提醒，一个是动态提醒。",-1),Q=i('<h2 id="_3-部署自动提醒机器人" tabindex="-1"><a class="header-anchor" href="#_3-部署自动提醒机器人" aria-hidden="true">#</a> 3. 部署自动提醒机器人</h2><p>目前7sDream写了一个插件可以实现这个功能，所以我们需要做的就需要把它部署起来。</p><h3 id="_3-1-开发部署环境" tabindex="-1"><a class="header-anchor" href="#_3-1-开发部署环境" aria-hidden="true">#</a> 3.1 开发部署环境</h3><ol><li>一个QQ小号（万一腾讯把你封了可以换一个）</li><li>一台服务器（当然你要是有一个一会断电断网的普通电脑也可以）</li></ol><h3 id="_3-2-简单知识解释" tabindex="-1"><a class="header-anchor" href="#_3-2-简单知识解释" aria-hidden="true">#</a> 3.2 简单知识解释</h3>',5),y={href:"https://v2.nonebot.dev/",target:"_blank",rel:"noopener noreferrer"},w=i('<blockquote><p>简单介绍： nonebot 相当于是一个消息处理中心，收到QQ里面传过来的消息，进行命令解析，选择相应的插件处理。 cqhttp服务则是一个和腾讯服务器连接的桥梁，通过反向订阅nonebot服务，把QQ里面收到的消息发送给 nonebot，然后nonebot服务再去解析消息，选择相应的插件处理。因此部署一个QQ机器人需要两个服务，一个是 cqhttp服务和nonebot 服务。（所以只看 7sdream的插件是部署不起来的）</p></blockquote><h3 id="_3-3-部署步骤" tabindex="-1"><a class="header-anchor" href="#_3-3-部署步骤" aria-hidden="true">#</a> 3.3 部署步骤</h3><p>下面一共9步，手把手实现自动提醒机器人。</p><p>（1）. 登录你的服务器，为你喜欢的UP主新建一个目录，这里我使用 <code>mkdir dadou</code> and <code>cd dadou</code></p><blockquote><p>dadou 是 xx up的名字。（我似乎在变相宣传？？？）</p></blockquote><p>（2）. 安装Python3.9 <code>conda create -n dadou python=3.9 pip</code>  和激活环境 <code>conda activate dadou</code></p><blockquote><p>为了方便管理，我使用 conda 进行 python版本控制，这里你也可以使用 pipenv、poetry等方式。安装3.9 是因为这个包只支持 3.9。</p></blockquote>',7),B={href:"https://github.com/7sDream/nonebot-plugin-bam",target:"_blank",rel:"noopener noreferrer"},T=n("code",null,"pip",-1),x=n("code",null,"pip install nonebot-plugin-bam",-1),A=n("blockquote",null,[n("p",null,"需要注意的坑：这里 7牛只提供了 3.9 的安装支持，因此你需要使用 python 3.9。")],-1),E=n("p",null,[s("（4）. 安装 nonebot "),n("code",null,"pip install nonebot2==2.0.0a10")],-1),P=n("blockquote",null,[n("p",null,"因为nonebot2 和 nonebot 是不兼容的，因此我们需要安装 nonebot2。 另外为什么要制定版本，因为 最近版本的 log 以及 adapter等功能分出去了，7sDream暂时还没有支持新版本。")],-1),N=n("p",null,[s("（5）. 降级pydantic 使用 "),n("code",null,"pip install pydantic==1.7.3"),s("  如果不降级 pydantic到这个版本，会出现如下错误。（希望你跟着一步一步坐下来，就不好出现下面这个错误了）")],-1),S=n("p",null,[n("img",{src:d,alt:"image.png",loading:"lazy"})],-1),U={href:"https://v2.nonebot.dev/guide/cqhttp-guide.html",target:"_blank",rel:"noopener noreferrer"},D=i(`<div class="language-text line-numbers-mode" data-ext="text"><pre class="language-text"><code>这里以 go-cqhttp (opens new window)为例:
+(1). 下载 go-cqhttp 对应平台的 release 文件，点此前往(opens new window)
+(2). 运行 exe 文件或者使用 ./go-cqhttp 启动
+(3). 生成默认配置文件并修改默认配置
+</code></pre><div class="line-numbers" aria-hidden="true"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><p>其中运行第2步的时候会产生一个 <code>config.hjson</code> 的文件，我们需要对文件作出修改。</p><div class="language-bash line-numbers-mode" data-ext="sh"><pre class="language-bash"><code>/*
+    go-cqhttp 默认配置文件
+*/
+<span class="token punctuation">{</span>
+    // QQ号
+    uin: 你的QQ号
+    // QQ密码，把下面密码换成正确的密码
+    password: <span class="token string">&quot;1235678&quot;</span>
+    // 是否启用密码加密
+    encrypt_password: <span class="token boolean">false</span>
+    // 加密后的密码, 如未启用密码加密将为空, 请勿随意修改.
+    password_encrypted: <span class="token string">&quot;&quot;</span>
+    // 是否启用内置数据库
+    // 启用将会增加10-20MB的内存占用和一定的磁盘空间
+    // 关闭将无法使用 撤回 回复 get_msg 等上下文相关功能
+    enable_db: <span class="token boolean">true</span>
+    // 访问密钥, 强烈推荐在公网的服务器设置
+    access_token: <span class="token string">&quot;&quot;</span>
+    // 重连设置
+    relogin: <span class="token punctuation">{</span>
+        // 是否启用自动重连
+        // 如不启用掉线后将不会自动重连
+        enabled: <span class="token boolean">true</span>
+        // 重连延迟, 单位秒
+        relogin_delay: <span class="token number">3</span>
+        // 最大重连次数, <span class="token number">0</span>为无限制
+        max_relogin_times: <span class="token number">0</span>
+    <span class="token punctuation">}</span>
+    // API限速设置
+    // 该设置为全局生效
+    // 原 cqhttp 虽然启用了 rate_limit 后缀, 但是基本没插件适配
+    // 目前该限速设置为令牌桶算法, 请参考:
+    // https://baike.baidu.com/item/%E4%BB%A4%E7%89%8C%E6%A1%B6%E7%AE%97%E6%B3%95/6597000?fr<span class="token operator">=</span>aladdin
+    _rate_limit: <span class="token punctuation">{</span>
+        // 是否启用限速
+        enabled: <span class="token boolean">false</span>
+        // 令牌回复频率, 单位秒
+        frequency: <span class="token number">1</span>
+        // 令牌桶大小
+        bucket_size: <span class="token number">1</span>
+    <span class="token punctuation">}</span>
+    // 是否忽略无效的CQ码
+    // 如果为假将原样发送
+    ignore_invalid_cqcode: <span class="token boolean">false</span>
+    // 是否强制分片发送消息
+    // 分片发送将会带来更快的速度
+    // 但是兼容性会有些问题
+    force_fragmented: <span class="token boolean">false</span>
+    // 心跳频率, 单位秒
+    // <span class="token parameter variable">-1</span> 为关闭心跳
+    heartbeat_interval: <span class="token number">0</span>
+    // HTTP设置
+    http_config: <span class="token punctuation">{</span>
+        // 是否启用正向HTTP服务器
+        enabled: <span class="token boolean">true</span>
+        // 服务端监听地址
+        host: <span class="token number">0.0</span>.0.0
+        // 服务端监听端口
+        port: <span class="token number">5700</span>
+        // 反向HTTP超时时间, 单位秒
+        // 最小值为5，小于5将会忽略本项设置
+        timeout: <span class="token number">0</span>
+        // 反向HTTP POST地址列表
+        // 格式:
+        // <span class="token punctuation">{</span>
+        //    地址: secret
+        // <span class="token punctuation">}</span>
+        post_urls: <span class="token punctuation">{</span><span class="token punctuation">}</span>
+    <span class="token punctuation">}</span>
+    // 正向WS设置 不需要，只要有反向配置就行了。
+    // 反向WS设置
+    ws_reverse_servers: <span class="token punctuation">[</span>
+        // 可以添加多个反向WS推送
+        <span class="token punctuation">{</span>
+            // 是否启用该推送
+            enabled: <span class="token boolean">true</span>
+            // 反向WS Universal 地址
+            // 注意 设置了此项地址后下面两项将会被忽略
+            // 留空请使用 <span class="token string">&quot;&quot;</span>
+            reverse_url: ws://127.0.0.1:8080/cqhttp/ws
+            // 反向WS API 地址
+            reverse_api_url: <span class="token string">&quot;&quot;</span> //ws://you_websocket_api.server
+            // 反向WS Event 地址
+            reverse_event_url: <span class="token string">&quot;&quot;</span> // ws://you_websocket_event.server
+            // 重连间隔 单位毫秒
+            reverse_reconnect_interval: <span class="token number">3000</span>
+        <span class="token punctuation">}</span>
+    <span class="token punctuation">]</span>
+    // 上报数据类型
+    // 可选: string array
+    post_message_format: string
+    // 是否使用服务器下发的新地址进行重连
+    // 注意, 此设置可能导致在海外服务器上连接情况更差
+    use_sso_address: <span class="token boolean">false</span>
+    // 是否启用 DEBUG
+    debug: <span class="token boolean">false</span>
+    // 日志等级 trace,debug,info,warn,error
+    log_level: <span class="token string">&quot;info&quot;</span>
+    // WebUi 设置
+    web_ui: <span class="token punctuation">{</span>
+        // 是否启用 WebUi
+        enabled: <span class="token boolean">true</span>
+        // 监听地址
+        host: <span class="token number">127.0</span>.0.1
+        // 监听端口
+        web_ui_port: <span class="token number">9999</span>
+        // 是否接收来自web的输入
+        web_input: <span class="token boolean">false</span>
+    <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+</code></pre><div class="line-numbers" aria-hidden="true"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><p>再次 运行 ./go-cqhttp</p><p><strong>这里一定会出现一个问题。运行滑块，填写需要的 cookies。这里只要按照提示，根据文档操作很好理解，不做过多介绍。</strong></p><p>运行成功出现：（如果是第一次登陆，界面是不一样的，第一次登陆的时候是教你怎么把QQ用 cqhttp登上去。）</p><p><img src="`+u+`" alt="image.png" loading="lazy"></p><p>（7）. 运行 nonebot 代码</p><p>新建文件 <code>run.py</code> ，内容如下：</p><div class="language-python line-numbers-mode" data-ext="py"><pre class="language-python"><code><span class="token keyword">import</span> nonebot
+<span class="token keyword">from</span> nonebot<span class="token punctuation">.</span>adapters<span class="token punctuation">.</span>cqhttp <span class="token keyword">import</span> Bot <span class="token keyword">as</span> CQHTTPBot
+
+nonebot<span class="token punctuation">.</span>init<span class="token punctuation">(</span>_env_file<span class="token operator">=</span><span class="token string">&quot;.env&quot;</span><span class="token punctuation">)</span>
+
+driver <span class="token operator">=</span> nonebot<span class="token punctuation">.</span>get_driver<span class="token punctuation">(</span><span class="token punctuation">)</span>
+driver<span class="token punctuation">.</span>register_adapter<span class="token punctuation">(</span><span class="token string">&quot;cqhttp&quot;</span><span class="token punctuation">,</span> CQHTTPBot<span class="token punctuation">)</span>
+
+nonebot<span class="token punctuation">.</span>load_builtin_plugins<span class="token punctuation">(</span><span class="token punctuation">)</span>
+
+<span class="token comment"># load other plugins</span>
+
+<span class="token comment"># bam need this to manage background tasks</span>
+nonebot<span class="token punctuation">.</span>load_plugin<span class="token punctuation">(</span><span class="token string">&quot;nonebot_plugin_apscheduler&quot;</span><span class="token punctuation">)</span>
+nonebot<span class="token punctuation">.</span>load_plugin<span class="token punctuation">(</span><span class="token string">&quot;nonebot_plugin_bam&quot;</span><span class="token punctuation">)</span>
+
+nonebot<span class="token punctuation">.</span>run<span class="token punctuation">(</span><span class="token punctuation">)</span>
+</code></pre><div class="line-numbers" aria-hidden="true"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><p>（8）. 配置上面 run.py 中需要的 .env 运行环境</p><div class="language-bash line-numbers-mode" data-ext="sh"><pre class="language-bash"><code><span class="token comment"># 数据落地文件路径，建议设置一下。</span>
+<span class="token comment"># 用默认值（储存在内存中）的话一重启数据就没了</span>
+<span class="token comment">##### !!!!!!（不要使用 7sdream 提供的 :memory:)</span>
+<span class="token assign-left variable">BAM_DB_FILE</span><span class="token operator">=</span><span class="token string">&quot;my_db&quot;</span>  
+
+<span class="token comment"># 重启时将所有用户的直播状态设置为未开播，而不是使用上次记录的状态。</span>
+<span class="token comment"># 正常使用不要打开此选项，是调试用的</span>
+<span class="token assign-left variable">BAM_ON_STARTUP_CLEAN_LIVE_STATUS</span><span class="token operator">=</span>false
+
+<span class="token comment"># 监控任务的间隔，这里设置的是每个用户间的间隔，而不是一轮的间隔。</span>
+<span class="token comment"># 所以如果一共关注了 N 个人（多个群关注同一个人只算一个）</span>
+<span class="token comment"># 那对于每个人来说，两次检测之间的间隔就是 N * interval</span>
+<span class="token comment"># 一般来说不要设置在 5 以下，可能会被 B 站 API 反爬而拒绝响应</span>
+<span class="token assign-left variable">BAM_TASK_INTERVAL</span><span class="token operator">=</span><span class="token number">4</span>
+
+<span class="token comment"># 使用那一个直播间状态查询 API，默认为 2，如果发现被封禁了可以临时调到 1 试试</span>
+<span class="token assign-left variable">BAM_LIVE_API</span><span class="token operator">=</span><span class="token number">2</span>
+
+<span class="token comment"># 动态内容在发送到 QQ 时的最大长度，超过长度会截断，设置为 0 或负数表示不截断</span>
+<span class="token assign-left variable">BAM_ACTIVITY_CONTENT_MAX_LENGTH</span><span class="token operator">=</span><span class="token number">0</span>
+
+
+<span class="token assign-left variable">HOST</span><span class="token operator">=</span><span class="token number">127.0</span>.0.1  <span class="token comment"># 配置 NoneBot 监听的 IP/主机名</span>
+<span class="token assign-left variable">PORT</span><span class="token operator">=</span><span class="token number">8080</span>  <span class="token comment"># 配置 NoneBot 监听的端口</span>
+<span class="token comment">#iDEBUG=true  # 开启 debug 模式 **请勿在生产环境开启**</span>
+<span class="token comment">###### !!!!!! 重要，这里是一个可以用来控制 机器人的用户。比如你的大号</span>
+<span class="token assign-left variable">SUPERUSERS</span><span class="token operator">=</span><span class="token punctuation">[</span><span class="token string">&quot;你的QQ大号，或者某个群主、管理员，可多个&quot;</span><span class="token punctuation">]</span>  <span class="token comment"># 配置 NoneBot 超级用户</span>
+<span class="token assign-left variable">NICKNAME</span><span class="token operator">=</span><span class="token punctuation">[</span><span class="token string">&quot;awesome_bot&quot;</span><span class="token punctuation">]</span>  <span class="token comment"># 配置机器人的昵称</span>
+<span class="token assign-left variable">COMMAND_START</span><span class="token operator">=</span><span class="token punctuation">[</span><span class="token string">&quot;/&quot;</span><span class="token punctuation">]</span>  <span class="token comment"># 配置命令起始字符</span>
+<span class="token assign-left variable">COMMAND_SEP</span><span class="token operator">=</span><span class="token punctuation">[</span><span class="token string">&quot;/&quot;</span><span class="token punctuation">]</span>  <span class="token comment"># 配置命令分割字符</span>
+
+<span class="token comment"># Custom Configs</span>
+<span class="token assign-left variable">CUSTOM_CONFIG1</span><span class="token operator">=</span><span class="token string">&quot;&quot;</span>
+<span class="token assign-left variable">CUSTOM_CONFIG2</span><span class="token operator">=</span>  <span class="token comment"># 留空则从系统环境变量读取，如不存在则为空字符串</span>
+</code></pre><div class="line-numbers" aria-hidden="true"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><p>（9）. 运行 run.py 使用 python run.py</p><p><img src="`+v+'" alt="image.png" loading="lazy"></p><blockquote><p>出现如下界面：打码的部分是你的QQ机器人，也就是你的小号。</p></blockquote><p>然后就成功了，大功告成！！</p><h2 id="_4-订阅你喜欢的up主" tabindex="-1"><a class="header-anchor" href="#_4-订阅你喜欢的up主" aria-hidden="true">#</a> 4. 订阅你喜欢的UP主</h2>',17),C={href:"https://github.com/7sDream/nonebot-plugin-bam",target:"_blank",rel:"noopener noreferrer"},I=i('<p>一共有两种方式：使用 superuser 私聊这个QQ群聊，一种是直接在群里@这个QQ机器人。</p><blockquote><p>私聊的时候不需要ATQQ机器人，在群里就需要AT。</p></blockquote><h3 id="_4-1-示例" tabindex="-1"><a class="header-anchor" href="#_4-1-示例" aria-hidden="true">#</a> 4.1 示例</h3><p>比如你想在你的群里订阅 豆子的直播和动态，</p><ol><li>加入大豆的粉丝群</li><li>邀请你的大号以及QQ小号（机器人）进群</li><li>使用如下命令：（@bot 的意思是使用大号 AT QQ机器人。）</li></ol><blockquote><p><code>@bot /bam/group/add</code>  <code>@bot /bam/follower/add 244057180</code></p></blockquote>',6),M={href:"https://space.bilibili.com/244057180/",target:"_blank",rel:"noopener noreferrer"},V=n("p",null,"欢迎关注~ 这是我作为一个三无粉丝唯一能做的。",-1),O=n("h2",{id:"_5-后记",tabindex:"-1"},[n("a",{class:"header-anchor",href:"#_5-后记","aria-hidden":"true"},"#"),s(" 5. 后记")],-1),L={href:"https://zh.wikipedia.org/zh-hans/%E5%89%B5%E9%80%A0101",target:"_blank",rel:"noopener noreferrer"},H={href:"https://weibo.com/u/5542384916?from=myfollow_all",target:"_blank",rel:"noopener noreferrer"},R=n("p",null,"我所羡慕的两个人：（因为感觉追星似乎挺有意思的）",-1),W={href:"https://www.iqiyi.com/playlist1232801602.html",target:"_blank",rel:"noopener noreferrer"},z=n("p",null,"技术大佬7sDream。7sDream是一个大牛逼，在互联网公司过着公务员的生活（只是因为他效率太高了而已）。每天高强度看Vtuber，尤其是阿夸，每次有关于虚拟偶像的事情都要在群里分享，感觉每天无欲无求，曾经他说过要不要一起来看 Vtuber，可我实在感受不到他看V的快乐。不过能体会到他每次分享这些消息的时候是非常欣喜，在支持关注一个事件的发展（当然对其他事情也是如此）。",-1),G=n("p",null,"我之所以这么做就是因为受他们的影响，感觉可以给自己的业余时间找点事情来做，这样就不至于每天陷入忙碌的焦虑以及痛苦之中，毕竟看好看的小姐姐聊天还是很有意思的。虽然如果当天装束我不喜欢，我就不看了（我果然还是伪粉），这样就能做到一种很随意。毕竟你也不认识ta，看不看对方也不会在意。而自己作为观众来说，似乎能从中感到到一丝的自由。",-1);function F(K,j){const t=l("RouterLink"),a=l("ExternalLinkIcon");return c(),p("div",null,[m,n("p",null,[s("这篇文章主要是教铁粉在粉丝群里面布置一个主播（UP主）动态变化的QQ聊天机器人。目前使用 【插件】支持B站直播提醒，B站动态提醒，手把手教学配置。这篇文章同样给大家一个视角，没有钱的粉丝可以给你的爱豆做什么？答案是帮她做"),e(t,{to:"/post/23.html#1-2-%E7%94%A8%E6%88%B7%E6%8B%89%E6%B4%BB"},{default:r(()=>[s("「用户拉活」")]),_:1}),s("，解放爱豆忘记开播提醒的烦恼。")]),_,n("p",null,[s("为了实现某种程度上的用户拉活，这里我是想给"),n("a",k,[s("「UP主：大豆壳子」"),e(a)]),s(" 的粉丝群提供一个开播自动提醒的机器人，那么她的粉丝（当然主要是我），就会收到相应的提醒。这样我就可以替她挂机刷人气（原谅我并不一定有时间看）。而刚好想到 "),n("a",h,[s("7sDream"),e(a)]),s(" 以前就为他最喜欢的"),n("a",g,[s("「Vtuber 阿夸」"),e(a)]),s("的粉丝群写了一个开播自动提醒的QQ聊天机器人。因此秉行着拿来主义（实际上是我不会写），我们直接用 7sDream写好的开源插件 "),n("a",f,[s("Bilibili Activity Monitor"),e(a)]),s(" 跟踪哔哩哔哩UP主的最近动态。目前只有两个功能："),q]),Q,n("p",null,[s("如果你是一个开发者，我建议你先看 nonebolt "),n("a",y,[s("https://v2.nonebot.dev/"),e(a)]),s(" 理解它们之间的关系。")]),w,n("p",null,[s("（3）. 安装B站动态提醒插件 bilibili activity monitor. 参考 "),n("a",B,[s("https://github.com/7sDream/nonebot-plugin-bam"),e(a)]),s("里面的readme。 这里注意，7sDream 使用的 poetry 进行包和环境的管理，但是我从来没有用过，因此选择了常见的 "),T,s(" 安装方式。 "),x]),A,E,P,N,S,n("p",null,[s("（6）. 启用 cqhttp服务 地址："),n("a",U,[s("https://v2.nonebot.dev/guide/cqhttp-guide.html"),e(a)]),s(" 这是用来和腾讯QQ服务器通信的 服务器，所以需要先下载 go-cqhttp，然后运行它。（运行方式在上面的链接中有写）")]),D,n("p",null,[s("具体的命令参见："),n("a",C,[s("https://github.com/7sDream/nonebot-plugin-bam"),e(a)]),s(" 提到的命令列表。这应该能看的懂吧，可不懂给7sDream提 issue啊（误）")]),I,n("p",null,[s("解释：后面这一串数字就是 > "),n("a",M,[s("大豆壳子主页连接 https://space.bilibili.com/244057180/"),e(a)]),s("] 的 uid。")]),V,O,n("p",null,[s("我从来不是一个合格的粉丝。我记得大四的时候，我们寝室一起在看"),n("a",L,[s("《创造101》"),e(a)]),s("，那个时候就非常喜欢"),n("a",H,[s("「段奥娟」"),e(a)]),s("，但是到现在我已经几乎认不出她了。（尽管我也有关注她的微博）")]),R,n("p",null,[s("室友佳哥。佳哥是一个经常吐槽我是一个伪粉的人。因为曾经我们一起看101的时候，我只关注段奥娟的表演节目，一些琐碎的日常视频也不看，也不打榜，也经常脸盲认不出人。而佳哥应该也不再追吴宣仪和孟美岐了，现在喜欢上了青春有你里面的 "),n("a",W,[s("谢可寅"),e(a)]),s("。本科毕业之后追星行为更加疯狂，包括但不限于买爱豆代言的东西、充钱打榜、看线下线上演唱会（VIP座）。但是我觉得他很快乐，嗯是的，追星好像是快乐的。")]),z,G])}const J=o(b,[["render",F],["__file","23.html.vue"]]);export{J as default};
