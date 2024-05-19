@@ -16,7 +16,7 @@ jobs:
           fetch-depth: 0
 
       - name: Setup Node.js
-        uses: actions/setup-node@v4
+        uses: actions/setup-node@v1
         with:
           # 选择要使用的 node 版本
           node-version: '18'  # update 之后应该是 20
