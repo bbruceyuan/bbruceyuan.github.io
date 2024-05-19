@@ -3,7 +3,7 @@ import { googleAnalyticsPlugin } from '@vuepress/plugin-google-analytics'
 // import { umamiAnalyticsPlugin } from "@vuepress/plugin-umami-analytics"
 import { umamiAnalyticsPlugin } from 'vuepress-plugin-umami-analytics'
 import { sitemapPlugin } from "vuepress-plugin-sitemap2";
-import { redirectPlugin } from "vuepress-plugin-redirect";
+// import { redirectPlugin } from "vuepress-plugin-redirect";
 import { searchProPlugin } from "vuepress-plugin-search-pro";
 import theme from "./theme";
 
@@ -28,7 +28,7 @@ export default defineUserConfig({
     googleAnalyticsPlugin({
       id: 'G-H2HX76V70M',
     }),
-    redirectPlugin({}),
+    // redirectPlugin({}),
     // 配置参考：https://github.com/miniapp-tool/mptool/blob/main/docs/.vuepress/config.ts
     // commid id: da07ca
     searchProPlugin({
