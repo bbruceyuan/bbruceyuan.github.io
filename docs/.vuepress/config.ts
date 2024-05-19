@@ -1,7 +1,11 @@
 import { viteBundler } from "@vuepress/bundler-vite";
 import { defineUserConfig } from 'vuepress'
 import { googleAnalyticsPlugin } from '@vuepress/plugin-google-analytics'
-import { umamiAnalyticsPlugin } from "@vuepress/plugin-umami-analytics"
+// import { umamiAnalyticsPlugin } from "@vuepress/plugin-umami-analytics"
+import { umamiAnalyticsPlugin } from 'vuepress-plugin-umami-analytics'
+import { sitemapPlugin } from "vuepress-plugin-sitemap2";
+import { redirectPlugin } from "vuepress-plugin-redirect";
+import { searchProPlugin } from "vuepress-plugin-search-pro";
 import theme from "./theme";
 
 
@@ -21,10 +25,24 @@ export default defineUserConfig({
   plugins: [
     umamiAnalyticsPlugin({
       id: "e2ad596a-fc3c-4271-9d2c-4be7713aa68f",
-      link: "https://ana.bbruceyuan.com/script.js"
+      src: "https://ana.bbruceyuan.com/script.js"
     }),
     googleAnalyticsPlugin({
       id: 'G-H2HX76V70M',
+    }),
+    redirectPlugin({}),
+    // 配置参考：https://github.com/miniapp-tool/mptool/blob/main/docs/.vuepress/config.ts
+    // commid id: da07ca
+    searchProPlugin({
+      autoSuggestions: false,
+      // indexContent: true,
+      // indexOptions: {
+      //   tokenize: (text, fieldName) =>
+      //     fieldName === "id" ? [text] : cut(text, true),
+      // },
+    }),
+    sitemapPlugin({
+      hostname: "https://bbruceyuan.com",
     }),
   ],
   markdown: {

@@ -45,14 +45,14 @@ export default hopeTheme({
     plugins: {
         // 配置参考：https://github.com/miniapp-tool/mptool/blob/main/docs/.vuepress/config.ts
         // commid id: da07ca
-        searchPro: {
-            autoSuggestions: false,
-            // indexContent: true,
-            // indexOptions: {
-            //   tokenize: (text, fieldName) =>
-            //     fieldName === "id" ? [text] : cut(text, true),
-            // },
-        },
+        // searchPro: {
+        //     autoSuggestions: false,
+        //     // indexContent: true,
+        //     // indexOptions: {
+        //     //   tokenize: (text, fieldName) =>
+        //     //     fieldName === "id" ? [text] : cut(text, true),
+        //     // },
+        // },
         comment: {
             provider: "Giscus",
             repo: "bbruceyuan/bbruceyuan.github.io",
@@ -72,45 +72,44 @@ export default hopeTheme({
             tasklist: true,
             imgLazyload: true,
         },
-        redirect: {
-            config: {
-                // 年终总结
-                "/post/15.html": "/blog/2020-year-summary.html",
-                "/post/34.html": "/blog/2021-year-summary.html",
-                "/post/35.html": "/blog/2022-year-summary.html",
-                "/post/2023-year-summary.html": "/blog/2023-year-summary.html",
+        // redirect: {
+        //     config: {
+        //         // 年终总结
+        //         "/post/15.html": "/blog/2020-year-summary.html",
+        //         "/post/34.html": "/blog/2021-year-summary.html",
+        //         "/post/35.html": "/blog/2022-year-summary.html",
+        //         "/post/2023-year-summary.html": "/blog/2023-year-summary.html",
 
-                // 其他
-                "/post/4.html": "/blog/2020-emnlp-submition.html",
-                "/post/11.html": "/blog/12.html",
-                "/post/12.html": "/blog/12.html",
-                "/post/13.html": "/blog/13.html",
-                "/post/14.html": "/blog/14.html",
-                "/post/16.html": "/blog/16.html",
-                "/post/18.html": "/blog/18.html",
-                "/post/19.html": "/blog/19.html",
-                "/post/20.html": "/blog/20.html",
-                "/post/21.html": "/blog/21.html",
-                "/post/22.html": "/blog/22.html",
-                "/post/23.html": "/blog/23.html",
-                "/post/24.html": "/blog/24.html",
-                "/post/25.html": "/blog/bai-fei-li-shang-jin-ji.html",
-                "/post/26.html": "/blog/hub-of-fu-lan-ke-yang.html",
-                "/post/27.html": "/blog/27.html",
-                "/post/28.html": "/blog/blind-date-from-bruce.html",
-                "/post/30.html": "/blog/blind-date-from-miss-cui.html",
-                "/post/31.html": "/blog/joke-with-miss-cui.html",
-                "/post/32.html": "/blog/how-i-met-bruce.html",
-                "/post/33.html": "/blog/life-influenced-by-point.html",
-                // 40 - 41
-                "/post/how-to-keep-mental-health-working-in-bytedance.html": "/blog/how-to-keep-mental-health-working-in-bytedance.html",
-                "/post/ten-years-after-the-college-entrance-examination.html": "/blog/ten-years-after-the-college-entrance-examination.html",
-            }
-        },
+        //         // 其他
+        //         "/post/4.html": "/blog/2020-emnlp-submition.html",
+        //         "/post/11.html": "/blog/12.html",
+        //         "/post/12.html": "/blog/12.html",
+        //         "/post/13.html": "/blog/13.html",
+        //         "/post/14.html": "/blog/14.html",
+        //         "/post/16.html": "/blog/16.html",
+        //         "/post/18.html": "/blog/18.html",
+        //         "/post/19.html": "/blog/19.html",
+        //         "/post/20.html": "/blog/20.html",
+        //         "/post/21.html": "/blog/21.html",
+        //         "/post/22.html": "/blog/22.html",
+        //         "/post/23.html": "/blog/23.html",
+        //         "/post/24.html": "/blog/24.html",
+        //         "/post/25.html": "/blog/bai-fei-li-shang-jin-ji.html",
+        //         "/post/26.html": "/blog/hub-of-fu-lan-ke-yang.html",
+        //         "/post/27.html": "/blog/27.html",
+        //         "/post/28.html": "/blog/blind-date-from-bruce.html",
+        //         "/post/30.html": "/blog/blind-date-from-miss-cui.html",
+        //         "/post/31.html": "/blog/joke-with-miss-cui.html",
+        //         "/post/32.html": "/blog/how-i-met-bruce.html",
+        //         "/post/33.html": "/blog/life-influenced-by-point.html",
+        //         // 40 - 41
+        //         "/post/how-to-keep-mental-health-working-in-bytedance.html": "/blog/how-to-keep-mental-health-working-in-bytedance.html",
+        //         "/post/ten-years-after-the-college-entrance-examination.html": "/blog/ten-years-after-the-college-entrance-examination.html",
+        //     }
+        // },
         feed: {
             rss: true,
         },
-
     },
     headerDepth: 3
 })
