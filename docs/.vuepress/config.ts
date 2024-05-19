@@ -1,4 +1,3 @@
-import { viteBundler } from "@vuepress/bundler-vite";
 import { defineUserConfig } from 'vuepress'
 import { googleAnalyticsPlugin } from '@vuepress/plugin-google-analytics'
 // import { umamiAnalyticsPlugin } from "@vuepress/plugin-umami-analytics"
@@ -20,7 +19,6 @@ export default defineUserConfig({
     // ['meta', { name: '360-site-verification', content: 'b5c713d816b0111fd6e0f0a416d598b3' }],
     // ['meta', { name: 'sogou_site_verification', content: 'UBtsNHFicS' }]
   ],
-  bundler: viteBundler(),
   theme,
   plugins: [
     umamiAnalyticsPlugin({
