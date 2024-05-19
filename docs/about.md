@@ -1,13 +1,13 @@
 ---
 title: 关于我
 date: 2019-06-30 22:18:18
-description: 关于 BBruceyuan 的一些简介，随便写一些
+description: 做了一个播客叫做打点酱油，平常写 Python, 对NLP、计算广告、大模型感兴趣，尝试做一些有意义的事情
 id: about
 permalink: /about.html
 article: false
 tag:
   - 关于我
-image: img/icon.jpg
+image: /img/icon.jpg
 ---
 
 ## 个人介绍 
@@ -18,7 +18,7 @@ image: img/icon.jpg
 
 对本站的任何问题都可以直接在文章下进行评论。
 
-也可以通过[bruceyuan123@gmail.com](mailto:BBruceyuan<bruceyuan123@gmail.com>?subject=【来自】BBruceyuan的博客)联系我。
+也可以通过[bruceyuan123@gmail.com](mailto:bbruceyuan<bruceyuan123@gmail.com>?subject=【来自】bbruceyuan的博客)联系我。
 
 为了节省双方的宝贵时间，作如下几点声明：
 

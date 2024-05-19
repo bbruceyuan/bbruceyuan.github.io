@@ -1,3 +1,3 @@
 hi, there~
 
-欢迎阅读我的[博客](https://bbruceyuan.com)
+欢迎阅读我的[博客-用代码打点酱油](https://bbruceyuan.com)～

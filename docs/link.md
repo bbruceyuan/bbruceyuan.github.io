@@ -21,7 +21,6 @@ image: img/link.png
 | 名称  | 描述 |
 |---| ---|
 | [极客兔兔](https://geektutu.com) | 致力于分享有趣的技术实践 |
-| [终未寒冬](https://www.liuhuisheng.com/) | 推理小说家和坂本大佬 |
 
 
 ## 申明
@@ -31,7 +30,8 @@ image: img/link.png
 > 本站文章均为原创，要求互换友链的你，也是原创博主。<br/>
 > 拒绝和聚合站、采集站、转载站做朋友。<br/>
 > 格式：<br/>
-> 站点名称：BBruceyuan<br/>
-> 站点描述：没有故事，写点技术，同时打点酱油!<br/>
-> 站点地址：https://bbruceyuan.com<br/>
-> 已加友链：https://bbruceyuan.com/link.html<br/>
+> 站点名称：用代码打点酱油<br/>
+> 站点描述：平常写 Python, 对 NLP、大模型、计算广告有一些研究，尝试做一些有意义的事情~<br/>
+> 站点地址：[https://bbruceyuan.com](https://bbruceyuan.com)<br/>
+> 已加友链：[https://bbruceyuan.com/link.html](https://bbruceyuan.com/link.html)<br/>
+> 常用网名：英文: bbruceyuan，中文：用代码打点酱油，打点酱油，混学大师<br/>
