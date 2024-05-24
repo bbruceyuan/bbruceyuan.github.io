@@ -191,7 +191,7 @@ class Programer(TypedDict):
 # a 正确，所有类型匹配
 a: Programer = {"name": "chaofa", "age": 28, "github": "github.com/bbruceyuan"}
 # b 错误，因为 age 类型不匹配
-b: Programer = {"name": "bbruceyuan", "age": 12.3, "github": "bbruceyuan.com"} 
+b: Programer = {"name": "bbruceyuan", "age": 12.3, "github": "bruceyuan.com"} 
 # c **正确**，因为 key github 是可选 key
 c: Programer = {"name": "chaofa", "age": 12}
 # d 错误，因为缺少 key age
@@ -214,7 +214,7 @@ class Programer(TypedDict, total=False):
 # a 正确，所有类型匹配
 a: Programer = {"name": "chaofa", "age": 28, "github": "github.com/bbruceyuan", 'address': 'address', 'email': 'email'}
 # b 错误，因为 age 类型不匹配
-b: Programer = {"name": "bbruceyuan", "age": 12.3, "github": "bbruceyuan.com"} 
+b: Programer = {"name": "bbruceyuan", "age": 12.3, "github": "bruceyuan.com"} 
 # c **正确**，因为 其他 key 都是可选的
 c: Programer = {"name": "chaofa"}
 # d **错误**，因为缺少 name key, 缺少了一定需要的 name key

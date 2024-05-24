@@ -32,6 +32,6 @@ image: img/link.png
 > 格式：<br/>
 > 站点名称：用代码打点酱油<br/>
 > 站点描述：平常写 Python, 对 NLP、大模型、计算广告有一些研究，尝试做一些有意义的事情~<br/>
-> 站点地址：[https://bbruceyuan.com](https://bbruceyuan.com)<br/>
-> 已加友链：[https://bbruceyuan.com/link.html](https://bbruceyuan.com/link.html)<br/>
+> 站点地址：[https://bruceyuan.com](https://bruceyuan.com)<br/>
+> 已加友链：[https://bruceyuan.com/link.html](https://bruceyuan.com/link.html)<br/>
 > 常用网名：英文: bbruceyuan，中文：用代码打点酱油，打点酱油，混学大师<br/>

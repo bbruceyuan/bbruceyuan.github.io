@@ -12,7 +12,7 @@ image: /img/icon.jpg
 
 ## 个人介绍 
 
-我是想打酱油与不想打酱油的矛盾体！
+我是想打酱油与不想打酱油的矛盾体！欢迎通过留言和我交流，也可以通过[播客-打点酱油](https://www.xiaoyuzhoufm.com/podcast/625a89560cab7e0abb960b6d)了解我更多～
 
 ## 其他申明
 

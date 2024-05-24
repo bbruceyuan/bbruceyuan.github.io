@@ -27,19 +27,19 @@ export default hopeTheme({
         end: ["Links", "Repo", "Search", "Outlook"]
     },
     sidebar: sidebar,
-    hostname: "https://bbruceyuan.com",
+    hostname: "https://bruceyuan.com",
     favicon: "/img/icon.jpg",
 
     author: {
         name: "bbruceyuan",
-        url: 'https://bbruceyuan.com',
+        url: 'https://bruceyuan.com',
     },
     blog: {
         description: "想要开始做一点有意义的事情~",
         medias: {
             Github: "https://github.com/bbruceyuan",
             BiliBili: "https://space.bilibili.com/12420432",
-            Twitter: "https://twitter.com/BBruceyuan"
+            Twitter: "https://x.com/bbruceyuan"
         },
     },
     plugins: {

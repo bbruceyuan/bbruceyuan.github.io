@@ -23,7 +23,7 @@ export default defineUserConfig({
   plugins: [
     umamiAnalyticsPlugin({
       id: "e2ad596a-fc3c-4271-9d2c-4be7713aa68f",
-      src: "https://ana.bbruceyuan.com/script.js"
+      src: "https://ana.bruceyuan.com/script.js"
     }),
     googleAnalyticsPlugin({
       id: 'G-H2HX76V70M',
@@ -40,7 +40,7 @@ export default defineUserConfig({
       // },
     }),
     sitemapPlugin({
-      hostname: "https://bbruceyuan.com",
+      hostname: "https://bruceyuan.com",
     }),
   ],
   markdown: {

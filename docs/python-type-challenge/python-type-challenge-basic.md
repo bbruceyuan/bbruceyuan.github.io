@@ -93,7 +93,7 @@ two_value_tuple: tuple[int, float] = (1, 3.14)
 three_value_tuple: tuple[int, float, str] = (1, 3.14, 'PI')
 
 # 表示这是一个 str -> str 的 dict
-url_map: dict[str, str] = {"chaofa": "bbruceyuan.com"}
+url_map: dict[str, str] = {"chaofa": "bruceyuan.com"}
 embedding_lookup: dict[str, list[float]] = {"chaofa": [1.2, 3.4, 5.6]}
 
 # bad case (不推荐)
@@ -110,7 +110,7 @@ two_value_tuple: Tuple[int, float] = (1, 3.14)
 three_value_tuple: Tuple[int, float, str] = (1, 3.14, 'PI')
 
 # 表示这是一个 str -> str 的 dict
-url_map: Dict[str, str] = {"chaofa": "bbruceyuan.com"}
+url_map: Dict[str, str] = {"chaofa": "bruceyuan.com"}
 embedding_lookup: Dict[str, list[float]] = {"chaofa": [1.2, 3.4, 5.6]}
 
 # 从python3.9 开始， List, Set, Tuple, Dict 等内置类型 支持小写表示，见 good case
