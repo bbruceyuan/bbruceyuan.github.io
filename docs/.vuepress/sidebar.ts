@@ -3,6 +3,9 @@ import { sidebar } from "vuepress-theme-hope";
 export default sidebar({
     "/introduction-to-computing-advertising": "structure",
     "/blog": "structure",
+    "/post": "structure",
+    "/hands-on-code": "structure",
+
     //     [
     //     {
     //         text: '年终总结',
@@ -42,31 +45,31 @@ export default sidebar({
     //         ],
     //     },
     // ],
-    "/post": [
+    // "/post": [
 
-        {
-            text: '技术',
-            collapsible: true,
-            children: [
-                '/post/技术/1.2020年了，还有必要学习分词算法吗？.md',
-                '/post/技术/2.深度学习时代，分词算法的真实应用实例.md',
-                '/post/技术/3.关于隐马尔可夫模型(HMM)，需要知道什么？.md',
-                '/post/技术/5.Transition-based-Directed-Graph-Construction-for-Emotion-Cause-Pair-Extraction(中文介绍).md',
-                '/post/技术/8.01之间均匀分区取两点构成三角形的概率-证明加代码实现.md',
-                '/post/技术/9.简单方法增加Query召回的多样性.md',
-                '/post/技术/10.Python实现蓄水池算法.md',
-                '/post/技术/17.NER上分利器-实体边界重定位.md',
-                '/post/技术/29.倒排索引原理与python实现.md'
-            ],
-        },
-        {
-            "text": "Python 类型体操",
-            "collapsible": true,
-            children: [
-                "/python-type-challenge/python-type-challenge-basic.md",
-                "/python-type-challenge/python-type-challenge-intermediate.md",
-                "/python-type-challenge/python-type-challenge-advanced.md"
-            ]
-        }
-    ],
+    //     {
+    //         text: '技术',
+    //         collapsible: true,
+    //         children: [
+    //             '/post/技术/1.2020年了，还有必要学习分词算法吗？.md',
+    //             '/post/技术/2.深度学习时代，分词算法的真实应用实例.md',
+    //             '/post/技术/3.关于隐马尔可夫模型(HMM)，需要知道什么？.md',
+    //             '/post/技术/5.Transition-based-Directed-Graph-Construction-for-Emotion-Cause-Pair-Extraction(中文介绍).md',
+    //             '/post/技术/8.01之间均匀分区取两点构成三角形的概率-证明加代码实现.md',
+    //             '/post/技术/9.简单方法增加Query召回的多样性.md',
+    //             '/post/技术/10.Python实现蓄水池算法.md',
+    //             '/post/技术/17.NER上分利器-实体边界重定位.md',
+    //             '/post/技术/29.倒排索引原理与python实现.md'
+    //         ],
+    //     },
+    //     {
+    //         "text": "Python 类型体操",
+    //         "collapsible": true,
+    //         children: [
+    //             "/python-type-challenge/python-type-challenge-basic.md",
+    //             "/python-type-challenge/python-type-challenge-intermediate.md",
+    //             "/python-type-challenge/python-type-challenge-advanced.md"
+    //         ]
+    //     }
+    // ],
 });

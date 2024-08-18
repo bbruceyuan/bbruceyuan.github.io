@@ -109,6 +109,7 @@ export default hopeTheme({
         // },
         feed: {
             rss: true,
+            count: 10,
         },
     },
     headerDepth: 3
