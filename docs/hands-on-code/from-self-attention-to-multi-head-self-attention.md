@@ -1,6 +1,6 @@
 ---
 title: 手写 Self-Attention 的四重境界，从 self-attention 到 multi-head self-attention
-date: 2024-08-018T12:00:00
+date: 2024-08-18T12:00:00
 star: true
 tag:
   - transformer

@@ -1,6 +1,6 @@
 ---
 title: 手写 transformer decoder（CausalLM）
-date: 2024-08-018T13:00:00
+date: 2024-08-18T13:00:00
 star: true
 tag:
   - transformer
