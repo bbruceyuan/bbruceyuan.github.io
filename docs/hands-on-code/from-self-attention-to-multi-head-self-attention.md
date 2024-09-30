@@ -13,23 +13,29 @@ banner: https://bruceyuan.com/img/huggingface.png
 ---
 
 ## 背景
+
 在 AI 相关的面试中，经常会有面试官让写 self-attention，但是因为 [transformer](https://arxiv.org/pdf/1706.03762) 这篇文章其实包含很多的细节，因此可能面试官对于 self-attention 实现到什么程度是有不同的预期。因此这里想通过写不同版本的 self-attention 实现来达到不同面试官的预期。以此告诉面试官，了解细节，但是处于时间考虑，可能只写了简化版本，如果有时间可以把完整的写出来。
 
 ## Self-Attention
 
 MultiHead Attention 的时候下一章介绍；先熟悉当前这个公式。
+
 ### Self Attention 的公式
+
 $$SelfAttention(X) = softmax(\frac{Q\cdot K}{\sqrt{d}}) \cdot V$$
 $Q = K = V = W * X$，其中Q K V 对应不同的矩阵 W
 
 ### 补充知识点
+
 1. matmul 和 @ 符号是一样的作用
 2. 为什么要除以 $\sqrt{d}$？ a. 防止梯度消失 b. 为了让 QK 的内积分布保持和输入一样
 3. 爱因斯坦方程表达式用法：` torch.einsum("bqd,bkd-> bqk", X, X).shape`
-4. X.repeat(1, 1, 3)  表示在不同的维度进行 repeat操作，也可以用 tensor.expand 操作
+4. X.repeat(1, 1, 3) 表示在不同的维度进行 repeat操作，也可以用 tensor.expand 操作
 
 ### 第一重: 简化版本
+
 - 直接对着公式实现， $SelfAttention(X) = softmax(\frac{Q\cdot K}{\sqrt{d}}) \cdot V$
+
 ```python
 # 导入相关需要的包
 import math
@@ -76,9 +82,9 @@ net(X)
 ```
 
 ### 第二重: 效率优化
-- 上面那哪些操作可以合并矩阵优化呢？
-	- QKV 矩阵计算的时候，可以合并成一个大矩阵计算。
-> 但是当前 `transformers` 实现中，其实是三个不同的 Linear 层
+
+- 上面那哪些操作可以合并矩阵优化呢？- QKV 矩阵计算的时候，可以合并成一个大矩阵计算。
+  > 但是当前 `transformers` 实现中，其实是三个不同的 Linear 层
 
 ```python
 class SelfAttV2(nn.Module):
@@ -111,10 +117,11 @@ net(X).shape
 ```
 
 ### 第三重: 加入细节
+
 - 看上去 self attention 实现很简单，但里面还有一些细节，还有哪些细节呢？
-	- attention 计算的时候有 dropout，而且是比较奇怪的位置
-	- attention 计算的时候一般会加入 attention_mask，因为样本会进行一些 padding 操作；
-	- MultiHeadAttention 过程中，除了 QKV 三个矩阵之外，还有一个 output 对应的投影矩阵，因此虽然面试让你写 SingleHeadAttention，但是依然要问清楚，是否要第四个矩阵？
+  - attention 计算的时候有 dropout，而且是比较奇怪的位置
+  - attention 计算的时候一般会加入 attention_mask，因为样本会进行一些 padding 操作；
+  - MultiHeadAttention 过程中，除了 QKV 三个矩阵之外，还有一个 output 对应的投影矩阵，因此虽然面试让你写 SingleHeadAttention，但是依然要问清楚，是否要第四个矩阵？
 
 ```python
 class SelfAttV3(nn.Module):
@@ -239,9 +246,11 @@ net(X, mask).shape
 ```
 
 ## MultiHead-Self-Attention
+
 怎么手写一个 Single Head Self-Attention，但是一般在实际上的训练过程中都会使用 Multi Head, 而且其实也仅仅是 每个 Head 做完 Self-Attention 得到结果之后，进行拼接，然后过一个 output 投影矩阵。
 
 ### 第四重：multi-head self-attention
+
 ```python
 import math
 import torch
