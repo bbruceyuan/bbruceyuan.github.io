@@ -18,7 +18,7 @@
     "docs:build": "vuepress build docs",
     "lint": "prettier --check --write .",
     "lint:md": "markdownlint-cli2 \"docs/**/*.md\" --fix",
-    "redirect-site": "vp-redirect generate src --hostname https://bruceyuan.com"
+    "redirect-site": "vp-redirect generate docs --hostname https://bruceyuan.com"
   },
   "devDependencies": {
     "@vuepress/bundler-vite": "2.0.0-rc.15",
