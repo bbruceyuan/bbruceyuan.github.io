@@ -29,7 +29,7 @@ publish: true
 - [Python 类型体操训练（一）-- 基础篇](/post/python-type-challenge-basic.html)
 - [Python 类型体操训练（二）-- 中级篇](/post/python-type-challenge-intermediate.html)
 - [Python 类型体操训练（三）-- 高级篇](/python-type-challenge-advanced.html)（**本篇文章**）
-- [Python 类型体操训练（四）-- 究极篇] 博主自己暂时还没学会
+- [Python 类型体操训练（四）-- 究极篇](#) 博主自己暂时还没学会
 <!-- -
 - [Python 类型体操训练（四）-- 究极篇](challenge/post/python-type-challenge-extreme.html) -->
 
@@ -293,4 +293,4 @@ def add_two(x: float, y: float) -> float:
 
 ## Reference
 
-- [1]. [Python-Type-Challenges](https://github.com/laike9m/Python-Type-Challenges)
+[^1]. [Python-Type-Challenges](https://github.com/laike9m/Python-Type-Challenges)

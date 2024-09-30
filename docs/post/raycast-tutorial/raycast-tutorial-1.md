@@ -128,6 +128,6 @@ raycast 还有很多其他的内置功能，我用的就比较少了，因此这
 
 ## 5. Reference
 
-[^1]: https://www.raycast.com/
+[^1]: <https://www.raycast.com/>
 
-[^2]: https://manual.raycast.com/
+[^2]: <https://manual.raycast.com/>

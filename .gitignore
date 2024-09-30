@@ -1,13 +1,13 @@
-node_modules
+node_modules/**
 
-# Vuepress Cache
+# VuePress Cache
 **/.vuepress/.cache/**
-# Vuepress Temp
+# VuePress Temp
 **/.vuepress/.temp/**
-
+# VuePress Redirect Site
+**/.vuepress/redirect/
 # Vuepress Output
 dist/
-
 
 # macOS
 .DS_Store
