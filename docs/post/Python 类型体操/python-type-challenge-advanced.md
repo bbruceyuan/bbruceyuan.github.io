@@ -10,31 +10,37 @@ tag:
 permalink: /post/python-type-challenge-advanced.html
 publish: true
 ---
+
 ## 阅读提示
+
 - 面向读者群体
-    - 有一定Python基础，需要进阶开发中大型项目
-    - 有其他静态类型语言开发经验的人，需要快速了解 Python 类型注释（type hint）
-    - 如果没有太多基础，可以**先阅读前两篇文章**
+  - 有一定Python基础，需要进阶开发中大型项目
+  - 有其他静态类型语言开发经验的人，需要快速了解 Python 类型注释（type hint）
+  - 如果没有太多基础，可以**先阅读前两篇文章**
 - 你能学到什么？
-    - Python 如何定义 `protocol`
-    - Python 如何重载类方法和函数签名
-    - Python 前向推导、生成器、Nerver等类型的使用
-    - ...
-    - 推荐自己完成 [Python-Type-Challenges](https://github.com/laike9m/Python-Type-Challenges) 上面的练习。
+  - Python 如何定义 `protocol`
+  - Python 如何重载类方法和函数签名
+  - Python 前向推导、生成器、Nerver等类型的使用
+  - ...
+  - 推荐自己完成 [Python-Type-Challenges](https://github.com/laike9m/Python-Type-Challenges) 上面的练习。
 
 这篇文章按照 [Python-Type-Challenges](https://github.com/laike9m/Python-Type-Challenges)[1]库的划分，一共分为四个部分。
+
 - [Python 类型体操训练（一）-- 基础篇](/post/python-type-challenge-basic.html)
-- [Python 类型体操训练（二）-- 中级篇](/post/python-type-challenge-intermediate.html) 
+- [Python 类型体操训练（二）-- 中级篇](/post/python-type-challenge-intermediate.html)
 - [Python 类型体操训练（三）-- 高级篇](/python-type-challenge-advanced.html)（**本篇文章**）
-- [Python 类型体操训练（四）-- 究极篇]  博主自己暂时还没学会
-<!-- - 
+- [Python 类型体操训练（四）-- 究极篇] 博主自己暂时还没学会
+<!-- -
 - [Python 类型体操训练（四）-- 究极篇](challenge/post/python-type-challenge-extreme.html) -->
 
 ## Python Type 高级类型
+
 ### Protocol - 协议
+
 `Protocol` 定义方式有点像 `abc`类，表示这个类型下面有某些方法。
 
 - 看例子学习，Duck 类下面有一个方法 `quack`
+
 ```python
 from typing import Protocol
 
@@ -55,10 +61,14 @@ class Dog:
 dog: SupportsQuack = Dog()   # 错误，因为 dog 类没有 `quack` 方法
 ```
 
-### 重载 
+### 重载
+
 #### override - 类方法重载
-重载这个特性在其他语言里面是被大量使用的，表示子类需要重载父类的方法。直接看 
-- 例子 
+
+重载这个特性在其他语言里面是被大量使用的，表示子类需要重载父类的方法。直接看
+
+- 例子
+
 ```python
 class Animal:
     def say(self) -> str:
@@ -82,6 +92,7 @@ animal2.say()  # 返回 'hello world'，因为没有正确的对 say 重载
 ```
 
 而现在有了 `override` 关键字之后，就不会发生上面的问题了
+
 ```python
 class Animal:
     def say(self) -> str:
@@ -101,10 +112,12 @@ class Duck(Animal):
 ```
 
 #### overload -函数签名重载
+
 这里的重载并不是真正的函数重载，因为**重载的时候并不需要做真正的实现**，而仅仅是重载签名。
+
 - 下面的 snippet code 来自于 [Python-Type-Challenges](https://github.com/laike9m/Python-Type-Challenges/blob/main/challenges/advanced-overload/solution.py)
-    - `process` 方法并没有真正的重写
-    - `overload` 要在 `process` 实现之前
+  - `process` 方法并没有真正的重写
+  - `overload` 要在 `process` 实现之前
 
 ```python
 from typing import overload
@@ -140,6 +153,7 @@ assert_type(process(None), str)  # expect-type-error
 ```
 
 ### ForwardRef -前向推导类型
+
 - Example 1, 我们使用一个类型的时候，可能这个类型还没有完成定义，但是我们又想定义内部的返回值。这个时候就需要使用前向推导，语法为「引号包裹变量名」，比如下面的 `copy` 方法返回 `"MyClass"` 。
 
 ```python
@@ -153,18 +167,21 @@ class MyClass:
 
 from typing import assert_type
 inst = MyClass(x=1)
-assert_type(inst.copy(), MyClass)  
+assert_type(inst.copy(), MyClass)
 # 这两个是同一个类型
 # 前向推导一般使用 引号将类名 包裹起来，从而达到前向推导的目的。
 ```
 
 - Example 2, 循环定义类型。定义一个 名叫 `Tree` 的字典，key 是 str, value 还是 `Tree`
+
 ```python
 type Tree = dict[str, "Tree"]
 ```
 
 ### Generator - 生成器
+
 用法: `Generator[YieldType, SendType, ReturnType]`，详情见例子
+
 ```python
 def echo_round() -> Generator[int, float, str]:
     sent = yield 0
@@ -178,8 +195,11 @@ def echo_round() -> Generator[int, float, str]:
 ```
 
 ### Never
+
 这通常用于表示一个函数永远不会被调用或者一个函数没有返回值。
+
 - Example 1, 永远不会被调用
+
 ```python
 from typing import Never
 
@@ -196,7 +216,9 @@ def int_or_str(arg: int | str) -> None:
         case _:
             never_call_me(arg)  # OK, arg is of type Never
 ```
+
 - Example 2， 没有返回值
+
 ```python
 from typing import Never
 
@@ -209,9 +231,12 @@ assert_never(stop())
 ```
 
 ### TypeGuard
+
 一般用于把 Python 类型缩窄。用 `TypeGuard` 定义会告诉类型检查器两个信息
+
 - 返回值是一个布尔类型（boolean）
 - 如果返回 `True` ，说明类型是 `TypeGuard` 内的类型。
+
 ```python
 from typing import Any, TypeGuard
 
@@ -220,7 +245,9 @@ def is_string(value: Any) -> TypeGuard[str]:
 ```
 
 ### TupleVar
+
 `Generic`（泛化）的高级用法，表示接受多个参数化泛化。
+
 ```python
 def move_first_element_to_last[T, *Ts](tup: tuple[T, *Ts]) -> tuple[*Ts, T]:
     return (*tup[1:], tup[0])
@@ -241,7 +268,9 @@ move_first_element_to_last(tup=(1, 'spam', 3.0))
 # tuple[()] 和 tuple[T, *Ts] 是不同的
 move_first_element_to_last(tup=())
 ```
+
 ### ParamSpec
+
 这也是 `Generic` 的高级用法，一般用于参数的传递。常用于**高阶函数的参数传递、修改**，比如 `decorator` 输入是一个函数，具体例子如下
 
 ```python
@@ -263,4 +292,5 @@ def add_two(x: float, y: float) -> float:
 如果没有 `ParamSpec` 就只能写成 `Callable[..., Any]`，这样的注释只能知道这是一个函数，不知道推断出函数的具体类型。
 
 ## Reference
+
 - [1]. [Python-Type-Challenges](https://github.com/laike9m/Python-Type-Challenges)

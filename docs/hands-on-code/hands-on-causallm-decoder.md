@@ -13,17 +13,21 @@ banner: https://bruceyuan.com/img/huggingface.png
 ---
 
 ## 阅读须知
+
 面试过程中让写 transformers Decoder 一定要沟通清楚是写一个 CausalLM decoder 还是原版的，原版的比较复杂，一般也不会让写。这里的 Decoder 一般指的是 **CausalLM**，具体变化是少了 encoder 部分的输入，所以也就没有了 encoder and decoder cross attention。
+
 - 因为重点希望写 CausalLM，所以没有 Cross attention 和 也省略了 token embedding 这一步。
 
 ## 知识点
+
 - transformers decoder 的流程是：input -> self-attention -> cross-attention -> FFN
 - causalLM decoder 的流程是 input -> self-attention -> FFN
-	- 其他 `[self-attention, FFN]` 是一个 block，一般会有很多的 block
+  - 其他 `[self-attention, FFN]` 是一个 block，一般会有很多的 block
 - FFN 矩阵有两次变化，一次升维度，一次降维度。其中 LLaMA 对于 GPT 的改进还有把 GeLU 变成了 SwishGLU，多了一个矩阵。所以一般升维会从 `4h -> 4h * 2 / 3`
 - 原版的 transformers 用 post-norm, 后面 gpt2, llama 系列用的是 pre-norm。其中 llama 系列一般用 RMSNorm 代替 GPT and transformers decoder 中的 LayerNorm。
 
 具体实现：
+
 ```python
 # 导入相关需要的包
 import math

@@ -3,7 +3,7 @@ title: Python 类型体操训练（一）-- 基础篇
 id: 37
 date: 2023-12-08 23:57:00
 description: python typing tutorial 基础篇。本篇文章介绍了 Python 基础类型、容器类型、 Python function 如何写类型注释，此外详细讲解了常见 Python Type 常见的关键字，包括 Union, Any, Optional, TypeAlias(type), NewType, Final，通过这 5 个最常用的关键字类型增强我们类型注释的表达能力。
-category: 
+category:
   - python-type-challenge
 tag:
   - python-typing-tutorial
@@ -12,45 +12,48 @@ permalink: /post/python-type-challenge-basic.html
 ---
 
 ## 阅读提示
-- 面向读者群体
-    - 有一定Python基础，需要进阶开发中大型项目
-    - 有其他静态类型语言开发经验的人，需要快速了解 Python 类型注释（type hint）
-- 你能学到什么？
-    - Python 基础变量如何写类型注释（type hint）？
-    - Python 容器变量如何写类型注释？
-    - Python 函数如何写类型注释？
-    - Python 类型有哪些常见的关键词？
-- 建议
-    - 注释部分非常的重要，阅读过程中**请关注代码注释部分**
 
+- 面向读者群体
+  - 有一定Python基础，需要进阶开发中大型项目
+  - 有其他静态类型语言开发经验的人，需要快速了解 Python 类型注释（type hint）
+- 你能学到什么？
+  - Python 基础变量如何写类型注释（type hint）？
+  - Python 容器变量如何写类型注释？
+  - Python 函数如何写类型注释？
+  - Python 类型有哪些常见的关键词？
+- 建议
+  - 注释部分非常的重要，阅读过程中**请关注代码注释部分**
 
 这篇文章按照 [Python-Type-Challenges](https://github.com/laike9m/Python-Type-Challenges)[1]库的划分，一共分为四个部分。
+
 - [Python 类型体操训练（一）-- 基础篇](/post/python-type-challenge-basic.html) （**本篇文章**）
 - [Python 类型体操训练（二）-- 中级篇](/post/python-type-challenge-intermediate.html)
 - [Python 类型体操训练（三）-- 高级篇](/post/python-type-challenge-advanced.html)
-- [Python 类型体操训练（四）-- 究极篇] TODO
-
+- \[Python 类型体操训练（四）-- 究极篇] TODO
 
 ## Python为什么要写类型
+
 大家都知道 Python 语言的灵活性，能写出非常简单灵活的代码，似乎在 Python 里面不需要类型推断，但是代码的灵活性恰好是重构和维护的杀手。 **绝大部分开源的 Python package，都是写了类型注释**。因为代码复杂之后，不可避免的会出现各类错误，而类型提示就可以很好的提前暴露相关的问题，从而在一开始就把问题扼杀在摇篮之中。
 
 !!!最重要的一点：有类型提示，**写代码更简单**（IDE 提示更智能），**降低使用函数的心智负担**。
 
 强烈推荐亲手完成 laike9m 的 [Python-Type-Challenges](https://github.com/laike9m/Python-Type-Challenges)库里面的习题，提升对Python类型的了解。一般推荐大家完成 高级训练即可，究极训练非常的难，更推荐大家在日常实践中学习掌握。
 
-> ! NOTE: 
+> ! NOTE:
 > 因为语言在慢慢发展，为了让大家体验到更好更高级的内容，这个系列的文章和Repo 一样，基于 Python 3.12 进行介绍。
+
 ## Python 类型基础
 
 在 Python 中有很多基础类型，主要包括 `int`, `float`, `str`, `bool`, `bytes`, `None`,  `list`, `tuple`, `dict`, `set`, `frozenset`，可以分为简单变量（simple variable）和容器变量（container variable）。
 
 ### 简单变量
+
 简单变量指的是： `int`, `float`, `str`, `bool`, `bytes`, `None` 等类型变量
 
 - 建议
-    - 简单变量类型申明不要有压力，最好能写，不想写省略也没问题
-    - 简单变量类型不写也可以很好的被 IDE 推断
-    - 如果这个变量作为一个返回值，而 func 又没有定义类型，建议写上
+  - 简单变量类型申明不要有压力，最好能写，不想写省略也没问题
+  - 简单变量类型不写也可以很好的被 IDE 推断
+  - 如果这个变量作为一个返回值，而 func 又没有定义类型，建议写上
 
 ```python
 # good case (推荐)
@@ -60,8 +63,8 @@ c: str = 'hello chaofa'
 d: bool = True
 e: bytes = b'hello chaofa'
 f: None = None  # 这种很少见到有人这么写
-# f = None # it is also ok. 
-# 注意：str 和 byte 的 区别 
+# f = None # it is also ok.
+# 注意：str 和 byte 的 区别
 # assert c.encode("utf-8") == e, "两者类型一样"
 
 # bad case (不推荐)
@@ -74,11 +77,12 @@ e = b'hello chaofa'
 ```
 
 ### 容器变量
+
 容器变量指的是： `list`, `tuple`, `dict`, `set` 等
 
 - 建议
-    - 容器变量强烈建议写上类型
-    - 这样可以让代码更可读
+  - 容器变量强烈建议写上类型
+  - 这样可以让代码更可读
 
 ```python
 # good case (推荐)
@@ -121,12 +125,13 @@ embedding_lookup: Dict[str, list[float]] = {"chaofa": [1.2, 3.4, 5.6]}
 ```
 
 ### 函数使用
+
 Python 写类型注释，更重要的使用场景是函数。当你写一个函数（类）的时候，说明你需要抽象一些东西，意味着你的场景更复杂。
 
 - 建议
-    - 建议写清楚每一个函数的 入参，类型返回值
-    - 这样有助于后续自己 debug。
-    - 请相信：绝大部分时候我们不需要考虑输入可能是多种类型，所以前期我觉得可以勇敢的写上类型。
+  - 建议写清楚每一个函数的 入参，类型返回值
+  - 这样有助于后续自己 debug。
+  - 请相信：绝大部分时候我们不需要考虑输入可能是多种类型，所以前期我觉得可以勇敢的写上类型。
 
 ```python
 # good case (推荐)
@@ -145,6 +150,7 @@ def foo(a: Any, b: Any) -> Any:
 ## Type 常见关键词
 
 ### Union
+
 `Union` 单词的意思很好理解，表示`联合, 合并`。在 Python 集合操作中，表示把两个集合放在一起，两者都保留。在 `typing` 中意义非常的接近，使用 `Union` 表示两个类型都可以。一般用法为： `a: Union[int, str]`
 
 ```python
@@ -162,6 +168,7 @@ b: int | str = 'chaofa'
 ```
 
 ### Optional
+
 `Optional` 表示 `可选的`，`Optional[X]` 和 `X | None` (`Union[X, None]`) 是一样的意思，表示这个变量可能是 `None` 或者是一个 `X` 类型。
 
 ```python
@@ -174,6 +181,7 @@ b: str | None = None
 ```
 
 ### TypeAlias (type)
+
 `TypeAlias` 表示对某个类型创建一个**别名**，类型没有发生变化，一般是为了方便自己理解。
 
 ```python
@@ -195,7 +203,9 @@ type Vector = list[float]
 ```
 
 ### NewType
+
 `NewType` 表示创建一个新的类型，这个类型和原有的类型不是同一个类型了。
+
 > `TypeAlias` 或者 `type` 标记的类型只是创建一个别名，`NewType` 是直接得到一个新的变量
 
 ```python
@@ -214,8 +224,8 @@ user_a = get_user_name(UserId(42351))
 user_b = get_user_name(-1)
 ```
 
-
 ### Final
+
 `Final` 表示这个变量不能再被重新赋值(assign)了。
 
 ```python
@@ -227,15 +237,15 @@ my_list.append(1) # 成功
 my_list = []      # 失败，因为这里重新对 my_list 进行了赋值
 ```
 
-
 ## 小结
+
 通过上面的学习，我们知道了 Python 基础类型、容器类型怎么写类型注释，也知道怎么在一个 Python function 里面加上类型注释，通过一些简单的类型标记就可以减少我们函数依赖错误，提前发现代码问题。最后我们还额外了解一些常见 Python Type 常见的关键字，包括 `Union`, `Optional`, `TypeAlias(type)`, `NewType`, `Final`，通过这 5 个最常用的关键字类型增强我们类型注释的表达能力。
 
 可以说阅读完本节内容，我们就可以非常轻易地在工作学习中用上，而且一定会极大的减少一些因为粗心带来的错误。
 
-
->  `TypeDict`, `Literal`, `Generic` 等更高级的关键字将在 中级教程 介绍。
+> `TypeDict`, `Literal`, `Generic` 等更高级的关键字将在 中级教程 介绍。
 
 ## Reference
-- [1]. [Python-Type-Challenges](https://github.com/laike9m/Python-Type-Challenges)
-- [2]. [https://docs.python.org/3/library/typing.html](https://docs.python.org/3/library/typing.html)
+
+- \[1]. [Python-Type-Challenges](https://github.com/laike9m/Python-Type-Challenges)
+- \[2]. <https://docs.python.org/3/library/typing.html>
