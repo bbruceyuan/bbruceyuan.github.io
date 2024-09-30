@@ -36,5 +36,4 @@ jobs:
         with:
           branch: gh-pages
           folder: docs/.vuepress/dist
-          token: ${{ secrets.ACCESS_TOKEN }}
           single-commit: true
