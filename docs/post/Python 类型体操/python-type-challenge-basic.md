@@ -24,7 +24,7 @@ permalink: /post/python-type-challenge-basic.html
 - 建议
   - 注释部分非常的重要，阅读过程中**请关注代码注释部分**
 
-这篇文章按照 [Python-Type-Challenges](https://github.com/laike9m/Python-Type-Challenges)[1]库的划分，一共分为四个部分。
+这篇文章按照 [Python-Type-Challenges](https://github.com/laike9m/Python-Type-Challenges)[^1]库的划分，一共分为四个部分。
 
 - [Python 类型体操训练（一）-- 基础篇](/post/python-type-challenge-basic.html) （**本篇文章**）
 - [Python 类型体操训练（二）-- 中级篇](/post/python-type-challenge-intermediate.html)
@@ -247,5 +247,6 @@ my_list = []      # 失败，因为这里重新对 my_list 进行了赋值
 
 ## Reference
 
-- \[1]. [Python-Type-Challenges](https://github.com/laike9m/Python-Type-Challenges)
-- \[2]. <https://docs.python.org/3/library/typing.html>
+- \[1]. <https://docs.python.org/3/library/typing.html>
+
+[^1]. [Python-Type-Challenges](https://github.com/laike9m/Python-Type-Challenges)

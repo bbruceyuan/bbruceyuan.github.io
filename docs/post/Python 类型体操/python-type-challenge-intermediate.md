@@ -26,7 +26,7 @@ publish: true
   - 完成这篇文章的阅读，基本上已经可以适应 Python 日常项目的开发需求
   - 强烈推荐自己进行[类型训练](<(https://github.com/laike9m/Python-Type-Challenges)>)
 
-这篇文章按照 [Python-Type-Challenges](https://github.com/laike9m/Python-Type-Challenges)[1]库的划分，一共分为四个部分。
+这篇文章按照 [Python-Type-Challenges](https://github.com/laike9m/Python-Type-Challenges)[^1]库的划分，一共分为四个部分。
 
 - [Python 类型体操训练（一）-- 基础篇](/post/python-type-challenge-basic.html)
 - [Python 类型体操训练（二）-- 中级篇](/post/python-type-challenge-intermediate.html) （**本篇文章**）
@@ -258,7 +258,7 @@ b: Programer = {"name": "bbruceyuan", "age": 25}
 
 ## 通用类型（Generic）
 
-写过 `C++/Java `的同学可能知道 泛型的概念，一般会用一个 `T` 来表示这个变量可能是任意类型。`C++`语法结构为：`template<class T> void func(T var) {...} ` ，`Java` 语法结构为 `public class Hello<T> {...}`。
+写过 `C++/Java`的同学可能知道 泛型的概念，一般会用一个 `T` 来表示这个变量可能是任意类型。`C++`语法结构为：`template<class T> void func(T var) {...}` ，`Java` 语法结构为 `public class Hello<T> {...}`。
 
 而 [Python 的写法](https://docs.python.org/3/library/typing.html#typing.Generic)和 [Scala 语言的泛型](https://docs.scala-lang.org/zh-cn/tour/generic-classes.html)更为接近，语法是几乎是一样的，用 `[T]` 来表示泛型，方括号 `[]` 是用来接收泛型参数，`T` 是一个通用的参数标识符。
 
@@ -437,4 +437,4 @@ accpet_a_func(foo2)   # 失败，因为 Callable 定义了，func 参数应该�
 
 ## Reference
 
-- [1]. [Python-Type-Challenges](https://github.com/laike9m/Python-Type-Challenges)
+[^1]. [Python-Type-Challenges](https://github.com/laike9m/Python-Type-Challenges)

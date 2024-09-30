@@ -29,7 +29,7 @@ $Q = K = V = W * X$，其中Q K V 对应不同的矩阵 W
 
 1. matmul 和 @ 符号是一样的作用
 2. 为什么要除以 $\sqrt{d}$？ a. 防止梯度消失 b. 为了让 QK 的内积分布保持和输入一样
-3. 爱因斯坦方程表达式用法：` torch.einsum("bqd,bkd-> bqk", X, X).shape`
+3. 爱因斯坦方程表达式用法：`torch.einsum("bqd,bkd-> bqk", X, X).shape`
 4. X.repeat(1, 1, 3) 表示在不同的维度进行 repeat操作，也可以用 tensor.expand 操作
 
 ### 第一重: 简化版本

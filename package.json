@@ -2,27 +2,30 @@
   "name": "bbruceyuan.github.io",
   "version": "1.0.0",
   "description": "my blog source",
-  "scripts": {
-    "docs:dev": "vuepress dev docs",
-    "docs:build": "vuepress build docs",
-    "lint": "prettier --check --write .",
-    "redirect-site": "vp-redirect generate src --hostname https://bruceyuan.com"
-  },
+  "type": "module",
+  "author": "",
+  "license": "ISC",
+  "homepage": "https://github.com/bbruceyuan/bbruceyuan.github.io#readme",
   "repository": {
     "type": "git",
     "url": "git+https://github.com/bbruceyuan/bbruceyuan.github.io.git"
   },
-  "author": "",
-  "license": "ISC",
   "bugs": {
     "url": "https://github.com/bbruceyuan/bbruceyuan.github.io/issues"
   },
-  "homepage": "https://github.com/bbruceyuan/bbruceyuan.github.io#readme",
+  "scripts": {
+    "docs:dev": "vuepress dev docs",
+    "docs:build": "vuepress build docs",
+    "lint": "prettier --check --write .",
+    "lint:md": "markdownlint-cli2 \"docs/**/*.md\" --fix",
+    "redirect-site": "vp-redirect generate src --hostname https://bruceyuan.com"
+  },
   "devDependencies": {
     "@vuepress/bundler-vite": "2.0.0-rc.15",
     "@vuepress/plugin-google-analytics": "2.0.0-rc.42",
     "@vuepress/plugin-redirect": "2.0.0-rc.51",
     "@vuepress/plugin-umami-analytics": "2.0.0-rc.47",
+    "markdownlint-cli2": "0.14.0",
     "mathjax-full": "3.2.2",
     "prettier": "3.3.3",
     "sass-embedded": "1.79.4",
