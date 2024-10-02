@@ -34,7 +34,7 @@ export default defineUserConfig({
     }),
     umamiAnalyticsPlugin({
       id: "e2ad596a-fc3c-4271-9d2c-4be7713aa68f",
-      src: "https://ana.bruceyuan.com/script.js",
+      link: "https://ana.bruceyuan.com/script.js",
     }),
   ],
 });
