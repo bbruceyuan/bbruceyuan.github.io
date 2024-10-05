@@ -4,8 +4,8 @@ import { navbar } from "vuepress-theme-hope";
 export default navbar([
   /* 你的导航栏配置 */
   {
-    text: "碎碎念",
-    link: "https://memos.bruceyuan.com",
+    text: "EnglishPod",
+    link: "https://englishpod.bruceyuan.com/",
   },
   "/link",
   "/about",

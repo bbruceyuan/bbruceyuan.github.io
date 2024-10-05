@@ -23,11 +23,13 @@ export default hopeTheme({
     '<script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>本站总访问量<span id="busuanzi_value_site_pv"></span>次,本站访客数<span id="busuanzi_value_site_uv"></span>人次',
 
   blog: {
-    description: "想要开始做一点有意义的事情~",
+    description: "想要开始做一点有意义的事情，来和我聊天吧~",
     medias: {
       Github: "https://github.com/bbruceyuan",
       BiliBili: "https://space.bilibili.com/12420432",
+      Youtube: "https://www.youtube.com/@bbruceyuan",
       Twitter: "https://x.com/bbruceyuan",
+      XiaoHongShu: "https://www.xiaohongshu.com/user/profile/622186a5000000002102bea8",
     },
   },
 

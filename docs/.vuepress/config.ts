@@ -7,15 +7,19 @@ import theme from "./theme.js";
 
 export default defineUserConfig({
   lang: "zh-CN",
-  title: "用代码打点酱油的 chaofa",
+  title: "用代码打点酱油的Bruce",
   description:
     "做了一个播客叫做打点酱油，平常写 Python, 对 NLP、计算广告、大模型感兴趣，尝试做一些有意义的事情",
 
   // 这是我的 一些搜索 相关的配置
   head: [
+    // 百度验证
     ["meta", { name: "baidu-site-verification", content: "codeva-6UT5nFOXMY" }],
-    // ['meta', { name: '360-site-verification', content: 'b5c713d816b0111fd6e0f0a416d598b3' }],
-    // ['meta', { name: 'sogou_site_verification', content: 'UBtsNHFicS' }]
+    // 360 验证
+    ['meta', { name: '360-site-verification', content: 'd65e0e26fb7ffa7c147867834f4d1475' }],
+    // 搜狗验证
+    ['meta', { name: 'sogou_site_verification', content: 'UBtsNHFicS' }],
+    // ['meta', { "http-equiv": 'Content-Type', content: 'text/html;charset=gb2312' }]
   ],
 
   markdown: {

@@ -16,6 +16,11 @@ banner: https://bruceyuan.com/img/huggingface.png
 
 在 AI 相关的面试中，经常会有面试官让写 self-attention，但是因为 [transformer](https://arxiv.org/pdf/1706.03762) 这篇文章其实包含很多的细节，因此可能面试官对于 self-attention 实现到什么程度是有不同的预期。因此这里想通过写不同版本的 self-attention 实现来达到不同面试官的预期。以此告诉面试官，了解细节，但是处于时间考虑，可能只写了简化版本，如果有时间可以把完整的写出来。
 
+
+> 如果对于文字不感冒，可以查看**YouTube 和 B 站视频**
+> [Youtube 链接](https://www.youtube.com/watch?v=d_jwwnYCzIg)-- [bilibili 链接](https://www.bilibili.com/video/BV19YbFeHETz/)
+
+
 ## Self-Attention
 
 MultiHead Attention 的时候下一章介绍；先熟悉当前这个公式。
