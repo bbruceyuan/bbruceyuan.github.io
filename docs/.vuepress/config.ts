@@ -14,7 +14,7 @@ export default defineUserConfig({
   // 这是我的 一些搜索 相关的配置
   head: [
     // 百度验证
-    ["meta", { name: "baidu-site-verification", content: "codeva-6UT5nFOXMY" }],
+    ["meta", { name: "baidu-site-verification", content: "codeva-y7Qplz9xAV" }],
     // 360 验证
     ['meta', { name: '360-site-verification', content: 'd65e0e26fb7ffa7c147867834f4d1475' }],
     // 搜狗验证
