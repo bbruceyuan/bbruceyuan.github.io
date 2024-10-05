@@ -18,7 +18,7 @@ export default defineUserConfig({
     // 360 验证
     ['meta', { name: '360-site-verification', content: 'd65e0e26fb7ffa7c147867834f4d1475' }],
     // 搜狗验证
-    ['meta', { name: 'sogou_site_verification', content: 'UBtsNHFicS' }],
+    ['meta', { name: 'sogou_site_verification', content: 'sS60nRna6W' }],
     // ['meta', { "http-equiv": 'Content-Type', content: 'text/html;charset=gb2312' }]
   ],
 
