@@ -24,7 +24,7 @@ publish: true
   - Python 类型中的一些高级关键字（Literal, Callable）？
 - 结论
   - 完成这篇文章的阅读，基本上已经可以适应 Python 日常项目的开发需求
-  - 强烈推荐自己进行[类型训练](<(https://github.com/laike9m/Python-Type-Challenges)>)
+  - 强烈推荐自己进行[类型训练](https://github.com/laike9m/Python-Type-Challenges)
 
 这篇文章按照 [Python-Type-Challenges](https://github.com/laike9m/Python-Type-Challenges)[^1]库的划分，一共分为四个部分。
 

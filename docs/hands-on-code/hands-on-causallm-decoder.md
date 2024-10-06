@@ -18,9 +18,7 @@ banner: https://bruceyuan.com/img/huggingface.png
 
 - 因为重点希望写 CausalLM，所以没有 Cross attention 和 也省略了 token embedding 这一步。
 
-> 如果对于文字不感冒，可以查看**YouTube 和 B 站视频**
-> [Youtube 链接](https://www.youtube.com/watch?v=yzEotGJaQ74)-- [bilibili 链接](https://www.bilibili.com/video/BV1Nh1QYCEsS/)
-
+> 如果对于文字不感冒，可以查看**YouTube 和 B 站视频** > [Youtube 链接](https://www.youtube.com/watch?v=yzEotGJaQ74)-- [bilibili 链接](https://www.bilibili.com/video/BV1Nh1QYCEsS/)
 
 ## 知识点
 
@@ -29,7 +27,6 @@ banner: https://bruceyuan.com/img/huggingface.png
   - 其他 `[self-attention, FFN]` 是一个 block，一般会有很多的 block
 - FFN 矩阵有两次变化，一次升维度，一次降维度。其中 LLaMA 对于 GPT 的改进还有把 GeLU 变成了 SwishGLU，多了一个矩阵。所以一般升维会从 `4h -> 4h * 2 / 3`
 - 原版的 transformers 用 post-norm, 后面 gpt2, llama 系列用的是 pre-norm。其中 llama 系列一般用 RMSNorm 代替 GPT and transformers decoder 中的 LayerNorm。
-
 
 具体实现：
 

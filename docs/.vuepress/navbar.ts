@@ -7,6 +7,15 @@ export default navbar([
     text: "EnglishPod",
     link: "https://englishpod.bruceyuan.com/",
   },
-  "/link",
+  {
+    text: "YouTube",
+    icon: "Youtube",
+    link: "https://www.youtube.com/@bbruceyuan",
+  },
+  {
+    text: "B 站",
+    link: "https://space.bilibili.com/12420432",
+  },
+  // "/link",
   "/about",
 ]);

@@ -29,7 +29,8 @@ export default hopeTheme({
       BiliBili: "https://space.bilibili.com/12420432",
       Youtube: "https://www.youtube.com/@bbruceyuan",
       Twitter: "https://x.com/bbruceyuan",
-      XiaoHongShu: "https://www.xiaohongshu.com/user/profile/622186a5000000002102bea8",
+      XiaoHongShu:
+        "https://www.xiaohongshu.com/user/profile/622186a5000000002102bea8",
     },
   },
 
