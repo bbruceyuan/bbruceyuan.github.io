@@ -1,0 +1,1034 @@
+<?xml version="1.0" encoding="utf-8"?><?xml-stylesheet type="text/xsl" href="https://bruceyuan.com/rss.xsl"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:dc="http://purl.org/dc/elements/1.1/">
+  <channel>
+    <atom:link href="https://bruceyuan.com/rss.xml" rel="self" type="application/rss+xml"/>
+    <title>用代码打点酱油的chaofa</title>
+    <link>https://bruceyuan.com/</link>
+    <description>做了一个播客叫做打点酱油，平常写 Python, 对 NLP、计算广告、大模型感兴趣，尝试做一些有意义的事情</description>
+    <language>zh-CN</language>
+    <pubDate>Tue, 15 Oct 2024 13:56:08 GMT</pubDate>
+    <lastBuildDate>Tue, 15 Oct 2024 13:56:08 GMT</lastBuildDate>
+    <generator>@vuepress/plugin-feed</generator>
+    <docs>https://validator.w3.org/feed/docs/rss2.html</docs>
+    <category>杂谈</category>
+    <category>hands-on-code</category>
+    <category>年终总结</category>
+    <item>
+      <title>普通人从零开始做公开表达的增长策略</title>
+      <link>https://bruceyuan.com/blog/growth-strategies-for-ordinary-people-starting-from-scratch.html</link>
+      <guid>https://bruceyuan.com/blog/growth-strategies-for-ordinary-people-starting-from-scratch.html</guid>
+      <source url="https://bruceyuan.com/rss.xml">普通人从零开始做公开表达的增长策略</source>
+      <description>国庆七天，开始在 B 站和 YouTube 做了一些教学视频，非常开心地涨粉 1.5k+，以下是我做的几个策略和思考：1. 视频大于文章；2. 利他优先；3. 拙劣的完成好过比完美的开始；4. 选取合适的平台；5. 内容互相链接...</description>
+      <category>杂谈</category>
+      <pubDate>Tue, 15 Oct 2024 22:06:00 GMT</pubDate>
+      <content:encoded><![CDATA[<p>国庆七天，开始在 <a href="https://space.bilibili.com/12420432" target="_blank" rel="noopener noreferrer">B 站</a>和 <a href="https://www.youtube.com/@bbruceyuan" target="_blank" rel="noopener noreferrer">YouTube</a> 做了一些教学视频，非常开心地涨粉 1.5k+，我做了什么？以下是我做的几个策略和思考。</p>
+<blockquote>
+<p>做这些东西本质上是为了满足自己的虚荣心，得到他人的关注和肯定。不然我也不会一直都有断断续续写一些技术文章。</p>
+</blockquote>
+<h2>1. 视频大于文章</h2>
+<p>大多数人已经不看文章了，大多数人都没有耐心看一篇长文，但是却会不自觉看一个中视频。因此国庆期间，把以前写的博客文章录成了视频。</p>
+<p>尽管视频内容信息密度远小于文字，但是它有一个得天独厚的条件，同时调动「画面视觉、听觉和知觉」，因此会更容易让人沉浸其中，这也是为什么教育除了需要书籍之外还需要课堂。知识传递没有高低贵贱之分，放下「视频信息传播就是不如文字信息传播」的偏见。</p>
+<h2>2. 利他优先</h2>
+<p>潘乱在播客中提到广泛传播的东西至少满足下面一个特征：喜闻乐见、感同深受、对我有用。对于普通人，中午吃什么没人关心，第一点不满足；引起共鸣需要天时地利人和，随机性太大；第二点太难。因此只能让做让别人也能收益的事情。</p>
+<h2>3. 拙劣的完成好过比完美的开始</h2>
+<p>视频和文章的细节在初期不重要，收音设备、封面怎么设计也不是我们该关心的，内容才是传播的第一要素。我们只要把最重要的内容做出来了就是成功。不要去想有多少人看，立刻马上去录制，这个是最重要的。后期如果真的有一定的用户基础后，我们可以去对一些细节进行优化（比如封面、剪辑）。</p>
+<h2>4. 选取合适的平台</h2>
+<p>视频号、公众号、Twitter（X）等平台对于新人并不友好，小红书和 B 站相对平权一点，对此把自己觉得相对优质的内容发到「更平权的平台」，并且这两个平台的用户粘性和社区属性更强，别人会愿意看普通人的东西。（抖音供给太多，很难起量）</p>
+<p>此外，平台的调性也决定了你的创作体验，比如 B 站和 YouTube 用户更喜欢看技术分享，并且这两个平台可以放外链，相对友好一些。而小红书真是封闭到像是闭关锁国，完全不允许外链，审核非常的严格，因此对于知识传播非常不友好。</p>
+<h2>5. 内容互相链接</h2>
+<p>不同内容之间相互应用，「A 视频提到的概念」在「B视频中有讲解」，那么此时应该把内容链接起来，不仅给观众提供上下文，同时给自己的内容提供更多的曝光。</p>
+<blockquote>
+<p>可见 Web 是真的好，大多数平台都不提供外链 😮‍💨</p>
+</blockquote>
+<h2>6. 真诚是必杀技（露脸）</h2>
+<p>不要把观众当傻x，同质内容是很多的，为什么用户要看你说的？专业肯定是最终的，但是大多数人都是普通人，而露面就可以增加和观众之间的链接，因此关系更容易拉近（笑）。</p>
+<h2>7. 脑子里面不要只想着赚钱的事情</h2>
+<p>做自媒体很多人第一印象是想赚钱，但有一个很直观的道理，如果你不想着从观众手里赚钱，那么你说话都硬气，人的精神状态会更好。而公开表达最重要的目的不是赚钱，而是让更多人了解你，被别人看到以及产生互动比赚几十块钱带来的愉悦根本不是一个量级。</p>
+<blockquote>
+<p>我的目标是让更多人看到我，90% 的精力是工作，10% 写书，做视频是一种表达和总结练习。</p>
+</blockquote>
+<ul class="task-list-container">
+<li class="task-list-item"><input type="checkbox" class="task-list-item-checkbox" id="task-item-0" disabled="disabled"><label class="task-list-item-label" for="task-item-0">  后面想到了再更新吧</label></li>
+</ul>
+]]></content:encoded>
+    </item>
+    <item>
+      <title>LLM 大模型训练-推理显存占用分析</title>
+      <link>https://bruceyuan.com/post/llm-train-infer-memoery-usage-calculation.html</link>
+      <guid>https://bruceyuan.com/post/llm-train-infer-memoery-usage-calculation.html</guid>
+      <source url="https://bruceyuan.com/rss.xml">LLM 大模型训练-推理显存占用分析</source>
+      <description>根据模型的参数大小，预估模型训练和推理过程中的显存占用情况，包括参数占用显存大小、优化器占用显存大小...KV Cache 和 中间激活值的计算方式</description>
+      <pubDate>Sun, 06 Oct 2024 09:41:20 GMT</pubDate>
+      <content:encoded><![CDATA[<h2>阅读完本文可以收获什么？</h2>
+<ol>
+<li>训练和推理的时候，占用显存的内容到底有哪里？</li>
+<li>xB 的模型，预估推理需要多少显存？</li>
+<li>要全参数训练一个 xB 的模型，需要多少显存？</li>
+<li>为什么混合精度训练可以节约显存？</li>
+<li>使用 deepspeed 后，每个卡占用的显存是多少？</li>
+</ol>
+<h2>基础知识</h2>
+<ul>
+<li>1 Byte = 8 bits, 1 KB = 1024 Bytes, 1 MB = 1024 KB, 1 GB = 1024 MB</li>
+<li>1 float64 = 8 Bytes = 64 bits, 这是双精度浮点数</li>
+<li>1 float32 = 4 Bytes = 32 bits，这是单精度浮点数，也称为 fp32</li>
+<li>1 float16 = 2 Bytes = 16 bits，这是半精度浮点数，也称为 fp16</li>
+<li>1 bf16 = 2 Bytes = 16 bits，这是 Brain Floating Point 格式，也称为 bf16</li>
+</ul>
+<h2>显存占用</h2>
+<p>强烈推荐阅读大佬的分析，本文强参考于 https://zhuanlan.zhihu.com/p/624740065</p>
+<h3>推理</h3>
+<p>模型推理一共有两部分内容会占用 GPU 显存，<strong>模型参数和 KV cache</strong>。</p>
+<ul>
+<li>其中假设模型的参数是 ，那么推理时候占用的显存是 ，这是因为现在 HuggingFace 中大部分模型的参数都保存为 BF16，如果没有特殊的必要，不会用 fp32 加载。</li>
+<li>KV cache，假设输入序列的长度为&nbsp;s&nbsp;，输出序列的长度为&nbsp;n&nbsp;，以float16来保存KV cache，那么<strong>KV cache的峰值显存占用大小为</strong> &nbsp; 。这里第一个2 表示K/V cache，第二个2表示float16占2个bytes。</li>
+</ul>
+<p>粗略的预估，模型推理需要的内存为： <strong>1.2 倍的模型参数内存</strong> = ，以 7B 模型为例，那么推理需要的内存大概是： 16.8 GB。
+相对精确的预估：按照上面的公式进行计算</p>
+<blockquote>
+<p>注意⚠️：推理的时候并不需要保存激活值，看到有的博客说需要保存激活值是错的。</p>
+</blockquote>
+<h3>训练</h3>
+<p>一般来说，现在都用混合精度训练，因此所有的分析都按照混合精度训练进行分析，而且按照 AdamW 优化起进行分析。训练的时候 GPU 显存占用一共包括 5 个部分：模型参数，梯度，优化器状态，kvCache，激活值。 假设模型参数为 。</p>
+<ul>
+<li>模型参数：fp32 参数 + bf16 参数 =  =  。</li>
+<li>梯度分为两种情况：是否开启 gradient accumulation
+<ul>
+<li>开启梯度累积：要同时保持 fp32 和 bf16 = </li>
+<li>没有开启梯度累积：保持 bf16 即可，占用显存为 ，但反向传播需要变成 fp32 计算，因此峰值还是需要 。</li>
+</ul>
+</li>
+<li>优化器
+<ul>
+<li>一节动量 fp32 和二阶动量 fp32，一共为 </li>
+</ul>
+</li>
+<li>kv cache（bf16），同推理：</li>
+<li>激活值（bf16）: </li>
+</ul>
+<p>因此在训练中，单卡需要的内存为：</p>
+<h4>假设使用 DeepSpeed 训练</h4>
+<p>如果使用 DeepSpeed，那么应该怎么计算每张卡需要的显存呢？</p>
+<ul>
+<li>ZeRO1，切分优化器
+<ul>
+<li>(一阶动量 + 二阶动量 + fp32 参数副本) / 卡数 + 梯度 + bf16 参数 + kvcache + 激活值
+<ul>
+<li>需要注意：fp32 参数保存在优化器</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>ZeRO2，切分梯度
+<ul>
+<li>(一阶动量 + 二阶动量 + fp32 参数副本 + 梯度) / 卡数 + bf16 参数 + kvcache + 激活值</li>
+</ul>
+</li>
+<li>ZeRO3，切分模型参数 - (一阶动量 + 二阶动量 + fp32 参数副本 + 梯度 + bf16 参数） / 卡数 + kvcache + 激活值</li>
+</ul>
+<p>具体可以看图（图是按照 Zero-offload 说的  预估的，但是 ZeRO-Infinity 说需要 ，但是差别应该不是特别大）：</p>
+<p><img src="/blog_imgs/20241006094016066.png" alt="大模型训练推理时候的显存占用计算-20241006094016066.webp" loading="lazy"></p>
+<h2>FAQ</h2>
+<ul>
+<li>
+<p>疑问 1 🤔：除去 kvcache 和激活值，模型参数部分到底占用  是比较有争议的并且<a href="https://github.com/huggingface/accelerate/issues/2659" target="_blank" rel="noopener noreferrer">非常让人疑惑</a>，为什么会出现这个情况？</p>
+<ul>
+<li>试图解答：
+<ol>
+<li>英伟达论文和 deepspeed 的实现中，都是按照 实现的，也就是说会同时复制一份fp32 的梯度，防止梯度精度不足问题，因此其实按照  预估不会有太大的问题。<strong>（推荐按照这种方式预估）</strong></li>
+<li>那为什么又有人说  呢？因为模型前向和反向的时候，梯度确实是 bf16，但是更新模型参数的时候还需要把梯度从 bf16 变换到 fp32，那么这个时候梯度在峰值的时候应该是需要 ，因此整体为  。</li>
+<li>为什么有人说是  呢？很显而易见没有考虑到上面的，毕竟很多<a href="https://github.com/microsoft/DeepSpeed/issues/1137" target="_blank" rel="noopener noreferrer">图和 paper</a> 里面，都没有写需要复制一份 fp32 的梯度，但实际上是需要的，代码更有说服力，包括 <a href="https://github.com/huggingface/accelerate/blob/main/src/accelerate/commands/estimate.py#L215-L247" target="_blank" rel="noopener noreferrer">accelerate</a> 都是按照 fp32 计算的，因此哪怕没有开梯度累积，也需要 。</li>
+</ol>
+</li>
+</ul>
+</li>
+<li>
+<p>疑问 2 🤔：既然做混合精度训练，需要同时保存参数的 bf16 和 fp32 副本，参数内存占用为 ，为什么还说混合精度训练可以节约内存呢？</p>
+<ul>
+<li>试图回答：如果用单精度训练，AdamW 优化起下面，参数内存占用为 ，但是显存占用还有一个大头是激活值，激活值从 fp32 -&gt; bf16，这里可以节约大量内存，而且混合精度在前向反向计算的时候更快。</li>
+</ul>
+</li>
+<li>
+<p>疑问 3 🤔: bf16 和 fp16 的关系？</p>
+<ul>
+<li>fp16 有更高的精度，因为小数位比较多</li>
+<li>bf16&nbsp;在保持相对精度的同时(&lt; fp16)，提供了更大的数值范围</li>
+</ul>
+</li>
+<li>
+<p>疑问 4 🤔: bf16 和 fp16 有什么好处？</p>
+<ul>
+<li>节省带宽</li>
+<li>节约内存</li>
+</ul>
+</li>
+<li>
+<p>疑问 5 🤔: 模型参数量和存储大小的关系?</p>
+<ul>
+<li>一般来说，现在说模型大小，都值得是模型的参数量。一般都是指里面有多少参数。</li>
+<li>但是也偶尔有人指的是模型保存之后在 disk 的中大小。</li>
+<li>这里的换算关系很简单，
+<ul>
+<li>单精度模型：1B 参数模型 = 1e9 * 4 = 4GB</li>
+<li>半精度模型：1B 参数模型 = 1e9 * 2 = 2 GB，如果是 0.5B 模型参数 = 0.5e9 * 2 = 1GB
+<ul>
+<li>以 <a href="https://huggingface.co/Qwen/Qwen2-0.5B-Instruct" target="_blank" rel="noopener noreferrer">Qwen/Qwen2-0.5B-Instruct</a> 为例，保存为 bf16 = 2bytes，那么模型的大小为 998 MB ~= 1 GB</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<h2>参考</h2>
+<ul>
+<li>https://blog.eleuther.ai/transformer-math/#total-inference-memory</li>
+<li>https://zhuanlan.zhihu.com/p/624740065</li>
+</ul>
+]]></content:encoded>
+      <enclosure url="https://bruceyuan.com/blog_imgs/20241006094016066.png" type="image/png"/>
+    </item>
+    <item>
+      <title>项目隔离，不同的项目使用不同的 Git 配置</title>
+      <link>https://bruceyuan.com/post/git-config-path-seperation.html</link>
+      <guid>https://bruceyuan.com/post/git-config-path-seperation.html</guid>
+      <source url="https://bruceyuan.com/rss.xml">项目隔离，不同的项目使用不同的 Git 配置</source>
+      <description>利用 Git 的 includeIf 配置，为不同的项目设置不同的配置，通过子文件夹 .gitconfig 覆盖 Git 的 Global 相关配置，比如 name，email 等。</description>
+      <pubDate>Fri, 30 Aug 2024 23:20:20 GMT</pubDate>
+      <content:encoded><![CDATA[<h2>适应场景</h2>
+<ul>
+<li>情况 1：你可能有多个邮箱，你希望项目 A 用邮箱 A，项目 B 用邮箱 B。很直观的做法就是在每个不同的项目中设置不同的邮箱。每次 <code>git clone xxx</code> 项目之后，<code>git config user.name xxx</code> 和 <code>git config user.email xxx</code>，但是每个项目都要自己设置就非常的麻烦。</li>
+<li>情况 2：你同时有公司的项目和自己的项目，希望公司的项目用公司邮箱，自己的项目用自己的邮箱，那么这种情况下一般会先设置 <code>global</code>的 <code>name</code> 和 <code>email</code>为公司邮箱，<strong>固定某个文件夹</strong>（personal_projects）设置为自己的邮箱。这种方法的优点是不需要在每个仓库中单独设置 Git 配置，而且可以轻松地管理多个项目或文件夹的不同 Git 身份。</li>
+</ul>
+<h2>配置步骤</h2>
+<p>我们可以使用 Git 的条件包含（conditional includes）功能来为特定文件夹设置不同的 <code>user.name</code> 和 <code>user.email</code>。</p>
+<ol>
+<li>
+<p>首先，全局 Git 配置中设置默认的 <code>user.name</code> 和 <code>user.email</code>（如果还没有设置的话）：</p>
+<div class="language-bash line-numbers-mode" data-highlighter="shiki" data-ext="bash" data-title="bash" style="--shiki-light:#383A42;--shiki-dark:#abb2bf;--shiki-light-bg:#FAFAFA;--shiki-dark-bg:#282c34"><pre class="shiki shiki-themes one-light one-dark-pro vp-code"><code><span class="line"><span style="--shiki-light:#4078F2;--shiki-dark:#61AFEF">git</span><span style="--shiki-light:#50A14F;--shiki-dark:#98C379"> config</span><span style="--shiki-light:#986801;--shiki-dark:#D19A66"> --global</span><span style="--shiki-light:#50A14F;--shiki-dark:#98C379"> user.name</span><span style="--shiki-light:#50A14F;--shiki-dark:#98C379"> "bbruceyuan_glocal"</span></span>
+<span class="line"><span style="--shiki-light:#4078F2;--shiki-dark:#61AFEF">git</span><span style="--shiki-light:#50A14F;--shiki-dark:#98C379"> config</span><span style="--shiki-light:#986801;--shiki-dark:#D19A66"> --global</span><span style="--shiki-light:#50A14F;--shiki-dark:#98C379"> user.email</span><span style="--shiki-light:#50A14F;--shiki-dark:#98C379"> "bbruceyuan_glocal.email@example.com"</span></span></code></pre>
+<div class="line-numbers" aria-hidden="true" style="counter-reset:line-number 0"><div class="line-number"></div><div class="line-number"></div></div></div></li>
+<li>
+<p>在 <code>personal_projects</code> 文件夹中创建一个 <code>.gitconfig</code> 文件：</p>
+<div class="language-bash line-numbers-mode" data-highlighter="shiki" data-ext="bash" data-title="bash" style="--shiki-light:#383A42;--shiki-dark:#abb2bf;--shiki-light-bg:#FAFAFA;--shiki-dark-bg:#282c34"><pre class="shiki shiki-themes one-light one-dark-pro vp-code"><code><span class="line"><span style="--shiki-light:#0184BC;--shiki-dark:#56B6C2">cd</span><span style="--shiki-light:#50A14F;--shiki-dark:#98C379"> path/to/personal_projects</span></span>
+<span class="line"><span style="--shiki-light:#4078F2;--shiki-dark:#61AFEF">touch</span><span style="--shiki-light:#50A14F;--shiki-dark:#98C379"> .gitconfig</span></span></code></pre>
+<div class="line-numbers" aria-hidden="true" style="counter-reset:line-number 0"><div class="line-number"></div><div class="line-number"></div></div></div></li>
+<li>
+<p>编辑 <code>personal_projects/.gitconfig</code> 文件，添加以下内容：</p>
+<div class="language-ini line-numbers-mode" data-highlighter="shiki" data-ext="ini" data-title="ini" style="--shiki-light:#383A42;--shiki-dark:#abb2bf;--shiki-light-bg:#FAFAFA;--shiki-dark-bg:#282c34"><pre class="shiki shiki-themes one-light one-dark-pro vp-code"><code><span class="line"><span style="--shiki-light:#4078F2;--shiki-dark:#61AFEF">[user]</span></span>
+<span class="line"><span style="--shiki-light:#E45649;--shiki-dark:#C678DD">    name</span><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF"> =</span><span style="--shiki-light:#383A42;--shiki-dark:#98C379"> bbruceyuan</span></span>
+<span class="line"><span style="--shiki-light:#E45649;--shiki-dark:#C678DD">    email</span><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF"> =</span><span style="--shiki-light:#383A42;--shiki-dark:#98C379"> bruceyuan@mail.com</span></span></code></pre>
+<div class="line-numbers" aria-hidden="true" style="counter-reset:line-number 0"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div></li>
+<li>
+<p>在全局 <code>.gitconfig</code> 文件中（通常位于 <code>~/.gitconfig</code>）添加条件包含配置：</p>
+<div class="language-ini line-numbers-mode" data-highlighter="shiki" data-ext="ini" data-title="ini" style="--shiki-light:#383A42;--shiki-dark:#abb2bf;--shiki-light-bg:#FAFAFA;--shiki-dark-bg:#282c34"><pre class="shiki shiki-themes one-light one-dark-pro vp-code"><code><span class="line"><span style="--shiki-light:#4078F2;--shiki-dark:#61AFEF">[includeIf "gitdir:/path/to/personal_projects/"]</span></span>
+<span class="line"><span style="--shiki-light:#E45649;--shiki-dark:#C678DD">    path</span><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF"> =</span><span style="--shiki-light:#383A42;--shiki-dark:#98C379"> /path/to/personal_projects/.gitconfig</span></span></code></pre>
+<div class="line-numbers" aria-hidden="true" style="counter-reset:line-number 0"><div class="line-number"></div><div class="line-number"></div></div></div><p>注意：</p>
+<ul>
+<li>路径必须以斜杠 <code>/</code> 结尾。</li>
+<li>路径可以是绝对路径 <code>/path/to/personal_projects/</code></li>
+<li>路径可以是相对路径，例如 <code>~/personal_projects/person/</code>。</li>
+</ul>
+</li>
+</ol>
+<p>这样设置后，<code>Git</code> 将在 <code>personal_projects</code> <strong>文件夹及其子文件夹</strong>中使用特定的 <code>user.name (bbruceyuan)</code> 和 <code>user.email (bruceyuan@mail.com)</code>，而在其他地方使用全局设置。</p>
+]]></content:encoded>
+    </item>
+    <item>
+      <title>手写 Self-Attention 的四重境界，从 self-attention 到 multi-head self-attention</title>
+      <link>https://bruceyuan.com/hands-on-code/from-self-attention-to-multi-head-self-attention.html</link>
+      <guid>https://bruceyuan.com/hands-on-code/from-self-attention-to-multi-head-self-attention.html</guid>
+      <source url="https://bruceyuan.com/rss.xml">手写 Self-Attention 的四重境界，从 self-attention 到 multi-head self-attention</source>
+      <description>在 AI 相关的面试中，经常会有面试官让写 self-attention，但是 transformer 这篇文章其实包含很多的细节，因此可能面试官对于 self-attention 实现到什么程度是有不同的预期。因此这里想通过写不同版本的 self-attention 实现来达到不同面试官的预期，四个不同的版本，对应不同的细节程度。</description>
+      <category>hands-on-code</category>
+      <pubDate>Sun, 18 Aug 2024 12:00:00 GMT</pubDate>
+      <content:encoded><![CDATA[<h2>背景</h2>
+<p>在 AI 相关的面试中，经常会有面试官让写 self-attention，但是因为 <a href="https://arxiv.org/pdf/1706.03762" target="_blank" rel="noopener noreferrer">transformer</a> 这篇文章其实包含很多的细节，因此可能面试官对于 self-attention 实现到什么程度是有不同的预期。因此这里想通过写不同版本的 self-attention 实现来达到不同面试官的预期。以此告诉面试官，了解细节，但是处于时间考虑，可能只写了简化版本，如果有时间可以把完整的写出来。</p>
+<blockquote>
+<p>如果对于文字不感冒，可以查看<strong>YouTube 和 B 站视频</strong> &gt; <a href="https://www.youtube.com/watch?v=d_jwwnYCzIg" target="_blank" rel="noopener noreferrer">Youtube 链接</a>-- <a href="https://www.bilibili.com/video/BV19YbFeHETz/" target="_blank" rel="noopener noreferrer">bilibili 链接</a></p>
+</blockquote>
+<h2>Self-Attention</h2>
+<p>MultiHead Attention 的时候下一章介绍；先熟悉当前这个公式。</p>
+<h3>Self Attention 的公式</h3>
+<p>，其中Q K V 对应不同的矩阵 W</p>
+<h3>补充知识点</h3>
+<ol>
+<li>matmul 和 @ 符号是一样的作用</li>
+<li>为什么要除以 ？ a. 防止梯度消失 b. 为了让 QK 的内积分布保持和输入一样</li>
+<li>爱因斯坦方程表达式用法：<code>torch.einsum("bqd,bkd-&gt; bqk", X, X).shape</code></li>
+<li>X.repeat(1, 1, 3) 表示在不同的维度进行 repeat操作，也可以用 tensor.expand 操作</li>
+</ol>
+<h3>第一重: 简化版本</h3>
+<ul>
+<li>直接对着公式实现， </li>
+</ul>
+<div class="language-python line-numbers-mode" data-highlighter="shiki" data-ext="python" data-title="python" style="--shiki-light:#383A42;--shiki-dark:#abb2bf;--shiki-light-bg:#FAFAFA;--shiki-dark-bg:#282c34"><pre class="shiki shiki-themes one-light one-dark-pro vp-code"><code><span class="line"><span style="--shiki-light:#A0A1A7;--shiki-light-font-style:italic;--shiki-dark:#7F848E;--shiki-dark-font-style:italic"># 导入相关需要的包</span></span>
+<span class="line"><span style="--shiki-light:#A626A4;--shiki-dark:#C678DD">import</span><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF"> math</span></span>
+<span class="line"><span style="--shiki-light:#A626A4;--shiki-dark:#C678DD">import</span><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF"> torch</span></span>
+<span class="line"><span style="--shiki-light:#A626A4;--shiki-dark:#C678DD">import</span><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF"> torch.nn </span><span style="--shiki-light:#A626A4;--shiki-dark:#C678DD">as</span><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF"> nn</span></span>
+<span class="line"></span>
+<span class="line"><span style="--shiki-light:#A626A4;--shiki-dark:#C678DD">import</span><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF"> warnings</span></span>
+<span class="line"><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF">warnings.</span><span style="--shiki-light:#383A42;--shiki-dark:#61AFEF">filterwarnings</span><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF">(</span><span style="--shiki-light:#986801;--shiki-light-font-style:inherit;--shiki-dark:#E06C75;--shiki-dark-font-style:italic">action</span><span style="--shiki-light:#383A42;--shiki-dark:#56B6C2">=</span><span style="--shiki-light:#50A14F;--shiki-dark:#98C379">"ignore"</span><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF">)</span></span>
+<span class="line"></span>
+<span class="line"></span>
+<span class="line"><span style="--shiki-light:#A626A4;--shiki-dark:#C678DD">class</span><span style="--shiki-light:#C18401;--shiki-dark:#E5C07B"> SelfAttV1</span><span style="--shiki-light:#C18401;--shiki-dark:#ABB2BF">(</span><span style="--shiki-light:#C18401;--shiki-dark:#E5C07B">nn</span><span style="--shiki-light:#C18401;--shiki-dark:#ABB2BF">.</span><span style="--shiki-light:#C18401;--shiki-dark:#E5C07B">Module</span><span style="--shiki-light:#C18401;--shiki-dark:#ABB2BF">)</span><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF">:</span></span>
+<span class="line"><span style="--shiki-light:#A626A4;--shiki-dark:#C678DD">    def</span><span style="--shiki-light:#0184BC;--shiki-dark:#56B6C2"> __init__</span><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF">(</span><span style="--shiki-light:#986801;--shiki-light-font-style:inherit;--shiki-dark:#E5C07B;--shiki-dark-font-style:italic">self</span><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF">,</span><span style="--shiki-light:#986801;--shiki-light-font-style:inherit;--shiki-dark:#D19A66;--shiki-dark-font-style:italic"> hidden_dim</span><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF">):</span></span>
+<span class="line"><span style="--shiki-light:#0184BC;--shiki-dark:#56B6C2">        super</span><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF">(SelfAttV1, </span><span style="--shiki-light:#E45649;--shiki-dark:#E5C07B">self</span><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF">).</span><span style="--shiki-light:#0184BC;--shiki-dark:#56B6C2">__init__</span><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF">()</span></span>
+<span class="line"><span style="--shiki-light:#E45649;--shiki-dark:#E5C07B">        self</span><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF">.hidden_dim </span><span style="--shiki-light:#383A42;--shiki-dark:#56B6C2">=</span><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF"> hidden_dim</span></span>
+<span class="line"><span style="--shiki-light:#A0A1A7;--shiki-light-font-style:italic;--shiki-dark:#7F848E;--shiki-dark-font-style:italic">        # 一般 Linear 都是默认有 bias</span></span>
+<span class="line"><span style="--shiki-light:#A0A1A7;--shiki-light-font-style:italic;--shiki-dark:#7F848E;--shiki-dark-font-style:italic">        # 一般来说， input dim 的 hidden dim</span></span>
+<span class="line"><span style="--shiki-light:#E45649;--shiki-dark:#E5C07B">        self</span><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF">.query_proj </span><span style="--shiki-light:#383A42;--shiki-dark:#56B6C2">=</span><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF"> nn.</span><span style="--shiki-light:#383A42;--shiki-dark:#61AFEF">Linear</span><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF">(hidden_dim, hidden_dim)</span></span>
+<span class="line"><span style="--shiki-light:#E45649;--shiki-dark:#E5C07B">        self</span><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF">.key_proj </span><span style="--shiki-light:#383A42;--shiki-dark:#56B6C2">=</span><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF"> nn.</span><span style="--shiki-light:#383A42;--shiki-dark:#61AFEF">Linear</span><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF">(hidden_dim, hidden_dim)</span></span>
+<span class="line"><span style="--shiki-light:#E45649;--shiki-dark:#E5C07B">        self</span><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF">.value_proj </span><span style="--shiki-light:#383A42;--shiki-dark:#56B6C2">=</span><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF"> nn.</span><span style="--shiki-light:#383A42;--shiki-dark:#61AFEF">Linear</span><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF">(hidden_dim, hidden_dim)</span></span>
+<span class="line"></span>
+<span class="line"><span style="--shiki-light:#A626A4;--shiki-dark:#C678DD">    def</span><span style="--shiki-light:#4078F2;--shiki-dark:#61AFEF"> forward</span><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF">(</span><span style="--shiki-light:#986801;--shiki-light-font-style:inherit;--shiki-dark:#E5C07B;--shiki-dark-font-style:italic">self</span><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF">,</span><span style="--shiki-light:#986801;--shiki-light-font-style:inherit;--shiki-dark:#D19A66;--shiki-dark-font-style:italic"> X</span><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF">):</span></span>
+<span class="line"><span style="--shiki-light:#A0A1A7;--shiki-light-font-style:italic;--shiki-dark:#7F848E;--shiki-dark-font-style:italic">        # X shape is: (batch, seq_len, hidden_dim)， 一般是和 hidden_dim 相同</span></span>
+<span class="line"><span style="--shiki-light:#A0A1A7;--shiki-light-font-style:italic;--shiki-dark:#7F848E;--shiki-dark-font-style:italic">        # 但是 X 的 final dim 可以和 hidden_dim 不同</span></span>
+<span class="line"><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF">        Q </span><span style="--shiki-light:#383A42;--shiki-dark:#56B6C2">=</span><span style="--shiki-light:#E45649;--shiki-dark:#E5C07B"> self</span><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF">.</span><span style="--shiki-light:#383A42;--shiki-dark:#61AFEF">query_proj</span><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF">(X)</span></span>
+<span class="line"><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF">        K </span><span style="--shiki-light:#383A42;--shiki-dark:#56B6C2">=</span><span style="--shiki-light:#E45649;--shiki-dark:#E5C07B"> self</span><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF">.</span><span style="--shiki-light:#383A42;--shiki-dark:#61AFEF">key_proj</span><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF">(X)</span></span>
+<span class="line"><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF">        V </span><span style="--shiki-light:#383A42;--shiki-dark:#56B6C2">=</span><span style="--shiki-light:#E45649;--shiki-dark:#E5C07B"> self</span><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF">.</span><span style="--shiki-light:#383A42;--shiki-dark:#61AFEF">value_proj</span><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF">(X)</span></span>
+<span class="line"></span>
+<span class="line"><span style="--shiki-light:#A0A1A7;--shiki-light-font-style:italic;--shiki-dark:#7F848E;--shiki-dark-font-style:italic">        # shape is: (batch, seq_len, seq_len)</span></span>
+<span class="line"><span style="--shiki-light:#A0A1A7;--shiki-light-font-style:italic;--shiki-dark:#7F848E;--shiki-dark-font-style:italic">        # torch.matmul 可以改成 Q @ K.T</span></span>
+<span class="line"><span style="--shiki-light:#A0A1A7;--shiki-light-font-style:italic;--shiki-dark:#7F848E;--shiki-dark-font-style:italic">        # 其中 K 需要改成 shape 为： (batch, hidden_dim, seq_len)</span></span>
+<span class="line"><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF">        attention_value </span><span style="--shiki-light:#383A42;--shiki-dark:#56B6C2">=</span><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF"> torch.</span><span style="--shiki-light:#383A42;--shiki-dark:#61AFEF">matmul</span><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF">(Q, K.</span><span style="--shiki-light:#383A42;--shiki-dark:#61AFEF">transpose</span><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF">(</span><span style="--shiki-light:#383A42;--shiki-dark:#56B6C2">-</span><span style="--shiki-light:#986801;--shiki-dark:#D19A66">1</span><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF">, </span><span style="--shiki-light:#383A42;--shiki-dark:#56B6C2">-</span><span style="--shiki-light:#986801;--shiki-dark:#D19A66">2</span><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF">))</span></span>
+<span class="line"><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF">        attention_wight </span><span style="--shiki-light:#383A42;--shiki-dark:#56B6C2">=</span><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF"> torch.</span><span style="--shiki-light:#383A42;--shiki-dark:#61AFEF">softmax</span><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF">(</span></span>
+<span class="line"><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF">            attention_value </span><span style="--shiki-light:#383A42;--shiki-dark:#56B6C2">/</span><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF"> math.</span><span style="--shiki-light:#383A42;--shiki-dark:#61AFEF">sqrt</span><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF">(</span><span style="--shiki-light:#E45649;--shiki-dark:#E5C07B">self</span><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF">.hidden_dim), </span><span style="--shiki-light:#986801;--shiki-light-font-style:inherit;--shiki-dark:#E06C75;--shiki-dark-font-style:italic">dim</span><span style="--shiki-light:#383A42;--shiki-dark:#56B6C2">=-</span><span style="--shiki-light:#986801;--shiki-dark:#D19A66">1</span></span>
+<span class="line"><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF">        )</span></span>
+<span class="line"><span style="--shiki-light:#A0A1A7;--shiki-light-font-style:italic;--shiki-dark:#7F848E;--shiki-dark-font-style:italic">        # print(attention_wight)</span></span>
+<span class="line"><span style="--shiki-light:#A0A1A7;--shiki-light-font-style:italic;--shiki-dark:#7F848E;--shiki-dark-font-style:italic">        # shape is: (batch, seq_len, hidden_dim)</span></span>
+<span class="line"><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF">        output </span><span style="--shiki-light:#383A42;--shiki-dark:#56B6C2">=</span><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF"> torch.</span><span style="--shiki-light:#383A42;--shiki-dark:#61AFEF">matmul</span><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF">(attention_wight, V)</span></span>
+<span class="line"><span style="--shiki-light:#A626A4;--shiki-dark:#C678DD">        return</span><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF"> output</span></span>
+<span class="line"></span>
+<span class="line"></span>
+<span class="line"><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF">X </span><span style="--shiki-light:#383A42;--shiki-dark:#56B6C2">=</span><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF"> torch.</span><span style="--shiki-light:#383A42;--shiki-dark:#61AFEF">rand</span><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF">(</span><span style="--shiki-light:#986801;--shiki-dark:#D19A66">3</span><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF">, </span><span style="--shiki-light:#986801;--shiki-dark:#D19A66">2</span><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF">, </span><span style="--shiki-light:#986801;--shiki-dark:#D19A66">4</span><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF">)</span></span>
+<span class="line"><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF">net </span><span style="--shiki-light:#383A42;--shiki-dark:#56B6C2">=</span><span style="--shiki-light:#383A42;--shiki-dark:#61AFEF"> SelfAttV1</span><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF">(</span><span style="--shiki-light:#986801;--shiki-dark:#D19A66">4</span><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF">)</span></span>
+<span class="line"><span style="--shiki-light:#383A42;--shiki-dark:#61AFEF">net</span><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF">(X)</span></span></code></pre>
+<div class="line-numbers" aria-hidden="true" style="counter-reset:line-number 0"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><h3>第二重: 效率优化</h3>
+<ul>
+<li>上面那哪些操作可以合并矩阵优化呢？- QKV 矩阵计算的时候，可以合并成一个大矩阵计算。
+<blockquote>
+<p>但是当前 <code>transformers</code> 实现中，其实是三个不同的 Linear 层</p>
+</blockquote>
+</li>
+</ul>
+<div class="language-python line-numbers-mode" data-highlighter="shiki" data-ext="python" data-title="python" style="--shiki-light:#383A42;--shiki-dark:#abb2bf;--shiki-light-bg:#FAFAFA;--shiki-dark-bg:#282c34"><pre class="shiki shiki-themes one-light one-dark-pro vp-code"><code><span class="line"><span style="--shiki-light:#A626A4;--shiki-dark:#C678DD">class</span><span style="--shiki-light:#C18401;--shiki-dark:#E5C07B"> SelfAttV2</span><span style="--shiki-light:#C18401;--shiki-dark:#ABB2BF">(</span><span style="--shiki-light:#C18401;--shiki-dark:#E5C07B">nn</span><span style="--shiki-light:#C18401;--shiki-dark:#ABB2BF">.</span><span style="--shiki-light:#C18401;--shiki-dark:#E5C07B">Module</span><span style="--shiki-light:#C18401;--shiki-dark:#ABB2BF">)</span><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF">:</span></span>
+<span class="line"><span style="--shiki-light:#A626A4;--shiki-dark:#C678DD">    def</span><span style="--shiki-light:#0184BC;--shiki-dark:#56B6C2"> __init__</span><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF">(</span><span style="--shiki-light:#986801;--shiki-light-font-style:inherit;--shiki-dark:#E5C07B;--shiki-dark-font-style:italic">self</span><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF">,</span><span style="--shiki-light:#986801;--shiki-light-font-style:inherit;--shiki-dark:#D19A66;--shiki-dark-font-style:italic"> dim</span><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF">) -&gt; </span><span style="--shiki-light:#986801;--shiki-dark:#D19A66">None</span><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF">:</span></span>
+<span class="line"><span style="--shiki-light:#0184BC;--shiki-dark:#56B6C2">        super</span><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF">().</span><span style="--shiki-light:#0184BC;--shiki-dark:#56B6C2">__init__</span><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF">()</span></span>
+<span class="line"><span style="--shiki-light:#E45649;--shiki-dark:#E5C07B">        self</span><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF">.dim </span><span style="--shiki-light:#383A42;--shiki-dark:#56B6C2">=</span><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF"> dim</span></span>
+<span class="line"><span style="--shiki-light:#A0A1A7;--shiki-light-font-style:italic;--shiki-dark:#7F848E;--shiki-dark-font-style:italic">        # 这样可以进行加速, 那么为什么现在 Llama, qwen, gpt 等</span></span>
+<span class="line"><span style="--shiki-light:#E45649;--shiki-dark:#E5C07B">        self</span><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF">.proj </span><span style="--shiki-light:#383A42;--shiki-dark:#56B6C2">=</span><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF"> nn.</span><span style="--shiki-light:#383A42;--shiki-dark:#61AFEF">Linear</span><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF">(dim, dim </span><span style="--shiki-light:#383A42;--shiki-dark:#56B6C2">*</span><span style="--shiki-light:#986801;--shiki-dark:#D19A66"> 3</span><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF">)</span></span>
+<span class="line"></span>
+<span class="line"><span style="--shiki-light:#E45649;--shiki-dark:#E5C07B">        self</span><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF">.output_proj </span><span style="--shiki-light:#383A42;--shiki-dark:#56B6C2">=</span><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF"> nn.</span><span style="--shiki-light:#383A42;--shiki-dark:#61AFEF">Linear</span><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF">(dim, dim)</span></span>
+<span class="line"></span>
+<span class="line"><span style="--shiki-light:#A626A4;--shiki-dark:#C678DD">    def</span><span style="--shiki-light:#4078F2;--shiki-dark:#61AFEF"> forward</span><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF">(</span><span style="--shiki-light:#986801;--shiki-light-font-style:inherit;--shiki-dark:#E5C07B;--shiki-dark-font-style:italic">self</span><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF">,</span><span style="--shiki-light:#986801;--shiki-light-font-style:inherit;--shiki-dark:#D19A66;--shiki-dark-font-style:italic"> X</span><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF">):</span></span>
+<span class="line"><span style="--shiki-light:#A0A1A7;--shiki-light-font-style:italic;--shiki-dark:#7F848E;--shiki-dark-font-style:italic">        # X shape is: (batch, seq, dim)</span></span>
+<span class="line"></span>
+<span class="line"><span style="--shiki-light:#383A42;--shiki-dark:#D19A66">        QKV</span><span style="--shiki-light:#383A42;--shiki-dark:#56B6C2"> =</span><span style="--shiki-light:#E45649;--shiki-dark:#E5C07B"> self</span><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF">.</span><span style="--shiki-light:#383A42;--shiki-dark:#61AFEF">proj</span><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF">(X)  </span><span style="--shiki-light:#A0A1A7;--shiki-light-font-style:italic;--shiki-dark:#7F848E;--shiki-dark-font-style:italic"># (batch, seq, dim * 3)</span></span>
+<span class="line"><span style="--shiki-light:#A0A1A7;--shiki-light-font-style:italic;--shiki-dark:#7F848E;--shiki-dark-font-style:italic">        # reshape 从希望的 q, k, 的形式</span></span>
+<span class="line"><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF">        Q, K, V </span><span style="--shiki-light:#383A42;--shiki-dark:#56B6C2">=</span><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF"> torch.</span><span style="--shiki-light:#383A42;--shiki-dark:#61AFEF">split</span><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF">(</span><span style="--shiki-light:#383A42;--shiki-dark:#D19A66">QKV</span><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF">, </span><span style="--shiki-light:#E45649;--shiki-dark:#E5C07B">self</span><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF">.dim, </span><span style="--shiki-light:#986801;--shiki-light-font-style:inherit;--shiki-dark:#E06C75;--shiki-dark-font-style:italic">dim</span><span style="--shiki-light:#383A42;--shiki-dark:#56B6C2">=-</span><span style="--shiki-light:#986801;--shiki-dark:#D19A66">1</span><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF">)</span></span>
+<span class="line"></span>
+<span class="line"><span style="--shiki-light:#A0A1A7;--shiki-light-font-style:italic;--shiki-dark:#7F848E;--shiki-dark-font-style:italic">        # print(x)</span></span>
+<span class="line"><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF">        att_weight </span><span style="--shiki-light:#383A42;--shiki-dark:#56B6C2">=</span><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF"> torch.</span><span style="--shiki-light:#383A42;--shiki-dark:#61AFEF">softmax</span><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF">(</span></span>
+<span class="line"><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF">            Q </span><span style="--shiki-light:#383A42;--shiki-dark:#56B6C2">@</span><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF"> K.</span><span style="--shiki-light:#383A42;--shiki-dark:#61AFEF">transpose</span><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF">(</span><span style="--shiki-light:#383A42;--shiki-dark:#56B6C2">-</span><span style="--shiki-light:#986801;--shiki-dark:#D19A66">1</span><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF">, </span><span style="--shiki-light:#383A42;--shiki-dark:#56B6C2">-</span><span style="--shiki-light:#986801;--shiki-dark:#D19A66">2</span><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF">) </span><span style="--shiki-light:#383A42;--shiki-dark:#56B6C2">/</span><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF"> math.</span><span style="--shiki-light:#383A42;--shiki-dark:#61AFEF">sqrt</span><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF">(</span><span style="--shiki-light:#E45649;--shiki-dark:#E5C07B">self</span><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF">.dim), </span><span style="--shiki-light:#986801;--shiki-light-font-style:inherit;--shiki-dark:#E06C75;--shiki-dark-font-style:italic">dim</span><span style="--shiki-light:#383A42;--shiki-dark:#56B6C2">=-</span><span style="--shiki-light:#986801;--shiki-dark:#D19A66">1</span></span>
+<span class="line"><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF">        )</span></span>
+<span class="line"><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF">        output </span><span style="--shiki-light:#383A42;--shiki-dark:#56B6C2">=</span><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF"> att_weight </span><span style="--shiki-light:#383A42;--shiki-dark:#56B6C2">@</span><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF"> V</span></span>
+<span class="line"><span style="--shiki-light:#A626A4;--shiki-dark:#C678DD">        return</span><span style="--shiki-light:#E45649;--shiki-dark:#E5C07B"> self</span><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF">.</span><span style="--shiki-light:#383A42;--shiki-dark:#61AFEF">output_proj</span><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF">(output)</span></span>
+<span class="line"></span>
+<span class="line"></span>
+<span class="line"><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF">X </span><span style="--shiki-light:#383A42;--shiki-dark:#56B6C2">=</span><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF"> torch.</span><span style="--shiki-light:#383A42;--shiki-dark:#61AFEF">rand</span><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF">(</span><span style="--shiki-light:#986801;--shiki-dark:#D19A66">3</span><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF">, </span><span style="--shiki-light:#986801;--shiki-dark:#D19A66">2</span><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF">, </span><span style="--shiki-light:#986801;--shiki-dark:#D19A66">4</span><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF">)</span></span>
+<span class="line"><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF">net </span><span style="--shiki-light:#383A42;--shiki-dark:#56B6C2">=</span><span style="--shiki-light:#383A42;--shiki-dark:#61AFEF"> SelfAttV2</span><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF">(</span><span style="--shiki-light:#986801;--shiki-dark:#D19A66">4</span><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF">)</span></span>
+<span class="line"><span style="--shiki-light:#383A42;--shiki-dark:#61AFEF">net</span><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF">(X).shape</span></span></code></pre>
+<div class="line-numbers" aria-hidden="true" style="counter-reset:line-number 0"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><h3>第三重: 加入细节</h3>
+<ul>
+<li>看上去 self attention 实现很简单，但里面还有一些细节，还有哪些细节呢？
+<ul>
+<li>attention 计算的时候有 dropout，而且是比较奇怪的位置</li>
+<li>attention 计算的时候一般会加入 attention_mask，因为样本会进行一些 padding 操作；</li>
+<li>MultiHeadAttention 过程中，除了 QKV 三个矩阵之外，还有一个 output 对应的投影矩阵，因此虽然面试让你写 SingleHeadAttention，但是依然要问清楚，是否要第四个矩阵？</li>
+</ul>
+</li>
+</ul>
+<div class="language-python line-numbers-mode" data-highlighter="shiki" data-ext="python" data-title="python" style="--shiki-light:#383A42;--shiki-dark:#abb2bf;--shiki-light-bg:#FAFAFA;--shiki-dark-bg:#282c34"><pre class="shiki shiki-themes one-light one-dark-pro vp-code"><code><span class="line"><span style="--shiki-light:#A626A4;--shiki-dark:#C678DD">class</span><span style="--shiki-light:#C18401;--shiki-dark:#E5C07B"> SelfAttV3</span><span style="--shiki-light:#C18401;--shiki-dark:#ABB2BF">(</span><span style="--shiki-light:#C18401;--shiki-dark:#E5C07B">nn</span><span style="--shiki-light:#C18401;--shiki-dark:#ABB2BF">.</span><span style="--shiki-light:#C18401;--shiki-dark:#E5C07B">Module</span><span style="--shiki-light:#C18401;--shiki-dark:#ABB2BF">)</span><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF">:</span></span>
+<span class="line"><span style="--shiki-light:#A626A4;--shiki-dark:#C678DD">    def</span><span style="--shiki-light:#0184BC;--shiki-dark:#56B6C2"> __init__</span><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF">(</span><span style="--shiki-light:#986801;--shiki-light-font-style:inherit;--shiki-dark:#E5C07B;--shiki-dark-font-style:italic">self</span><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF">,</span><span style="--shiki-light:#986801;--shiki-light-font-style:inherit;--shiki-dark:#D19A66;--shiki-dark-font-style:italic"> dim</span><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF">) -&gt; </span><span style="--shiki-light:#986801;--shiki-dark:#D19A66">None</span><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF">:</span></span>
+<span class="line"><span style="--shiki-light:#0184BC;--shiki-dark:#56B6C2">        super</span><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF">().</span><span style="--shiki-light:#0184BC;--shiki-dark:#56B6C2">__init__</span><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF">()</span></span>
+<span class="line"><span style="--shiki-light:#E45649;--shiki-dark:#E5C07B">        self</span><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF">.dim </span><span style="--shiki-light:#383A42;--shiki-dark:#56B6C2">=</span><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF"> dim</span></span>
+<span class="line"><span style="--shiki-light:#A0A1A7;--shiki-light-font-style:italic;--shiki-dark:#7F848E;--shiki-dark-font-style:italic">        # 这样可以进行加速</span></span>
+<span class="line"><span style="--shiki-light:#E45649;--shiki-dark:#E5C07B">        self</span><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF">.proj </span><span style="--shiki-light:#383A42;--shiki-dark:#56B6C2">=</span><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF"> nn.</span><span style="--shiki-light:#383A42;--shiki-dark:#61AFEF">Linear</span><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF">(dim, dim </span><span style="--shiki-light:#383A42;--shiki-dark:#56B6C2">*</span><span style="--shiki-light:#986801;--shiki-dark:#D19A66"> 3</span><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF">)</span></span>
+<span class="line"><span style="--shiki-light:#A0A1A7;--shiki-light-font-style:italic;--shiki-dark:#7F848E;--shiki-dark-font-style:italic">        # 一般是 0.1 的 dropout，一般写作 config.attention_probs_dropout_prob</span></span>
+<span class="line"><span style="--shiki-light:#A0A1A7;--shiki-light-font-style:italic;--shiki-dark:#7F848E;--shiki-dark-font-style:italic">        # hidden_dropout_prob 一般也是 0.1</span></span>
+<span class="line"><span style="--shiki-light:#E45649;--shiki-dark:#E5C07B">        self</span><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF">.att_drop </span><span style="--shiki-light:#383A42;--shiki-dark:#56B6C2">=</span><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF"> nn.</span><span style="--shiki-light:#383A42;--shiki-dark:#61AFEF">Dropout</span><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF">(</span><span style="--shiki-light:#986801;--shiki-dark:#D19A66">0.1</span><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF">)</span></span>
+<span class="line"></span>
+<span class="line"><span style="--shiki-light:#A0A1A7;--shiki-light-font-style:italic;--shiki-dark:#7F848E;--shiki-dark-font-style:italic">        # 不写这个应该也没人怪，应该好像是 MultiHeadAttention 中的产物，这个留给 MultiHeadAttention 也没有问题；</span></span>
+<span class="line"><span style="--shiki-light:#E45649;--shiki-dark:#E5C07B">        self</span><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF">.output_proj </span><span style="--shiki-light:#383A42;--shiki-dark:#56B6C2">=</span><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF"> nn.</span><span style="--shiki-light:#383A42;--shiki-dark:#61AFEF">Linear</span><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF">(dim, dim)</span></span>
+<span class="line"></span>
+<span class="line"><span style="--shiki-light:#A626A4;--shiki-dark:#C678DD">    def</span><span style="--shiki-light:#4078F2;--shiki-dark:#61AFEF"> forward</span><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF">(</span><span style="--shiki-light:#986801;--shiki-light-font-style:inherit;--shiki-dark:#E5C07B;--shiki-dark-font-style:italic">self</span><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF">,</span><span style="--shiki-light:#986801;--shiki-light-font-style:inherit;--shiki-dark:#D19A66;--shiki-dark-font-style:italic"> X</span><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF">,</span><span style="--shiki-light:#986801;--shiki-light-font-style:inherit;--shiki-dark:#D19A66;--shiki-dark-font-style:italic"> attention_mask</span><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF">=</span><span style="--shiki-light:#986801;--shiki-dark:#D19A66">None</span><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF">):</span></span>
+<span class="line"><span style="--shiki-light:#A0A1A7;--shiki-light-font-style:italic;--shiki-dark:#7F848E;--shiki-dark-font-style:italic">        # attention_mask shape is: (batch, seq)</span></span>
+<span class="line"><span style="--shiki-light:#A0A1A7;--shiki-light-font-style:italic;--shiki-dark:#7F848E;--shiki-dark-font-style:italic">        # X shape is: (batch, seq, dim)</span></span>
+<span class="line"></span>
+<span class="line"><span style="--shiki-light:#383A42;--shiki-dark:#D19A66">        QKV</span><span style="--shiki-light:#383A42;--shiki-dark:#56B6C2"> =</span><span style="--shiki-light:#E45649;--shiki-dark:#E5C07B"> self</span><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF">.</span><span style="--shiki-light:#383A42;--shiki-dark:#61AFEF">proj</span><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF">(X)  </span><span style="--shiki-light:#A0A1A7;--shiki-light-font-style:italic;--shiki-dark:#7F848E;--shiki-dark-font-style:italic"># (batch, seq, dim * 3)</span></span>
+<span class="line"><span style="--shiki-light:#A0A1A7;--shiki-light-font-style:italic;--shiki-dark:#7F848E;--shiki-dark-font-style:italic">        # reshape 从希望的 q, k, 的形式</span></span>
+<span class="line"><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF">        Q, K, V </span><span style="--shiki-light:#383A42;--shiki-dark:#56B6C2">=</span><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF"> torch.</span><span style="--shiki-light:#383A42;--shiki-dark:#61AFEF">split</span><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF">(</span><span style="--shiki-light:#383A42;--shiki-dark:#D19A66">QKV</span><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF">, </span><span style="--shiki-light:#E45649;--shiki-dark:#E5C07B">self</span><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF">.dim, </span><span style="--shiki-light:#986801;--shiki-light-font-style:inherit;--shiki-dark:#E06C75;--shiki-dark-font-style:italic">dim</span><span style="--shiki-light:#383A42;--shiki-dark:#56B6C2">=-</span><span style="--shiki-light:#986801;--shiki-dark:#D19A66">1</span><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF">)</span></span>
+<span class="line"></span>
+<span class="line"><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF">        att_weight </span><span style="--shiki-light:#383A42;--shiki-dark:#56B6C2">=</span><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF"> Q </span><span style="--shiki-light:#383A42;--shiki-dark:#56B6C2">@</span><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF"> K.</span><span style="--shiki-light:#383A42;--shiki-dark:#61AFEF">transpose</span><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF">(</span><span style="--shiki-light:#383A42;--shiki-dark:#56B6C2">-</span><span style="--shiki-light:#986801;--shiki-dark:#D19A66">1</span><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF">, </span><span style="--shiki-light:#383A42;--shiki-dark:#56B6C2">-</span><span style="--shiki-light:#986801;--shiki-dark:#D19A66">2</span><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF">) </span><span style="--shiki-light:#383A42;--shiki-dark:#56B6C2">/</span><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF"> math.</span><span style="--shiki-light:#383A42;--shiki-dark:#61AFEF">sqrt</span><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF">(</span><span style="--shiki-light:#E45649;--shiki-dark:#E5C07B">self</span><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF">.dim)</span></span>
+<span class="line"><span style="--shiki-light:#A626A4;--shiki-dark:#C678DD">        if</span><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF"> attention_mask </span><span style="--shiki-light:#A626A4;--shiki-dark:#C678DD">is</span><span style="--shiki-light:#A626A4;--shiki-dark:#C678DD"> not</span><span style="--shiki-light:#986801;--shiki-dark:#D19A66"> None</span><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF">:</span></span>
+<span class="line"><span style="--shiki-light:#A0A1A7;--shiki-light-font-style:italic;--shiki-dark:#7F848E;--shiki-dark-font-style:italic">            # 给 weight 填充一个极小的值</span></span>
+<span class="line"><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF">            att_weight </span><span style="--shiki-light:#383A42;--shiki-dark:#56B6C2">=</span><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF"> att_weight.</span><span style="--shiki-light:#383A42;--shiki-dark:#61AFEF">masked_fill</span><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF">(attention_mask </span><span style="--shiki-light:#383A42;--shiki-dark:#56B6C2">==</span><span style="--shiki-light:#986801;--shiki-dark:#D19A66"> 0</span><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF">, </span><span style="--shiki-light:#0184BC;--shiki-dark:#56B6C2">float</span><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF">(</span><span style="--shiki-light:#50A14F;--shiki-dark:#98C379">"-1e20"</span><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF">))</span></span>
+<span class="line"></span>
+<span class="line"><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF">        att_weight </span><span style="--shiki-light:#383A42;--shiki-dark:#56B6C2">=</span><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF"> torch.</span><span style="--shiki-light:#383A42;--shiki-dark:#61AFEF">softmax</span><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF">(att_weight, </span><span style="--shiki-light:#986801;--shiki-light-font-style:inherit;--shiki-dark:#E06C75;--shiki-dark-font-style:italic">dim</span><span style="--shiki-light:#383A42;--shiki-dark:#56B6C2">=-</span><span style="--shiki-light:#986801;--shiki-dark:#D19A66">1</span><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF">)</span></span>
+<span class="line"></span>
+<span class="line"><span style="--shiki-light:#A0A1A7;--shiki-light-font-style:italic;--shiki-dark:#7F848E;--shiki-dark-font-style:italic">        # 这里在 BERT中的官方代码也说很奇怪，但是原文中这么用了，所以继承了下来</span></span>
+<span class="line"><span style="--shiki-light:#A0A1A7;--shiki-light-font-style:italic;--shiki-dark:#7F848E;--shiki-dark-font-style:italic">        # （用于 output 后面会更符合直觉？）</span></span>
+<span class="line"><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF">        att_weight </span><span style="--shiki-light:#383A42;--shiki-dark:#56B6C2">=</span><span style="--shiki-light:#E45649;--shiki-dark:#E5C07B"> self</span><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF">.</span><span style="--shiki-light:#383A42;--shiki-dark:#61AFEF">att_drop</span><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF">(att_weight)</span></span>
+<span class="line"></span>
+<span class="line"><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF">        output </span><span style="--shiki-light:#383A42;--shiki-dark:#56B6C2">=</span><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF"> att_weight </span><span style="--shiki-light:#383A42;--shiki-dark:#56B6C2">@</span><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF"> V</span></span>
+<span class="line"><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF">        ret </span><span style="--shiki-light:#383A42;--shiki-dark:#56B6C2">=</span><span style="--shiki-light:#E45649;--shiki-dark:#E5C07B"> self</span><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF">.</span><span style="--shiki-light:#383A42;--shiki-dark:#61AFEF">output_proj</span><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF">(output)</span></span>
+<span class="line"><span style="--shiki-light:#A626A4;--shiki-dark:#C678DD">        return</span><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF"> ret</span></span>
+<span class="line"></span>
+<span class="line"></span>
+<span class="line"><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF">X </span><span style="--shiki-light:#383A42;--shiki-dark:#56B6C2">=</span><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF"> torch.</span><span style="--shiki-light:#383A42;--shiki-dark:#61AFEF">rand</span><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF">(</span><span style="--shiki-light:#986801;--shiki-dark:#D19A66">3</span><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF">, </span><span style="--shiki-light:#986801;--shiki-dark:#D19A66">4</span><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF">, </span><span style="--shiki-light:#986801;--shiki-dark:#D19A66">2</span><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF">)</span></span>
+<span class="line"><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF">b </span><span style="--shiki-light:#383A42;--shiki-dark:#56B6C2">=</span><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF"> torch.</span><span style="--shiki-light:#383A42;--shiki-dark:#61AFEF">tensor</span><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF">(</span></span>
+<span class="line"><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF">    [</span></span>
+<span class="line"><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF">        [</span><span style="--shiki-light:#986801;--shiki-dark:#D19A66">1</span><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF">, </span><span style="--shiki-light:#986801;--shiki-dark:#D19A66">1</span><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF">, </span><span style="--shiki-light:#986801;--shiki-dark:#D19A66">1</span><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF">, </span><span style="--shiki-light:#986801;--shiki-dark:#D19A66">0</span><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF">],</span></span>
+<span class="line"><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF">        [</span><span style="--shiki-light:#986801;--shiki-dark:#D19A66">1</span><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF">, </span><span style="--shiki-light:#986801;--shiki-dark:#D19A66">1</span><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF">, </span><span style="--shiki-light:#986801;--shiki-dark:#D19A66">0</span><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF">, </span><span style="--shiki-light:#986801;--shiki-dark:#D19A66">0</span><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF">],</span></span>
+<span class="line"><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF">        [</span><span style="--shiki-light:#986801;--shiki-dark:#D19A66">1</span><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF">, </span><span style="--shiki-light:#986801;--shiki-dark:#D19A66">0</span><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF">, </span><span style="--shiki-light:#986801;--shiki-dark:#D19A66">0</span><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF">, </span><span style="--shiki-light:#986801;--shiki-dark:#D19A66">0</span><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF">],</span></span>
+<span class="line"><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF">    ]</span></span>
+<span class="line"><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF">)</span></span>
+<span class="line"><span style="--shiki-light:#0184BC;--shiki-dark:#56B6C2">print</span><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF">(b.shape)</span></span>
+<span class="line"><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF">mask </span><span style="--shiki-light:#383A42;--shiki-dark:#56B6C2">=</span><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF"> b.</span><span style="--shiki-light:#383A42;--shiki-dark:#61AFEF">unsqueeze</span><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF">(</span><span style="--shiki-light:#986801;--shiki-light-font-style:inherit;--shiki-dark:#E06C75;--shiki-dark-font-style:italic">dim</span><span style="--shiki-light:#383A42;--shiki-dark:#56B6C2">=</span><span style="--shiki-light:#986801;--shiki-dark:#D19A66">1</span><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF">).</span><span style="--shiki-light:#383A42;--shiki-dark:#61AFEF">repeat</span><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF">(</span><span style="--shiki-light:#986801;--shiki-dark:#D19A66">1</span><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF">, </span><span style="--shiki-light:#986801;--shiki-dark:#D19A66">4</span><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF">, </span><span style="--shiki-light:#986801;--shiki-dark:#D19A66">1</span><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF">)</span></span>
+<span class="line"></span>
+<span class="line"><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF">net </span><span style="--shiki-light:#383A42;--shiki-dark:#56B6C2">=</span><span style="--shiki-light:#383A42;--shiki-dark:#61AFEF"> SelfAttV3</span><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF">(</span><span style="--shiki-light:#986801;--shiki-dark:#D19A66">2</span><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF">)</span></span>
+<span class="line"><span style="--shiki-light:#383A42;--shiki-dark:#61AFEF">net</span><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF">(X, mask).shape</span></span></code></pre>
+<div class="line-numbers" aria-hidden="true" style="counter-reset:line-number 0"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><h3>面试写法 （完整版）--注意注释</h3>
+<div class="language-python line-numbers-mode" data-highlighter="shiki" data-ext="python" data-title="python" style="--shiki-light:#383A42;--shiki-dark:#abb2bf;--shiki-light-bg:#FAFAFA;--shiki-dark-bg:#282c34"><pre class="shiki shiki-themes one-light one-dark-pro vp-code"><code><span class="line"><span style="--shiki-light:#A0A1A7;--shiki-light-font-style:italic;--shiki-dark:#7F848E;--shiki-dark-font-style:italic"># 导入相关需要的包</span></span>
+<span class="line"><span style="--shiki-light:#A626A4;--shiki-dark:#C678DD">import</span><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF"> math</span></span>
+<span class="line"><span style="--shiki-light:#A626A4;--shiki-dark:#C678DD">import</span><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF"> torch</span></span>
+<span class="line"><span style="--shiki-light:#A626A4;--shiki-dark:#C678DD">import</span><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF"> torch.nn </span><span style="--shiki-light:#A626A4;--shiki-dark:#C678DD">as</span><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF"> nn</span></span>
+<span class="line"></span>
+<span class="line"><span style="--shiki-light:#A626A4;--shiki-dark:#C678DD">import</span><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF"> warnings</span></span>
+<span class="line"></span>
+<span class="line"><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF">warnings.</span><span style="--shiki-light:#383A42;--shiki-dark:#61AFEF">filterwarnings</span><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF">(</span><span style="--shiki-light:#986801;--shiki-light-font-style:inherit;--shiki-dark:#E06C75;--shiki-dark-font-style:italic">action</span><span style="--shiki-light:#383A42;--shiki-dark:#56B6C2">=</span><span style="--shiki-light:#50A14F;--shiki-dark:#98C379">"ignore"</span><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF">)</span></span>
+<span class="line"></span>
+<span class="line"><span style="--shiki-light:#A626A4;--shiki-dark:#C678DD">class</span><span style="--shiki-light:#C18401;--shiki-dark:#E5C07B"> SelfAttV4</span><span style="--shiki-light:#C18401;--shiki-dark:#ABB2BF">(</span><span style="--shiki-light:#C18401;--shiki-dark:#E5C07B">nn</span><span style="--shiki-light:#C18401;--shiki-dark:#ABB2BF">.</span><span style="--shiki-light:#C18401;--shiki-dark:#E5C07B">Module</span><span style="--shiki-light:#C18401;--shiki-dark:#ABB2BF">)</span><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF">:</span></span>
+<span class="line"><span style="--shiki-light:#A626A4;--shiki-dark:#C678DD">    def</span><span style="--shiki-light:#0184BC;--shiki-dark:#56B6C2"> __init__</span><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF">(</span><span style="--shiki-light:#986801;--shiki-light-font-style:inherit;--shiki-dark:#E5C07B;--shiki-dark-font-style:italic">self</span><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF">,</span><span style="--shiki-light:#986801;--shiki-light-font-style:inherit;--shiki-dark:#D19A66;--shiki-dark-font-style:italic"> dim</span><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF">) -&gt; </span><span style="--shiki-light:#986801;--shiki-dark:#D19A66">None</span><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF">:</span></span>
+<span class="line"><span style="--shiki-light:#0184BC;--shiki-dark:#56B6C2">        super</span><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF">().</span><span style="--shiki-light:#0184BC;--shiki-dark:#56B6C2">__init__</span><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF">()</span></span>
+<span class="line"><span style="--shiki-light:#E45649;--shiki-dark:#E5C07B">        self</span><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF">.dim </span><span style="--shiki-light:#383A42;--shiki-dark:#56B6C2">=</span><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF"> dim</span></span>
+<span class="line"></span>
+<span class="line"><span style="--shiki-light:#A0A1A7;--shiki-light-font-style:italic;--shiki-dark:#7F848E;--shiki-dark-font-style:italic">        # 这样很清晰</span></span>
+<span class="line"><span style="--shiki-light:#E45649;--shiki-dark:#E5C07B">        self</span><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF">.query_proj </span><span style="--shiki-light:#383A42;--shiki-dark:#56B6C2">=</span><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF"> nn.</span><span style="--shiki-light:#383A42;--shiki-dark:#61AFEF">Linear</span><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF">(dim, dim)</span></span>
+<span class="line"><span style="--shiki-light:#E45649;--shiki-dark:#E5C07B">        self</span><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF">.key_proj </span><span style="--shiki-light:#383A42;--shiki-dark:#56B6C2">=</span><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF"> nn.</span><span style="--shiki-light:#383A42;--shiki-dark:#61AFEF">Linear</span><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF">(dim, dim)</span></span>
+<span class="line"><span style="--shiki-light:#E45649;--shiki-dark:#E5C07B">        self</span><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF">.value_proj </span><span style="--shiki-light:#383A42;--shiki-dark:#56B6C2">=</span><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF"> nn.</span><span style="--shiki-light:#383A42;--shiki-dark:#61AFEF">Linear</span><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF">(dim, dim)</span></span>
+<span class="line"><span style="--shiki-light:#A0A1A7;--shiki-light-font-style:italic;--shiki-dark:#7F848E;--shiki-dark-font-style:italic">        # 一般是 0.1 的 dropout，一般写作 config.attention_probs_dropout_prob</span></span>
+<span class="line"><span style="--shiki-light:#A0A1A7;--shiki-light-font-style:italic;--shiki-dark:#7F848E;--shiki-dark-font-style:italic">        # hidden_dropout_prob 一般也是 0.1</span></span>
+<span class="line"><span style="--shiki-light:#E45649;--shiki-dark:#E5C07B">        self</span><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF">.att_drop </span><span style="--shiki-light:#383A42;--shiki-dark:#56B6C2">=</span><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF"> nn.</span><span style="--shiki-light:#383A42;--shiki-dark:#61AFEF">Dropout</span><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF">(</span><span style="--shiki-light:#986801;--shiki-dark:#D19A66">0.1</span><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF">)</span></span>
+<span class="line"></span>
+<span class="line"><span style="--shiki-light:#A0A1A7;--shiki-light-font-style:italic;--shiki-dark:#7F848E;--shiki-dark-font-style:italic">        # 可以不写；具体和面试官沟通。</span></span>
+<span class="line"><span style="--shiki-light:#A0A1A7;--shiki-light-font-style:italic;--shiki-dark:#7F848E;--shiki-dark-font-style:italic">        # 这是 MultiHeadAttention 中的产物，这个留给 MultiHeadAttention 也没有问题；</span></span>
+<span class="line"><span style="--shiki-light:#E45649;--shiki-dark:#E5C07B">        self</span><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF">.output_proj </span><span style="--shiki-light:#383A42;--shiki-dark:#56B6C2">=</span><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF"> nn.</span><span style="--shiki-light:#383A42;--shiki-dark:#61AFEF">Linear</span><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF">(dim, dim)</span></span>
+<span class="line"></span>
+<span class="line"><span style="--shiki-light:#A626A4;--shiki-dark:#C678DD">    def</span><span style="--shiki-light:#4078F2;--shiki-dark:#61AFEF"> forward</span><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF">(</span><span style="--shiki-light:#986801;--shiki-light-font-style:inherit;--shiki-dark:#E5C07B;--shiki-dark-font-style:italic">self</span><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF">,</span><span style="--shiki-light:#986801;--shiki-light-font-style:inherit;--shiki-dark:#D19A66;--shiki-dark-font-style:italic"> X</span><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF">,</span><span style="--shiki-light:#986801;--shiki-light-font-style:inherit;--shiki-dark:#D19A66;--shiki-dark-font-style:italic"> attention_mask</span><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF">=</span><span style="--shiki-light:#986801;--shiki-dark:#D19A66">None</span><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF">):</span></span>
+<span class="line"><span style="--shiki-light:#A0A1A7;--shiki-light-font-style:italic;--shiki-dark:#7F848E;--shiki-dark-font-style:italic">        # attention_mask shape is: (batch, seq)</span></span>
+<span class="line"><span style="--shiki-light:#A0A1A7;--shiki-light-font-style:italic;--shiki-dark:#7F848E;--shiki-dark-font-style:italic">        # X shape is: (batch, seq, dim)</span></span>
+<span class="line"></span>
+<span class="line"><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF">        Q </span><span style="--shiki-light:#383A42;--shiki-dark:#56B6C2">=</span><span style="--shiki-light:#E45649;--shiki-dark:#E5C07B"> self</span><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF">.</span><span style="--shiki-light:#383A42;--shiki-dark:#61AFEF">query_proj</span><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF">(X)</span></span>
+<span class="line"><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF">        K </span><span style="--shiki-light:#383A42;--shiki-dark:#56B6C2">=</span><span style="--shiki-light:#E45649;--shiki-dark:#E5C07B"> self</span><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF">.</span><span style="--shiki-light:#383A42;--shiki-dark:#61AFEF">key_proj</span><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF">(X)</span></span>
+<span class="line"><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF">        V </span><span style="--shiki-light:#383A42;--shiki-dark:#56B6C2">=</span><span style="--shiki-light:#E45649;--shiki-dark:#E5C07B"> self</span><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF">.</span><span style="--shiki-light:#383A42;--shiki-dark:#61AFEF">value_proj</span><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF">(X)</span></span>
+<span class="line"></span>
+<span class="line"><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF">        att_weight </span><span style="--shiki-light:#383A42;--shiki-dark:#56B6C2">=</span><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF"> Q </span><span style="--shiki-light:#383A42;--shiki-dark:#56B6C2">@</span><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF"> K.</span><span style="--shiki-light:#383A42;--shiki-dark:#61AFEF">transpose</span><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF">(</span><span style="--shiki-light:#383A42;--shiki-dark:#56B6C2">-</span><span style="--shiki-light:#986801;--shiki-dark:#D19A66">1</span><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF">, </span><span style="--shiki-light:#383A42;--shiki-dark:#56B6C2">-</span><span style="--shiki-light:#986801;--shiki-dark:#D19A66">2</span><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF">) </span><span style="--shiki-light:#383A42;--shiki-dark:#56B6C2">/</span><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF"> math.</span><span style="--shiki-light:#383A42;--shiki-dark:#61AFEF">sqrt</span><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF">(</span><span style="--shiki-light:#E45649;--shiki-dark:#E5C07B">self</span><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF">.dim)</span></span>
+<span class="line"><span style="--shiki-light:#A626A4;--shiki-dark:#C678DD">        if</span><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF"> attention_mask </span><span style="--shiki-light:#A626A4;--shiki-dark:#C678DD">is</span><span style="--shiki-light:#A626A4;--shiki-dark:#C678DD"> not</span><span style="--shiki-light:#986801;--shiki-dark:#D19A66"> None</span><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF">:</span></span>
+<span class="line"><span style="--shiki-light:#A0A1A7;--shiki-light-font-style:italic;--shiki-dark:#7F848E;--shiki-dark-font-style:italic">            # 给 weight 填充一个极小的值</span></span>
+<span class="line"><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF">            att_weight </span><span style="--shiki-light:#383A42;--shiki-dark:#56B6C2">=</span><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF"> att_weight.</span><span style="--shiki-light:#383A42;--shiki-dark:#61AFEF">masked_fill</span><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF">(attention_mask </span><span style="--shiki-light:#383A42;--shiki-dark:#56B6C2">==</span><span style="--shiki-light:#986801;--shiki-dark:#D19A66"> 0</span><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF">, </span><span style="--shiki-light:#0184BC;--shiki-dark:#56B6C2">float</span><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF">(</span><span style="--shiki-light:#50A14F;--shiki-dark:#98C379">"-1e20"</span><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF">))</span></span>
+<span class="line"></span>
+<span class="line"><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF">        att_weight </span><span style="--shiki-light:#383A42;--shiki-dark:#56B6C2">=</span><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF"> torch.</span><span style="--shiki-light:#383A42;--shiki-dark:#61AFEF">softmax</span><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF">(att_weight, </span><span style="--shiki-light:#986801;--shiki-light-font-style:inherit;--shiki-dark:#E06C75;--shiki-dark-font-style:italic">dim</span><span style="--shiki-light:#383A42;--shiki-dark:#56B6C2">=-</span><span style="--shiki-light:#986801;--shiki-dark:#D19A66">1</span><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF">)</span></span>
+<span class="line"><span style="--shiki-light:#0184BC;--shiki-dark:#56B6C2">        print</span><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF">(att_weight)</span></span>
+<span class="line"></span>
+<span class="line"><span style="--shiki-light:#A0A1A7;--shiki-light-font-style:italic;--shiki-dark:#7F848E;--shiki-dark-font-style:italic">        # 这里在 BERT中的官方代码也说很奇怪，但是原文中这么用了，所以继承了下来</span></span>
+<span class="line"><span style="--shiki-light:#A0A1A7;--shiki-light-font-style:italic;--shiki-dark:#7F848E;--shiki-dark-font-style:italic">        # （用于 output 后面会更符合直觉？）</span></span>
+<span class="line"><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF">        att_weight </span><span style="--shiki-light:#383A42;--shiki-dark:#56B6C2">=</span><span style="--shiki-light:#E45649;--shiki-dark:#E5C07B"> self</span><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF">.</span><span style="--shiki-light:#383A42;--shiki-dark:#61AFEF">att_drop</span><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF">(att_weight)</span></span>
+<span class="line"></span>
+<span class="line"><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF">        output </span><span style="--shiki-light:#383A42;--shiki-dark:#56B6C2">=</span><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF"> att_weight </span><span style="--shiki-light:#383A42;--shiki-dark:#56B6C2">@</span><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF"> V</span></span>
+<span class="line"><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF">        ret </span><span style="--shiki-light:#383A42;--shiki-dark:#56B6C2">=</span><span style="--shiki-light:#E45649;--shiki-dark:#E5C07B"> self</span><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF">.</span><span style="--shiki-light:#383A42;--shiki-dark:#61AFEF">output_proj</span><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF">(output)</span></span>
+<span class="line"><span style="--shiki-light:#A626A4;--shiki-dark:#C678DD">        return</span><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF"> ret</span></span>
+<span class="line"></span>
+<span class="line"></span>
+<span class="line"><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF">X </span><span style="--shiki-light:#383A42;--shiki-dark:#56B6C2">=</span><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF"> torch.</span><span style="--shiki-light:#383A42;--shiki-dark:#61AFEF">rand</span><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF">(</span><span style="--shiki-light:#986801;--shiki-dark:#D19A66">3</span><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF">, </span><span style="--shiki-light:#986801;--shiki-dark:#D19A66">4</span><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF">, </span><span style="--shiki-light:#986801;--shiki-dark:#D19A66">2</span><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF">)</span></span>
+<span class="line"><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF">b </span><span style="--shiki-light:#383A42;--shiki-dark:#56B6C2">=</span><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF"> torch.</span><span style="--shiki-light:#383A42;--shiki-dark:#61AFEF">tensor</span><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF">(</span></span>
+<span class="line"><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF">    [</span></span>
+<span class="line"><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF">        [</span><span style="--shiki-light:#986801;--shiki-dark:#D19A66">1</span><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF">, </span><span style="--shiki-light:#986801;--shiki-dark:#D19A66">1</span><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF">, </span><span style="--shiki-light:#986801;--shiki-dark:#D19A66">1</span><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF">, </span><span style="--shiki-light:#986801;--shiki-dark:#D19A66">0</span><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF">],</span></span>
+<span class="line"><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF">        [</span><span style="--shiki-light:#986801;--shiki-dark:#D19A66">1</span><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF">, </span><span style="--shiki-light:#986801;--shiki-dark:#D19A66">1</span><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF">, </span><span style="--shiki-light:#986801;--shiki-dark:#D19A66">0</span><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF">, </span><span style="--shiki-light:#986801;--shiki-dark:#D19A66">0</span><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF">],</span></span>
+<span class="line"><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF">        [</span><span style="--shiki-light:#986801;--shiki-dark:#D19A66">1</span><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF">, </span><span style="--shiki-light:#986801;--shiki-dark:#D19A66">0</span><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF">, </span><span style="--shiki-light:#986801;--shiki-dark:#D19A66">0</span><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF">, </span><span style="--shiki-light:#986801;--shiki-dark:#D19A66">0</span><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF">],</span></span>
+<span class="line"><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF">    ]</span></span>
+<span class="line"><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF">)</span></span>
+<span class="line"><span style="--shiki-light:#0184BC;--shiki-dark:#56B6C2">print</span><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF">(b.shape)</span></span>
+<span class="line"><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF">mask </span><span style="--shiki-light:#383A42;--shiki-dark:#56B6C2">=</span><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF"> b.</span><span style="--shiki-light:#383A42;--shiki-dark:#61AFEF">unsqueeze</span><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF">(</span><span style="--shiki-light:#986801;--shiki-light-font-style:inherit;--shiki-dark:#E06C75;--shiki-dark-font-style:italic">dim</span><span style="--shiki-light:#383A42;--shiki-dark:#56B6C2">=</span><span style="--shiki-light:#986801;--shiki-dark:#D19A66">1</span><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF">).</span><span style="--shiki-light:#383A42;--shiki-dark:#61AFEF">repeat</span><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF">(</span><span style="--shiki-light:#986801;--shiki-dark:#D19A66">1</span><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF">, </span><span style="--shiki-light:#986801;--shiki-dark:#D19A66">4</span><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF">, </span><span style="--shiki-light:#986801;--shiki-dark:#D19A66">1</span><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF">)</span></span>
+<span class="line"></span>
+<span class="line"><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF">net </span><span style="--shiki-light:#383A42;--shiki-dark:#56B6C2">=</span><span style="--shiki-light:#383A42;--shiki-dark:#61AFEF"> SelfAttV4</span><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF">(</span><span style="--shiki-light:#986801;--shiki-dark:#D19A66">2</span><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF">)</span></span>
+<span class="line"><span style="--shiki-light:#383A42;--shiki-dark:#61AFEF">net</span><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF">(X, mask).shape</span></span></code></pre>
+<div class="line-numbers" aria-hidden="true" style="counter-reset:line-number 0"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><h2>MultiHead-Self-Attention</h2>
+<p>怎么手写一个 Single Head Self-Attention，但是一般在实际上的训练过程中都会使用 Multi Head, 而且其实也仅仅是 每个 Head 做完 Self-Attention 得到结果之后，进行拼接，然后过一个 output 投影矩阵。</p>
+<h3>第四重：multi-head self-attention</h3>
+<div class="language-python line-numbers-mode" data-highlighter="shiki" data-ext="python" data-title="python" style="--shiki-light:#383A42;--shiki-dark:#abb2bf;--shiki-light-bg:#FAFAFA;--shiki-dark-bg:#282c34"><pre class="shiki shiki-themes one-light one-dark-pro vp-code"><code><span class="line"><span style="--shiki-light:#A626A4;--shiki-dark:#C678DD">import</span><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF"> math</span></span>
+<span class="line"><span style="--shiki-light:#A626A4;--shiki-dark:#C678DD">import</span><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF"> torch</span></span>
+<span class="line"><span style="--shiki-light:#A626A4;--shiki-dark:#C678DD">import</span><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF"> torch.nn </span><span style="--shiki-light:#A626A4;--shiki-dark:#C678DD">as</span><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF"> nn</span></span>
+<span class="line"></span>
+<span class="line"><span style="--shiki-light:#A626A4;--shiki-dark:#C678DD">class</span><span style="--shiki-light:#C18401;--shiki-dark:#E5C07B"> MultiHeadAttention</span><span style="--shiki-light:#C18401;--shiki-dark:#ABB2BF">(</span><span style="--shiki-light:#C18401;--shiki-dark:#E5C07B">nn</span><span style="--shiki-light:#C18401;--shiki-dark:#ABB2BF">.</span><span style="--shiki-light:#C18401;--shiki-dark:#E5C07B">Module</span><span style="--shiki-light:#C18401;--shiki-dark:#ABB2BF">)</span><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF">:</span></span>
+<span class="line"><span style="--shiki-light:#A626A4;--shiki-dark:#C678DD">    def</span><span style="--shiki-light:#0184BC;--shiki-dark:#56B6C2"> __init__</span><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF">(</span><span style="--shiki-light:#986801;--shiki-light-font-style:inherit;--shiki-dark:#E5C07B;--shiki-dark-font-style:italic">self</span><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF">,</span><span style="--shiki-light:#986801;--shiki-light-font-style:inherit;--shiki-dark:#D19A66;--shiki-dark-font-style:italic"> hidden_dim</span><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF">,</span><span style="--shiki-light:#986801;--shiki-light-font-style:inherit;--shiki-dark:#D19A66;--shiki-dark-font-style:italic"> nums_head</span><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF">) -&gt; </span><span style="--shiki-light:#986801;--shiki-dark:#D19A66">None</span><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF">:</span></span>
+<span class="line"><span style="--shiki-light:#0184BC;--shiki-dark:#56B6C2">        super</span><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF">().</span><span style="--shiki-light:#0184BC;--shiki-dark:#56B6C2">__init__</span><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF">()</span></span>
+<span class="line"><span style="--shiki-light:#E45649;--shiki-dark:#E5C07B">        self</span><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF">.nums_head </span><span style="--shiki-light:#383A42;--shiki-dark:#56B6C2">=</span><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF"> nums_head</span></span>
+<span class="line"></span>
+<span class="line"><span style="--shiki-light:#A0A1A7;--shiki-light-font-style:italic;--shiki-dark:#7F848E;--shiki-dark-font-style:italic">        # 一般来说，</span></span>
+<span class="line"><span style="--shiki-light:#E45649;--shiki-dark:#E5C07B">        self</span><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF">.head_dim </span><span style="--shiki-light:#383A42;--shiki-dark:#56B6C2">=</span><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF"> hidden_dim </span><span style="--shiki-light:#383A42;--shiki-dark:#56B6C2">//</span><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF"> nums_head</span></span>
+<span class="line"><span style="--shiki-light:#E45649;--shiki-dark:#E5C07B">        self</span><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF">.hidden_dim </span><span style="--shiki-light:#383A42;--shiki-dark:#56B6C2">=</span><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF"> hidden_dim</span></span>
+<span class="line"></span>
+<span class="line"><span style="--shiki-light:#A0A1A7;--shiki-light-font-style:italic;--shiki-dark:#7F848E;--shiki-dark-font-style:italic">        # 一般默认有 bias，需要时刻主意，hidden_dim = head_dim * nums_head，所以最终是可以算成是 n 个矩阵</span></span>
+<span class="line"><span style="--shiki-light:#E45649;--shiki-dark:#E5C07B">        self</span><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF">.q_proj </span><span style="--shiki-light:#383A42;--shiki-dark:#56B6C2">=</span><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF"> nn.</span><span style="--shiki-light:#383A42;--shiki-dark:#61AFEF">Linear</span><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF">(hidden_dim, hidden_dim)</span></span>
+<span class="line"><span style="--shiki-light:#E45649;--shiki-dark:#E5C07B">        self</span><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF">.k_proj </span><span style="--shiki-light:#383A42;--shiki-dark:#56B6C2">=</span><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF"> nn.</span><span style="--shiki-light:#383A42;--shiki-dark:#61AFEF">Linear</span><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF">(hidden_dim, hidden_dim)</span></span>
+<span class="line"><span style="--shiki-light:#E45649;--shiki-dark:#E5C07B">        self</span><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF">.v_proj </span><span style="--shiki-light:#383A42;--shiki-dark:#56B6C2">=</span><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF"> nn.</span><span style="--shiki-light:#383A42;--shiki-dark:#61AFEF">Linear</span><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF">(hidden_dim, hidden_dim)</span></span>
+<span class="line"></span>
+<span class="line"><span style="--shiki-light:#A0A1A7;--shiki-light-font-style:italic;--shiki-dark:#7F848E;--shiki-dark-font-style:italic">        # gpt2 和 bert 类都有，但是 llama 其实没有</span></span>
+<span class="line"><span style="--shiki-light:#E45649;--shiki-dark:#E5C07B">        self</span><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF">.att_dropout </span><span style="--shiki-light:#383A42;--shiki-dark:#56B6C2">=</span><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF"> nn.</span><span style="--shiki-light:#383A42;--shiki-dark:#61AFEF">Dropout</span><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF">(</span><span style="--shiki-light:#986801;--shiki-dark:#D19A66">0.1</span><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF">)</span></span>
+<span class="line"><span style="--shiki-light:#A0A1A7;--shiki-light-font-style:italic;--shiki-dark:#7F848E;--shiki-dark-font-style:italic">        # 输出时候的 proj</span></span>
+<span class="line"><span style="--shiki-light:#E45649;--shiki-dark:#E5C07B">        self</span><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF">.o_proj </span><span style="--shiki-light:#383A42;--shiki-dark:#56B6C2">=</span><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF"> nn.</span><span style="--shiki-light:#383A42;--shiki-dark:#61AFEF">Linear</span><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF">(hidden_dim, hidden_dim)</span></span>
+<span class="line"></span>
+<span class="line"><span style="--shiki-light:#A626A4;--shiki-dark:#C678DD">    def</span><span style="--shiki-light:#4078F2;--shiki-dark:#61AFEF"> forward</span><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF">(</span><span style="--shiki-light:#986801;--shiki-light-font-style:inherit;--shiki-dark:#E5C07B;--shiki-dark-font-style:italic">self</span><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF">,</span><span style="--shiki-light:#986801;--shiki-light-font-style:inherit;--shiki-dark:#D19A66;--shiki-dark-font-style:italic"> X</span><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF">,</span><span style="--shiki-light:#986801;--shiki-light-font-style:inherit;--shiki-dark:#D19A66;--shiki-dark-font-style:italic"> attention_mask</span><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF">=</span><span style="--shiki-light:#986801;--shiki-dark:#D19A66">None</span><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF">):</span></span>
+<span class="line"><span style="--shiki-light:#A0A1A7;--shiki-light-font-style:italic;--shiki-dark:#7F848E;--shiki-dark-font-style:italic">        # 需要在 mask 之前 masked_fill</span></span>
+<span class="line"><span style="--shiki-light:#A0A1A7;--shiki-light-font-style:italic;--shiki-dark:#7F848E;--shiki-dark-font-style:italic">        # X shape is (batch, seq, hidden_dim)</span></span>
+<span class="line"><span style="--shiki-light:#A0A1A7;--shiki-light-font-style:italic;--shiki-dark:#7F848E;--shiki-dark-font-style:italic">        # attention_mask shape is (batch, seq)</span></span>
+<span class="line"></span>
+<span class="line"><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF">        batch_size, seq_len, _ </span><span style="--shiki-light:#383A42;--shiki-dark:#56B6C2">=</span><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF"> X.</span><span style="--shiki-light:#383A42;--shiki-dark:#61AFEF">size</span><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF">()</span></span>
+<span class="line"></span>
+<span class="line"><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF">        Q </span><span style="--shiki-light:#383A42;--shiki-dark:#56B6C2">=</span><span style="--shiki-light:#E45649;--shiki-dark:#E5C07B"> self</span><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF">.</span><span style="--shiki-light:#383A42;--shiki-dark:#61AFEF">q_proj</span><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF">(X)</span></span>
+<span class="line"><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF">        K </span><span style="--shiki-light:#383A42;--shiki-dark:#56B6C2">=</span><span style="--shiki-light:#E45649;--shiki-dark:#E5C07B"> self</span><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF">.</span><span style="--shiki-light:#383A42;--shiki-dark:#61AFEF">k_proj</span><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF">(X)</span></span>
+<span class="line"><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF">        V </span><span style="--shiki-light:#383A42;--shiki-dark:#56B6C2">=</span><span style="--shiki-light:#E45649;--shiki-dark:#E5C07B"> self</span><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF">.</span><span style="--shiki-light:#383A42;--shiki-dark:#61AFEF">v_proj</span><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF">(X)</span></span>
+<span class="line"></span>
+<span class="line"><span style="--shiki-light:#A0A1A7;--shiki-light-font-style:italic;--shiki-dark:#7F848E;--shiki-dark-font-style:italic">        # shape 变成 （batch_size, num_head, seq_len, head_dim）</span></span>
+<span class="line"><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF">        q_state </span><span style="--shiki-light:#383A42;--shiki-dark:#56B6C2">=</span><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF"> Q.</span><span style="--shiki-light:#383A42;--shiki-dark:#61AFEF">view</span><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF">(batch_size, seq_len, </span><span style="--shiki-light:#E45649;--shiki-dark:#E5C07B">self</span><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF">.nums_head, </span><span style="--shiki-light:#E45649;--shiki-dark:#E5C07B">self</span><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF">.head_dim).</span><span style="--shiki-light:#383A42;--shiki-dark:#61AFEF">permute</span><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF">(</span></span>
+<span class="line"><span style="--shiki-light:#986801;--shiki-dark:#D19A66">            0</span><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF">, </span><span style="--shiki-light:#986801;--shiki-dark:#D19A66">2</span><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF">, </span><span style="--shiki-light:#986801;--shiki-dark:#D19A66">1</span><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF">, </span><span style="--shiki-light:#986801;--shiki-dark:#D19A66">3</span></span>
+<span class="line"><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF">        )</span></span>
+<span class="line"><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF">        k_state </span><span style="--shiki-light:#383A42;--shiki-dark:#56B6C2">=</span><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF"> K.</span><span style="--shiki-light:#383A42;--shiki-dark:#61AFEF">view</span><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF">(batch_size, seq_len, </span><span style="--shiki-light:#E45649;--shiki-dark:#E5C07B">self</span><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF">.nums_head, </span><span style="--shiki-light:#E45649;--shiki-dark:#E5C07B">self</span><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF">.head_dim).</span><span style="--shiki-light:#383A42;--shiki-dark:#61AFEF">transpose</span><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF">(</span></span>
+<span class="line"><span style="--shiki-light:#986801;--shiki-dark:#D19A66">            1</span><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF">, </span><span style="--shiki-light:#986801;--shiki-dark:#D19A66">2</span></span>
+<span class="line"><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF">        )</span></span>
+<span class="line"><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF">        v_state </span><span style="--shiki-light:#383A42;--shiki-dark:#56B6C2">=</span><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF"> V.</span><span style="--shiki-light:#383A42;--shiki-dark:#61AFEF">view</span><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF">(batch_size, seq_len, </span><span style="--shiki-light:#E45649;--shiki-dark:#E5C07B">self</span><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF">.nums_head, </span><span style="--shiki-light:#E45649;--shiki-dark:#E5C07B">self</span><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF">.head_dim).</span><span style="--shiki-light:#383A42;--shiki-dark:#61AFEF">transpose</span><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF">(</span></span>
+<span class="line"><span style="--shiki-light:#986801;--shiki-dark:#D19A66">            1</span><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF">, </span><span style="--shiki-light:#986801;--shiki-dark:#D19A66">2</span></span>
+<span class="line"><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF">        )</span></span>
+<span class="line"><span style="--shiki-light:#A0A1A7;--shiki-light-font-style:italic;--shiki-dark:#7F848E;--shiki-dark-font-style:italic">        # 主意这里需要用 head_dim，而不是 hidden_dim</span></span>
+<span class="line"><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF">        attention_weight </span><span style="--shiki-light:#383A42;--shiki-dark:#56B6C2">=</span><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF"> (</span></span>
+<span class="line"><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF">            q_state </span><span style="--shiki-light:#383A42;--shiki-dark:#56B6C2">@</span><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF"> k_state.</span><span style="--shiki-light:#383A42;--shiki-dark:#61AFEF">transpose</span><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF">(</span><span style="--shiki-light:#383A42;--shiki-dark:#56B6C2">-</span><span style="--shiki-light:#986801;--shiki-dark:#D19A66">1</span><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF">, </span><span style="--shiki-light:#383A42;--shiki-dark:#56B6C2">-</span><span style="--shiki-light:#986801;--shiki-dark:#D19A66">2</span><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF">) </span><span style="--shiki-light:#383A42;--shiki-dark:#56B6C2">/</span><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF"> math.</span><span style="--shiki-light:#383A42;--shiki-dark:#61AFEF">sqrt</span><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF">(</span><span style="--shiki-light:#E45649;--shiki-dark:#E5C07B">self</span><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF">.head_dim)</span></span>
+<span class="line"><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF">        )</span></span>
+<span class="line"><span style="--shiki-light:#0184BC;--shiki-dark:#56B6C2">        print</span><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF">(</span><span style="--shiki-light:#0184BC;--shiki-dark:#56B6C2">type</span><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF">(attention_mask))</span></span>
+<span class="line"><span style="--shiki-light:#A626A4;--shiki-dark:#C678DD">        if</span><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF"> attention_mask </span><span style="--shiki-light:#A626A4;--shiki-dark:#C678DD">is</span><span style="--shiki-light:#A626A4;--shiki-dark:#C678DD"> not</span><span style="--shiki-light:#986801;--shiki-dark:#D19A66"> None</span><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF">:</span></span>
+<span class="line"><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF">            attention_weight </span><span style="--shiki-light:#383A42;--shiki-dark:#56B6C2">=</span><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF"> attention_weight.</span><span style="--shiki-light:#383A42;--shiki-dark:#61AFEF">masked_fill</span><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF">(</span></span>
+<span class="line"><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF">                attention_mask </span><span style="--shiki-light:#383A42;--shiki-dark:#56B6C2">==</span><span style="--shiki-light:#986801;--shiki-dark:#D19A66"> 0</span><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF">, </span><span style="--shiki-light:#0184BC;--shiki-dark:#56B6C2">float</span><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF">(</span><span style="--shiki-light:#50A14F;--shiki-dark:#98C379">"-1e20"</span><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF">)</span></span>
+<span class="line"><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF">            )</span></span>
+<span class="line"></span>
+<span class="line"><span style="--shiki-light:#A0A1A7;--shiki-light-font-style:italic;--shiki-dark:#7F848E;--shiki-dark-font-style:italic">        # 第四个维度 softmax</span></span>
+<span class="line"><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF">        attention_weight </span><span style="--shiki-light:#383A42;--shiki-dark:#56B6C2">=</span><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF"> torch.</span><span style="--shiki-light:#383A42;--shiki-dark:#61AFEF">softmax</span><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF">(attention_weight, </span><span style="--shiki-light:#986801;--shiki-light-font-style:inherit;--shiki-dark:#E06C75;--shiki-dark-font-style:italic">dim</span><span style="--shiki-light:#383A42;--shiki-dark:#56B6C2">=</span><span style="--shiki-light:#986801;--shiki-dark:#D19A66">3</span><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF">)</span></span>
+<span class="line"><span style="--shiki-light:#0184BC;--shiki-dark:#56B6C2">        print</span><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF">(attention_weight)</span></span>
+<span class="line"></span>
+<span class="line"><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF">        attention_weight </span><span style="--shiki-light:#383A42;--shiki-dark:#56B6C2">=</span><span style="--shiki-light:#E45649;--shiki-dark:#E5C07B"> self</span><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF">.</span><span style="--shiki-light:#383A42;--shiki-dark:#61AFEF">att_dropout</span><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF">(attention_weight)</span></span>
+<span class="line"><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF">        output_mid </span><span style="--shiki-light:#383A42;--shiki-dark:#56B6C2">=</span><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF"> attention_weight </span><span style="--shiki-light:#383A42;--shiki-dark:#56B6C2">@</span><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF"> v_state</span></span>
+<span class="line"></span>
+<span class="line"><span style="--shiki-light:#A0A1A7;--shiki-light-font-style:italic;--shiki-dark:#7F848E;--shiki-dark-font-style:italic">        # 重新变成 (batch, seq_len, num_head, head_dim)</span></span>
+<span class="line"><span style="--shiki-light:#A0A1A7;--shiki-light-font-style:italic;--shiki-dark:#7F848E;--shiki-dark-font-style:italic">        # 这里的 contiguous() 是相当于返回一个连续内存的 tensor，一般用了 permute/tranpose 都要这么操作</span></span>
+<span class="line"><span style="--shiki-light:#A0A1A7;--shiki-light-font-style:italic;--shiki-dark:#7F848E;--shiki-dark-font-style:italic">        # 如果后面用 Reshape 就可以不用这个 contiguous()，因为 view 只能在连续内存中操作</span></span>
+<span class="line"><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF">        output_mid </span><span style="--shiki-light:#383A42;--shiki-dark:#56B6C2">=</span><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF"> output_mid.</span><span style="--shiki-light:#383A42;--shiki-dark:#61AFEF">transpose</span><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF">(</span><span style="--shiki-light:#986801;--shiki-dark:#D19A66">1</span><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF">, </span><span style="--shiki-light:#986801;--shiki-dark:#D19A66">2</span><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF">).</span><span style="--shiki-light:#383A42;--shiki-dark:#61AFEF">contiguous</span><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF">()</span></span>
+<span class="line"></span>
+<span class="line"><span style="--shiki-light:#A0A1A7;--shiki-light-font-style:italic;--shiki-dark:#7F848E;--shiki-dark-font-style:italic">        # 变成 (batch, seq, hidden_dim),</span></span>
+<span class="line"><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF">        output </span><span style="--shiki-light:#383A42;--shiki-dark:#56B6C2">=</span><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF"> output_mid.</span><span style="--shiki-light:#383A42;--shiki-dark:#61AFEF">view</span><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF">(batch_size, seq_len, </span><span style="--shiki-light:#383A42;--shiki-dark:#56B6C2">-</span><span style="--shiki-light:#986801;--shiki-dark:#D19A66">1</span><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF">)</span></span>
+<span class="line"><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF">        output </span><span style="--shiki-light:#383A42;--shiki-dark:#56B6C2">=</span><span style="--shiki-light:#E45649;--shiki-dark:#E5C07B"> self</span><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF">.</span><span style="--shiki-light:#383A42;--shiki-dark:#61AFEF">o_proj</span><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF">(output)</span></span>
+<span class="line"><span style="--shiki-light:#A626A4;--shiki-dark:#C678DD">        return</span><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF"> output</span></span>
+<span class="line"></span>
+<span class="line"></span>
+<span class="line"><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF">attention_mask </span><span style="--shiki-light:#383A42;--shiki-dark:#56B6C2">=</span><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF"> (</span></span>
+<span class="line"><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF">    torch.</span><span style="--shiki-light:#383A42;--shiki-dark:#61AFEF">tensor</span><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF">(</span></span>
+<span class="line"><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF">        [</span></span>
+<span class="line"><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF">            [</span><span style="--shiki-light:#986801;--shiki-dark:#D19A66">0</span><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF">, </span><span style="--shiki-light:#986801;--shiki-dark:#D19A66">1</span><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF">],</span></span>
+<span class="line"><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF">            [</span><span style="--shiki-light:#986801;--shiki-dark:#D19A66">0</span><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF">, </span><span style="--shiki-light:#986801;--shiki-dark:#D19A66">0</span><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF">],</span></span>
+<span class="line"><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF">            [</span><span style="--shiki-light:#986801;--shiki-dark:#D19A66">1</span><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF">, </span><span style="--shiki-light:#986801;--shiki-dark:#D19A66">0</span><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF">],</span></span>
+<span class="line"><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF">        ]</span></span>
+<span class="line"><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF">    )</span></span>
+<span class="line"><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF">    .</span><span style="--shiki-light:#383A42;--shiki-dark:#61AFEF">unsqueeze</span><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF">(</span><span style="--shiki-light:#986801;--shiki-dark:#D19A66">1</span><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF">)</span></span>
+<span class="line"><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF">    .</span><span style="--shiki-light:#383A42;--shiki-dark:#61AFEF">unsqueeze</span><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF">(</span><span style="--shiki-light:#986801;--shiki-dark:#D19A66">2</span><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF">)</span></span>
+<span class="line"><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF">    .</span><span style="--shiki-light:#383A42;--shiki-dark:#61AFEF">expand</span><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF">(</span><span style="--shiki-light:#986801;--shiki-dark:#D19A66">3</span><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF">, </span><span style="--shiki-light:#986801;--shiki-dark:#D19A66">8</span><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF">, </span><span style="--shiki-light:#986801;--shiki-dark:#D19A66">2</span><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF">, </span><span style="--shiki-light:#986801;--shiki-dark:#D19A66">2</span><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF">)</span></span>
+<span class="line"><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF">)</span></span>
+<span class="line"></span>
+<span class="line"><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF">x </span><span style="--shiki-light:#383A42;--shiki-dark:#56B6C2">=</span><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF"> torch.</span><span style="--shiki-light:#383A42;--shiki-dark:#61AFEF">rand</span><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF">(</span><span style="--shiki-light:#986801;--shiki-dark:#D19A66">3</span><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF">, </span><span style="--shiki-light:#986801;--shiki-dark:#D19A66">2</span><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF">, </span><span style="--shiki-light:#986801;--shiki-dark:#D19A66">128</span><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF">)</span></span>
+<span class="line"><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF">net </span><span style="--shiki-light:#383A42;--shiki-dark:#56B6C2">=</span><span style="--shiki-light:#383A42;--shiki-dark:#61AFEF"> MultiHeadAttention</span><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF">(</span><span style="--shiki-light:#986801;--shiki-dark:#D19A66">128</span><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF">, </span><span style="--shiki-light:#986801;--shiki-dark:#D19A66">8</span><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF">)</span></span>
+<span class="line"><span style="--shiki-light:#383A42;--shiki-dark:#61AFEF">net</span><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF">(x, attention_mask).shape</span></span></code></pre>
+<div class="line-numbers" aria-hidden="true" style="counter-reset:line-number 0"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><blockquote>
+<p>这里再次解释一下，为什么现在现在的代码实现都是 q k v 的投影矩阵都是分开写的，这是因为现在的模型很大，本身可能会做 张量并行，流水线并行等方式，所以分开写问题也不大（分开写很清晰），可能是加速效果并不明显。</p>
+</blockquote>
+]]></content:encoded>
+      <enclosure url="https://bruceyuan.com/img/huggingface.png" type="image/png"/>
+    </item>
+    <item>
+      <title>手写 transformer decoder（CausalLM）</title>
+      <link>https://bruceyuan.com/hands-on-code/hands-on-causallm-decoder.html</link>
+      <guid>https://bruceyuan.com/hands-on-code/hands-on-causallm-decoder.html</guid>
+      <source url="https://bruceyuan.com/rss.xml">手写 transformer decoder（CausalLM）</source>
+      <description>手写一个 Causal Language Model，或者说简化版的 transformer 中的 decoder。</description>
+      <category>hands-on-code</category>
+      <pubDate>Sun, 18 Aug 2024 13:00:00 GMT</pubDate>
+      <content:encoded><![CDATA[<h2>阅读须知</h2>
+<p>面试过程中让写 transformers Decoder 一定要沟通清楚是写一个 CausalLM decoder 还是原版的，原版的比较复杂，一般也不会让写。这里的 Decoder 一般指的是 <strong>CausalLM</strong>，具体变化是少了 encoder 部分的输入，所以也就没有了 encoder and decoder cross attention。</p>
+<ul>
+<li>因为重点希望写 CausalLM，所以没有 Cross attention 和 也省略了 token embedding 这一步。</li>
+</ul>
+<blockquote>
+<p>如果对于文字不感冒，可以查看<strong>YouTube 和 B 站视频</strong> &gt; <a href="https://www.youtube.com/watch?v=yzEotGJaQ74" target="_blank" rel="noopener noreferrer">Youtube 链接</a>-- <a href="https://www.bilibili.com/video/BV1Nh1QYCEsS/" target="_blank" rel="noopener noreferrer">bilibili 链接</a></p>
+</blockquote>
+<h2>知识点</h2>
+<ul>
+<li>transformers decoder 的流程是：input -&gt; self-attention -&gt; cross-attention -&gt; FFN</li>
+<li>causalLM decoder 的流程是 input -&gt; self-attention -&gt; FFN
+<ul>
+<li>其他 <code>[self-attention, FFN]</code> 是一个 block，一般会有很多的 block</li>
+</ul>
+</li>
+<li>FFN 矩阵有两次变化，一次升维度，一次降维度。其中 LLaMA 对于 GPT 的改进还有把 GeLU 变成了 SwishGLU，多了一个矩阵。所以一般升维会从 <code>4h -&gt; 4h * 2 / 3</code></li>
+<li>原版的 transformers 用 post-norm, 后面 gpt2, llama 系列用的是 pre-norm。其中 llama 系列一般用 RMSNorm 代替 GPT and transformers decoder 中的 LayerNorm。</li>
+</ul>
+<p>具体实现：</p>
+<div class="language-python line-numbers-mode" data-highlighter="shiki" data-ext="python" data-title="python" style="--shiki-light:#383A42;--shiki-dark:#abb2bf;--shiki-light-bg:#FAFAFA;--shiki-dark-bg:#282c34"><pre class="shiki shiki-themes one-light one-dark-pro vp-code"><code><span class="line"><span style="--shiki-light:#A0A1A7;--shiki-light-font-style:italic;--shiki-dark:#7F848E;--shiki-dark-font-style:italic"># 导入相关需要的包</span></span>
+<span class="line"><span style="--shiki-light:#A626A4;--shiki-dark:#C678DD">import</span><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF"> math</span></span>
+<span class="line"><span style="--shiki-light:#A626A4;--shiki-dark:#C678DD">import</span><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF"> torch</span></span>
+<span class="line"><span style="--shiki-light:#A626A4;--shiki-dark:#C678DD">import</span><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF"> torch.nn </span><span style="--shiki-light:#A626A4;--shiki-dark:#C678DD">as</span><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF"> nn</span></span>
+<span class="line"></span>
+<span class="line"><span style="--shiki-light:#A626A4;--shiki-dark:#C678DD">import</span><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF"> warnings</span></span>
+<span class="line"><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF">warnings.</span><span style="--shiki-light:#383A42;--shiki-dark:#61AFEF">filterwarnings</span><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF">(</span><span style="--shiki-light:#986801;--shiki-light-font-style:inherit;--shiki-dark:#E06C75;--shiki-dark-font-style:italic">action</span><span style="--shiki-light:#383A42;--shiki-dark:#56B6C2">=</span><span style="--shiki-light:#50A14F;--shiki-dark:#98C379">"ignore"</span><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF">)</span></span>
+<span class="line"></span>
+<span class="line"><span style="--shiki-light:#A0A1A7;--shiki-light-font-style:italic;--shiki-dark:#7F848E;--shiki-dark-font-style:italic"># 写一个 Block</span></span>
+<span class="line"><span style="--shiki-light:#A626A4;--shiki-dark:#C678DD">class</span><span style="--shiki-light:#C18401;--shiki-dark:#E5C07B"> SimpleDecoder</span><span style="--shiki-light:#C18401;--shiki-dark:#ABB2BF">(</span><span style="--shiki-light:#C18401;--shiki-dark:#E5C07B">nn</span><span style="--shiki-light:#C18401;--shiki-dark:#ABB2BF">.</span><span style="--shiki-light:#C18401;--shiki-dark:#E5C07B">Module</span><span style="--shiki-light:#C18401;--shiki-dark:#ABB2BF">)</span><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF">:</span></span>
+<span class="line"><span style="--shiki-light:#A626A4;--shiki-dark:#C678DD">    def</span><span style="--shiki-light:#0184BC;--shiki-dark:#56B6C2"> __init__</span><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF">(</span><span style="--shiki-light:#986801;--shiki-light-font-style:inherit;--shiki-dark:#E5C07B;--shiki-dark-font-style:italic">self</span><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF">,</span><span style="--shiki-light:#986801;--shiki-light-font-style:inherit;--shiki-dark:#D19A66;--shiki-dark-font-style:italic"> hidden_dim</span><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF">,</span><span style="--shiki-light:#986801;--shiki-light-font-style:inherit;--shiki-dark:#D19A66;--shiki-dark-font-style:italic"> nums_head</span><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF">,</span><span style="--shiki-light:#986801;--shiki-light-font-style:inherit;--shiki-dark:#D19A66;--shiki-dark-font-style:italic"> dropout</span><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF">=</span><span style="--shiki-light:#986801;--shiki-dark:#D19A66">0.1</span><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF">):</span></span>
+<span class="line"><span style="--shiki-light:#0184BC;--shiki-dark:#56B6C2">        super</span><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF">().</span><span style="--shiki-light:#0184BC;--shiki-dark:#56B6C2">__init__</span><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF">()</span></span>
+<span class="line"></span>
+<span class="line"><span style="--shiki-light:#E45649;--shiki-dark:#E5C07B">        self</span><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF">.nums_head </span><span style="--shiki-light:#383A42;--shiki-dark:#56B6C2">=</span><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF"> nums_head</span></span>
+<span class="line"><span style="--shiki-light:#E45649;--shiki-dark:#E5C07B">        self</span><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF">.head_dim </span><span style="--shiki-light:#383A42;--shiki-dark:#56B6C2">=</span><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF"> hidden_dim </span><span style="--shiki-light:#383A42;--shiki-dark:#56B6C2">//</span><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF"> nums_head</span></span>
+<span class="line"><span style="--shiki-light:#E45649;--shiki-dark:#E5C07B">        self</span><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF">.dropout </span><span style="--shiki-light:#383A42;--shiki-dark:#56B6C2">=</span><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF"> dropout</span></span>
+<span class="line"></span>
+<span class="line"><span style="--shiki-light:#A0A1A7;--shiki-light-font-style:italic;--shiki-dark:#7F848E;--shiki-dark-font-style:italic">        # 这里按照 transformers 中的 decoder 来写，用 post_norm 的方式实现，主意有 残差链接</span></span>
+<span class="line"><span style="--shiki-light:#A0A1A7;--shiki-light-font-style:italic;--shiki-dark:#7F848E;--shiki-dark-font-style:italic">        # eps 是为了防止溢出；其中 llama 系列的模型一般用的是 RMSnorm 以及 pre-norm（为了稳定性）</span></span>
+<span class="line"><span style="--shiki-light:#A0A1A7;--shiki-light-font-style:italic;--shiki-dark:#7F848E;--shiki-dark-font-style:italic">        # RMSnorm 没有一个 recenter 的操作，而 layernorm 是让模型重新变成 均值为 0，方差为 1</span></span>
+<span class="line"><span style="--shiki-light:#A0A1A7;--shiki-light-font-style:italic;--shiki-dark:#7F848E;--shiki-dark-font-style:italic">        # RMS 使用 w平方根均值进行归一化 $\sqrt{\frac{1}{n} \sum_{1}^{n}{a_i^2} }$</span></span>
+<span class="line"><span style="--shiki-light:#E45649;--shiki-dark:#E5C07B">        self</span><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF">.layernorm_att </span><span style="--shiki-light:#383A42;--shiki-dark:#56B6C2">=</span><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF"> nn.</span><span style="--shiki-light:#383A42;--shiki-dark:#61AFEF">LayerNorm</span><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF">(hidden_dim, </span><span style="--shiki-light:#986801;--shiki-light-font-style:inherit;--shiki-dark:#E06C75;--shiki-dark-font-style:italic">eps</span><span style="--shiki-light:#383A42;--shiki-dark:#56B6C2">=</span><span style="--shiki-light:#986801;--shiki-dark:#D19A66">0.00001</span><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF">)</span></span>
+<span class="line"></span>
+<span class="line"><span style="--shiki-light:#E45649;--shiki-dark:#E5C07B">        self</span><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF">.q_proj </span><span style="--shiki-light:#383A42;--shiki-dark:#56B6C2">=</span><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF"> nn.</span><span style="--shiki-light:#383A42;--shiki-dark:#61AFEF">Linear</span><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF">(hidden_dim, hidden_dim)</span></span>
+<span class="line"><span style="--shiki-light:#E45649;--shiki-dark:#E5C07B">        self</span><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF">.k_proj </span><span style="--shiki-light:#383A42;--shiki-dark:#56B6C2">=</span><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF"> nn.</span><span style="--shiki-light:#383A42;--shiki-dark:#61AFEF">Linear</span><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF">(hidden_dim, hidden_dim)</span></span>
+<span class="line"><span style="--shiki-light:#E45649;--shiki-dark:#E5C07B">        self</span><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF">.v_proj </span><span style="--shiki-light:#383A42;--shiki-dark:#56B6C2">=</span><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF"> nn.</span><span style="--shiki-light:#383A42;--shiki-dark:#61AFEF">Linear</span><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF">(hidden_dim, hidden_dim)</span></span>
+<span class="line"><span style="--shiki-light:#E45649;--shiki-dark:#E5C07B">        self</span><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF">.o_proj </span><span style="--shiki-light:#383A42;--shiki-dark:#56B6C2">=</span><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF"> nn.</span><span style="--shiki-light:#383A42;--shiki-dark:#61AFEF">Linear</span><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF">(hidden_dim, hidden_dim)</span></span>
+<span class="line"><span style="--shiki-light:#E45649;--shiki-dark:#E5C07B">        self</span><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF">.drop_att </span><span style="--shiki-light:#383A42;--shiki-dark:#56B6C2">=</span><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF"> nn.</span><span style="--shiki-light:#383A42;--shiki-dark:#61AFEF">Dropout</span><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF">(</span><span style="--shiki-light:#986801;--shiki-dark:#D19A66">0.1</span><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF">)</span></span>
+<span class="line"></span>
+<span class="line"><span style="--shiki-light:#A0A1A7;--shiki-light-font-style:italic;--shiki-dark:#7F848E;--shiki-dark-font-style:italic">        # for ffn 准备</span></span>
+<span class="line"><span style="--shiki-light:#E45649;--shiki-dark:#E5C07B">        self</span><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF">.layernorm_ffn </span><span style="--shiki-light:#383A42;--shiki-dark:#56B6C2">=</span><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF"> nn.</span><span style="--shiki-light:#383A42;--shiki-dark:#61AFEF">LayerNorm</span><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF">(hidden_dim, </span><span style="--shiki-light:#986801;--shiki-light-font-style:inherit;--shiki-dark:#E06C75;--shiki-dark-font-style:italic">eps</span><span style="--shiki-light:#383A42;--shiki-dark:#56B6C2">=</span><span style="--shiki-light:#986801;--shiki-dark:#D19A66">0.00001</span><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF">)</span></span>
+<span class="line"></span>
+<span class="line"><span style="--shiki-light:#E45649;--shiki-dark:#E5C07B">        self</span><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF">.up_proj </span><span style="--shiki-light:#383A42;--shiki-dark:#56B6C2">=</span><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF"> nn.</span><span style="--shiki-light:#383A42;--shiki-dark:#61AFEF">Linear</span><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF">(hidden_dim, hidden_dim </span><span style="--shiki-light:#383A42;--shiki-dark:#56B6C2">*</span><span style="--shiki-light:#986801;--shiki-dark:#D19A66"> 4</span><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF">)</span></span>
+<span class="line"><span style="--shiki-light:#E45649;--shiki-dark:#E5C07B">        self</span><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF">.down_proj </span><span style="--shiki-light:#383A42;--shiki-dark:#56B6C2">=</span><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF"> nn.</span><span style="--shiki-light:#383A42;--shiki-dark:#61AFEF">Linear</span><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF">(hidden_dim </span><span style="--shiki-light:#383A42;--shiki-dark:#56B6C2">*</span><span style="--shiki-light:#986801;--shiki-dark:#D19A66"> 4</span><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF">, hidden_dim)</span></span>
+<span class="line"><span style="--shiki-light:#E45649;--shiki-dark:#E5C07B">        self</span><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF">.layernorm_ffn </span><span style="--shiki-light:#383A42;--shiki-dark:#56B6C2">=</span><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF"> nn.</span><span style="--shiki-light:#383A42;--shiki-dark:#61AFEF">LayerNorm</span><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF">(hidden_dim, </span><span style="--shiki-light:#986801;--shiki-light-font-style:inherit;--shiki-dark:#E06C75;--shiki-dark-font-style:italic">eps</span><span style="--shiki-light:#383A42;--shiki-dark:#56B6C2">=</span><span style="--shiki-light:#986801;--shiki-dark:#D19A66">0.00001</span><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF">)</span></span>
+<span class="line"><span style="--shiki-light:#E45649;--shiki-dark:#E5C07B">        self</span><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF">.act_fn </span><span style="--shiki-light:#383A42;--shiki-dark:#56B6C2">=</span><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF"> nn.</span><span style="--shiki-light:#383A42;--shiki-dark:#61AFEF">ReLU</span><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF">()</span></span>
+<span class="line"><span style="--shiki-light:#E45649;--shiki-dark:#E5C07B">        self</span><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF">.drop_ffn </span><span style="--shiki-light:#383A42;--shiki-dark:#56B6C2">=</span><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF"> nn.</span><span style="--shiki-light:#383A42;--shiki-dark:#61AFEF">Dropout</span><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF">(</span><span style="--shiki-light:#986801;--shiki-dark:#D19A66">0.1</span><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF">)</span></span>
+<span class="line"></span>
+<span class="line"><span style="--shiki-light:#A626A4;--shiki-dark:#C678DD">    def</span><span style="--shiki-light:#4078F2;--shiki-dark:#61AFEF"> attention_output</span><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF">(</span><span style="--shiki-light:#986801;--shiki-light-font-style:inherit;--shiki-dark:#E5C07B;--shiki-dark-font-style:italic">self</span><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF">,</span><span style="--shiki-light:#986801;--shiki-light-font-style:inherit;--shiki-dark:#D19A66;--shiki-dark-font-style:italic"> query</span><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF">,</span><span style="--shiki-light:#986801;--shiki-light-font-style:inherit;--shiki-dark:#D19A66;--shiki-dark-font-style:italic"> key</span><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF">,</span><span style="--shiki-light:#986801;--shiki-light-font-style:inherit;--shiki-dark:#D19A66;--shiki-dark-font-style:italic"> value</span><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF">,</span><span style="--shiki-light:#986801;--shiki-light-font-style:inherit;--shiki-dark:#D19A66;--shiki-dark-font-style:italic"> attention_mask</span><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF">=</span><span style="--shiki-light:#986801;--shiki-dark:#D19A66">None</span><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF">):</span></span>
+<span class="line"><span style="--shiki-light:#A0A1A7;--shiki-light-font-style:italic;--shiki-dark:#7F848E;--shiki-dark-font-style:italic">        # 计算两者相关性</span></span>
+<span class="line"><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF">        key </span><span style="--shiki-light:#383A42;--shiki-dark:#56B6C2">=</span><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF"> key.</span><span style="--shiki-light:#383A42;--shiki-dark:#61AFEF">transpose</span><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF">(</span><span style="--shiki-light:#986801;--shiki-dark:#D19A66">2</span><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF">, </span><span style="--shiki-light:#986801;--shiki-dark:#D19A66">3</span><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF">)  </span><span style="--shiki-light:#A0A1A7;--shiki-light-font-style:italic;--shiki-dark:#7F848E;--shiki-dark-font-style:italic"># (batch, num_head, head_dim, seq)</span></span>
+<span class="line"><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF">        att_weight </span><span style="--shiki-light:#383A42;--shiki-dark:#56B6C2">=</span><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF"> torch.</span><span style="--shiki-light:#383A42;--shiki-dark:#61AFEF">matmul</span><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF">(query, key) </span><span style="--shiki-light:#383A42;--shiki-dark:#56B6C2">/</span><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF"> math.</span><span style="--shiki-light:#383A42;--shiki-dark:#61AFEF">sqrt</span><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF">(</span><span style="--shiki-light:#E45649;--shiki-dark:#E5C07B">self</span><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF">.head_dim)</span></span>
+<span class="line"></span>
+<span class="line"><span style="--shiki-light:#A0A1A7;--shiki-light-font-style:italic;--shiki-dark:#7F848E;--shiki-dark-font-style:italic">        # attention mask 进行依次调整；变成 causal_attention</span></span>
+<span class="line"><span style="--shiki-light:#A626A4;--shiki-dark:#C678DD">        if</span><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF"> attention_mask </span><span style="--shiki-light:#A626A4;--shiki-dark:#C678DD">is</span><span style="--shiki-light:#A626A4;--shiki-dark:#C678DD"> not</span><span style="--shiki-light:#986801;--shiki-dark:#D19A66"> None</span><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF">:</span></span>
+<span class="line"><span style="--shiki-light:#A0A1A7;--shiki-light-font-style:italic;--shiki-dark:#7F848E;--shiki-dark-font-style:italic">            # 变成下三角矩阵</span></span>
+<span class="line"><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF">            attention_mask </span><span style="--shiki-light:#383A42;--shiki-dark:#56B6C2">=</span><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF"> attention_mask.</span><span style="--shiki-light:#383A42;--shiki-dark:#61AFEF">tril</span><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF">()</span></span>
+<span class="line"><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF">            att_weight </span><span style="--shiki-light:#383A42;--shiki-dark:#56B6C2">=</span><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF"> att_weight.</span><span style="--shiki-light:#383A42;--shiki-dark:#61AFEF">masked_fill</span><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF">(attention_mask </span><span style="--shiki-light:#383A42;--shiki-dark:#56B6C2">==</span><span style="--shiki-light:#986801;--shiki-dark:#D19A66"> 0</span><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF">, </span><span style="--shiki-light:#0184BC;--shiki-dark:#56B6C2">float</span><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF">(</span><span style="--shiki-light:#50A14F;--shiki-dark:#98C379">"-1e20"</span><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF">))</span></span>
+<span class="line"><span style="--shiki-light:#A626A4;--shiki-dark:#C678DD">        else</span><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF">:</span></span>
+<span class="line"><span style="--shiki-light:#A0A1A7;--shiki-light-font-style:italic;--shiki-dark:#7F848E;--shiki-dark-font-style:italic">            # 人工构造一个下三角的 attention mask</span></span>
+<span class="line"><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF">            attention_mask </span><span style="--shiki-light:#383A42;--shiki-dark:#56B6C2">=</span><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF"> torch.</span><span style="--shiki-light:#383A42;--shiki-dark:#61AFEF">ones_like</span><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF">(att_weight).</span><span style="--shiki-light:#383A42;--shiki-dark:#61AFEF">tril</span><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF">()</span></span>
+<span class="line"><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF">            att_weight </span><span style="--shiki-light:#383A42;--shiki-dark:#56B6C2">=</span><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF"> att_weight.</span><span style="--shiki-light:#383A42;--shiki-dark:#61AFEF">masked_fill</span><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF">(attention_mask </span><span style="--shiki-light:#383A42;--shiki-dark:#56B6C2">==</span><span style="--shiki-light:#986801;--shiki-dark:#D19A66"> 0</span><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF">, </span><span style="--shiki-light:#0184BC;--shiki-dark:#56B6C2">float</span><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF">(</span><span style="--shiki-light:#50A14F;--shiki-dark:#98C379">"-1e20"</span><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF">))</span></span>
+<span class="line"></span>
+<span class="line"><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF">        att_weight </span><span style="--shiki-light:#383A42;--shiki-dark:#56B6C2">=</span><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF"> torch.</span><span style="--shiki-light:#383A42;--shiki-dark:#61AFEF">softmax</span><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF">(att_weight, </span><span style="--shiki-light:#986801;--shiki-light-font-style:inherit;--shiki-dark:#E06C75;--shiki-dark-font-style:italic">dim</span><span style="--shiki-light:#383A42;--shiki-dark:#56B6C2">=-</span><span style="--shiki-light:#986801;--shiki-dark:#D19A66">1</span><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF">)</span></span>
+<span class="line"><span style="--shiki-light:#0184BC;--shiki-dark:#56B6C2">        print</span><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF">(att_weight)</span></span>
+<span class="line"></span>
+<span class="line"><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF">        att_weight </span><span style="--shiki-light:#383A42;--shiki-dark:#56B6C2">=</span><span style="--shiki-light:#E45649;--shiki-dark:#E5C07B"> self</span><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF">.</span><span style="--shiki-light:#383A42;--shiki-dark:#61AFEF">drop_att</span><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF">(att_weight)</span></span>
+<span class="line"></span>
+<span class="line"><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF">        mid_output </span><span style="--shiki-light:#383A42;--shiki-dark:#56B6C2">=</span><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF"> torch.</span><span style="--shiki-light:#383A42;--shiki-dark:#61AFEF">matmul</span><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF">(att_weight, value)</span></span>
+<span class="line"><span style="--shiki-light:#A0A1A7;--shiki-light-font-style:italic;--shiki-dark:#7F848E;--shiki-dark-font-style:italic">        # mid_output shape is: (batch, nums_head, seq, head_dim)</span></span>
+<span class="line"></span>
+<span class="line"><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF">        mid_output </span><span style="--shiki-light:#383A42;--shiki-dark:#56B6C2">=</span><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF"> mid_output.</span><span style="--shiki-light:#383A42;--shiki-dark:#61AFEF">transpose</span><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF">(</span><span style="--shiki-light:#986801;--shiki-dark:#D19A66">1</span><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF">, </span><span style="--shiki-light:#986801;--shiki-dark:#D19A66">2</span><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF">).</span><span style="--shiki-light:#383A42;--shiki-dark:#61AFEF">contiguous</span><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF">()</span></span>
+<span class="line"><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF">        batch, seq, _, _ </span><span style="--shiki-light:#383A42;--shiki-dark:#56B6C2">=</span><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF"> mid_output.</span><span style="--shiki-light:#383A42;--shiki-dark:#61AFEF">size</span><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF">()</span></span>
+<span class="line"><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF">        mid_output </span><span style="--shiki-light:#383A42;--shiki-dark:#56B6C2">=</span><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF"> mid_output.</span><span style="--shiki-light:#383A42;--shiki-dark:#61AFEF">view</span><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF">(batch, seq, </span><span style="--shiki-light:#383A42;--shiki-dark:#56B6C2">-</span><span style="--shiki-light:#986801;--shiki-dark:#D19A66">1</span><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF">)</span></span>
+<span class="line"><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF">        output </span><span style="--shiki-light:#383A42;--shiki-dark:#56B6C2">=</span><span style="--shiki-light:#E45649;--shiki-dark:#E5C07B"> self</span><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF">.</span><span style="--shiki-light:#383A42;--shiki-dark:#61AFEF">o_proj</span><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF">(mid_output)</span></span>
+<span class="line"><span style="--shiki-light:#A626A4;--shiki-dark:#C678DD">        return</span><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF"> output</span></span>
+<span class="line"></span>
+<span class="line"><span style="--shiki-light:#A626A4;--shiki-dark:#C678DD">    def</span><span style="--shiki-light:#4078F2;--shiki-dark:#61AFEF"> attention_block</span><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF">(</span><span style="--shiki-light:#986801;--shiki-light-font-style:inherit;--shiki-dark:#E5C07B;--shiki-dark-font-style:italic">self</span><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF">,</span><span style="--shiki-light:#986801;--shiki-light-font-style:inherit;--shiki-dark:#D19A66;--shiki-dark-font-style:italic"> X</span><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF">,</span><span style="--shiki-light:#986801;--shiki-light-font-style:inherit;--shiki-dark:#D19A66;--shiki-dark-font-style:italic"> attention_mask</span><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF">=</span><span style="--shiki-light:#986801;--shiki-dark:#D19A66">None</span><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF">):</span></span>
+<span class="line"><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF">        batch, seq, _ </span><span style="--shiki-light:#383A42;--shiki-dark:#56B6C2">=</span><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF"> X.</span><span style="--shiki-light:#383A42;--shiki-dark:#61AFEF">size</span><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF">()</span></span>
+<span class="line"><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF">        query </span><span style="--shiki-light:#383A42;--shiki-dark:#56B6C2">=</span><span style="--shiki-light:#E45649;--shiki-dark:#E5C07B"> self</span><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF">.</span><span style="--shiki-light:#383A42;--shiki-dark:#61AFEF">q_proj</span><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF">(X).</span><span style="--shiki-light:#383A42;--shiki-dark:#61AFEF">view</span><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF">(batch, seq, </span><span style="--shiki-light:#E45649;--shiki-dark:#E5C07B">self</span><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF">.nums_head, </span><span style="--shiki-light:#383A42;--shiki-dark:#56B6C2">-</span><span style="--shiki-light:#986801;--shiki-dark:#D19A66">1</span><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF">).</span><span style="--shiki-light:#383A42;--shiki-dark:#61AFEF">transpose</span><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF">(</span><span style="--shiki-light:#986801;--shiki-dark:#D19A66">1</span><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF">, </span><span style="--shiki-light:#986801;--shiki-dark:#D19A66">2</span><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF">)</span></span>
+<span class="line"><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF">        key </span><span style="--shiki-light:#383A42;--shiki-dark:#56B6C2">=</span><span style="--shiki-light:#E45649;--shiki-dark:#E5C07B"> self</span><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF">.</span><span style="--shiki-light:#383A42;--shiki-dark:#61AFEF">k_proj</span><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF">(X).</span><span style="--shiki-light:#383A42;--shiki-dark:#61AFEF">view</span><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF">(batch, seq, </span><span style="--shiki-light:#E45649;--shiki-dark:#E5C07B">self</span><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF">.nums_head, </span><span style="--shiki-light:#383A42;--shiki-dark:#56B6C2">-</span><span style="--shiki-light:#986801;--shiki-dark:#D19A66">1</span><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF">).</span><span style="--shiki-light:#383A42;--shiki-dark:#61AFEF">transpose</span><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF">(</span><span style="--shiki-light:#986801;--shiki-dark:#D19A66">1</span><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF">, </span><span style="--shiki-light:#986801;--shiki-dark:#D19A66">2</span><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF">)</span></span>
+<span class="line"><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF">        value </span><span style="--shiki-light:#383A42;--shiki-dark:#56B6C2">=</span><span style="--shiki-light:#E45649;--shiki-dark:#E5C07B"> self</span><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF">.</span><span style="--shiki-light:#383A42;--shiki-dark:#61AFEF">v_proj</span><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF">(X).</span><span style="--shiki-light:#383A42;--shiki-dark:#61AFEF">view</span><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF">(batch, seq, </span><span style="--shiki-light:#E45649;--shiki-dark:#E5C07B">self</span><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF">.nums_head, </span><span style="--shiki-light:#383A42;--shiki-dark:#56B6C2">-</span><span style="--shiki-light:#986801;--shiki-dark:#D19A66">1</span><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF">).</span><span style="--shiki-light:#383A42;--shiki-dark:#61AFEF">transpose</span><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF">(</span><span style="--shiki-light:#986801;--shiki-dark:#D19A66">1</span><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF">, </span><span style="--shiki-light:#986801;--shiki-dark:#D19A66">2</span><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF">)</span></span>
+<span class="line"></span>
+<span class="line"><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF">        output </span><span style="--shiki-light:#383A42;--shiki-dark:#56B6C2">=</span><span style="--shiki-light:#E45649;--shiki-dark:#E5C07B"> self</span><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF">.</span><span style="--shiki-light:#383A42;--shiki-dark:#61AFEF">attention_output</span><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF">(</span></span>
+<span class="line"><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF">            query,</span></span>
+<span class="line"><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF">            key,</span></span>
+<span class="line"><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF">            value,</span></span>
+<span class="line"><span style="--shiki-light:#986801;--shiki-light-font-style:inherit;--shiki-dark:#E06C75;--shiki-dark-font-style:italic">            attention_mask</span><span style="--shiki-light:#383A42;--shiki-dark:#56B6C2">=</span><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF">attention_mask,</span></span>
+<span class="line"><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF">        )</span></span>
+<span class="line"><span style="--shiki-light:#A626A4;--shiki-dark:#C678DD">        return</span><span style="--shiki-light:#E45649;--shiki-dark:#E5C07B"> self</span><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF">.</span><span style="--shiki-light:#383A42;--shiki-dark:#61AFEF">layernorm_att</span><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF">(X </span><span style="--shiki-light:#383A42;--shiki-dark:#56B6C2">+</span><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF"> output)</span></span>
+<span class="line"></span>
+<span class="line"><span style="--shiki-light:#A626A4;--shiki-dark:#C678DD">    def</span><span style="--shiki-light:#4078F2;--shiki-dark:#61AFEF"> ffn_block</span><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF">(</span><span style="--shiki-light:#986801;--shiki-light-font-style:inherit;--shiki-dark:#E5C07B;--shiki-dark-font-style:italic">self</span><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF">,</span><span style="--shiki-light:#986801;--shiki-light-font-style:inherit;--shiki-dark:#D19A66;--shiki-dark-font-style:italic"> X</span><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF">):</span></span>
+<span class="line"><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF">        up </span><span style="--shiki-light:#383A42;--shiki-dark:#56B6C2">=</span><span style="--shiki-light:#E45649;--shiki-dark:#E5C07B"> self</span><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF">.</span><span style="--shiki-light:#383A42;--shiki-dark:#61AFEF">act_fn</span><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF">(</span></span>
+<span class="line"><span style="--shiki-light:#E45649;--shiki-dark:#E5C07B">            self</span><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF">.</span><span style="--shiki-light:#383A42;--shiki-dark:#61AFEF">up_proj</span><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF">(X),</span></span>
+<span class="line"><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF">        )</span></span>
+<span class="line"><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF">        down </span><span style="--shiki-light:#383A42;--shiki-dark:#56B6C2">=</span><span style="--shiki-light:#E45649;--shiki-dark:#E5C07B"> self</span><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF">.</span><span style="--shiki-light:#383A42;--shiki-dark:#61AFEF">down_proj</span><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF">(up)</span></span>
+<span class="line"><span style="--shiki-light:#A0A1A7;--shiki-light-font-style:italic;--shiki-dark:#7F848E;--shiki-dark-font-style:italic">        # 进行 norm 操作</span></span>
+<span class="line"><span style="--shiki-light:#A626A4;--shiki-dark:#C678DD">        return</span><span style="--shiki-light:#E45649;--shiki-dark:#E5C07B"> self</span><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF">.</span><span style="--shiki-light:#383A42;--shiki-dark:#61AFEF">layernorm_ffn</span><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF">(X </span><span style="--shiki-light:#383A42;--shiki-dark:#56B6C2">+</span><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF"> down)</span></span>
+<span class="line"></span>
+<span class="line"><span style="--shiki-light:#A626A4;--shiki-dark:#C678DD">    def</span><span style="--shiki-light:#4078F2;--shiki-dark:#61AFEF"> forward</span><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF">(</span><span style="--shiki-light:#986801;--shiki-light-font-style:inherit;--shiki-dark:#E5C07B;--shiki-dark-font-style:italic">self</span><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF">,</span><span style="--shiki-light:#986801;--shiki-light-font-style:inherit;--shiki-dark:#D19A66;--shiki-dark-font-style:italic"> X</span><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF">,</span><span style="--shiki-light:#986801;--shiki-light-font-style:inherit;--shiki-dark:#D19A66;--shiki-dark-font-style:italic"> attention_mask</span><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF">=</span><span style="--shiki-light:#986801;--shiki-dark:#D19A66">None</span><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF">):</span></span>
+<span class="line"><span style="--shiki-light:#A0A1A7;--shiki-light-font-style:italic;--shiki-dark:#7F848E;--shiki-dark-font-style:italic">        # X 一般假设是已经经过 embedding 的输入， (batch, seq, hidden_dim)</span></span>
+<span class="line"><span style="--shiki-light:#A0A1A7;--shiki-light-font-style:italic;--shiki-dark:#7F848E;--shiki-dark-font-style:italic">        # attention_mask 一般指的是 tokenizer 后返回的 mask 结果，表示哪些样本需要忽略</span></span>
+<span class="line"><span style="--shiki-light:#A0A1A7;--shiki-light-font-style:italic;--shiki-dark:#7F848E;--shiki-dark-font-style:italic">        # shape 一般是： (batch, nums_head, seq)</span></span>
+<span class="line"></span>
+<span class="line"><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF">        att_output </span><span style="--shiki-light:#383A42;--shiki-dark:#56B6C2">=</span><span style="--shiki-light:#E45649;--shiki-dark:#E5C07B"> self</span><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF">.</span><span style="--shiki-light:#383A42;--shiki-dark:#61AFEF">attention_block</span><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF">(X, </span><span style="--shiki-light:#986801;--shiki-light-font-style:inherit;--shiki-dark:#E06C75;--shiki-dark-font-style:italic">attention_mask</span><span style="--shiki-light:#383A42;--shiki-dark:#56B6C2">=</span><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF">attention_mask)</span></span>
+<span class="line"><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF">        ffn_output </span><span style="--shiki-light:#383A42;--shiki-dark:#56B6C2">=</span><span style="--shiki-light:#E45649;--shiki-dark:#E5C07B"> self</span><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF">.</span><span style="--shiki-light:#383A42;--shiki-dark:#61AFEF">ffn_block</span><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF">(att_output)</span></span>
+<span class="line"><span style="--shiki-light:#A626A4;--shiki-dark:#C678DD">        return</span><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF"> ffn_output</span></span>
+<span class="line"></span>
+<span class="line"></span>
+<span class="line"><span style="--shiki-light:#A0A1A7;--shiki-light-font-style:italic;--shiki-dark:#7F848E;--shiki-dark-font-style:italic"># 测试</span></span>
+<span class="line"></span>
+<span class="line"><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF">x </span><span style="--shiki-light:#383A42;--shiki-dark:#56B6C2">=</span><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF"> torch.</span><span style="--shiki-light:#383A42;--shiki-dark:#61AFEF">rand</span><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF">(</span><span style="--shiki-light:#986801;--shiki-dark:#D19A66">3</span><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF">, </span><span style="--shiki-light:#986801;--shiki-dark:#D19A66">4</span><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF">, </span><span style="--shiki-light:#986801;--shiki-dark:#D19A66">64</span><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF">)</span></span>
+<span class="line"><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF">net </span><span style="--shiki-light:#383A42;--shiki-dark:#56B6C2">=</span><span style="--shiki-light:#383A42;--shiki-dark:#61AFEF"> SimpleDecoder</span><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF">(</span><span style="--shiki-light:#986801;--shiki-dark:#D19A66">64</span><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF">, </span><span style="--shiki-light:#986801;--shiki-dark:#D19A66">8</span><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF">)</span></span>
+<span class="line"><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF">mask </span><span style="--shiki-light:#383A42;--shiki-dark:#56B6C2">=</span><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF"> (</span></span>
+<span class="line"><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF">    torch.</span><span style="--shiki-light:#383A42;--shiki-dark:#61AFEF">tensor</span><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF">([[</span><span style="--shiki-light:#986801;--shiki-dark:#D19A66">1</span><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF">, </span><span style="--shiki-light:#986801;--shiki-dark:#D19A66">1</span><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF">, </span><span style="--shiki-light:#986801;--shiki-dark:#D19A66">1</span><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF">, </span><span style="--shiki-light:#986801;--shiki-dark:#D19A66">1</span><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF">], [</span><span style="--shiki-light:#986801;--shiki-dark:#D19A66">1</span><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF">, </span><span style="--shiki-light:#986801;--shiki-dark:#D19A66">1</span><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF">, </span><span style="--shiki-light:#986801;--shiki-dark:#D19A66">0</span><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF">, </span><span style="--shiki-light:#986801;--shiki-dark:#D19A66">0</span><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF">], [</span><span style="--shiki-light:#986801;--shiki-dark:#D19A66">1</span><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF">, </span><span style="--shiki-light:#986801;--shiki-dark:#D19A66">1</span><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF">, </span><span style="--shiki-light:#986801;--shiki-dark:#D19A66">1</span><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF">, </span><span style="--shiki-light:#986801;--shiki-dark:#D19A66">0</span><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF">]])</span></span>
+<span class="line"><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF">    .</span><span style="--shiki-light:#383A42;--shiki-dark:#61AFEF">unsqueeze</span><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF">(</span><span style="--shiki-light:#986801;--shiki-dark:#D19A66">1</span><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF">)</span></span>
+<span class="line"><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF">    .</span><span style="--shiki-light:#383A42;--shiki-dark:#61AFEF">unsqueeze</span><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF">(</span><span style="--shiki-light:#986801;--shiki-dark:#D19A66">2</span><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF">)</span></span>
+<span class="line"><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF">    .</span><span style="--shiki-light:#383A42;--shiki-dark:#61AFEF">repeat</span><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF">(</span><span style="--shiki-light:#986801;--shiki-dark:#D19A66">1</span><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF">, </span><span style="--shiki-light:#986801;--shiki-dark:#D19A66">8</span><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF">, </span><span style="--shiki-light:#986801;--shiki-dark:#D19A66">4</span><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF">, </span><span style="--shiki-light:#986801;--shiki-dark:#D19A66">1</span><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF">)</span></span>
+<span class="line"><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF">)</span></span>
+<span class="line"></span>
+<span class="line"><span style="--shiki-light:#383A42;--shiki-dark:#61AFEF">net</span><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF">(x, mask).shape</span></span></code></pre>
+<div class="line-numbers" aria-hidden="true" style="counter-reset:line-number 0"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div>]]></content:encoded>
+      <enclosure url="https://bruceyuan.com/img/huggingface.png" type="image/png"/>
+    </item>
+    <item>
+      <title>工作，再坚持坚持</title>
+      <link>https://bruceyuan.com/blog/work-i-can-insist-more-time.html</link>
+      <guid>https://bruceyuan.com/blog/work-i-can-insist-more-time.html</guid>
+      <source url="https://bruceyuan.com/rss.xml">工作，再坚持坚持</source>
+      <description>我依然在工作，我依然在挣扎，我依然在挣扎着完成工作，希望新的工作策略可以帮助我再坚持坚持！！！</description>
+      <category>杂谈</category>
+      <pubDate>Wed, 14 Aug 2024 23:00:00 GMT</pubDate>
+      <content:encoded><![CDATA[<h2>背景</h2>
+<p>我很累，很想休息一段时间，但是囿于对职业生涯不可持续和收入下滑的恐惧，依然是不敢有什么懈怠，挣扎着完成工作。五月份，写了一篇文章<a href="/blog/how-to-keep-mental-health-working-in-bytedance.html" target="_blank">《如何在字节工作六个月以上且保持一定的心理健康?》</a>进行自我勉励却收效甚微。写文章容易、收集牛人的方法论也容易，但是落实到自己身上比想象中要艰难很多，做一个普通人，终究还是无法跨越知道和做到的鸿沟。不是无法胜任工作，不是心灵饱受摧残，现在心理也很健康，只是不想每天都保持在一种疲劳的紧绷状态。</p>
+<h2>原因分析</h2>
+<p>说到底，工作让人疲劳只有两个原因：1. 工作量大，2. 工作时间长。工作量大这点基本无法解决，从我的直观感受，字节的工作量应该有企鹅的 1.4-1.5 倍左右，而且现 Leader 明显比前 Leader 更卷<sup class="footnote-ref"><a href="#footnote1">[1]</a><a class="footnote-anchor" id="footnote-ref1"></a></sup><a class="footnote-anchor" id="footnote-ref1">。基于这种情况，想要改变工作量大这一点，基本上不太可能，在当前工作市场的大背景下，你不干有点是人干（笑）。但是工作时长较长这一点，应该是有方法可以改变的。这里就不再想前文说的比较难实现的方法了，比如：多和领导沟通（这很难，每个人的工作习惯和喜欢的风格也不一样），少参加一些会议... 而工作时间长会有很多方面的因素，工作量是一点，工作效率是另外一个重要的点。对我来说，也许提高工作效率是一个可行的方法。</a></p><a class="footnote-anchor" id="footnote-ref1">
+</a><h2><a class="footnote-anchor" id="footnote-ref1"></a><a class="header-anchor" href="#方案实施"><span>方案实施</span></a></h2>
+<h3>1. 每天优先完成一件重要的事情</h3>
+<p>最近采用每天至少完成一件重要的事情这个方法，对我有很大的成效，自我体感上事情变得更可控了。在当前团队最大的问题是你需要同时干多个事情，而且并不是排期制（也有自己的问题在其中），所以导致容易出现插入需求，临时让你干点什么，这对于效率的伤害就巨大的。学计算的都知道，切换进程有一项比较大的时间开销就是上下文的切换，不同的进程之间有不同的资源，而不同的项目也有自己的资源，频繁的切换让大脑很疲劳。因此我近期给自己设立的目标就是：当前至少完成一件事情，一般是当前周期最重要的事情。</p>
+<p>这么做还有另外一个很重要的原因，老板真的不可能关心你做的每一件事情。大约每个公司都会做绩效管理，每个员工都要填写自己半年干了什么，而在填重点工作产出的时候，几乎每一个员工都有同样的感受：怎么做的好多事情都不成体系，没有办法往上面填。这核心的原因是你做了很多老板不关心的事情，以我自己为例。我上半年工作产出绝对是够的，但是因为团队变换，一大半的工作产出老板根本不在乎，然后还有一些老板安排去临时支持的事情，花费了很多时间，但是最终在总结里面可能都没法出现（🤣）。</p>
+<h3>2. 寻找为自己打工的感觉</h3>
+<p>打工有两个目的，挣钱和可能的自我实现。挣钱的目标很实在，当挣钱少的时候，比如一个月五千块，各方面的压力很大，就很容易萌生寻找出路的想法，工作难以维系。但是当工资达到差不多的时候，挣钱的重要性就从 90% 变成 70%。而这个时候，就能开始考虑一些（可能的）自我实现的感觉。</p>
+<p>自我实现包括的范围很大，可以是真正做出对他人有用的东西，成就感满满；也可以是自我积累，满足自己的探索求知的需求。甚至俗气一点，不需要什么自我实现，当前的工作仅仅是为了跳槽做积累，那么这个时候你写的每一行代码，学到的每一个知识点都是为自己学习的，这个在更长时间维度上是对自己更有益的。</p>
+<p>如果有了为自己打工的感觉，干什么事情都变得更有动力了。这也是为什么个体户、独立开发者、创业者干活都是那么的充满能量，这也许就是为自己打工的魅力。自己的产出不再是仅仅为了公司，也是为了自己。</p>
+<h3>3. 放弃追求老板的认同</h3>
+<p>除了 OKR 之外，还要有一套自己的评价体系。我认识很多同学，包括我自己，干活总是会想要追求老板的认同，可能老板点个赞就觉得可以这么做，老板不回应就代表不可行<sup class="footnote-ref"><a href="#footnote2">[2]</a><a class="footnote-anchor" id="footnote-ref2"></a></sup><a class="footnote-anchor" id="footnote-ref2">。这个也许是潜意识的，我也是近期观察自己的心理才发现自己原来就是一个挺在乎别人评价的人，我几乎不找老板 oneone，因此主要的沟通都是在群里。所以很多时候，老板不回应我的下一步方案和结论的时候，我就会有点迷茫，尤其是看到老板却积极回应别的同事，此时甚至会有一些自我怀疑 🤔<sup class="footnote-ref"></sup></a><a href="#footnote3">[3]</a><a class="footnote-anchor" id="footnote-ref3">。从今天起，放弃追求老板的认同，干真正有意义的主线工作，通过亮点给人留下印象，而不是通过一堆乱七八糟的事情干扰别人的注意力。</a></p><a class="footnote-anchor" id="footnote-ref3">
+<blockquote>
+<p>放弃追求老板的认同不代表不听从老板的指挥，反而更需要对齐大方向目标，OKR 要对清楚，只是少干一些非 OKR 上的东西。比如不要为了满足老板看某个数的需求，坑次坑次加班。</p>
+</blockquote>
+</a><h2><a class="footnote-anchor" id="footnote-ref3"></a><a class="header-anchor" href="#总结"><span>总结</span></a></h2>
+<p>当前的工作有些超过自身的负荷，能明显的感觉到自己状态在工作忙的时候是差很多的，需要一些独处消化的时候，因此无论是社交，还是花在其他事情上的注意力（包括家人）都是越来越少了，而这显然是不对的。希望能通过采用上面的方式弱化自己的工作情绪，减少自己工作的疲劳感 🐛，所以这期标题叫：《工作，再坚持坚持》。</p>
+<hr class="footnotes-sep">
+<section class="footnotes">
+<ol class="footnotes-list">
+<li id="footnote1" class="footnote-item"><p>接更多事情，不怎么拒绝需求，投入的时间也多（就投入这一块，还是很牛的，也很佩服）。 <a href="#footnote-ref1" class="footnote-backref">↩︎</a></p>
+</li>
+<li id="footnote2" class="footnote-item"><p>很多老板也是看人下菜，不要把别人想的多高尚。 <a href="#footnote-ref2" class="footnote-backref">↩︎</a></p>
+</li>
+<li id="footnote3" class="footnote-item"><p>自我怀疑 🤔（好像）也不是很严重，因为自己的工作产出一直都是够的，至少拿个中等绩效没问题。只是时常会觉得自己果然是很难拿高绩效的。 <a href="#footnote-ref3" class="footnote-backref">↩︎</a></p>
+</li>
+</ol>
+</section>
+]]></content:encoded>
+      <enclosure url="https://cdn.bruceyuan.com/img/icon.webp" type="image/webp"/>
+    </item>
+    <item>
+      <title>与朋友聊天——大宇篇</title>
+      <link>https://bruceyuan.com/blog/talk-with-dayu.html</link>
+      <guid>https://bruceyuan.com/blog/talk-with-dayu.html</guid>
+      <source url="https://bruceyuan.com/rss.xml">与朋友聊天——大宇篇</source>
+      <description>经历越多，就越期待有一个持久的东西，不会因为外在因素的衰亡而衰亡，能一直陪伴着我。--dayu</description>
+      <category>杂谈</category>
+      <pubDate>Sat, 08 Jun 2024 10:25:00 GMT</pubDate>
+      <content:encoded><![CDATA[<h2>阅读前提</h2>
+<ul>
+<li>我（bruce, bbruceyuan）和<a href="https://anotherdayu.com" target="_blank" rel="noopener noreferrer">大宇（dayu）</a>是同龄人，大宇是一个即将毕业的博士，我是一个工作多年的打工人。</li>
+<li>文章以对话形式表达。但是【对话的前后关系以及原文】有一些润色修改，想突显我对 dayu 印象深刻的点。</li>
+</ul>
+<h2>独立博客的意义？</h2>
+<p>bruce: 你怎么看待独立博客这种形式？</p>
+<p>dayu: 独立博客，我觉得这个概念很有趣。因为我们这代人都接触过很多平台，比如QQ空间、人人网、饭否、网易之前的轻博客平台等等，经历了许多平台的衰亡。<strong>经历越多，就越期待有一个持久的东西，不会因为外在因素的衰亡而衰亡，能一直陪伴着我</strong>。这时，独立博客这个概念就非常吸引人，只要我去维护，只要我还在，我就可以一直维护。<strong>只要我愿意去维护，它的内容就会越来越多，就像给自己的花园浇花一样，虽然不一定被别人看到，但慢慢生长总会有一些新的缘分和契机，就会有一些新的可能性</strong><sup class="footnote-ref"><a href="#footnote1">[1]</a><a class="footnote-anchor" id="footnote-ref1"></a></sup><a class="footnote-anchor" id="footnote-ref1">。这个过程很有趣，比如在一些群里被人认出来，所以博客带给自己的很多不一样的人生经历。</a></p><a class="footnote-anchor" id="footnote-ref1">
+<!-- more -->
+<p>bruce: 我最近看了一本书《小而美：持续经营法则》里面提到，应该在社交媒体上分享对他人有用的东西，而不是日常分享，比如午餐吃了什么？你怎么看待这个观点？</p>
+</a><p><a class="footnote-anchor" id="footnote-ref1">dayu: 我觉得分享日常挺好的，甚至我很喜欢看这种分享。我们分享自己的生活，更多是一种记录性的<sup class="footnote-ref"></sup></a><a href="#footnote2">[2]</a><a class="footnote-anchor" id="footnote-ref2">。</a></p><a class="footnote-anchor" id="footnote-ref2">
+</a><h2><a class="footnote-anchor" id="footnote-ref2"></a><a class="header-anchor" href="#未来在何方"><span>未来在何方？</span></a></h2>
+<p>bruce: 你很喜欢《How I Met Your Mother》和《老友记》，为什么？</p>
+<p>dayu: 我很羡慕他们，因为他们每个人都在不断犯错，但他们不畏惧犯错的过程。这些主角们都有勇气犯错，然后尝试着去改变。虽然有时候改变不了，但他们有尝试，这个过程其实挺棒的。</p>
+<p>bruce: 你提到的这两个剧中的角色都勇于尝试新事物，不断探索不同的可能性。这是否是欧美和国内的区别呢？国内的人好像非常害怕犯错和尝试新方向。比如在互联网行业，大家都会觉得 GAP&nbsp;1 年就像给职业宣告了死刑一样。</p>
+<p>dayu: 我感觉是的，整个社会氛围两边相差很大。<strong>前面几十年国内一直处于上升期，所以很多人的社会印象就是我的人生一直要往前走。这个印象对于我们这代人来说挺有压力的，因为我们这代人可能很大一部分人都没有办法像过去一代人那样有向前走的机会</strong>。而国外美剧，他们恰好已经过去了我们现在的阶段，他们社会福利好，大家没有那么急剧快速的上升压力，所以感觉挺不一样的。但是我相信我们可能也会到这样一个阶段，只是现在我们可能到不了，但是等我们孩子那一代可能会到那个阶段。</p>
+<p>bruce: 是的，我们的教育又希望我们向上走，但社会发展增速放缓导致整体向上走的机会变少了，这样确实会很容易感到痛苦。然后我们还能接触到一些国外的东西，他们可以自由地做自己想做的事情，他们会有更多的试错机会。这就会产生矛盾，我们觉得自己应该向上走，但又很羡慕国外那种不断试错、体验新生活的状态。</p>
+<p>dayu: 没错，就是挺拧巴的。但也许我们不应该抱怨经济下滑或中国整个社会状态的问题，以医药行业为例，从19年开始，医药行业的腾飞就是虚假的。中国没有像国外那样大的药企，也没有大规模规范化临床实验的结构。很多东西是可以被预期的，只是一个泡沫。泡沫破掉后，医药行业就会受到影响。我不提其他行业，只是泡沫破掉了，跟中国的经济放缓和疫情关系不大。它只是到了这个阶段，所以要承担之前泡沫所付出的代价<sup class="footnote-ref"><a href="#footnote3">[3]</a><a class="footnote-anchor" id="footnote-ref3"></a></sup><a class="footnote-anchor" id="footnote-ref3">。</a></p><a class="footnote-anchor" id="footnote-ref3">
+<p>bruce: 互联网行业也是类似，现在互联网面临着职位趋向于饱和、跳槽困难、高度的内卷和晋升困难等问题，你怎么看待这个问题？</p>
+</a><p><a class="footnote-anchor" id="footnote-ref3">dayu: 互联网行业正在向更稳健的方向发展，向平稳过渡，等过渡到一定的时候，可能行业更加规范化，大家的生活也会变得更稳定。公司里跳槽的频率相对较高，但大家总能再找到工作。整个生物医药市场和互联网行业都存在这种情况，虽然很多人失去工作，但同时也能找到工作，只是可能与之前的工作差别不大。整个行业仍然缺人，只是在不断换血<sup class="footnote-ref"></sup></a><a href="#footnote4">[4]</a><a class="footnote-anchor" id="footnote-ref4">。</a></p><a class="footnote-anchor" id="footnote-ref4">
+<p>bruce: 那你理想的工作状态是什么样的？</p>
+<p>dayu: 有两点，一是独立自由的工作节奏，二是健康讨论交流的氛围。这两个东西，一个是我现在有且舒适的，一个是我现在没有且渴望的。工作节奏是我现在有并且觉得挺舒适的。跟相似工作职能和相似科研项目的人的交流和讨论，是我现在和很长期的一段时间很缺乏的。</p>
+</a><p><a class="footnote-anchor" id="footnote-ref4">bruce: 哈哈哈，那祝你在博后的时候能拥有这样的交流氛围<sup class="footnote-ref"></sup></a><a href="#footnote5">[5]</a><a class="footnote-anchor" id="footnote-ref5">～</a></p><a class="footnote-anchor" id="footnote-ref5">
+</a><h2><a class="footnote-anchor" id="footnote-ref5"></a><a class="header-anchor" href="#注释"><span>注释</span></a></h2>
+<p>工作忙成狗了，没想到刚发完<a href="/blog/how-to-keep-mental-health-working-in-bytedance.html" target="_blank">如何在字节工作六个月以上且保持一定的心理健康？</a>的我就觉得痛苦的想死了，以至于拖了一个月才开始动笔写这个流水账记录。我真的太喜欢这种气质的人了，让人感到很平静。</p>
+<hr class="footnotes-sep">
+<section class="footnotes">
+<ol class="footnotes-list">
+<li id="footnote1" class="footnote-item"><p>说到这句话的时候，我觉得大宇<strong>有种类似于少楠孟岩一样的气质</strong>。 <a href="#footnote-ref1" class="footnote-backref">↩︎</a></p>
+</li>
+<li id="footnote2" class="footnote-item"><p>dayu 很喜欢点点写的<a href="/blog/how-i-met-bruce.html" target="_blank">《How-I-Met-Bruce》</a>（这是我和对象之间的故事）。回家之后我还和对象说，我也很喜欢点开看别人日常博客的分享，这样的人好像不多，但是没想到一聊天就遇到一个，还真是缘分。 <a href="#footnote-ref2" class="footnote-backref">↩︎</a></p>
+</li>
+<li id="footnote3" class="footnote-item"><p>这里受伤的人都是无辜的。没有人愿意这样，大家只是因为想过好的生活。这个行业的发展和未来可能经历的东西，并不是大家想要发生的。--dayu <a href="#footnote-ref3" class="footnote-backref">↩︎</a></p>
+</li>
+<li id="footnote4" class="footnote-item"><p>其实这是我们最开始聊得问题。这个回答让我觉得他很乐观，总是能看到好的一面，而网络上发声的很多人都在传递焦虑。 <a href="#footnote-ref4" class="footnote-backref">↩︎</a></p>
+</li>
+<li id="footnote5" class="footnote-item"><p>其实这不是结尾，我也没有说这句话，作为文章祝福补上吧 ～ <a href="#footnote-ref5" class="footnote-backref">↩︎</a></p>
+</li>
+</ol>
+</section>
+]]></content:encoded>
+    </item>
+    <item>
+      <title>如何在字节工作六个月以上且保持一定的心理健康?</title>
+      <link>https://bruceyuan.com/blog/how-to-keep-mental-health-working-in-bytedance.html</link>
+      <guid>https://bruceyuan.com/blog/how-to-keep-mental-health-working-in-bytedance.html</guid>
+      <source url="https://bruceyuan.com/rss.xml">如何在字节工作六个月以上且保持一定的心理健康?</source>
+      <description>互联网寒气愈发浓厚，号称宇宙终点站的字节跳动也开始裁员，但毕竟是终点站，哪怕是在裁员的寒冬季节，也依然有很多人陆续入职着字节，我也是其中一员。传闻字节的平均在职时间是 7 个月，这侧面说明了字节跳动的工作压力让员工很难保持一个良好的心理状态。前段时间有一个很火的帖子《在字节工作3个月以上仍保持一定程度的心理健康并非完全不可能》，受它启发，也想谈谈我在字节工作 6 个月后是如何保持心理健康的？</description>
+      <category>杂谈</category>
+      <pubDate>Thu, 02 May 2024 22:52:00 GMT</pubDate>
+      <content:encoded><![CDATA[<h2>背景</h2>
+<p>互联网寒气愈发浓厚，号称宇宙终点站的字节跳动也开始裁员，但毕竟是<strong>终点站</strong>，哪怕是在裁员的寒冬季节，也依然有「很多人陆续入职着字节」，我也是其中一员。传闻字节的平均在职时间是 7 个月，这侧面说明了字节跳动的工作压力让员工很难保持一个良好的心理状态。前段时间有一个很火的帖子<a href="https://www.bilibili.com/video/BV16j411v7Vj/" target="_blank" rel="noopener noreferrer">《在字节工作3个月以上仍保持一定程度的心理健康并非完全不可能》</a>，受它启发，也想谈谈我在字节工作 6 个月后是如何保持心理健康的。</p>
+<blockquote>
+<p>当然本篇文章不仅适合字节同学，在其他公司的打工人其实也可参考。</p>
+<p>如果你不想阅读，可以听我录得一期博客<a href="https://www.xiaoyuzhoufm.com/episode/6652ca6d4efbc0c3dc17359b" target="_blank" rel="noopener noreferrer">《第 3 集. 如何在互联网高强度工作且保持一定的心理健康》-- 打点酱油</a></p>
+</blockquote>
+<h2>1. 正确认知自己的上班时间？</h2>
+<p>在字节被人诟病最多的就是工作强度，我很想为它说一些好话，但是很抱歉，我很难说出这么违心的话，因为字节相对于其他的互联网公司确实更累。所以如果入职字节，还是需要做好一定的心理建设——我愿意为了工作付出相对更多地精力。</p>
+<p>在做好心理建设之后，我们需要对字节的工作时间有一个更多地认知，它其实并没有比其他互联网公司长很多。一般的互联网公司，都是 10:00 上班，20:30-21:00 期间下班，而据我观察，字节电梯的高峰时期是 10:30，晚上则一般会在 21:30-22:00 期间出现滴滴车辆拥堵，所以客观上大部分字节人工作时间也就多了半小时[1]，不要因为潜意识觉得自己工作时间太长而影响自己的心情。</p>
+<p>综上，要<strong>对字节的工作时间有正确的认知</strong>——大约会多工作半小时，但是请不要低估这0.5小时工作对于一个普通人的摧残，请一定要<strong>做好心理建设</strong>。</p>
+<h2>2. 保护你的注意力，合理提出拒绝</h2>
+<p>字节的企业文化是什么？相信最出圈的一定是<strong>始终创业</strong>（always day1）。这个口号给字节带来了无限的生命力，始终能推出新的APP 和能力，让字节保持较高的竞争力。但对于一个打工的帕鲁来说，这会带来一定的麻烦——更大的工作量和更多的需求，想要晋升、提升能力的打工人可能就会不断给自己揽活，或者无法拒绝一些需求，导致自己排期出现变形，以至于可能需要周末加班[2]。所以<strong>请合理的拒绝需求</strong>，不要让自己身处超多的业务线。</p>
+<p>创业是意味着要推陈出新，新业务需要大量的尝试，对于产品的形态不同的人有不同的认知，所以催生出了字节一线打工人的噩梦——会议[3]。因为新业务的存在导致大家要不断的开会对齐，不然可能研发的结果和产品的需求最终南辕北辙，至过几天可能你连其他人说的名词都听不懂。作为研发，不是开完会对齐产品方向就 ok，你需要实打实的用代码讲功能实现。如果一个研发被会议占据了太多的时间，那么加班就必不可少，所以<strong>请保护好你的注意力</strong>，不是别人拉你开会你就一定要参加。如果和你关系不大减少参加，等被 cue 的时候，自然会有人拉你入会。这点我和 Leader 沟通过达成了一致，尽量减少参加不必要的会议。</p>
+<blockquote>
+<p>当然对于很多高手，可以一心多用，一边开会一边干活，但是真的太难了，普通人慎重尝试。</p>
+</blockquote>
+<p>综上，我们不要因为始终创业的企业文化就不断给自己加码，要与 Leader 一起拒绝不合理的需求，同时保护好自己的注意力，不要什么会都参加（其他职能也类似）。</p>
+<h2>3. 找出工作情绪背后的真相</h2>
+<p>前段时间因为和其他部门同事合作，因为沟通问题导致合作的不太愉快，最终让我对工作也变得反感，期间也有很大的工作情绪。实在绷不住了之后向 Leader 吐槽这个事情，同时也向<a href="https://github.com/xcodebuild" target="_blank" rel="noopener noreferrer">打工圣体</a>蛇神请教，他一下就指出我的问题：我向 Leader 说的是情绪，而不是问题本身。</p>
+<p>经过梳理，我才发现自己的核心需求竟然只是让别人遵循原先约定的方案，减少后期我维护的成本[4]。在和该同事重复沟通后，达成一致，对方出人力解决这个问题，我的烦恼一下就没有了。</p>
+<p>有时候「你很痛苦、情绪要爆炸、不想和某人合作」可能只是表象，我们应该去分析找出真正的问题，然后去推动解决它；如果实在推动不了，那么上升到 Leader 层面，你的 Leader 会帮助你解决的。</p>
+<p>所以在你感到痛苦的时候，多和身边的人咨询下，<strong>分析内在的问题，去推动解决它</strong>。不要被工作情绪吞噬，这只会让你更痛苦。</p>
+<h2>4. 领导不是敌人，多和 Leader 沟通</h2>
+<p>能够和 Leader 进行有效沟通，这是在任何一个团队呆得舒服的必要条件。很大一部分同学离职和呆得不爽都是因为觉得 Leader 不行，但很多情况，可能都是因为没有和 Leader 进行足够的沟通。任何一个能拿高绩效的同学，都不会和 Leader 关系差。这是因为当你和领导多沟通与交流想法的时候，你们的目标更容易达成一致，这样更容易实现他想要的结果。</p>
+<p>此外，作为你的领导，他可能很难关注到你的需求，如果及时和他沟通，他才能更加了解你，那么他可以出面帮你争取资源或者支持。如果你不想做某事，也尽早提出，领导也希望能让下属在合适的位置工作，因为这是激励相容的状态（对双方都好）。</p>
+<p>所以<strong>多和 Leader 沟通，主动约 Leader oneone</strong>[5]，大但地提出自己的诉求（个人成长、工作内容等），少些抱怨～</p>
+<h2>5. 花点时间打磨自己的工具才能降低对未来的焦虑</h2>
+<p>抱着学技术的同学来到字节可能会失望，除了少数的前沿团队，大多数人都是为业务服务的，所以造成所谓的技术深度不足，或者技术壁垒不高。但作为一个技术同学应该正确地看待这个事情，完成业务和手头事情才是第一要务，炫技一定要在完成业务的基础上才能实现，不然 Leader 可能就不得不给个不符合预期了。</p>
+<p>技术不足问题并不大，也不要想着完成业务能学到太多的东西。我的观点永远是：作为一个普通人，只有当你有足够的时间自己学习，你才能最大化的提升自己的技术水平。业务成长和技术成长齐头并进的可能性很少，所以一定要「<strong>预留一些时间给自己</strong>看看论文，参加一些开源项目，这样才能更好的成长以及让内心更充盈，对未来的焦虑才会更少」。</p>
+<blockquote>
+<p>很多人说在公司业务成长期，更容易有技术提升，但这种可能性不高，除非公司花钱让你做炫技内容，公司花钱雇你做 PR。不然业务推着，你觉得能有时间让你去学习最新的技术吗？老板根本不愿意等待。</p>
+</blockquote>
+<h2>6. 唯一的银弹，多锻炼身体，动起来吧</h2>
+<p>最后，当然也是最重要的，<strong>多锻炼保持一个健康的身体状态</strong>。以上说的都是屁话，对于有的人可能不适用，但是这一条对绝大多数人都有用。</p>
+<p>对于一个认知正常的成年人，锻炼的重要性和意义再重复的作用不大。所以，不要觉得周末很累了、只想躺着，「动起来吧，<a href="https://www.xiaoyuzhoufm.com/episode/6623a060200abebe6e1abc82" target="_blank" rel="noopener noreferrer">只要动起来可能会发现什么事情都变好了</a>」～</p>
+<h2>Ref</h2>
+<ul>
+<li>[1]. 个人在工作上相对于前司多了 1+h，主要原因是中午吃饭和下午吃饭的部分时间经常会用于工作。当然如果有人说相对前司需要多工作了 1.5——2 小时，我也丝毫不会惊讶🤣～毕竟，这里是字节。</li>
+<li>[2]. 本帕鲁因为担心转正问题，不敢拒绝需求，导致出现了不少加班的情况。</li>
+<li>[3]. 我和一些字节同事交流后发现，字节会议比主流互联网公司多很多，这也是非常多技术人员很烦恼的点。</li>
+<li>[4]. 我和 Leader 发的消息是：某人太难沟通了，第一次遇到这种人，很烦。
+<ul>
+<li>后续梳理解决问题之后撤回了，刚好 Leader 休假没看到。</li>
+<li>按照蛇神的方案：反馈要少抱怨，多聊问题本身。那么我应该说的是：xx 因为不遵循 zz 导致项目要延期 N天，增加 M 工作量。（领导可能不关心你多做了什么，项目进度可能才是他担心的）</li>
+</ul>
+</li>
+<li>[5]. 这也是我需要加强的，我个人从来不主动约领导聊自己的诉求，改变中...</li>
+<li>[6]. 本篇文章更多是为了自勉，希望自己能做些什么来延长自己的职业生涯。</li>
+</ul>
+]]></content:encoded>
+    </item>
+    <item>
+      <title>2023，新的开始</title>
+      <link>https://bruceyuan.com/blog/2023-year-summary.html</link>
+      <guid>https://bruceyuan.com/blog/2023-year-summary.html</guid>
+      <source url="https://bruceyuan.com/rss.xml">2023，新的开始</source>
+      <description>2023年，我结婚了，换工作了。这也意味着在 2024 年，一切都是新的开始，所以这篇文章命名为《新的开始》。</description>
+      <category>年终总结</category>
+      <pubDate>Mon, 01 Jan 2024 21:00:00 GMT</pubDate>
+      <content:encoded><![CDATA[<ul>
+<li>人物介绍
+<ul>
+<li>bbruceyuan，我，发哥</li>
+<li>点点，我对象</li>
+</ul>
+</li>
+</ul>
+<h2>结婚</h2>
+<h3>1</h3>
+<p>点点平常并不注重形象，但是1.13号，她生日的这一天，她突然想化妆了。</p>
+<p>点点说：“我们要不直接去拍结婚照，这样会有人帮我画个妆”。</p>
+<p>我回答：“好啊，太好了吧”。（“我其实是震惊的😱😱”）</p>
+<p>我转头和朋友徐健说这件事，把他吓了一跳，这件事情出现得太突然。我和点点是很久远以前讲过结婚的事，我以为两人都没放在心上，以至于我脑子也有点懵，“我觉得我还很年轻，我才刚毕业，不会现在就要结婚了吧。虽然我以前很想找一个老婆，但这个决定太突然了吧。一两个月都没说过这个事情，怎么突然就要去拍结婚照了”。尽管事出突然，但我其实并不是害怕结婚，所以最后在我的震惊中欣然前往。好在最后结婚照片拍的还不错（P 图水平挺好的，只是我有点认不出自己）。</p>
+<h3>2</h3>
+<p>5 月 25 日 -- 我们认识的那一天。这个日子很特殊，如果想要在这一天领证，我们必须在 2023 年完成领证，因为接下来的两年里面 5 月 25 日都是周末，想去领证民政局都不开门。如果错过了今年，就需要等到 2026 年 5 月 25 。</p>
+<p>如果说「决定去拍登记照」和「确定领征婚证时间」仓促得像是开玩笑，那么在两星期后突然说要延迟领证（没错，单方面宣布）就像是在耍猴。只能说不愧是点点，不通知父母也就算了，连我也是毫无预兆地收到通知。理由也奇葩到打死我都想不出。</p>
+<p>点点说：“有人邀请我去当伴娘，但是当伴娘需要未婚，所以我暂时还不能结婚。”</p>
+<p>我：“当伴娘这么重要吗？”</p>
+<p>“至少比我结婚要重要。我从来没当过伴娘。”</p>
+<p>该朋友（果果）的婚礼在 9 月份，期间各种讨论和准备各种事项，临近婚期的时候还要开腾讯会议商讨流程。比自己结婚上心多了，不过这是在我们自己结婚后才知道的。</p>
+<h3>3</h3>
+<p>能让点点延期领证时间的婚礼太让人期待了，我当然也没有错过。两人早上四点多就起床赶飞机北上，见识到了传说中的省政府家属大院（绿化和位置真好）。在这场盛大的婚礼中，幸福的氛围洋溢在每一个角落，桌上每个人都用自己的方式表达着对这对男才女貌的新人的祝福和羡慕。掏出手机拍照、录像的人仿佛没有停过，都想沾点喜气。</p>
+<p>不过最让我印象深刻的手捧花致辞环节，点点一如既往地稳定发挥，讲了<a href="https://www.bilibili.com/video/BV1Qh4y1h71U/" target="_blank" rel="noopener noreferrer">一段反响还不错的脱口秀</a>，不过不到五分钟。喜悦的背后也会有窘迫，主持人把我 cue 上台，明里暗里（明示）让我求婚，我真的是好尴尬，笨拙的我什么话也不出来，因为我不想因为环境迫使而求婚（不过直到领证也没有求婚😶😶）。</p>
+<p>事后，点点说起这个事情。她说，"发哥什么话都说不出来，我要怎么才能化解尴尬"。她在反思的过程中想到了一个极好的办法，“我应该在当时单膝给你跪下的，这样别人就会觉得我聪明。只不过我当时没有反应过来”（幸好没反应过来，不然对我而言会不会更尴尬？）。</p>
+<h3>4</h3>
+<p>国庆过得真快，我和徐健去了泰国，点点和钟雯去了贵州。这样的行程安排应该没人能想到我们在 10 月 7 号就要领证吧？双方父母没有见过面[1]，也没有一些正常的订婚等流程。我们两人用的戒指也是果果婚礼中的道具戒指。</p>
+<p>领证的那天挺开心的，还通过视频的方式将半天的时光浓缩 3 分钟里面，<a href="https://www.bilibili.com/video/BV1Z841167Pj/" target="_blank" rel="noopener noreferrer">《终于和富婆领证了》</a>。只是在第 3 天我想请婚假的时候，我才意识到我需要为那半天的开心买单。10月 7 号我已经请了半天婚假，但是<strong>婚假必须连休</strong>，也就表明我剩下的婚假捐给了血汗工厂。</p>
+<p>10 月 7 号，这是我和点点在一起的日子。我有个朋友说我和点点只能在一起两年，而 23 年 10 月 7 号刚好倒计时结束[2]，结束了情侣关系，变成了夫妻关系。一般情况，10 月 7 号都是非工作日，能在这一天领证也挺特殊的，以后都能在结婚纪念日放假，光是想想就觉得很幸福了。</p>
+<h3>总结</h3>
+<p>尽管婚前和婚后我觉得没有什么差别，两人的相处方式没有变化——点点依然做饭却不给我吃，洗衣服只洗自己的[3]。但这依然是新的开始，接下来我们将开启 5 年的婚姻生活（点点说生完娃就可以领离婚证），希望我不要净身出户。</p>
+<p>结婚后，最开始要面对的问题就是「什么时候生娃」，只是想想这个事情就觉得头大。这个责任太大了，感觉很难做好，而且现在上班没啥时间，心里慌得很。希望接下来的一年不会因为各种琐碎的事情闹矛盾，两人还能一如既往地好好聊天讨论问题。</p>
+<h2>工作</h2>
+<h3>LeetCode周赛</h3>
+<p>3 月份，我在 Twitter 中看到一篇大佬的年终总结 <a href="https://www.zackwu.com/posts/2022-11-26-it-was-random/" target="_blank" rel="noopener noreferrer">《二十三岁，当时只道是偶然》</a>。在震惊于年轻大佬的成就，也看到大佬面对工作的倦怠是如何做的。因为太牛逼了，所以我粘贴了部分原文。</p>
+<blockquote>
+<p>用更多的空余时间提升自我。在百无聊赖的航班上，仔细阅读逃生手册不失为一种消遣。从我对工作不再兴致高昂的那一天起，落入俗套地，我开始学习准备有朝一日的降落伞，Leetcode 刷题也好，提升英语能力也好，LinkedIn 探索也罢……虽然现在还没有到需要跳伞的那一天，但如今回首，我似乎也做完了很多事情：Leetcode 周赛全球前 100，不再担心任何公司的技术面试；雅思 8.5 分，不论是为了将来移民还是面试，都至少有了信心；以及各种日积月累学到的技能与知识。偶然而已，不过或许某一天这些偶然可以拼凑成完整的注定。</p>
+</blockquote>
+<p>"提前准备有朝一日的降落伞"，这句话对我触动很大。虽然那时候觉得自己今年不会跳槽，应该会等升 9 级失败的时候再跳槽，但我也开始学习大佬，写一写 LeetCode，只是没想到在 8 月份的时候就已经用上了。</p>
+<p>我从四月份开始刷 LeetCode 周赛，直到九月休假，大部分的周赛都参加了。我从也最一开始的 1400 提升到了 1700，成功加入<a href="https://space.bilibili.com/206214/" target="_blank" rel="noopener noreferrer">灵茶山当学徒</a>。</p>
+<p><img src="/blog_imgs/20240101165111.png" alt="20240101165111" loading="lazy"></p>
+<p>虽然和无辄这种全球前100的大佬相比有很大的差距，但是这个提升我很满意，这已经让我在接下来的面试中几乎不怎么担心写题。最重要的是，我发现我不再抗拒写题这件事情，以前总觉得写题没有意义（确实没意义），而现在却觉得这种即时的反馈还是挺爽的。会一个知识点就能 Accept 一道题，而在其他任何一个领域，都没法做到这一点。</p>
+<p>休假回来，入职新公司后，工作很疲劳，就再也没有参加过周赛。新的一年希望能重新捡起周赛的习惯，争取一年内突破到 Knight 段位（大概 1900 分）。</p>
+<h3>新的工作</h3>
+<p>迫于各类压力（晋升压力，同辈压力，错失LLM...）[4]，我在 8 月份的时候选择了跳槽。大佬的「降落伞理论」给了我很大的帮助，在这次跳槽中，我不用刻意准备刷题，只需要准备好简历就可以开始面试。因此这一次的面试没有半分的拖延，差不多用了一个月的时间就把大部分公司的流程都走完了。在面试过程中也遇到一些比较奇葩的事情[5]，不过好在非常幸运地拿到一些 offer。</p>
+<p>去年 12 月，chatGPT 的横空出世，几乎牵动着所有做 NLP 同学的心。不意外的，我也很想加入到其中做一点点可能更有意思的工作。但迫于能力和精力的不足，最终还是没能投入 LLM 预训练大潮中，而是选择了自己更为熟悉的 NLP 应用。（简历上永远不会有预训练核心技术了。。。）</p>
+<p>从鹅厂到了宇宙厂之后，工作量有了很明显的增加。最让我不适应的是：在我入职的第二周就安排了大量的活。刚开始的一个多月里面，我不得不每天干到十点多，我对朋友们说：如果一直这样的话，我觉得我干不了一年。我入职前的预期是晚上 9 点 30 下班，因为我入睡比较慢，一般 11 点就需要上床准备睡觉，而我又住的比较远。好在项目是有周期性的，一个项目结束之后就慢慢缓和下来，我也开始步入了新工作的正轨。</p>
+<p>换新工作后就不再为职级之类的事情烦恼了，大概率到这份工作结束都不能升级吧。不过也无所谓了，认识到自己的不足就可以减少对于工作的精力投入，这样大概率会过得更开心一些。在<a href="https://bruceyuan.com/post/ten-years-after-the-college-entrance-examination.html" target="_blank" rel="noopener noreferrer">《高考十年后》</a> 里面好像也有同样的期望。</p>
+<p>新的一年里，希望也能和以前一样不要背星，安全转正，不要被裁。</p>
+<h2>其他</h2>
+<ul>
+<li>健身。这是今年我做得最好的一件事。全年累计锻炼 95 次，平均每 4 天锻炼 1 次，<strong>我非常的满意</strong>。
+<ul>
+<li>24 年能保持差不多的节奏，全年锻炼 100 次以上就算成功。</li>
+</ul>
+</li>
+<li>播客[6]。终于完成了 22 年一直想做却没做的事情，录了 2 期播客，虽然内容很垃圾，但是<strong>我很满意</strong>。
+<ul>
+<li>希望在 24 年能录 4 期播客。</li>
+</ul>
+</li>
+<li>读书。今年读书和前两年相比少了一些，一共 13 本。我觉得写的最好的当属李笑来的<a href="https://book.douban.com/subject/25749845/" target="_blank" rel="noopener noreferrer">《把时间当做朋友》</a>，这本书仿佛有一种把自己看透的感觉。新工作还是比较累的，24 年大概率也不会读更多的书。
+<ul>
+<li>24 年全年读 12 本书，平均 1 个月读 1 本我就满意了。</li>
+</ul>
+</li>
+<li>博客。今年几乎没有写什么东西，全年年累计 UV 有 4k+, PV 有 9k+，也还不错吧。
+<ul>
+<li>希望能多更新博客，希望全年 UV 达到 10K, PV 达到 20K。</li>
+</ul>
+</li>
+</ul>
+<h2>补充</h2>
+<ul>
+<li>[1]. 写双方父母没见过面是因为决定结婚的时候双方还没见过。</li>
+<li>[2]. 我和点点在一起表白说得就是：我们开始倒计时吧？
+<ul>
+<li>具体见：<a href="/blog/how-i-met-bruce.html#_12" target="_blank">《How I Met Bruce》</a></li>
+</ul>
+</li>
+<li>[3]. 我很讨厌洗碗，如果我不吃饭就不用洗碗。点点有时候接受不了一个星期洗一次衣服，就只洗自己的。</li>
+<li>[4]. 组织架构变动会让我在年底答辩的时候不知道讲什么内容。同辈的同学收入远超我，有一定的自我压力。</li>
+<li>[5]. 面试奇葩问题
+<ul>
+<li>某面试官自己都不懂的东西问我装逼: <a href="https://oi-wiki.org/math/combinatorics/catalan/" target="_blank" rel="noopener noreferrer">卡特兰数</a>的时间复杂度上限；</li>
+<li>某深圳证券科技公司问一些奇葩问题：爱上领导怎么办？领导让你内蒙古出差？上古奇葩知识点（我面 NLP 大模型岗问大量 CV yolo 等相关的东西）真是哭笑不得。</li>
+</ul>
+</li>
+<li>[6]. 欢迎关注播客<a href="https://www.xiaoyuzhoufm.com/podcast/625a89560cab7e0abb960b6d" target="_blank" rel="noopener noreferrer">《打点酱油》</a></li>
+<li>历史的年终总结
+<ul>
+<li><a href="/blog/2022-year-summary.html" target="_blank">《2022，激荡中的平淡》</a></li>
+<li><a href="/blog/2021-year-summary.html" target="_blank">《2021，乌云与曙光》</a></li>
+<li><a href="/blog/2020-year-summary.html" target="_blank">《2020年过去了，我不怀念它》</a></li>
+</ul>
+</li>
+</ul>
+]]></content:encoded>
+      <enclosure url="https://bruceyuan.com/blog_imgs/20240101165111.png" type="image/png"/>
+    </item>
+    <item>
+      <title>高考十年后</title>
+      <link>https://bruceyuan.com/blog/ten-years-after-the-college-entrance-examination.html</link>
+      <guid>https://bruceyuan.com/blog/ten-years-after-the-college-entrance-examination.html</guid>
+      <source url="https://bruceyuan.com/rss.xml">高考十年后</source>
+      <description>现状 说起【高考、十年】这两个词，第一个涌入我脑海的，是高三那个百无聊赖的夜晚。我和WBX在聊「十年后我们会变成什么样子、现状会是什么样子」，但是当时描述的画面此刻却一点也想不起来，只是这件事情深深地印在我的脑海里。既然已经回忆不起来少年时候的我对于十年后的想象，那么此时坐在电脑前面的我倒是可以简单介绍一下现在的状态。 工作 （不满意） 毫无疑问，十年...</description>
+      <category>杂谈</category>
+      <pubDate>Sat, 17 Jun 2023 14:00:00 GMT</pubDate>
+      <content:encoded><![CDATA[<h2>现状</h2>
+<p>说起【高考、十年】这两个词，第一个涌入我脑海的，是高三那个百无聊赖的夜晚。我和WBX在聊「十年后我们会变成什么样子、现状会是什么样子」，但是当时描述的画面此刻却一点也想不起来，只是这件事情深深地印在我的脑海里。既然已经回忆不起来少年时候的我对于十年后的想象，那么此时坐在电脑前面的我倒是可以简单介绍一下现在的状态。</p>
+<h3>工作 （不满意）</h3>
+<p>毫无疑问，十年后的自己早已离开了校园，成了一个社畜。目前是一个程序员，但是我觉得我干的并不开心，可能是干得不够好。一件事情做不好，自然不会有动力做下去，也就有了播客中提到的【不知道为什么从（2023）5月份以来，我一做到工位上就会很烦躁，不满的情绪挥之不去，每天上班的唯一的动力就是等下班】，但是仔细想想，可能就是对现状的不满。我对自己不满意，我对工作很焦虑，我不认为自己有足够的能力给自己 H1 一个满意的答复。更仔细的想，可能是因为 23年 H1 我付出了比以前更多地努力，但是几个月过去却没有什么进展，自然会对自己心生不满。XJ 给我分享了一篇 Sam altman 的文章<a href="https://blog.samaltman.com/how-to-be-successful" target="_blank" rel="noopener noreferrer">《How To Be Successful - Sam Altman》</a>，我很受启发，但是收启发的点不是真的如何变成功，而是解释了为什么自己会焦虑，原文是这么写的：你总是会错误的计算风险。你总是专注于让自己跟上别人的步伐，尽管是在短期内，也不想在竞争中落后。</p>
+<blockquote>
+<p>You will usually get risk calculations wrong. You’ll be very focused on keeping up with other people and not falling behind in competitive games, even in the short term.</p>
+</blockquote>
+<h3>生活 （满意）</h3>
+<p>工作不是生活的全部，业余生活不受工作的影响，因为绝大部分情况，我周末是可以完全脱离工作的。我可以做一切我想做的事情，尽管一般情况我会选择什么也不做。</p>
+<p>说到生活，最值得提及的可能是有了女朋友，而且让我最为欣慰的点是，两年后的我们也并没有陷入无话可谈的地步（我感觉我挺怕没话说的），甚至我们还能一起坐下来正经的录一期播客（这真的太让人开心了吧）。我们只是一起录了两期节目，剪辑之后加起来只有 40分钟，却让我觉得意义非凡，因为这是我想做又没做快两年的事情。</p>
+<blockquote>
+<p>从第一次想录博客到最后终于动手录第一期博客，时间跨度长达 1.5 年。</p>
+</blockquote>
+<p>除了播客外，「（基本上）坚持不懈的锻炼」让我很满意。从去年开始就有<a href="/post/35.html" target="_blank">陆续的锻炼</a>，因为疫情新冠，23年1月没有锻炼，从2月恢复以来，基本每周都有保持运动的习惯，到写这篇文章的时候，已经累计运动 50次，平均每周锻炼 3 次，完全达成了我年初制定的目标，当然，这也是唯一一个达成的目标。</p>
+<h2>回忆</h2>
+<p>但本文并不是想审视现在的状态，是希望能回顾一下近十年我作对了什么，做错了什么，所以选了三件我觉得最重要的三件事。</p>
+<h3>高中复读 （错）</h3>
+<p>遥想十年前的这些日子，（6.7 - 6.20+）期间，高考刚刚结束，但是此刻分数还没有出来。印象里我应该是整天都躺在房间里面看小说，在看番茄的《莽荒纪》。毕竟因为高考，有很多更新都需要补上，但那时候的我不知道读大学之后我会弃坑，也不知道我其实并不那么喜欢看网络小说。</p>
+<p>美好的日子总是短暂的，躺在床上看小说的日子也不可能持续一辈子，因为高考出分了。出分后我自然再也没有心情看小说，具体分数我有点忘记了，应该是只比一本线高一二十分，排名都已经是一万多名了（江西考生不多）。我对比了一下我身边和我成绩差不多的同学，发现这些同学高考成绩都高我二三十分，在学校排名也确实退后了一百多名，当然这些其实都不重要。</p>
+<p>重要的是我犯了一个我至今都还在犯蠢的错误（前文已经提到过），<code>I am be very focused on keeping up with other people</code>。 是的，尽管其实我已经完成了我高考的目标（我心里面觉得上个南昌大学就不错了，事实上我对于其他学校也并没有任何的认识），但是我却<strong>毅然决然的决定要去复读</strong>。现在看来真的是一个愚蠢的决定，我身边的朋友们也一定觉得我是个傻X。「考得并不差的却要去复读」这个决定，是过分得高估自己，现在我觉得他们的认识一点都没错。读大学之后，我认识到了自己是一个普通人，不管是智商还是认知都不属于超过平均线的那种，但是我还是时常烦恼自己做的不够好，不如我希望的那般好。这里在外人看来，当然还是过分的高估自己，但是我知道这里还有有细微的差别，现在烦恼主要是无能狂怒，还是想要很多（原先是认知问题，现在是欲望问题）。</p>
+<p>因为决定要复读，我是头也没回地决定要报名，这里又犯了一个无可救药的错误：<strong>未调研匆忙做决定</strong>。这里的决定指的是<code>进入原县中学复读班</code>。明明也有市中学的学校打电话问我要不要他们学校读书，但那个时候的我什么都不懂，我完全没有考虑去更高级的学校里面复读。因此我呆在了原县中学复读班，在一个 80% 的同学目标是考二本学校的环境里面，我好像几乎没有任何的进步，只是在重复的计算 1 + 1 = 2 罢了。这也是我关于高考最后后悔的一件事，我应该好好调研选择一个好的环境，这样才能对得起这么一年的时间。（如果那时候有人点醒我这一点就好了，但是我又怎么会听呢？就像别人让我不要复读，我同样是当做了耳旁风。）</p>
+<h3>大学转专业 （对）</h3>
+<p>复读一年的时间过得很快，转眼间第二次高考也结束了，需要报志愿。我依然什么都不懂，所有的信息来源只是那一本官方统一发的《高考报名指南》，里面是每个学校每个专业排名等。后面我去了东北大学的冶金工程，班里 90% 以上的同学都是被调剂过来的，当然这是在读大学后才知道的。原来这么多人不是主动选择这个专业的，但我心里面依然没觉得这不是什么重要的事情，直到我在贴吧里面看到冶金就业多危险之后，我才觉得如果可以的话，我得去一个本科毕业就可以工作且工作环境不危险的专业。</p>
+<p>大学过去一年之后，学习成绩排名还可以，完全可以转专业，然后随大流的，成绩前 10% 的就去了信息学院（后面改成计算机学院），成绩前30%的同学就很多转去了软件工程。我最后转专业去了物联网，当然是因为计算机去不了，又不想去电子、通信之类，又看不上软件，但那时的我又怎么会知道其实去软件工程也许才是最优解呢（这个错误直到保研的时候都还重演）。幸运的是，我们学校的物联网和计算机一起上课，课程设置上几乎完全一样。</p>
+<p>转专业这个决定对我的重要影响在大三的时候开始显现出来了。大三的我很想去工作的，这个时候发现计算类的专业找工作真的比其他专业好太多，进可以去大公司工作，退还可以保研继续读书。最后我选择的策略是：能去BAT上班就不接着读书。后面我去读研了，原因是本科的时候没有拿到BAT任何一家的offer。</p>
+<p>计算机专业慢慢成了最热专业，没过多久就到了顶点，公司裁员、就业变得更加困难。这个时候我能够有一口饭吃，全是因为我当时<strong>转了专业</strong>。尽管不如早些年入行的人一般享受红利，但是依然<strong>比我做其他事情获得更大的收益</strong>，所以我只有<strong>感恩！感恩！感恩！</strong></p>
+<h3>毕业工作选择（错）</h3>
+<p>在说工作选择之前，我必须得说：经过长期的上网冲浪和各种言论，我对于发达国家总是有一种莫名的向往。这也许和我长期以来的思考习惯有关，当我因为自身的局限性自己不能做出判断的时候，我就会看“厉害的人是怎么选择的”。</p>
+<blockquote>
+<p>初中升高中的时候，我爸妈就非常希望我去读个免费师范大专或者中专，我本身也没有什么想法（那时候我对于大专本科等没有啥了解，我一直认为读二本就非常的难），也没有其他人给我建议，但看到学习成绩好的人一般都不会这么选择，所以最终上了高中。</p>
+</blockquote>
+<p>我和XJ总是把『真的好想去美国打工啊』挂在嘴边，就非常想去发达国家看看。但是硕士毕业之后，我面临着去新加坡工作还是继续待在国内工作两个选择的时候，我选择了国内。原因必然会有很多，主要原因是因为我害怕自己出国之后找不到老婆（误），虽然不可思议，但这真的是我比较担心的一点。不过后来的结果很好，我留在国内之后确实找到了女朋友（见前面好几篇博客）。现状是我达成了找女朋友的目标，所以这个选择好像也没有错。</p>
+<p>既然这篇文章是『反思自己』，那么假设我现在没有女朋友。我应该会非常非常非常后悔待在国内。</p>
+<ol>
+<li>对于我这样条件的人来说，要是找不到女朋友还是会有比较大的心里压力；</li>
+<li>工作上我自然是从头到尾都不喜欢它。</li>
+</ol>
+<p>我也非常想有更丰富的生活，直到现在，我还是会畅想：假设我要是出国了，是不是会更有意思一点呢？</p>
+<h2>未来</h2>
+<p>虽然口口声声说着要想清楚自己要做的事情，但是真正落到自己头上之后就会一团浆糊。未来很模糊，我完全不知道自己想干什么，但是我现在唯一明确的一点是：28定律在人生道路上处处存在，我们只要尽力去做好那 20% 重要的事情。</p>
+<blockquote>
+<p>这里说一下我对于 28 定律和选择区别的认识。选择更多的是一个决定/念头，比如去出国工作还是呆在国内工作，不同的选择之间一般是互斥的。但是做28定律中比较重要的20%事情，这些选择集合里面的事情不是互斥的，比如：工作和生活，有人觉得享受生活是对自己更重要的事情，有人觉得工作上获得成功是更重要的，但是每一个人都要至少要去工作和生活，只是侧重点不一样而已。 不过两者也是有联系的，毕竟挑选那20%重要的事情就是一种非常重要的选择。</p>
+</blockquote>
+<p>既然看不清太远，不如就此看看我希望一年后的自己能有一些什么结果？</p>
+<h3>长期主义</h3>
+<p>我希望自己开始践行一些长期主义的事情。比如开始进行长期的定投，希望能有较大的金额投入；能有自己开发的一个小 Demo，不管是什么东西，至少能开始写一个网站，把它部署起来；持续的锻炼，平衡工作和生活的基础上每周锻炼3次。</p>
+<h3>换工作</h3>
+<p>希望一年之后能换一份工作。一年之后如果晋升失败，应该是要换工作的。现在实在是太痛苦了，干的事情没有任何的意义。按照李笑来的说法，干得不爽很有可能是因为干得不好，如果一件事情能干出成绩，那么这件事情大概率就能变成你的兴趣。显然，工作上我暂时不知道怎么才能干得好，所以就先不管了吧，换一个老板试试。</p>
+<h3>内容输出</h3>
+<p>希望以后能进行内容输出。我总是会在网上看到各种琐碎的知识，但是更多的时候，我还是希望能看一些完整的内容，因此我希望我自己能开始写一本「计算机相关的小书」，具体写啥还没想好，这本小书是不是也许会让我内心平静一些？我最佩服的作者，<a href="https://geektutu.com/" target="_blank" rel="noopener noreferrer">极客兔兔</a>，他的行动力真的是太强了，当决定好要行动的时候就马上开始写。突然有想到李笑来说，做任何一件事情最好的时间都是当下，马上开始。那我开始每周写一篇博客先吧。。。？</p>
+<h3>个人体验</h3>
+<p>工作的两年半让我越发感觉到体验的重要性，这种体验不是指旅游、消费带来的体验，而是生活方式和生活经历的体验。生活经历丰富的人无论最终结果如何，都是那么的吸引人。我举两个例子：一个是我的女朋友，一个是萍水相逢的网友。</p>
+<ul>
+<li>在刚认识女朋友的时候，我们两就有非常多的话可以聊，除了她记忆力好之外的最重要原因就是她生活经历比我丰富多了，丰富体现在：她毕业后卖过保险、进过普通国企打工，去当过考研教研，考公当公务员，都是同一届的学生，但是毕业之后她的人生就已经是我的三倍长了；在顺利毕业的情况，毕业前她写过短文小说，折腾过公众号，尝试过网文写作，考过N2，上过双学位（虽然我一点也不觉得有用）。这些东西在和别人聊天的过程就变成了让人印象深刻的特点。</li>
+<li>第二个网友的例子是：有一次见网友的时候，一开始还挺尴尬的，感觉没啥可说的，但是后面提到他在组了一个外包公司，写各种外包，在我眼中瞬间就变成了一副大学生创业咖的模样，然后也就有了更多可以交流的话题。</li>
+</ul>
+<p>不过这个我不知道应该做点什么？</p>
+<h2>总结</h2>
+<p>我现在真的只有感恩，真的是太多的人给了我很多的帮助，运气真好，运气太重要了。</p>
+]]></content:encoded>
+    </item>
+  </channel>
+</rss>
