@@ -6,13 +6,13 @@ import sidebar from "./sidebar.js";
 export default hopeTheme({
   // basic info
   hostname: "https://bruceyuan.com",
-  favicon: "/img/icon.jpg",
+  favicon: "/img/icon.webp",
   author: {
     name: "bbruceyuan",
     url: "https://bruceyuan.com",
   },
 
-  logo: "/img/icon.jpg",
+  logo: "/img/icon.webp",
   repo: "bbruceyuan",
   docsRepo: "bbruceyuan/bbruceyuan.github.io",
   docsDir: "docs",

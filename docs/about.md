@@ -7,14 +7,14 @@ permalink: /about.html
 article: false
 tag:
   - 关于我
-image: /img/icon.jpg
+image: /img/icon.webp
 ---
 
 ## 个人介绍
 
-我是想打酱油与不想打酱油的矛盾体！欢迎通过留言和我交流，也可以通过[播客-打点酱油](https://www.xiaoyuzhoufm.com/podcast/625a89560cab7e0abb960b6d)了解我更多～
+我是想打酱油与不想打酱油的矛盾体！欢迎通过留言和我交流，也可以通过「[播客-打点酱油](https://www.xiaoyuzhoufm.com/podcast/625a89560cab7e0abb960b6d)」了解我更多～
 
-目前（2024-10）真的开始尝试做对他人有意义的事情了～，可以看「B 站」和「油管」视频，这样的生活似乎更有意思一些～
+目前（2024-10）真的开始尝试做对他人有意义的事情了～，可以看「[B 站](https://space.bilibili.com/12420432)」和「[油管 YouTube](https://www.youtube.com/@bbruceyuan)」视频，这样的生活似乎更有意思一些～
 
 ## 其他申明
 
