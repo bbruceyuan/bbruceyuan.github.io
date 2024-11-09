@@ -4,6 +4,7 @@ date: 2024-08-18T12:00:00
 star: true
 tag:
   - transformer
+  - LLM
 category:
   - hands-on-code
 description: 在 AI 相关的面试中，经常会有面试官让写 self-attention，但是 transformer 这篇文章其实包含很多的细节，因此可能面试官对于 self-attention 实现到什么程度是有不同的预期。因此这里想通过写不同版本的 self-attention 实现来达到不同面试官的预期，四个不同的版本，对应不同的细节程度。

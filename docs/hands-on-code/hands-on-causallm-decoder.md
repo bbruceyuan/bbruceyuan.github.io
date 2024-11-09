@@ -4,6 +4,7 @@ date: 2024-08-18T13:00:00
 star: true
 tag:
   - transformer
+  - LLM
 category:
   - hands-on-code
 description: 手写一个 Causal Language Model，或者说简化版的 transformer 中的 decoder。
@@ -117,6 +118,10 @@ class SimpleDecoder(nn.Module):
             self.up_proj(X),
         )
         down = self.down_proj(up)
+
+        # 执行 dropout
+        down = self.drop_ffn(down)
+
         # 进行 norm 操作
         return self.layernorm_ffn(X + down)
 
