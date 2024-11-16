@@ -21,6 +21,7 @@ image: img/link.png
 | 名称                             | 描述                     |
 | -------------------------------- | ------------------------ |
 | [极客兔兔](https://geektutu.com) | 致力于分享有趣的技术实践 |
+| [代码笔记](https://freelifeblog.top/) | 热爱生活，保持好奇心 |
 
 ## 申明
 
@@ -32,7 +33,7 @@ image: img/link.png
 >
 > 格式：
 >
-> 站点名称：用代码打点酱油的Bruce
+> 站点名称：用代码打点酱油的chaofa
 >
 > 站点描述：平常写 Python, 对 NLP、大模型、计算广告有一些研究，尝试做一些有意义的事情~
 >
@@ -40,4 +41,4 @@ image: img/link.png
 >
 > 已加友链：<https://bruceyuan.com/link.html>
 >
-> 常用网名：英文: bbruceyuan，中文：用代码打点酱油，打点酱油，混学大师，用代码打点酱油的Bruce
+> 常用网名：英文: bbruceyuan，bruce yuan，中文：用代码打点酱油，打点酱油，混学大师，用代码打点酱油的chaofa
