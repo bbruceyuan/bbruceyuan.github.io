@@ -20,6 +20,8 @@ permalink: /hands-on-code/hands-on-lora.html
 
 LoRA 有很多的优点，节约显存，训练快，效果损失较小（相对于全参数微调），推理的时候不增加耗时，可以做一个插入式组件使用。缺点当然也有，那就是还是会有一些效果的损失（笑）。
 
+> 减少显存占用的主要原因是训练参数变小了（比如只对 qkv 层做 LoRA）
+
 ## 核心原理
 
 核心原理非常的简单，任意一个矩阵 $W_0$，都可以对它进行低秩分解，把一个很大的矩阵拆分成两个小矩矩阵[^1]（$A,B$），在训练的过程中不去改变 $W_0$ 参数，而是去改变 $A B$。具体可以表示为
@@ -32,7 +34,8 @@ $$\text{s.t.} \quad W_0 \in \mathbb{R}^{n \times m}, \; A \in \mathbb{R}^{n \tim
 
 - 为什么说只优化 AB 两个矩阵就可以了呢？这里面的假设是什么？
 - $W$ 不是满秩的，里面有大量参数是冗余的，那么其实可以用更接近满秩的矩阵 AB 代替。
-> 矩阵都可以表示为若干个线性无关向量，最少的线性无关向量个数就是秩
+> 矩阵都可以表示为若干个线性无关向量，最大的线性无关向量个数就是秩
+
 
 ## PyTorch 代码实现
 ```python
@@ -90,9 +93,11 @@ class LinearLoRALayer(nn.Module):
     
     def forward(self, X):
         # X shape is (batch, seq_len, in_feature)
-        # lora_a 是 in_feature * rank
-        if self.rank > 0:
+        # lora_a 是 out_features * rank
+        if self.rank > 0 and not self.merge:
             output = self.linear(X) + self.scale * ( X @ (self.lora_a @ self.lora_b).T )
+        elif self.rank > 0 and self.merge:
+            output = self.linear(X)
         else:
             output = self.linear(X)
         
@@ -100,11 +105,11 @@ class LinearLoRALayer(nn.Module):
 
     def merge_weight(self, ):
         if self.merge and self.rank > 0:
-            self.linear.weight.data += self.lora_a @ self.lora_b
+            self.linear.weight.data += self.scale * (self.lora_a @ self.lora_b)
     
     def unmerge_weight(self, ):
         if self.rank > 0:
-            self.linear.weight.data -= self.lora_a @ self.lora_b
+            self.linear.weight.data -= self.scale * (self.lora_a @ self.lora_b)
 
 
 # 写一段测试代码
