@@ -22,6 +22,11 @@ LoRA 有很多的优点，节约显存，训练快，效果损失较小（相对
 
 > 减少显存占用的主要原因是训练参数变小了（比如只对 qkv 层做 LoRA）
 
+> [!info]
+> 不喜欢看文字的同学可以看 [B站视频-用代码打点酱油](https://www.bilibili.com/video/BV1fHmkYyE2w/),
+> 
+> 或者视频号：用代码打点酱油
+
 ## 核心原理
 
 核心原理非常的简单，任意一个矩阵 $W_0$，都可以对它进行低秩分解，把一个很大的矩阵拆分成两个小矩矩阵[^1]（$A,B$），在训练的过程中不去改变 $W_0$ 参数，而是去改变 $A B$。具体可以表示为
@@ -71,7 +76,8 @@ class LinearLoRALayer(nn.Module):
                 torch.zeros(out_features, rank)
             )
             # lora_a 需要初始化为 高斯分布
-            nn.init.kaiming_uniform_(self.lora_a, a=math.sqrt(5))
+            # @春风归无期 提醒我 @用代码打点酱油的chaofa : 在调用凯明初始化的时候注释里写的高斯分布，调用的却是均匀分布，而且参数a的值设置的是根号5，但a表示的是leaky relu的负斜率系数，一般是0.01这样的小值，不可能超过1
+            nn.init.kaiming_normal_(self.lora_a, a=0.01)
 
             self.lora_b = nn.Parameter(
                 torch.zeros(rank, in_features)
