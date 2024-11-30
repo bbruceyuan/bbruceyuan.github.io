@@ -33,7 +33,7 @@ image: img/link.png
 >
 > 格式：
 >
-> 站点名称：用代码打点酱油的chaofa
+> 站点名称：chaofa用代码打点酱油
 >
 > 站点描述：平常写 Python, 对 NLP、大模型、计算广告有一些研究，尝试做一些有意义的事情~
 >
@@ -41,4 +41,4 @@ image: img/link.png
 >
 > 已加友链：<https://bruceyuan.com/link.html>
 >
-> 常用网名：英文: bbruceyuan，bruce yuan，中文：用代码打点酱油，打点酱油，混学大师，用代码打点酱油的chaofa
+> 常用网名：英文: bbruceyuan，bruce yuan，中文：用代码打点酱油，打点酱油，混学大师，chaofa用代码打点酱油，用代码打点酱油的chaofa

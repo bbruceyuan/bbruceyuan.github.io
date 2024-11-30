@@ -7,7 +7,7 @@ import theme from "./theme.js";
 
 export default defineUserConfig({
   lang: "zh-CN",
-  title: "用代码打点酱油的chaofa",
+  title: "chaofa用代码打点酱油",
   description:
     "做了一个播客叫做打点酱油，平常写 Python, 对 NLP、计算广告、大模型感兴趣，尝试做一些有意义的事情",
 

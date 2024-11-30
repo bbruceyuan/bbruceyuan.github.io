@@ -23,7 +23,8 @@ LoRA 有很多的优点，节约显存，训练快，效果损失较小（相对
 > 减少显存占用的主要原因是训练参数变小了（比如只对 qkv 层做 LoRA）
 
 > [!info]
-> 不喜欢看文字的同学可以看 [B站视频-用代码打点酱油](https://www.bilibili.com/video/BV1fHmkYyE2w/),
+>
+> 不喜欢看文字的同学可以看 [B站视频-chaofa用代码打点酱油](https://www.bilibili.com/video/BV1fHmkYyE2w/),
 > 
 > 或者视频号：用代码打点酱油
 
