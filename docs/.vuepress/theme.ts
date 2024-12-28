@@ -8,7 +8,7 @@ export default hopeTheme({
   hostname: "https://bruceyuan.com",
   favicon: "/img/icon.webp",
   author: {
-    name: "bbruceyuan",
+    name: "chaofa",
     url: "https://bruceyuan.com",
   },
 

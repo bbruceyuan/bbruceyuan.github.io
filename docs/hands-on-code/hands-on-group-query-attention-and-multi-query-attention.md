@@ -1,5 +1,5 @@
 ---
-title: 手写大模型组件之Group Query Attention，从 MHA -> MQA -> GQA
+title: 手写大模型组件之Group Query Attention，从 MHA，MQA 到 GQA
 date: 2024-12-08T22:00:00
 star: true
 tag:
@@ -13,7 +13,11 @@ permalink: /hands-on-code/hands-on-group-query-attention-and-multi-query-attenti
 banner: https://bruceyuan.com/img/huggingface.png
 ---
 
-GQA（Group Query Attention）的优点：效果损失小，推理的时候可以加速（来自于kvcache小，内存取数少）。
+- GQA（Group Query Attention）的优点：效果损失小，推理的时候可以加速（来自于kvcache小，内存取数少）。
+- 仔细阅读 MHA, MQA 和 GQA的区别，就会发现 MHA 和 MQA 都是 GQA 的特殊表达形式
+    - 三者可以用同一套代码，只需要修改【GQA】代码里面的 `nums_key_value_head` 参数就可
+    - `nums_key_value_head` 设置等于 1 就是 MQA
+    - `nums_key_value_head` 设置等于 `nums_head` 就是 MHA
 
 
 ## multi-head self-attention
