@@ -7,7 +7,7 @@ tag:
   - LLM
 category:
   - hands-on-code
-description: 
+description: 了解注意力机制变体，包括MHA（Multi-Head Attention）、MQA（Multi-Query Attention）和GQA（Group Query Attention）。通过手写代码实现，探讨三种注意力机制的异同，以及GQA在推理性能优化方面的优势。
 publish: true
 permalink: /hands-on-code/hands-on-group-query-attention-and-multi-query-attention.html
 banner: https://bruceyuan.com/img/huggingface.png
