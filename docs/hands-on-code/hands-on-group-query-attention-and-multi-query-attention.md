@@ -20,7 +20,16 @@ banner: https://bruceyuan.com/img/huggingface.png
     - `nums_key_value_head` 设置等于 `nums_head` 就是 MHA
 
 
+
+> 如果不喜欢看文字的同学可以查看 [B站](https://space.bilibili.com/12420432) 或者 [YouTube](https://www.youtube.com/@bbruceyuan) 视频。
+> 
+> B站：[https://www.bilibili.com/video/BV1ZmqpYfEGY/](https://www.bilibili.com/video/BV1ZmqpYfEGY/)
+> 
+> YouTube: [https://www.youtube.com/watch?v=1jBW7qcyd7A&t=1s](https://www.youtube.com/watch?v=1jBW7qcyd7A&t=1s)
+
+
 ## multi-head self-attention
+> 备注：也可以直接由 GQA 中修改参数得到。但是本代码更完整一些
 
 ```python
 import math

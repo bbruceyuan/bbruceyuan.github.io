@@ -22,19 +22,29 @@ LoRA 有很多的优点，节约显存，训练快，效果损失较小（相对
 
 > 减少显存占用的主要原因是训练参数变小了（比如只对 qkv 层做 LoRA）
 
-> [!info]
+
 >
 > 不喜欢看文字的同学可以看 [B站视频-chaofa用代码打点酱油](https://www.bilibili.com/video/BV1fHmkYyE2w/),
 > 
-> 或者视频号：用代码打点酱油
+> 或者视频号：chaofa用代码打点酱油
+
 
 ## 核心原理
 
 核心原理非常的简单，任意一个矩阵 $W_0$，都可以对它进行低秩分解，把一个很大的矩阵拆分成两个小矩矩阵[^1]（$A,B$），在训练的过程中不去改变 $W_0$ 参数，而是去改变 $A B$。具体可以表示为
+
 $$W_{new} = W_0 + AB \tag{1}$$
+
 最终在训练计算的时候是
-$$h = W_0x + ABx = W_0 + \frac{\alpha}{r}ABx\tag{2}$$
+
+$$h = W_0x + ABx = (W_0 + AB)x\tag{2}$$
+
+但是一般来说，AB 会进行一定的缩放，使用 $\frac{\alpha}{r}$ 作为缩放因子，所以最终会写成
+
+$$h = (W_0 + \frac{\alpha}{r}AB)x\tag{3}$$
+
 $$\text{s.t.} \quad W_0 \in \mathbb{R}^{n \times m}, \; A \in \mathbb{R}^{n \times r}, \; B \in \mathbb{R}^{r \times m}$$
+
 其中 $r << n \text{ and } r << m$，$r$ 甚至可以设置成 1。
 
 
@@ -87,6 +97,7 @@ class LinearLoRALayer(nn.Module):
 
             # linear 需要设置为不可以训练
             self.linear.weight.requires_grad = False
+            self.linear.bias.requires_grad = False
         
         self.dropout = nn.Dropout(
             dropout
@@ -184,3 +195,4 @@ print("Max difference after merge/unmerge cycle:",
 - [从 self-attention 到 multi-head self-attention](/hands-on-code/from-self-attention-to-multi-head-self-attention.html)
 - [手写 transformer decoder（CausalLM）](/hands-on-code/hands-on-causallm-decoder.html)
 - [LLM 大模型训练-推理显存占用分析](/post/llm-train-infer-memoery-usage-calculation.html)
+- [手写大模型组件之Group Query Attention，从 MHA，MQA 到 GQA](https://bruceyuan.com/hands-on-code/hands-on-group-query-attention-and-multi-query-attention.html)
