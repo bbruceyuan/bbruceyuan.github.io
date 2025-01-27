@@ -38,7 +38,8 @@ class BasicExpert(nn.Module):
         return self.linear(x)
 ```
 
-基础班的的 MOE 可以看这个图，非常的简单。
+基础版本的 MOE 可以看这个图，非常的简单。
+
 ![llms-zero-to-hero-basic-moe-model](/llms-zero-to-hero/basic-moe-model.png)
 
 ```python
