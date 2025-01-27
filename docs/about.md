@@ -17,6 +17,20 @@ image: /img/icon.webp
 目前（2024-10）真的开始尝试做对他人有意义的事情了～，可以看「[B 站-chaofa用代码打点酱油](https://space.bilibili.com/12420432)」和「[油管 YouTube-chaofa用代码打点酱油](https://www.youtube.com/@bbruceyuan)」视频，这样的生活似乎更有意思一些～
 
 
+## 相关信息介绍
+- hi，我是 chaofa，目前是个**大模型算法工程师**，除了 LLM 之外，对于搜索、广告也有一定的了解~
+- 这是我的 [notion blog](https://www.notion.so/11a569b3ecce49b2826d679f5e2fdb54?pvs=21)
+    - 记录平常的一些学习记录，主要是 paper阅读方面的内容~
+    - 此外会记录一些公开的创作计划
+- 个人中文博客： [**chaofa用代码打点酱油](https://bruceyuan.com) （推荐）**
+- 个人同名公众号
+
+![chaofa用代码打点酱油](/llms-zero-to-hero/chaofa-wechat-official-account.png)
+
+
+如果我的教程哪里有问题，也可以加我wx: bbruceyuan 进行反馈，感激~
+
+
 ## 其他申明
 
 对本站的任何问题都可以直接在文章下进行评论。

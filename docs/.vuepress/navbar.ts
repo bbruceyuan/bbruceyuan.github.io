@@ -4,6 +4,10 @@ import { navbar } from "vuepress-theme-hope";
 export default navbar([
   /* 你的导航栏配置 */
   {
+    text: "LLMs-Zero-to-Hero",
+    link: "https://bruceyuan.com/llms-zero-to-hero/",
+  },
+  {
     text: "YouTube",
     icon: "Youtube",
     link: "https://www.youtube.com/@bbruceyuan",
