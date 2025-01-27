@@ -1,5 +1,5 @@
 ---
-title: LLM MOE的进化之路，从普通简化 MOE，到 spare_moe，再到 Deepseep 中的 share_expert_spare_moe
+title: LLM MOE的进化之路，从普通简化 MOE，到 spare_moe，再到 deepseek 使用的 share_xpert_spare_moe
 date: 2025-01-27T19:30:00
 star: true
 tag:
