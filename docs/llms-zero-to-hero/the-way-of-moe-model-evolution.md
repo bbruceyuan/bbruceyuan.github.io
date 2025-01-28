@@ -1,5 +1,5 @@
 ---
-title: LLM MOE的进化之路，从普通简化 MOE，到 spare_moe，再到 deepseek 使用的 share_expert_spare_moe
+title: LLM MOE的进化之路，从普通简化 MOE，到 sparse_moe，再到 deepseek 使用的 share_expert_sparse_moe
 date: 2025-01-27T19:30:00
 star: true
 tag:
@@ -20,6 +20,7 @@ banner: https://bruceyuan.com/img/huggingface.png
 - 基础版MOE。理解 MOE 在干什么？
 - 大模型训练用的 SparseMoE。了解大模型怎么做 MOE 训练？
 - Deepseek 用的 shared_expert SparseMoE。了解 MOE 模型如何进化？
+- 视频讲解见： 
 
 ## 2. 版本1：基础版本MOE
 输入是一个 Token, 输出是一个 Token Embedding。暂时先不考虑 MOE 得到的  Embedding 怎么使用。
