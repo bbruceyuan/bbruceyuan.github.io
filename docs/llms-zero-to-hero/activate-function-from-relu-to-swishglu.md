@@ -56,7 +56,7 @@ $$
 GELU(x) = x  P(X \le x) = x  \Phi(x)  \tag{3}
 $$
 
-其中 $\Phi(x) $ 是标准正态分布的累计分布函数，定义为 
+其中 $\Phi(x)$ 是标准正态分布的累计分布函数，定义为 
 $$
 \Phi(x) = \frac{1}{2}(1 + erf(\frac{x}{\sqrt{2}}))  \tag{4}
 $$
@@ -93,16 +93,18 @@ $$
 FFN(W_1, W_2, x) = \text{Swish}(xW_1)W2 \tag{6}
 $$
 
-共有两个可学习的矩阵。
+共有两个可学习的矩阵，其中 $w_1,(4, 4h)$ 是升维矩阵，$w_2,(4h, h)$ 是降低维度的矩阵。
 
 #### 3.2 GLU 门控单元
-GLU，Gated Linear Units，是一种门控结构（有参数），通过 sigmoid 控制不同维度的激活。公式如下[^1]：
+GLU，Gated Linear Units，是一种门控结构（有参数，因此相对于普通的激活函数多了一个 `gate` 矩阵），通过 sigmoid 控制不同维度的激活。公式如下[^1]：
 
 $$
 GLU(W, x, V, b, c) = (Wx + b) \otimes \text{sigmoid}(Vx + c)  \tag{7}
 $$
 
 这里是不是熟悉 LSTM, GRU 的同学一下就理解，其中需要注意的是，`b, c` 对应的 bias 不是必须的。
+
+对比公式 7 和公式 9，公式 9 中的 $w_{up}$ 对应 公式 7 中的 $W$，而 $w_{gate}$ 对应公式 7 中的 $V$ 矩阵。
 
 
 #### 3.3 swishGLU 的表达形式
@@ -152,9 +154,9 @@ class FFNExpert(nn.Module):
         # 这里可以自己去优化成 multiple_of 的倍数
         mid_dim = hidden_dim * 8 // 3
 
-        self.up = nn.Linear(hidden_dim, mid_dim)
-        self.down = nn.Linear(mid_dim, hidden_dim)
-        self.gate = nn.Linear(hidden_dim, mid_dim)
+        self.up = nn.Linear(hidden_dim, mid_dim, bias=False)
+        self.down = nn.Linear(mid_dim, hidden_dim, bias=False)
+        self.gate = nn.Linear(hidden_dim, mid_dim, bias=False)
 
         self.dropout = nn.Dropout(dropout)
 
@@ -178,7 +180,7 @@ class FFNExpert(nn.Module):
 
 
 最后欢迎关注我，基本全网同名 [chaofa用代码打点酱油](https://bruceyuan.com/)
-- 公众号： ![chaofa用代码打点酱油](/llms-zero-to-hero/chaofa-wechat-official-account.png)
+- 公众号： ![chaofa用代码打点酱油](https://bruceyuan.com/llms-zero-to-hero/chaofa-wechat-official-account.png)
 - [B站-chaofa用代码打点酱油](https://space.bilibili.com/12420432)
 - [YouTube-chaofa用代码打点酱油](https://www.youtube.com/@bbruceyuan)
 - [chaofa 的 notion 简介](https://chaofa.notion.site/11a569b3ecce49b2826d679f5e2fdb54)

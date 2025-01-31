@@ -1,6 +1,7 @@
 # Hi, there~
 
-感谢你阅读我的博客[chaofa用代码打点酱油](https://bruceyuan.com)～
+感谢你阅读我的博客[chaofa用代码打点酱油](https://bruceyuan.com)～ 也可以阅读【[chaofa 的个人简介](https://chaofa.notion.site/11a569b3ecce49b2826d679f5e2fdb54)】了解更多~
+
 
 ## part 1
 我最近主要 focus on LLM, expecially Agent，目前在写一个 LLM 相关的教程。
@@ -15,5 +16,9 @@
 
 
 ## 其他
-- 公众号： ![chaofa用代码打点酱油](/llms-zero-to-hero/chaofa-wechat-official-account.png)
+- 公众号： ![chaofa用代码打点酱油](https://bruceyuan.com/llms-zero-to-hero/chaofa-wechat-official-account.png)
 - [chaofa 的 notion 简介](https://chaofa.notion.site/11a569b3ecce49b2826d679f5e2fdb54)
+- 我的个人微信： bbruceyuan  （可以反馈问题）
+
+![chaofa-wechat-account-is:bbruceyuan](https://bruceyuan.com/llms-zero-to-hero/wechat-account-bbruceyuan.png)
+
