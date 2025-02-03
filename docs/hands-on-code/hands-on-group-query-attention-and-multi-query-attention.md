@@ -197,5 +197,9 @@ net(x).shape
 由于 MQA 是 GQA 的一种特殊形式，因此只要在参数设置的时候将 nums_key_value_head = 1 就是 Multi Query Self-Attention。
 
 
-## REF
-视频链接：TODO
+## 交个朋友🤣
+最后欢迎关注我，基本全网同名 [chaofa用代码打点酱油](https://bruceyuan.com/)
+- 公众号： ![chaofa用代码打点酱油](https://bruceyuan.com/llms-zero-to-hero/chaofa-wechat-official-account.png)
+- [B站-chaofa用代码打点酱油](https://space.bilibili.com/12420432)
+- [YouTube-chaofa用代码打点酱油](https://www.youtube.com/@bbruceyuan)
+- [chaofa 的 notion 简介](https://chaofa.notion.site/11a569b3ecce49b2826d679f5e2fdb54)

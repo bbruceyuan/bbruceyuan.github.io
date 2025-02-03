@@ -304,17 +304,17 @@ def switch_load_balancing_loss(router_logits: torch.Tensor, num_experts: int) ->
     router_probs = torch.softmax(router_logits, dim=-1)  # [b*s, num_experts]
     
     # 获取每个token的最优专家
-    _, selected_experts = torch.topk(router_probs, k=2, dim=-1)  # [b*s]
+    _, selected_experts = torch.topk(router_probs, k=2, dim=-1) 
     
     # 创建one-hot矩阵表示选中的专家
-    mask = torch.nn.functional.one_hot(selected_experts, num_experts).float()  # [b*s, num_experts]
+    mask = torch.nn.functional.one_hot(selected_experts, num_experts).float() 
     
     # 计算每个专家的期望负载 (理想情况下应该是 1/num_experts)
     expected_load = torch.ones_like(router_probs) / num_experts
     
     # 计算实际负载 (每个专家处理的token数量除以总token数量)
     # 在batch维度上计算平均值
-    actual_load = mask.mean(dim=0)  # [num_experts]
+    actual_load = mask.mean(dim=0)
     
     # 计算auxiliary loss
     # 这会惩罚负载分布与期望负载的差异
@@ -389,7 +389,7 @@ test_moe_training()
 
 ## 交个朋友🤣
 最后欢迎关注我，基本全网同名 [chaofa用代码打点酱油](https://bruceyuan.com/)
-- 公众号： ![chaofa用代码打点酱油](/llms-zero-to-hero/chaofa-wechat-official-account.png)
+- 公众号： ![chaofa用代码打点酱油](https://bruceyuan.com/llms-zero-to-hero/chaofa-wechat-official-account.png)
 - [B站-chaofa用代码打点酱油](https://space.bilibili.com/12420432)
 - [YouTube-chaofa用代码打点酱油](https://www.youtube.com/@bbruceyuan)
 - [chaofa 的 notion 简介](https://chaofa.notion.site/11a569b3ecce49b2826d679f5e2fdb54)

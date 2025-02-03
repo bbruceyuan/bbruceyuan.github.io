@@ -67,7 +67,7 @@ class SelfAttV1(nn.Module):
         V = self.value_proj(X)
 
         # shape is: (batch, seq_len, seq_len)
-        # torch.matmul 可以改成 Q @ K.T
+        # torch.matmul 可以改成 Q @ K.transpose(-1, -2)
         # 其中 K 需要改成 shape 为： (batch, hidden_dim, seq_len)
         attention_value = torch.matmul(Q, K.transpose(-1, -2))
         attention_wight = torch.softmax(
@@ -346,3 +346,11 @@ net(x, attention_mask).shape
 ```
 
 > 这里再次解释一下，为什么现在现在的代码实现都是 q k v 的投影矩阵都是分开写的，这是因为现在的模型很大，本身可能会做 张量并行，流水线并行等方式，所以分开写问题也不大（分开写很清晰），可能是加速效果并不明显。
+
+
+## 交个朋友🤣
+最后欢迎关注我，基本全网同名 [chaofa用代码打点酱油](https://bruceyuan.com/)
+- 公众号： ![chaofa用代码打点酱油](https://bruceyuan.com/llms-zero-to-hero/chaofa-wechat-official-account.png)
+- [B站-chaofa用代码打点酱油](https://space.bilibili.com/12420432)
+- [YouTube-chaofa用代码打点酱油](https://www.youtube.com/@bbruceyuan)
+- [chaofa 的 notion 简介](https://chaofa.notion.site/11a569b3ecce49b2826d679f5e2fdb54)
