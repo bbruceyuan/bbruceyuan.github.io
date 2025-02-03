@@ -60,6 +60,7 @@ Ollama 的**特点**：
 		- `{model_name}`  替换成真实的模型名字，名字可以在 https://ollama.com/search 中获取。
 	- 注意⚠️：这样启动模型具有对应的上下文，本质上是启动了 chat 的接口。
 	- 具体效果如下：可以看到模型具有 `think` 的能力，但是由于模型比较小，效果依然不是特别好。
+
 ![DeepSeek-R1大模型本地部署的三种方式，总有一种适合你-20250202213103381](https://cfcdn.bruceyuan.com/blog/2025/DeepSeek-R1大模型本地部署的三种方式，总有一种适合你-20250202213103381.webp)
 > 从上面也可以看出，比较适合本地快速测试大模型。
 ## 方式2：LM Studio
@@ -73,9 +74,11 @@ LM Studio 的**特点**：
 - 用于管理本地模型和配置的系统
 
 - LM Studio 是一个可视化的软件（ https://lm-studio.cn ），基本上没有任何的学习成本。具体操作界面如下：
+
 ![DeepSeek-R1大模型本地部署的三种方式，总有一种适合你-20250202215154305](https://cfcdn.bruceyuan.com/blog/2025/DeepSeek-R1大模型本地部署的三种方式，总有一种适合你-20250202215154305.webp)
 
 - 模型下载和运行的步骤如下
+
 ![DeepSeek-R1大模型本地部署的三种方式，总有一种适合你-20250202214613708](https://cfcdn.bruceyuan.com/blog/2025/DeepSeek-R1大模型本地部署的三种方式，总有一种适合你-20250202214613708.webp)
 
 因此 LM Studio 最适合普通人使用，没有任何的使用成本，全部都是可视化操作。比如适合个人学习、内容创作、教育演示。以及需要隐私保护的本地对话场景。
@@ -93,6 +96,7 @@ vLLM 的**特点**
 通过 vllm 对外提供一个服务，这样你就可以一次部署，在多个不同的地方使用，比如家里、公司内、甚至在星巴克内；当然也可以把这个服务提供给其他人。
 
 通过 `pip install vllm` [安装](https://docs.vllm.ai/en/latest/getting_started/quickstart.html)之后，一般有两种形式使用。
+
 ### 方式1：提供 openai 的API接口的 server
 下面我用 [AIStackDC](https://aistackdc.com) 平台演示（当然也可以本地使用），这是一个云服务器平台，最大的特点就是便宜好用，如果用我的邀请链接：[https://aistackdc.com/phone-register?invite_code=D872A9](https://aistackdc.com/phone-register?invite_code=D872A9)，可以额外获得 1张 1 折（5 小时）和几张5 折（36小时）优惠券。
 
