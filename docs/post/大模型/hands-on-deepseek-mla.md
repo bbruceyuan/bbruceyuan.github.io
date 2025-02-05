@@ -1,5 +1,5 @@
 ---
-title: 从代码角度彻底学习和理解 DeepSeek MLA 算法
+title: 从代码角度学习和彻底理解 DeepSeek MLA 算法
 date: 2025-02-05 11:53:20
 tag:
   - transformer
