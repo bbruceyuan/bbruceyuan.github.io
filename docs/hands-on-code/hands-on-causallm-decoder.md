@@ -48,6 +48,8 @@ class SimpleDecoder(nn.Module):
         self.nums_head = nums_head
         self.head_dim = hidden_dim // nums_head
 
+        self.dropout = dropout
+
         # 这里按照 transformers 中的 decoder 来写，用 post_norm 的方式实现，主意有 残差链接
         # eps 是为了防止溢出；其中 llama 系列的模型一般用的是 RMSnorm 以及 pre-norm（为了稳定性）
         # RMSnorm 没有一个 recenter 的操作，而 layernorm 是让模型重新变成 均值为 0，方差为 1
@@ -58,7 +60,7 @@ class SimpleDecoder(nn.Module):
         self.k_proj = nn.Linear(hidden_dim, hidden_dim)
         self.v_proj = nn.Linear(hidden_dim, hidden_dim)
         self.o_proj = nn.Linear(hidden_dim, hidden_dim)
-        self.drop_att = nn.Dropout(0.1)
+        self.drop_att = nn.Dropout(self.dropout)
 
         # for ffn 准备
         self.up_proj = nn.Linear(hidden_dim, hidden_dim * 4)
@@ -66,7 +68,7 @@ class SimpleDecoder(nn.Module):
         self.layernorm_ffn = nn.LayerNorm(hidden_dim, eps=0.00001)
         self.act_fn = nn.ReLU()
         
-        self.drop_ffn = nn.Dropout(0.1)
+        self.drop_ffn = nn.Dropout(self.dropout)
 
     def attention_output(self, query, key, value, attention_mask=None):
         # 计算两者相关性
