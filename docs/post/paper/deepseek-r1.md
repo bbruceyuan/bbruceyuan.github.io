@@ -165,6 +165,19 @@ DeepSeek-R1 最牛的地方在于它不仅复现出了 openai-o1 模型的效果
 - Long-cot-with-reasoning 的蒸馏能够让小模型进一步提升推理能力。
 - 业务上在使用小模型具有了更多的可能性，赶紧学着 R1 的脚步用起来吧。（似乎看到了一点点小模型的希望）
 
+## 5. 一些失败的尝试
+
+- Process Reward Model（PRM）
+	- 定义一个 PRM 的粒度很难，怎么算是一个 Step 呢？
+	- 评估当前的 Step 是否准确很难
+	- 训练一个 step rm 很难，容易产生 reward hacking
+- Monte Carlo Tree Search（MCTS）
+	- 在语言模型中，词表太大了，基本都十几K，因此搜索空间太大了。
+	- 如果采用最大的探索限制，又容易产生局部最优。
+	- value model 很难训练，不好评估当前的步骤是否是好的。
+
+但是这些失败的尝试不代表这些路径就是错的，也许是还没有找打正确的打开方式。
+
 
 ## 其他
 最后欢迎关注我，基本全网同名 [chaofa用代码打点酱油](https://bruceyuan.com/)
