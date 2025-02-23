@@ -29,6 +29,7 @@ export default defineUserConfig({
       { "http-equiv": "Content-Type", content: "text/html;charset=gb2312" },
     ],
     ["meta", { name: "sogou_site_verification", content: "sS60nRna6W" }],
+    ["meta", { name: "google-adsense-account", content: "ca-pub-6733138658650037"}],
   ],
 
   markdown: {
