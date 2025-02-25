@@ -30,6 +30,14 @@ export default defineUserConfig({
     ],
     ["meta", { name: "sogou_site_verification", content: "sS60nRna6W" }],
     ["meta", { name: "google-adsense-account", content: "ca-pub-6733138658650037"}],
+    [
+      "script",
+      {
+        src: "https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6733138658650037",
+        async: true,
+        crossorigin: "anonymous",
+      },
+    ]
   ],
 
   markdown: {
