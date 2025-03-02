@@ -1,5 +1,5 @@
 ---
-title: LLM activate function激活函数的进化之路，从 ReLU，GELU 到 swishGLU
+title: LLM activate function激活函数的进化之路，从 ReLU，GELU 到 SwiGLU(swishGLU)
 date: 2025-01-27T18:58:00
 star: true
 tag:
@@ -69,8 +69,8 @@ $$
 
 近似计算分析详细可以参见苏神的文章，[GELU的两个初等函数近似是怎么来的](https://spaces.ac.cn/archives/7309)
 
-### 3. SwishGLU
-swishGLU 是 swish 激活函数和 GLU 门控单元的结合体，因此需要分别介绍两者的不同。
+### 3. SwiGLU（SwishGLU）
+SwiGLU（或者swishGLU，以下可能混用） 是 swish 激活函数和 GLU 门控单元的结合体，因此需要分别介绍两者的不同。
 
 其中需要注意的是：在 T5 开始，很多模型（比如 PaLM ）在FFN层都不用 bias 了，也就是说 FFN的公式变成了
 $$
@@ -93,7 +93,7 @@ $$
 FFN(W_1, W_2, x) = \text{Swish}(xW_1)W2 \tag{6}
 $$
 
-共有两个可学习的矩阵，其中 $w_1,(4, 4h)$ 是升维矩阵，$w_2,(4h, h)$ 是降低维度的矩阵。
+共有两个可学习的矩阵，其中 $w_1,(h, 4h)$ 是升维矩阵，$w_2,(4h, h)$ 是降低维度的矩阵。
 
 #### 3.2 GLU 门控单元
 GLU，Gated Linear Units，是一种门控结构（有参数，因此相对于普通的激活函数多了一个 `gate` 矩阵），通过 sigmoid 控制不同维度的激活。公式如下[^1]：
@@ -107,8 +107,8 @@ $$
 对比公式 7 和公式 9，公式 9 中的 $w_{up}$ 对应 公式 7 中的 $W$，而 $w_{gate}$ 对应公式 7 中的 $V$ 矩阵。
 
 
-#### 3.3 swishGLU 的表达形式
-而 `swishGLU` 就是把门控函数替换成了 `swish`，并且去除掉了 `bias` 部分，因此一共有三个可训练的参数矩阵, w1, w2, w3。
+#### 3.3 SwiGLU 的表达形式
+而 `SwiGLU` 就是把门控函数替换成了 `swish`，并且去除掉了 `bias` 部分，以及把 FFN 层的一个 Linear 层替换成了 GLU 层，因此一共有三个可训练的参数矩阵, w1, w2, w3。
 
 因此最终的公式表达为，
 
@@ -121,9 +121,9 @@ $$
 FFN(w_{up}, w_{down}, w_{gate}) = w_{down} \cdot (w_{up}x \otimes \text{Swish}(w_{gate}x))  \tag{9}
 $$
 
-通过这个公式整体就非常的清晰理解使用 swishGLU 的 FFN。
+通过这个公式整体就非常的清晰理解使用 swiGLU 的 FFN。
 
-而我们都知道在 basic 版本的 FFN，见公式（1）， 只有 $w_{up} $ 和 $w_{down}$ 分别是 (h, 4h) 和（4h, h），因此整体参数是 $8h^2$。
+而我们都知道在 basic 版本的 FFN，见公式（1）， 只有 $w_{up}$ 和 $w_{down}$ 分别是 (h, 4h) 和（4h, h），因此整体参数是 $8h^2$。
 
 而公式9 中，一共有三个矩阵，如果想要实现总参数 $8h^2$，那么每一个参数矩阵的大小应该是 $\frac{8h^2}{3}$，因此 $w_{up},w_{down}, w_{gate}$ 的shape应该是 $(h, \frac{8h}{3})$。
 
@@ -146,7 +146,7 @@ mid_dim = multiple_of * ((mid_dim + multiple_of - 1) // multiple_of)
 ## 3. 带有 swishGLU 的 FFN 代码实现
 ```python
 class FFNExpert(nn.Module):
-    def __init__(self, hidden_dim, dropout):   # LLM 进化之路， FFN 激活函数从 GELU -> SwishGLU
+    def __init__(self, hidden_dim, dropout):   # LLM 进化之路， FFN 激活函数从 GELU -> SwiGLU
         super().__init__()  
 
         # 有一个 magic number 叫做 8/3
@@ -166,7 +166,9 @@ class FFNExpert(nn.Module):
                 # up 之后的 Shape 是(b, s, mid_dim)
                 # gate 和 up 之后的Shape都是 (b, s, mid_dim)
                 # 两者是 element-wise 相乘
-                self.gate(x) * F.silu(self.up(x))
+                F.silu(
+                    self.gate(x)
+                ) * self.up(x)
             )
         )
         return out
@@ -175,6 +177,7 @@ class FFNExpert(nn.Module):
 
 ## 参考
 - [GELU的两个初等函数近似是怎么来的](https://kexue.fm/archives/7309)
+- 非常参考阅读文章：[GLU 和 SwiGLU](https://mingchao.wang/1fb1JNJ6/) 可以写的时候没发现
 
 [^1]: https://zhuanlan.zhihu.com/p/693332639
 
