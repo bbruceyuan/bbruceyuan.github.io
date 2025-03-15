@@ -39,7 +39,7 @@ DeepSeek-R1 最牛的地方在于它不仅复现出了 openai-o1 模型的效果
 	- 结论是：在小模型上，在【大模型上进行蒸馏】效果会好于【用 R1 的方式做训练】。
 
 
-- 整体架构图（最清晰），找到出处我补个链接。
+- 整体架构图（最清晰）来自于 [https://x.com/SirrahChan/status/1881488738473357753](https://x.com/SirrahChan/status/1881488738473357753)。
 	- ![deepseek-r1-reading-notes-20250216220356516](https://cfcdn.bruceyuan.com/blog/2025/deepseek-r1-reading-notes-20250216220356516.webp)
 - Huggingface 在 DeepSeek-R1 出来之后，立刻开始了复现之路，图片其实也挺清晰的，但是有一些细节上的缺失，但是不影响整体的理解。
 	- ![deepseek-r1-reading-notes-20250216221241663](https://cfcdn.bruceyuan.com/blog/2025/deepseek-r1-reading-notes-20250216221241663.webp)
