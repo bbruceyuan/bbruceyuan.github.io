@@ -1,5 +1,5 @@
 ---
-title: 从代码角度学习和彻底理解 DeepSeek MLA 算法
+title: MLA(1)：从代码角度学习和彻底理解 DeepSeek MLA 算法
 date: 2025-02-05 11:53:20
 tag:
   - transformer
@@ -22,6 +22,8 @@ permalink: /post/hands-on-deepseek-mla.html
     - 这部分Paper以及官方开源实现没有给出
 
 > 如果不想看文字，可以看B站手把手教学视频： [从零复现MLA算法](https://www.bilibili.com/video/BV19aP1epEUc)
+>
+> 也欢迎关注我的 github repo: [LLMs-zero-to-hero](https://github.com/bbruceyuan/LLMs-Zero-to-Hero)
 
 ## 原始的 MLA 算法
 
