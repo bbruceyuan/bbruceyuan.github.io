@@ -208,7 +208,7 @@ class SparseMOE(nn.Module):
             final_hidden_states.index_add_(0, top_x, current_hidden_states.to(hidden_states.dtype))
             # 方式2
             # final_hidden_states[top_x] += current_hidden_states.to(hidden_states.dtype)
-            # 方式1 的写法性能更差，并且方式1容易出现错误，+= 操作在处理重复索引时需要多次读写内存，可能会导致竞争条件
+            # 方式2 的写法性能更差，并且方式2容易出现错误，+= 操作在处理重复索引时需要多次读写内存，可能会导致竞争条件
 
         # 把 final_hidden_states 还原到原来的 shape
         final_hidden_states = final_hidden_states.reshape(batch_size, seq_len, hidden_dim)

@@ -28,37 +28,37 @@ permalink: /post/hands-on-deepseek-mla-projection-absorption.html
 在原始的官方 huggingface 的[实现](https://huggingface.co/deepseek-ai/DeepSeek-V2-Chat/tree/main)中（852行开始），kv cache 缓存的是完整的 kv cache，也就是**升维之后**且应用了 RoPE 位置编码的 kv，而不是压缩后的 $C_t^{KV}$。具体实现见：
 
 ```python
-    def forward(
-        self,
-        hidden_states: torch.Tensor,
-        attention_mask: Optional[torch.Tensor] = None,
-        position_ids: Optional[torch.LongTensor] = None,
-        past_key_value: Optional[Cache] = None,
-        output_attentions: bool = False,
-        use_cache: bool = False,
-        **kwargs,
-    ):
-	    ... 
-	    # 注意这里的 compressed_kv 是计算出来的
-	    # 实际只要缓存这个就行，不行看是 kv states
-	    compressed_kv = self.kv_a_proj_with_mqa(hidden_states)
-	    # 此处compressed_kv 对应公式中的 c_t^{KV}
-	    compressed_kv, k_pe = torch.split(
-	        compressed_kv, [self.kv_lora_rank, self.qk_rope_head_dim], dim=-1
-	    )
-	    ...
-	     
-		# key shape is: (batch, seq_len, num_head, nope_dim + rope_dim)
-		key_states = k_pe.new_empty(bsz, self.num_heads, q_len, self.q_head_dim)
-		key_states[:, :, :, : self.qk_nope_head_dim] = k_nope
-		key_states[:, :, :, self.qk_nope_head_dim :] = k_pe
-		# value shape is (batch, seq_len, num_head, value_dim)
-		if past_key_value is not None:
-			cache_kwargs = {"sin": sin, "cos": cos}  # Specific to RoPE models
-			key_states, value_states = past_key_value.update(
-				key_states, value_states, self.layer_idx, cache_kwargs
-			)
-		...
+def forward(
+    self,
+    hidden_states: torch.Tensor,
+    attention_mask: Optional[torch.Tensor] = None,
+    position_ids: Optional[torch.LongTensor] = None,
+    past_key_value: Optional[Cache] = None,
+    output_attentions: bool = False,
+    use_cache: bool = False,
+    **kwargs,
+):
+    ... 
+    # 注意这里的 compressed_kv 是计算出来的
+    # 实际只要缓存这个就行，不行看是 kv states
+    compressed_kv = self.kv_a_proj_with_mqa(hidden_states)
+    # 此处compressed_kv 对应公式中的 c_t^{KV}
+    compressed_kv, k_pe = torch.split(
+        compressed_kv, [self.kv_lora_rank, self.qk_rope_head_dim], dim=-1
+    )
+    ...
+        
+    # key shape is: (batch, seq_len, num_head, nope_dim + rope_dim)
+    key_states = k_pe.new_empty(bsz, self.num_heads, q_len, self.q_head_dim)
+    key_states[:, :, :, : self.qk_nope_head_dim] = k_nope
+    key_states[:, :, :, self.qk_nope_head_dim :] = k_pe
+    # value shape is (batch, seq_len, num_head, value_dim)
+    if past_key_value is not None:
+        cache_kwargs = {"sin": sin, "cos": cos}  # Specific to RoPE models
+        key_states, value_states = past_key_value.update(
+            key_states, value_states, self.layer_idx, cache_kwargs
+        )
+    ...
 ```
 
 > 注意代码中 shape 的注释，通过 shape 可以了解缓存的完整的 kv cache
