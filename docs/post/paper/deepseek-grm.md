@@ -1,5 +1,5 @@
 ---
-title: DeepSeek-GRM: Inferene-time Scaling 的 Generalist Reward Model(通用奖励模型)
+title: "DeepSeek-GRM：Inferene-time Scaling 的 Generalist Reward Model(通用奖励模型)"
 date: 2025-05-03 23:00:20
 tag:
   - LLM
