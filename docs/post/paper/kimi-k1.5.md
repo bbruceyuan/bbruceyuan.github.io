@@ -73,7 +73,7 @@ SFT 数据集包含大约 100 万个样本。
 	- 我有一个疑问：按理说不同的 sample 的 Attention 是分开的，具体可以看 Github issue，但如果 Attention 是分开的，那么这里的 Sequence length 设置这么长的意义是什么？
 	- 如果有好的解释，欢迎留言讨论。
 
-## 3.2. Long-CoT SFT（重点1）
+### 3.2. Long-CoT SFT（重点1）
 
 假设我们有了一个【精心挑选的数据集（具体见 4.1 小结）】，我们从中挑出一小部分，这些数据集是一些 Question（包含文本和图片），那么我们可以通过 Prompt Engineering 的方式生成答案，这部分数据是为了 Long-CoT 能力获得（其中 [DeepSeek-R1 coldstart 数据](https://bruceyuan.com/post/deepseek-r1-paper-reading-notes.html) 也是这么处理的）。
 
