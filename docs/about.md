@@ -19,7 +19,7 @@ image: /img/icon.webp
 
 ## 相关信息介绍
 - hi，我是 chaofa，目前是个**大模型算法工程师**，除了 LLM 之外，对于搜索、广告也有一定的了解~
-- 这是我的 [notion blog](https://www.notion.so/11a569b3ecce49b2826d679f5e2fdb54?pvs=21)
+- 这是我的 [notion blog](https://chaofa.notion.site/11a569b3ecce49b2826d679f5e2fdb54)
     - 记录平常的一些学习记录，主要是 paper阅读方面的内容~
     - 此外会记录一些公开的创作计划
 - 个人中文博客： **[chaofa用代码打点酱油](https://bruceyuan.com) （推荐）**
