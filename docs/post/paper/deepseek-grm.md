@@ -23,7 +23,7 @@ RL 在推理模型中取得了巨大的成功，如 OpenAI 的 O系列、DeepSee
 
 ![deepseek-grm-20250502123401789](https://cfcdn.bruceyuan.com/blog/2025/deepseek-grm-20250502123401789.webp)
 
-这里的分类非常的清晰，先分成两个大类：（1）打分模式（Scoring Patterns），氛围 Pointwise, Pairwise；（2）生成打分的模式：Scalar（标量数值型），Semi-Scalar（半数值型），Generative（生成式）。
+这里的分类非常的清晰，先分成两个大类：（1）打分模式（Scoring Patterns），分为 Pointwise, Pairwise；（2）生成打分的模式：Scalar（标量数值型），Semi-Scalar（半数值型），Generative（生成式）。
 
 先对输入进行区分（Scoring Patterns）包含两种类型的输入：
 - （i）Pointwise，输入是一条样本（或多个样本），但是要对每一个样本都输出对应的分数。这里解释一下为什么 pointwise 的 Scoring Patterns 可以支持多种输入形式？原因为：训练完之后，你的输入可以是一条样本，也可以是两条样本，也可以是多条样本，而下方的 pairwise 形式的 Scoring Pattens 训练完之后，只能给成对的样本评估，如果要支持多个、单个样本，则需要其他的操作。
