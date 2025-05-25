@@ -71,7 +71,7 @@ export default hopeTheme({
     },
 
     markdownMath: {
-      type: "mathjax",
+      type: "katex",
     },
 
     mdEnhance: {

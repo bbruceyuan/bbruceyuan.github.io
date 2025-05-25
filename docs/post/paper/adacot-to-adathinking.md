@@ -6,7 +6,7 @@ tag:
   - paper
 category:
   - paper-reading
-description: 深入分析三个快慢思考模型的实现：阿里Qwen3通过SFT实现的混合思考、字节AdaCoT基于RL的帕累托最优化、清华AdaThinking的受限优化框架。详细解读代码实现、训练方法和实验效果，探讨如何让模型在保持准确率的同时减少不必要的思考过程。对于想了解大模型推理优化的读者很有帮助。
+description: "深入分析三个快慢思考模型的实现：阿里Qwen3通过SFT实现的混合思考、字节AdaCoT基于RL的帕累托最优化、清华AdaThinking的受限优化框架。详细解读代码实现、训练方法和实验效果，探讨如何让模型在保持准确率的同时减少不必要的思考过程。对于想了解大模型推理优化的读者很有帮助。"
 publish: true
 permalink: /post/slow-fast-thinking-from-qwen3-thinking-mixed-to-adacot-to-adathinking.html
 ---
@@ -197,12 +197,14 @@ $x$ 是 user query，$r$ 是 model response，$P$ 都是二元奖励或惩罚，
 其他细节并不是很清楚，既然写了是 PPO 算法，那么大概率也是 Follow PPO 优化算法公式，如下：
 
 $$
-\begin{align}
+\begin{align*}
 L^{\text{KL+CLIP}}(\theta) = \mathbb{E}_{t} \bigg[ & \min\left( r_t(\theta) A_t, \,\, \text{clip}\big(r_t(\theta), 1-\epsilon, 1+\epsilon\big) A_t \right) \nonumber \\
 & - \beta \, \text{KL}\left[\pi_{\theta}(\cdot|s_t) \| \pi_{\theta_{\text{ref}}}(\cdot|s_t)\right] \bigg]
-\end{align}
+\end{align*}
 $$
+
 其中 $r_t{\theta}$ 是重要性采样比率，表示为：
+
 $$
 r_t(\theta) = \frac{\pi_\theta(a_t|s_t)}{\pi_{\theta_{\text{old}}}(a_t|s_t)}
 $$
@@ -254,7 +256,7 @@ $$
 整体的优化目标如下，尽量少的出现 Thinking（$y_1 = </\text{think}>$ 表示第一生成的词就是 `</think>` 这样就表示没有思考），但是需要 $R_{\theta}(x, y)$ 要大于  $R_{\theta_{ref}}(x, y)$，后者就是约束。
 
 $$
-\begin{align}
+\begin{align*}
 \max_{\theta} \mathbb{E}_{x \sim D, y \sim \pi_{\theta}(\cdot | x)} \, \mathbb{I}(y_1 = \text{</think>})  \tag{3} 
 
 \\
@@ -262,26 +264,25 @@ $$
 \text{s.t.} \mathbb{E}_{x \sim D, y \sim \pi_{\theta}(\cdot | x)} \, R(x, y) \geq
 
 \mathbb{E}_{x \sim D, y' \sim \pi_{\theta_{\text{ref}}}(\cdot | x)} \, R(x, y').
-\end{align}
+\end{align*}
 $$
 
 根据[拉格朗日乘数法](https://zh.wikipedia.org/zh-cn/%E6%8B%89%E6%A0%BC%E6%9C%97%E6%97%A5%E4%B9%98%E6%95%B0)，可以把约束条件放到优化公式中，最终变成：
 
 $$
-\begin{align}
+\begin{align*}
 \max \mathbb{E}_{x \sim D, y \sim \pi_\theta(\cdot | x), y' \sim \pi_{\theta_{\mathrm{ref}}}(\cdot | x)} \mathbb{I}(y_1 = </\mathrm{think}>)
 + \lambda (R(x, y) - R(x, y')) \tag{4}
-\end{align}
-
+\end{align*}
 $$
 
 把公式拆一拆，另 $\delta = \frac{1}{\lambda}$ ，$\mathbb{E}_{y' \sim \pi_{\theta_{\mathrm{ref}}}(\cdot | x)}$ 下放到期望内部，这样就得到两个期望
 
 $$
-\begin{align}
+\begin{align*}
 \max \mathbb{E}_{x \sim D, y \sim \pi_\theta(\cdot | x)} \left[ \mathbb{I}(y_1 = </\mathrm{think}>) \cdot \delta 
 + R(x, y) \right] - \mathbb{E}_{y' \sim \pi_{\theta_{\mathrm{ref}}}(\cdot | x)} R(x, y') 
-\end{align}
+\end{align*}
 $$
 我们用蒙特卡洛采样，可以得到 $\mathbb{E}_{y' \sim \pi_{\theta_{\mathrm{ref}}}(\cdot | x)} R(x, y')$ 近似等于 K 次采样的 Reward 均值，因此我们有
 $$
@@ -302,12 +303,11 @@ $$
 但是我们知道  $\mathbb{I} = y_1=</\text{think}>$ 以及 $R(x, y)$ 是不可导的，所以我们用 policy gradient 的方式进行优化，这样也是用 PPO 算法进行优化，具体优化公式为（Without KL）：
 
 $$
-\begin{align}
- \mathcal{L}(\theta) = -\mathbb{E}_{x \sim D, y \sim \pi_{\theta_{old}}(\cdot|x)} \left[ \min\left( \frac{\pi_{\theta}(y|x)}{\pi_{\theta_{old}}(y|x)} A(x,y), \right.
-
-\left. \text{clip} \left( \frac{\pi_{\theta}(y|x)}{\pi_{\theta_{old}}(y|x)}, 1 - \epsilon, 1 + \epsilon \right) A(x,y) \right) \right] \tag{7}
-
-\end{align}
+\begin{align*}
+\mathcal{L}(\theta) = -\mathbb{E}_{x \sim D, y \sim \pi_{\theta_{\text{old}}}(\cdot|x)} \Bigg[ &\min\Bigg( 
+\frac{\pi_{\theta}(y|x)}{\pi_{\theta_{\text{old}}}(y|x)} A(x,y), \\
+&\text{clip}\left( \frac{\pi_{\theta}(y|x)}{\pi_{\theta_{\text{old}}}(y|x)}, 1 - \epsilon, 1 + \epsilon \right) A(x,y) \Bigg) \Bigg] \tag{7}
+\end{align*}
 $$
 
 其中优势函数计算公式为： 
@@ -321,23 +321,25 @@ $$
 由于开始的模型是 thinking model，所以模型一开始 $y_1 = </\text{think}>$ 概率为 0，模型不会直接输出 `</think>` 终止符。因此我们直接修改 $\pi_{\theta_{old}}$。
 
 $$
-
-\pi_{\text{IS}}(y_t = a|x, y_{<t}) =
+\pi_{\text{IS}}(y_t = a|x, y_{<t}) = 
 \begin{cases} 
-0.5, & \text{if } t = 1, \, a = </\mathrm{think}>; \\
-0.5, & \text{if } t = 1, \, a = w_{\text{start}}; \\
-\pi_{\theta_\text{old}}(y_t = a|x, y_{<t}), & \text{if } t > 1.
+\begin{aligned}
+0.5, & \quad \text{if } t = 1, \, a = </\mathrm{think}>; \\
+0.5, & \quad \text{if } t = 1, \, a = w_{\text{start}}; \\
+\pi_{\theta_\text{old}}(y_t = a|x, y_{<t}), & \quad \text{if } t > 1.
+\end{aligned}
 \end{cases} \tag{8}
-
 $$
 因此最终的 PPO算法公式改成了
 
 $$
-\begin{align}
-\mathcal{L}_{\text{AT}}(\theta) = -\mathbb{E}_{x \sim D, y \sim \pi_{\text{IS}}(\cdot|x)} \left[ \min\left( \frac{\pi_{\theta}(y|x)}{\pi_{\text{IS}}(y|x)}, \right. 
-
-\left. \text{clip} \left( \frac{\pi_{\theta}(y|x)}{\pi_{\text{IS}}(y|x)}, 1 - \epsilon, 1 + \epsilon \right) \right) A(x,y) \right].
-\end{align} \tag{9}
+\begin{align*}
+\begin{split}
+\mathcal{L}_{\text{AT}}(\theta) = -\mathbb{E}_{x \sim D, y \sim \pi_{\text{IS}}(\cdot|x)} \Bigg[ &\min\Bigg( 
+\frac{\pi_{\theta}(y|x)}{\pi_{\text{IS}}(y|x)}, \\
+&\text{clip}\left( \frac{\pi_{\theta}(y|x)}{\pi_{\text{IS}}(y|x)}, 1 - \epsilon, 1 + \epsilon \right) \Bigg) A(x,y) \Bigg]
+\end{split} \tag{9}
+\end{align*}
 $$
 
 从 Loss 上的理解，我们希望同时满足下面两个条件的时候才更新 $\pi_{\theta}$ ，$\delta$ 越大，越鼓励模型不要思考。
