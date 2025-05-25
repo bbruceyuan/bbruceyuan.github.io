@@ -83,14 +83,14 @@ $$
 swish 是一个非线性函数（激活函数都是如此，笑🤣），具体公式为：
 
 $$
-\text{Swish} = x \sigma(\beta x)  \tag{7}
+\text{Swish} = x \sigma(\beta x)
 $$
 其中 $\beta$ 是一个超参数，当 $\beta = 1$ 时，Swish 就变成了 SiLU (Sigmoid Linear Unit)，大多数框架的默认实现（如 PyTorch、TensorFlow 的 `nn.SiLU()`）使用的是 $\beta = 1$ 的固定版本。
 
 因此如果采用 swish 激活函数，FFN 的公式变成了
 
 $$
-FFN(W_1, W_2, x) = \text{Swish}(xW_1)W2 \tag{6}
+FFN(W_1, W_2, x) = \text{Swish}(xW_1)W2
 $$
 
 共有两个可学习的矩阵，其中 $w_1,(h, 4h)$ 是升维矩阵，$w_2,(4h, h)$ 是降低维度的矩阵。
