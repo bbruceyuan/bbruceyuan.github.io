@@ -16,6 +16,12 @@ permalink: /post/deepseek-grm-paper-reading-notes.html
 Training Scaling 和 Inference Scaling 在 Base-Model 都取得了巨大的成功。那么在强化学习（Reinforcement Learning, RL）过程中需要的 Reward-Model（RM） 是不是也可以通过 **Inference-Time Scaling 来优化 RM** 呢？因此 DeepSeek 团队提出一种方法叫做：Self-Principed Critique Tuning (SPCT) 的方法来训练一个通用型的 RM（Generalist RM）。
 
 RL 在推理模型中取得了巨大的成功，如 OpenAI 的 O系列、DeepSeek R系列（[DeepSeek-R1](https://bruceyuan.com/post/deepseek-r1-paper-reading-notes.html)），但这些模型都采用了 Rule-Base Reward Model，因此 Reward Model 具有一定的局限性，在很多场景不够通用，因此本文的 **DeepSeek-GRM 是旨在利用 SPCT 的方式来训练一个通用型的 Reward Model，并且能够很好得 Inference-Time Scale，以此得到一个在通用任务（非数学、代码等有精确 Reward）也能有很好效果的模型**。
+s
+
+> [!NOTE]
+> 本文首发于[chaofa用代码打点酱油](https://bruceyuan.com/)的个人 Blog，后续有更新会优先更新于 Blog 中，原文链接[DeepSeek-GRM：Inferene-time Scaling 的 Generalist Reward Model(通用奖励模型)](https://bruceyuan.com/post/deepseek-grm-paper-reading-notes.html)，也会同步到同名[公众号-chaofa用代码打点酱油](https://bruceyuan.com/llms-zero-to-hero/chaofa-wechat-official-account.png)（仅同步）
+> 
+> 如果不喜欢看文字的朋友，也可以看 [B站](https://www.bilibili.com/video/BV17cVdzTEac/)、[YouTube](https://youtu.be/NlIKow850w8?si=r2GFKqGl4GfsJQvw) 上的视频解读。
 
 ## 2. 前提(Preliminaries)
 
@@ -24,6 +30,8 @@ RL 在推理模型中取得了巨大的成功，如 OpenAI 的 O系列、DeepSee
 ![deepseek-grm-20250502123401789](https://cfcdn.bruceyuan.com/blog/2025/deepseek-grm-20250502123401789.webp)
 
 这里的分类非常的清晰，先分成两个大类：（1）打分模式（Scoring Patterns），分为 Pointwise, Pairwise；（2）生成打分的模式：Scalar（标量数值型），Semi-Scalar（半数值型），Generative（生成式）。
+
+> 我甚至觉得这个划分是本文最重要的贡献之一
 
 先对输入进行区分（Scoring Patterns）包含两种类型的输入：
 - （i）Pointwise，输入是一条样本（或多个样本），但是要对每一个样本都输出对应的分数。这里解释一下为什么 pointwise 的 Scoring Patterns 可以支持多种输入形式？原因为：训练完之后，你的输入可以是一条样本，也可以是两条样本，也可以是多条样本，而下方的 pairwise 形式的 Scoring Pattens 训练完之后，只能给成对的样本评估，如果要支持多个、单个样本，则需要其他的操作。

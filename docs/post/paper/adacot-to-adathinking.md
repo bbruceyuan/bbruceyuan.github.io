@@ -1,5 +1,5 @@
 ---
-title: "自适应快慢思考推理模型（Adaptive Reasoning Model）：Qwen3混合思考->字节AdaCoT->清华AdaThinking"
+title: "自适应快慢思考推理模型（Adaptive Reasoning Model）：Qwen3混合思考->字节AdaCoT->清华AdaptThinking"
 date: 2025-05-25 20:01:20
 tag:
   - LLM
@@ -30,6 +30,8 @@ OpenAI O 系列发布之后，Inference Time Scaling 的模型一直备受关注
 
 > [!NOTE]
 > 本文首发于[chaofa用代码打点酱油](https://bruceyuan.com/)的个人 Blog，后续有更新会优先更新于 Blog 中，原文链接[自适应快慢思考推理模型：Qwen3混合思考->字节AdaCoT->清华AdaThinking](https://bruceyuan.com/post/slow-fast-thinking-from-qwen3-thinking-mixed-to-adacot-to-adathinking.html)，也会同步到同名[公众号-chaofa用代码打点酱油](https://bruceyuan.com/llms-zero-to-hero/chaofa-wechat-official-account.png)（仅同步）
+> 
+> 如果不喜欢看文字的朋友，也可以看 [B站](https://www.bilibili.com/video/BV1DB7KzaELZ/)、[YouTube](https://youtu.be/IO9oKN5Cknc?si=2GDmTkxGdwumCIl0) 上的视频解读。
 
 
 ## 2. 阿里 Qwen3 混合思考
