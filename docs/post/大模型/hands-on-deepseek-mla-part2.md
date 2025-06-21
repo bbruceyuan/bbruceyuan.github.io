@@ -13,7 +13,7 @@ permalink: /post/hands-on-deepseek-mla-projection-absorption.html
 
 ## 基础原理
 
-这里假设读者对于 MLA有一定的了解，只是不清楚 MLA 算法的实现，关于原版的 MLA 具体实现可以见 [从代码角度学习和彻底理解 DeepSeek MLA 算法](https://bruceyuan.com/post/hands-on-deepseek-mla.html)，视频解读见：[ 完全从零实现DeepSeek MLA算法(MultiHead Latent Attention)-（无矩阵吸收版）](https://www.bilibili.com/video/BV19aP1epEUc)
+这里假设读者对于 MLA有一定的了解，只是不清楚 MLA 算法的实现，关于原版的 MLA 具体实现可以见 [从代码角度学习和彻底理解 DeepSeek MLA 算法](https://yuanchaofa.com/post/hands-on-deepseek-mla.html)，视频解读见：[ 完全从零实现DeepSeek MLA算法(MultiHead Latent Attention)-（无矩阵吸收版）](https://www.bilibili.com/video/BV19aP1epEUc)
 
 
 ![deepseek-mla-矩阵吸收之迷-20250316140034131](https://cfcdn.bruceyuan.com/blog/2025/deepseek-mla-矩阵吸收之迷-20250316140034131.webp)
@@ -382,15 +382,15 @@ A: 从实际的测算中，对模型参数进行预处理，实际上耗时更�
 - [https://kexue.fm/archives/10091](https://kexue.fm/archives/10091)
 - [https://www.armcvai.cn/2025-02-10/mla-code.html](https://www.armcvai.cn/2025-02-10/mla-code.html)
 - 爱因斯坦方程的用法: https://zhuanlan.zhihu.com/p/71639781
-- 假设没有矩阵吸收，可以看我的 blog: [从代码角度学习和彻底理解 DeepSeek MLA 算法](https://bruceyuan.com/post/hands-on-deepseek-mla.html)
+- 假设没有矩阵吸收，可以看我的 blog: [从代码角度学习和彻底理解 DeepSeek MLA 算法](https://yuanchaofa.com/post/hands-on-deepseek-mla.html)
 
 
 
 
 
 ## 其他
-最后欢迎关注我，基本全网同名 [chaofa用代码打点酱油](https://bruceyuan.com/)
-- 公众号（主要是为了订阅通知，不然看 Blog 就够了）： ![chaofa用代码打点酱油](https://bruceyuan.com/llms-zero-to-hero/chaofa-wechat-official-account.png)
+最后欢迎关注我，基本全网同名 [chaofa用代码打点酱油](https://yuanchaofa.com/)
+- 公众号（主要是为了订阅通知，不然看 Blog 就够了）： ![chaofa用代码打点酱油](https://yuanchaofa.com/llms-zero-to-hero/chaofa-wechat-official-account.png)
 - [B站-chaofa用代码打点酱油](https://space.bilibili.com/12420432)
 - [YouTube-chaofa用代码打点酱油](https://www.youtube.com/@bbruceyuan)
 - [chaofa 的 notion 简介](https://chaofa.notion.site/11a569b3ecce49b2826d679f5e2fdb54)

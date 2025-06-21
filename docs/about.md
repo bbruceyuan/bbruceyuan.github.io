@@ -22,15 +22,15 @@ image: /img/icon.webp
 - 这是我的 [notion blog](https://chaofa.notion.site/11a569b3ecce49b2826d679f5e2fdb54)
     - 记录平常的一些学习记录，主要是 paper阅读方面的内容~
     - 此外会记录一些公开的创作计划
-- 个人中文博客： **[chaofa用代码打点酱油](https://bruceyuan.com) （推荐）**
+- 个人中文博客： **[chaofa用代码打点酱油](https://yuanchaofa.com) （推荐）**
 - 个人同名公众号
 
-![chaofa用代码打点酱油](https://bruceyuan.com/llms-zero-to-hero/chaofa-wechat-official-account.png)
+![chaofa用代码打点酱油](https://yuanchaofa.com/llms-zero-to-hero/chaofa-wechat-official-account.png)
 
 
 如果我的教程哪里有问题，也可以加我wx: bbruceyuan 进行反馈，感激~，如果添加，可以尝试扫码
 
-![chaofa-wechat-account-is:bbruceyuan](https://bruceyuan.com/llms-zero-to-hero/wechat-account-bbruceyuan.png)
+![chaofa-wechat-account-is:bbruceyuan](https://yuanchaofa.com/llms-zero-to-hero/wechat-account-bbruceyuan.png)
 
 
 ## 其他申明

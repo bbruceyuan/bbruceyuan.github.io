@@ -29,13 +29,13 @@ permalink: /blog/2025-05-month-summary.html
 - 自身能力的局限性
 	- 尽管大环境确实在近几年肉眼可见变差，但作为计算机行业，而且是搞 AI 大模型的，我其实也不应该抱怨环境的问题，至少比其他行业还是好不少[^6]。因此我重点反思自己的问题，自身能力的局限性。
 	- 身边厉害的人也不少，无论是靠着自己的努力，还是因为行业东风，拥有巨大包裹的人不再少数（但从比例上看也不会超过 10% 吧），而如果只是像我一样无法保持在前 10-20% 水平的普通大厂青年，按照我的判断是断然无法达到图片中的描述的数字，那么在可预期的未来是不可能达到这样的目标。
-	- 就像上一篇文章提到的，努力会让自己觉得充实、踏实，但[绝不是做好事情最重要的因素](https://bruceyuan.com/blog/2025-04-month-summary.html)，如果自身资质一般，结果应该也可能不尽如人意吧。（但是，这也确实就是唯一自己能控制的了）
+	- 就像上一篇文章提到的，努力会让自己觉得充实、踏实，但[绝不是做好事情最重要的因素](https://yuanchaofa.com/blog/2025-04-month-summary.html)，如果自身资质一般，结果应该也可能不尽如人意吧。（但是，这也确实就是唯一自己能控制的了）
 - 综上，我觉得在 35 岁之前，绝绝绝大多数完全符合图中条件的人不可能达到这个目标，但是最多也就**承担 5% 的责任**吧。
 
 
 ## 2. 金钱的分量
 
-作为业余偶尔在 B 站创作[大模型知识科普](https://space.bilibili.com/12420432)的内容创作者，我目前创作最大的目的还是**满足自己的虚荣心**[^3]，以我自己为例，在 B 站视频本身是自身学习知识的一种外溢，我在日常的工作学习中需要跟踪前沿技术，因此我一定会需要自己学习 [DeepSeek-R1](https://bruceyuan.com/post/deepseek-r1-paper-reading-notes.html)，[OpenManus原理](https://www.youtube.com/watch?v=HW2EyHbm-Wk)，[大模型混合思考](https://bruceyuan.com/post/slow-fast-thinking-from-qwen3-thinking-mixed-to-adacot-to-adathinking.html)等相关的技术[^4]。
+作为业余偶尔在 B 站创作[大模型知识科普](https://space.bilibili.com/12420432)的内容创作者，我目前创作最大的目的还是**满足自己的虚荣心**[^3]，以我自己为例，在 B 站视频本身是自身学习知识的一种外溢，我在日常的工作学习中需要跟踪前沿技术，因此我一定会需要自己学习 [DeepSeek-R1](https://yuanchaofa.com/post/deepseek-r1-paper-reading-notes.html)，[OpenManus原理](https://www.youtube.com/watch?v=HW2EyHbm-Wk)，[大模型混合思考](https://yuanchaofa.com/post/slow-fast-thinking-from-qwen3-thinking-mixed-to-adacot-to-adathinking.html)等相关的技术[^4]。
 
 但是，创作内容也是有一定的成本，我本可以休息的周末时间就会被创作挤占，而在商业化不足的情况下很难长期坚持创作。这里核心讲一下我对此的看法：「如果想要正常运营一个频道，一定需要合理的商业化，不然这个频道一定走不远；而目前大多数的创作者能坚持创作大多因为满足兴趣驱动以及主业有收入这两个点；但**同样的金钱（金额）有不同的分量**」。
 

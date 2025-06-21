@@ -15,7 +15,7 @@ permalink: /post/kimi-k1.5-paper-reading-notes.html
 
 OpenAI O系列（reasoning）模型发布后（2024-09-12），全世界都在尝试解决 OpenAI 设置的谜题，而在同一时间（2025-01-20），Kimi-k1.5 和 deepseek-r1 都发布了自己的推理模型。并且都达到 openai-o1 模型的效果。这是两个出色的解题人，值得敬佩。
 
-尽管 Kimi K1.5 效果很好，而且还是**多模态**的模型，但从网络声量上看，完全被 DeepSeek-R1 盖过去了，只能说时也命也。但事实上，对于科员人员以及算法工程是从业人员，以及想找算法工作的学生来说，[Kimi k1.5 的技术报告](https://arxiv.org/abs/2501.12599)确实更值得 follow 的，核心是里面有更多算法处理的细节，这些细节是我们可以在工作中直接 follow 使用的，而 DeepSeek R1 的 paper 中还有很多细节没有透露，从我的上一篇文章[《自顶向下方式深度解读 DeepSeek-R1》](https://bruceyuan.com/post/deepseek-r1-paper-reading-notes.html)中就提到几个我们想知道却没说的关键点，Kimi k1.5 给了我们答案，让我们继续看下去，**怎么处理数据能够让模型可以有更强的 Reasoning 能力**。
+尽管 Kimi K1.5 效果很好，而且还是**多模态**的模型，但从网络声量上看，完全被 DeepSeek-R1 盖过去了，只能说时也命也。但事实上，对于科员人员以及算法工程是从业人员，以及想找算法工作的学生来说，[Kimi k1.5 的技术报告](https://arxiv.org/abs/2501.12599)确实更值得 follow 的，核心是里面有更多算法处理的细节，这些细节是我们可以在工作中直接 follow 使用的，而 DeepSeek R1 的 paper 中还有很多细节没有透露，从我的上一篇文章[《自顶向下方式深度解读 DeepSeek-R1》](https://yuanchaofa.com/post/deepseek-r1-paper-reading-notes.html)中就提到几个我们想知道却没说的关键点，Kimi k1.5 给了我们答案，让我们继续看下去，**怎么处理数据能够让模型可以有更强的 Reasoning 能力**。
 
 ## 1. 整体架构
 
@@ -75,7 +75,7 @@ SFT 数据集包含大约 100 万个样本。
 
 ### 3.2. Long-CoT SFT（重点1）
 
-假设我们有了一个【精心挑选的数据集（具体见 4.1 小结）】，我们从中挑出一小部分，这些数据集是一些 Question（包含文本和图片），那么我们可以通过 Prompt Engineering 的方式生成答案，这部分数据是为了 Long-CoT 能力获得（其中 [DeepSeek-R1 coldstart 数据](https://bruceyuan.com/post/deepseek-r1-paper-reading-notes.html) 也是这么处理的）。
+假设我们有了一个【精心挑选的数据集（具体见 4.1 小结）】，我们从中挑出一小部分，这些数据集是一些 Question（包含文本和图片），那么我们可以通过 Prompt Engineering 的方式生成答案，这部分数据是为了 Long-CoT 能力获得（其中 [DeepSeek-R1 coldstart 数据](https://yuanchaofa.com/post/deepseek-r1-paper-reading-notes.html) 也是这么处理的）。
 
 这部分数据需要包含人类的思考过程：规划（生成执行大纲），评估（对中间步骤进行评估），反思（可以重新思考和修正方法/步骤）以及探索（鼓励尝试新的方法和思路），而这一步的 SFT 本质上和 3.1 中 SFT 是一样的，核心差别在于数据不一样，这部分数据是的 answer 部分比较长，并且蕴含了人类的思考过程。
 
@@ -84,7 +84,7 @@ SFT 数据集包含大约 100 万个样本。
 我们都知道好的数据对于 RL 提升模型效果具有很重要的帮助，因此 kimi 定义了三个关键属性来衡量数据集的好坏。
 - 多样性。数据集应该具有很丰富的来源，包含自然科学、代码、推理等各种任务，这样可以帮助模型掌握各种各样的能力。
 - 难度平衡。好的数据集应该平衡好简单、中等以及复杂的问题，并且通过课程学习的方式可以让模型更好地掌握复杂推理的能力，并且减少过拟合。
-- 是否可以精确评估。在 [DeepSeek-R1 的 paper 解读](https://bruceyuan.com/post/deepseek-r1-paper-reading-notes.html)中也提到了，RL 的数据需要可以精确地评估，这样可以更好地指引模型推理。
+- 是否可以精确评估。在 [DeepSeek-R1 的 paper 解读](https://yuanchaofa.com/post/deepseek-r1-paper-reading-notes.html)中也提到了，RL 的数据需要可以精确地评估，这样可以更好地指引模型推理。
 
 这些东西除了第三点精确评估，都是以前（k1.5 和 r1出来之前）就经常提到的，但是具体怎么做的呢？
 
@@ -206,8 +206,8 @@ kimi-k1.5 的 Long2Short，实现了长链推理（Long-CoT）到短链推理（
 
 
 ## 其他
-最后欢迎关注我，基本全网同名 [chaofa用代码打点酱油](https://bruceyuan.com/)
-- 公众号： ![chaofa用代码打点酱油](https://bruceyuan.com/llms-zero-to-hero/chaofa-wechat-official-account.png)
+最后欢迎关注我，基本全网同名 [chaofa用代码打点酱油](https://yuanchaofa.com/)
+- 公众号： ![chaofa用代码打点酱油](https://yuanchaofa.com/llms-zero-to-hero/chaofa-wechat-official-account.png)
 - [B站-chaofa用代码打点酱油](https://space.bilibili.com/12420432)
 - [YouTube-chaofa用代码打点酱油](https://www.youtube.com/@bbruceyuan)
 - [chaofa 的 notion 简介](https://chaofa.notion.site/11a569b3ecce49b2826d679f5e2fdb54)

@@ -195,12 +195,12 @@ print("Max difference after merge/unmerge cycle:",
 - [从 self-attention 到 multi-head self-attention](/hands-on-code/from-self-attention-to-multi-head-self-attention.html)
 - [手写 transformer decoder（CausalLM）](/hands-on-code/hands-on-causallm-decoder.html)
 - [LLM 大模型训练-推理显存占用分析](/post/llm-train-infer-memoery-usage-calculation.html)
-- [手写大模型组件之Group Query Attention，从 MHA，MQA 到 GQA](https://bruceyuan.com/hands-on-code/hands-on-group-query-attention-and-multi-query-attention.html)
+- [手写大模型组件之Group Query Attention，从 MHA，MQA 到 GQA](https://yuanchaofa.com/hands-on-code/hands-on-group-query-attention-and-multi-query-attention.html)
 
 
 ## 交个朋友🤣
-最后欢迎关注我，基本全网同名 [chaofa用代码打点酱油](https://bruceyuan.com/)
-- 公众号： ![chaofa用代码打点酱油](https://bruceyuan.com/llms-zero-to-hero/chaofa-wechat-official-account.png)
+最后欢迎关注我，基本全网同名 [chaofa用代码打点酱油](https://yuanchaofa.com/)
+- 公众号： ![chaofa用代码打点酱油](https://yuanchaofa.com/llms-zero-to-hero/chaofa-wechat-official-account.png)
 - [B站-chaofa用代码打点酱油](https://space.bilibili.com/12420432)
 - [YouTube-chaofa用代码打点酱油](https://www.youtube.com/@bbruceyuan)
 - [chaofa 的 notion 简介](https://chaofa.notion.site/11a569b3ecce49b2826d679f5e2fdb54)

@@ -11,11 +11,11 @@ category:
 description: "主要介绍了从基础的 ReLU 到 GELU，再到现代大语言模型中广泛使用的 SwishGLU 的发展过程, 介绍了深度学习中激活函数演进历程。文章详细讲解了各个激活函数的数学原理和实现方式，并重点分析了 SwishGLU 如何结合 Swish 激活函数和 GLU 门控单元的优点。同时，文章还提供了完整的 PyTorch 代码实现，展示了如何在神经网络中使用这些激活函数，特别是在大语言模型的 FFN（前馈神经网络）层中的应用。对于想要深入理解现代深度学习模型架构的开发者和研究者来说，这是一份很有价值的参考资料。"
 publish: true
 permalink: /llms-zero-to-hero/activate-function-from-relu-gelu-to-swishglu.html
-banner: https://bruceyuan.com/img/huggingface.png
+banner: https://yuanchaofa.com/img/huggingface.png
 ---
 
 ## 1. 背景
-自 chatGPT 22年底问世以来，大模型（Large Language Model, LLM）一般使用 [Causal Language Model](https://bruceyuan.com/hands-on-code/hands-on-causallm-decoder.html) 的形式，属于 Transformers 中的 Decoder 部分，其中在 Decoder 的 Block 中有一个 FFN(FeadForward) 层，一般认为这部分参数用于存储知识。而标准的 FFN 一般有一个升维度和降维度的过程，一共有两个权重矩阵，用公式表示为
+自 chatGPT 22年底问世以来，大模型（Large Language Model, LLM）一般使用 [Causal Language Model](https://yuanchaofa.com/hands-on-code/hands-on-causallm-decoder.html) 的形式，属于 Transformers 中的 Decoder 部分，其中在 Decoder 的 Block 中有一个 FFN(FeadForward) 层，一般认为这部分参数用于存储知识。而标准的 FFN 一般有一个升维度和降维度的过程，一共有两个权重矩阵，用公式表示为
 
 $$FFN(x) = ReLU(xW_1 + b1)W2 + b2  \tag{1}$$
 
@@ -182,8 +182,8 @@ class FFNExpert(nn.Module):
 [^1]: https://zhuanlan.zhihu.com/p/693332639
 
 
-最后欢迎关注我，基本全网同名 [chaofa用代码打点酱油](https://bruceyuan.com/)
-- 公众号： ![chaofa用代码打点酱油](https://bruceyuan.com/llms-zero-to-hero/chaofa-wechat-official-account.png)
+最后欢迎关注我，基本全网同名 [chaofa用代码打点酱油](https://yuanchaofa.com/)
+- 公众号： ![chaofa用代码打点酱油](https://yuanchaofa.com/llms-zero-to-hero/chaofa-wechat-official-account.png)
 - [B站-chaofa用代码打点酱油](https://space.bilibili.com/12420432)
 - [YouTube-chaofa用代码打点酱油](https://www.youtube.com/@bbruceyuan)
 - [chaofa 的 notion 简介](https://chaofa.notion.site/11a569b3ecce49b2826d679f5e2fdb54)

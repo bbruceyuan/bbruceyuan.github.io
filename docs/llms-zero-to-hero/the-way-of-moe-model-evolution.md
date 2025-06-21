@@ -11,7 +11,7 @@ category:
 description: "本文详细介绍了三种不同版本的混合专家模型(Mixture of Experts, MoE)实现，从基础到进阶，帮助读者全面理解 MoE 在大语言模型中的应用。主要内容包括：1. 基础版 MoE：使用简单的线性层作为专家，理解 MoE 的基本工作原理; 2. SparseMoE：大模型训练中常用的稀疏 MoE 实现，基于 Switch Transformers 的设计;3. SharedExpert SparseMoE：参考 DeepSeek 的改进版本，引入共享专家机制。文章提供了完整的 PyTorch 实现代码，包括模型定义、路由机制、负载均衡损失计算以及训练流程。同时设置了扩展性练习，帮助读者深入理解 MoE 的工作机制和优化方向。"
 publish: true
 permalink: /llms-zero-to-hero/the-way-of-moe-model-evolution.html
-banner: https://bruceyuan.com/img/huggingface.png
+banner: https://yuanchaofa.com/img/huggingface.png
 ---
 
 
@@ -380,16 +380,16 @@ test_moe_training()
 ## 5. 课后作业
 
 1. 把 expert 改成 swishGLU 版本的 FFN 专家
-   - 可以参考文章：[LLM activate function 激活函数的进化之路，从 ReLU，GELU 到 swishGLU](https://bruceyuan.com/llms-zero-to-hero/activate-function-from-relu-gelu-to-swishglu.html)
-   - 以及 [手写 transformer decoder（CausalLM）](https://bruceyuan.com/hands-on-code/hands-on-causallm-decoder.html)
+   - 可以参考文章：[LLM activate function 激活函数的进化之路，从 ReLU，GELU 到 swishGLU](https://yuanchaofa.com/llms-zero-to-hero/activate-function-from-relu-gelu-to-swishglu.html)
+   - 以及 [手写 transformer decoder（CausalLM）](https://yuanchaofa.com/hands-on-code/hands-on-causallm-decoder.html)
 2. 把 MOE 应用到上一次的 build_nanoGPT 中，也就是替换掉原来的 FFN层，注意这里负载均衡 loss 要包含每一层的 MOE 的 router_logits
    - 参考 GitHub 仓库， 【[LLMs-Zero-to-Hero](https://github.com/bbruceyuan/LLMs-Zero-to-Hero)】
 3. 自己问一下 GPT topK 是怎么实现的反向传播，了解反向传播的梯度怎么流转的？
 
 
 ## 交个朋友🤣
-最后欢迎关注我，基本全网同名 [chaofa用代码打点酱油](https://bruceyuan.com/)
-- 公众号： ![chaofa用代码打点酱油](https://bruceyuan.com/llms-zero-to-hero/chaofa-wechat-official-account.png)
+最后欢迎关注我，基本全网同名 [chaofa用代码打点酱油](https://yuanchaofa.com/)
+- 公众号： ![chaofa用代码打点酱油](https://yuanchaofa.com/llms-zero-to-hero/chaofa-wechat-official-account.png)
 - [B站-chaofa用代码打点酱油](https://space.bilibili.com/12420432)
 - [YouTube-chaofa用代码打点酱油](https://www.youtube.com/@bbruceyuan)
 - [chaofa 的 notion 简介](https://chaofa.notion.site/11a569b3ecce49b2826d679f5e2fdb54)

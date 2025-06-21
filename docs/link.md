@@ -38,8 +38,8 @@ image: img/link.png
 >
 > 站点描述：平常写 Python, 对 NLP、大模型、计算广告有一些研究，尝试做一些有意义的事情~
 >
-> 站点地址：<https://bruceyuan.com>
+> 站点地址：<https://yuanchaofa.com>
 >
-> 已加友链：<https://bruceyuan.com/link.html>
+> 已加友链：<https://yuanchaofa.com/link.html>
 >
 > 常用网名：英文: bbruceyuan，bruce yuan，中文：用代码打点酱油，打点酱油，混学大师，chaofa用代码打点酱油，用代码打点酱油的chaofa

@@ -29,7 +29,7 @@ OpenAI O 系列发布之后，Inference Time Scaling 的模型一直备受关注
 ![adacot-adathinking-20250525140638319](https://cfcdn.bruceyuan.com/blog/2025/adacot-adathinking-20250525140638319.webp)
 
 > [!NOTE]
-> 本文首发于[chaofa用代码打点酱油](https://bruceyuan.com/)的个人 Blog，后续有更新会优先更新于 Blog 中，原文链接[自适应快慢思考推理模型：Qwen3混合思考->字节AdaCoT->清华AdaThinking](https://bruceyuan.com/post/slow-fast-thinking-from-qwen3-thinking-mixed-to-adacot-to-adathinking.html)，也会同步到同名[公众号-chaofa用代码打点酱油](https://bruceyuan.com/llms-zero-to-hero/chaofa-wechat-official-account.png)（仅同步）
+> 本文首发于[chaofa用代码打点酱油](https://yuanchaofa.com/)的个人 Blog，后续有更新会优先更新于 Blog 中，原文链接[自适应快慢思考推理模型：Qwen3混合思考->字节AdaCoT->清华AdaThinking](https://yuanchaofa.com/post/slow-fast-thinking-from-qwen3-thinking-mixed-to-adacot-to-adathinking.html)，也会同步到同名[公众号-chaofa用代码打点酱油](https://yuanchaofa.com/llms-zero-to-hero/chaofa-wechat-official-account.png)（仅同步）
 > 
 > 如果不喜欢看文字的朋友，也可以看 [B站](https://www.bilibili.com/video/BV1DB7KzaELZ/)、[YouTube](https://youtu.be/IO9oKN5Cknc?si=2GDmTkxGdwumCIl0) 上的视频解读。
 
@@ -379,14 +379,14 @@ $$
 	- 其中 `AdaCoT` 通过把优化目标转换成 Pareto optimization，然后利用 PPO 算法进行优化
 	- `AdaThinking` 也是通过 PPO 算法优化，把问题视为：尽量少触发 CoT 的情况下，新模型的回复大于【旧模型回答】且大于【Thinking 模式模型的回答】。
 
-[DeepSeek-R1](https://bruceyuan.com/post/deepseek-r1-paper-reading-notes.html) 之后，真就全员 RL 啊，什么东西都用 RL 来搞一遍~ ok, `RL is all we need~`
+[DeepSeek-R1](https://yuanchaofa.com/post/deepseek-r1-paper-reading-notes.html) 之后，真就全员 RL 啊，什么东西都用 RL 来搞一遍~ ok, `RL is all we need~`
 
 
 
 ## 其他
-最后欢迎关注我，基本全网同名 [chaofa用代码打点酱油](https://bruceyuan.com/) (推荐)
-- [公众号-chaofa用代码打点酱油](https://bruceyuan.com/llms-zero-to-hero/chaofa-wechat-official-account.png)（仅同步）
-    - ![chaofa用代码打点酱油](https://bruceyuan.com/llms-zero-to-hero/chaofa-wechat-official-account.png)
+最后欢迎关注我，基本全网同名 [chaofa用代码打点酱油](https://yuanchaofa.com/) (推荐)
+- [公众号-chaofa用代码打点酱油](https://yuanchaofa.com/llms-zero-to-hero/chaofa-wechat-official-account.png)（仅同步）
+    - ![chaofa用代码打点酱油](https://yuanchaofa.com/llms-zero-to-hero/chaofa-wechat-official-account.png)
 - [B站-chaofa用代码打点酱油](https://space.bilibili.com/12420432)
 - [YouTube-chaofa用代码打点酱油](https://www.youtube.com/@bbruceyuan)
 - [chaofa 的 notion 简介](https://chaofa.notion.site/11a569b3ecce49b2826d679f5e2fdb54)

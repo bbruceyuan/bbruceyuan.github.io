@@ -47,7 +47,7 @@ Agent 概念火了，但是 Agent 能做什么，却是很多人和业务没有�
 > 最后推荐下 yaoshunyu 的 blog, [AI下半场](https://ysymyth.github.io/The-Second-Half/)。
 ## 3. 视频更新
 
-上个月说要[走慢些](https://bruceyuan.com/blog/2025-03-month-summary.html)，但没想到的是人一旦松懈下来，就真的就很难动起来了，整个 4 月份在 GitHub 只有两个绿点，而且其实是一些无足轻重的 blog 错误修正，真正想写想做的内容其实没有并没有更新，比如 [LLMs-Zero-to-Hero](https://github.com/bbruceyuan/LLMs-Zero-to-Hero) 系列主视频更新。
+上个月说要[走慢些](https://yuanchaofa.com/blog/2025-03-month-summary.html)，但没想到的是人一旦松懈下来，就真的就很难动起来了，整个 4 月份在 GitHub 只有两个绿点，而且其实是一些无足轻重的 blog 错误修正，真正想写想做的内容其实没有并没有更新，比如 [LLMs-Zero-to-Hero](https://github.com/bbruceyuan/LLMs-Zero-to-Hero) 系列主视频更新。
 
 ![2025-04-20250504030155871](https://cfcdn.bruceyuan.com/blog/2025/2025-04-20250504030155871.webp)
 

@@ -13,9 +13,9 @@ permalink: /blog/2024-year-summary.html
 
 - 历史年终总结
 	- [《2023，新的开始》](bruceyuan.com/blog/2023-year-summary.html)
-	- [《2022，激荡中的平淡》](https://bruceyuan.com/blog/2022-year-summary.html)
-	- [《2021，乌云与曙光》](https://bruceyuan.com/blog/2021-year-summary.html)
-	- [《2020年过去了，我不怀念它》](https://bruceyuan.com/blog/2020-year-summary.html)
+	- [《2022，激荡中的平淡》](https://yuanchaofa.com/blog/2022-year-summary.html)
+	- [《2021，乌云与曙光》](https://yuanchaofa.com/blog/2021-year-summary.html)
+	- [《2020年过去了，我不怀念它》](https://yuanchaofa.com/blog/2020-year-summary.html)
 
 ## 等待新的生命
 

@@ -19,9 +19,9 @@ permalink: /blog/2025-02-month-summary.html
 
 因为技术日新月异，工作又过于饱和基本没有时间了解前沿内容。在春节的时候，我想着日后要更高效地利用时间提升自己，因此我尝试了在早晚通勤的时候，在车上拿出 Pad 看 Paper，但最终只坚持了 10 天。
 
-此外，由于 25 年 1 月份做了两期 [LLMs-Zero-to-Hero](https://github.com/bbruceyuan/LLMs-Zero-to-Hero) 爆款视频，[B 站粉丝数量](https://space.bilibili.com/12420432)一下在一个月内增加到了 19k（10k -> 19k），有些超出了我的预期。这个月更新了三个视频，但两个是假期更新的。自 2.10 号开始上班后只录制了一期视频，而且方向从写代码变成了 [deepseek-R1-paper 解读](https://bruceyuan.com/post/deepseek-r1-paper-reading-notes.html)，核心原因就一个：paper 解读相对容易做，并且这篇 paper 年前回家的时候就读了好几遍了。 诶，工作变得更忙了，周末实在是没法精力自己学习，只能更新一些更简单的内容。
+此外，由于 25 年 1 月份做了两期 [LLMs-Zero-to-Hero](https://github.com/bbruceyuan/LLMs-Zero-to-Hero) 爆款视频，[B 站粉丝数量](https://space.bilibili.com/12420432)一下在一个月内增加到了 19k（10k -> 19k），有些超出了我的预期。这个月更新了三个视频，但两个是假期更新的。自 2.10 号开始上班后只录制了一期视频，而且方向从写代码变成了 [deepseek-R1-paper 解读](https://yuanchaofa.com/post/deepseek-r1-paper-reading-notes.html)，核心原因就一个：paper 解读相对容易做，并且这篇 paper 年前回家的时候就读了好几遍了。 诶，工作变得更忙了，周末实在是没法精力自己学习，只能更新一些更简单的内容。
 
-另外，一个非常让人开心的事情是，我终于完成了[年前的 Flag](https://bruceyuan.com/blog/2024-year-summary.html) 中提到的，作为嘉宾参与了一期[硬地骇客的录制](https://www.xiaoyuzhoufm.com/episode/67bc6e1605a90dfd0d8decf1)。作为一个从第一期就开始听得老粉，能作为嘉宾参与第 94 期节目的录制，实在是值得骄傲和庆祝的一件事情。不过在录制的过程中，自己的缺点暴露的一览无遗，表达能力实在是太差了，很多想讲的点都没能说出来。这个以后还需要加强锻炼，希望能和更多的朋友聊天。
+另外，一个非常让人开心的事情是，我终于完成了[年前的 Flag](https://yuanchaofa.com/blog/2024-year-summary.html) 中提到的，作为嘉宾参与了一期[硬地骇客的录制](https://www.xiaoyuzhoufm.com/episode/67bc6e1605a90dfd0d8decf1)。作为一个从第一期就开始听得老粉，能作为嘉宾参与第 94 期节目的录制，实在是值得骄傲和庆祝的一件事情。不过在录制的过程中，自己的缺点暴露的一览无遗，表达能力实在是太差了，很多想讲的点都没能说出来。这个以后还需要加强锻炼，希望能和更多的朋友聊天。
 
 ## 投资-程序员破产之路
 

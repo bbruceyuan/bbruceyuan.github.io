@@ -10,7 +10,7 @@ category:
 description: 了解注意力机制变体，包括MHA（Multi-Head Attention）、MQA（Multi-Query Attention）和GQA（Group Query Attention）。通过手写代码实现，探讨三种注意力机制的异同，以及GQA在推理性能优化方面的优势。
 publish: true
 permalink: /hands-on-code/hands-on-group-query-attention-and-multi-query-attention.html
-banner: https://bruceyuan.com/img/huggingface.png
+banner: https://yuanchaofa.com/img/huggingface.png
 ---
 
 - GQA（Group Query Attention）的优点：效果损失小，推理的时候可以加速（来自于kvcache小，内存取数少）。
@@ -198,8 +198,8 @@ net(x).shape
 
 
 ## 交个朋友🤣
-最后欢迎关注我，基本全网同名 [chaofa用代码打点酱油](https://bruceyuan.com/)
-- 公众号： ![chaofa用代码打点酱油](https://bruceyuan.com/llms-zero-to-hero/chaofa-wechat-official-account.png)
+最后欢迎关注我，基本全网同名 [chaofa用代码打点酱油](https://yuanchaofa.com/)
+- 公众号： ![chaofa用代码打点酱油](https://yuanchaofa.com/llms-zero-to-hero/chaofa-wechat-official-account.png)
 - [B站-chaofa用代码打点酱油](https://space.bilibili.com/12420432)
 - [YouTube-chaofa用代码打点酱油](https://www.youtube.com/@bbruceyuan)
 - [chaofa 的 notion 简介](https://chaofa.notion.site/11a569b3ecce49b2826d679f5e2fdb54)

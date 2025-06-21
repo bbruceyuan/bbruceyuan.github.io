@@ -15,11 +15,11 @@ permalink: /post/deepseek-grm-paper-reading-notes.html
 
 Training Scaling 和 Inference Scaling 在 Base-Model 都取得了巨大的成功。那么在强化学习（Reinforcement Learning, RL）过程中需要的 Reward-Model（RM） 是不是也可以通过 **Inference-Time Scaling 来优化 RM** 呢？因此 DeepSeek 团队提出一种方法叫做：Self-Principed Critique Tuning (SPCT) 的方法来训练一个通用型的 RM（Generalist RM）。
 
-RL 在推理模型中取得了巨大的成功，如 OpenAI 的 O系列、DeepSeek R系列（[DeepSeek-R1](https://bruceyuan.com/post/deepseek-r1-paper-reading-notes.html)），但这些模型都采用了 Rule-Base Reward Model，因此 Reward Model 具有一定的局限性，在很多场景不够通用，因此本文的 **DeepSeek-GRM 是旨在利用 SPCT 的方式来训练一个通用型的 Reward Model，并且能够很好得 Inference-Time Scale，以此得到一个在通用任务（非数学、代码等有精确 Reward）也能有很好效果的模型**。
+RL 在推理模型中取得了巨大的成功，如 OpenAI 的 O系列、DeepSeek R系列（[DeepSeek-R1](https://yuanchaofa.com/post/deepseek-r1-paper-reading-notes.html)），但这些模型都采用了 Rule-Base Reward Model，因此 Reward Model 具有一定的局限性，在很多场景不够通用，因此本文的 **DeepSeek-GRM 是旨在利用 SPCT 的方式来训练一个通用型的 Reward Model，并且能够很好得 Inference-Time Scale，以此得到一个在通用任务（非数学、代码等有精确 Reward）也能有很好效果的模型**。
 s
 
 > [!NOTE]
-> 本文首发于[chaofa用代码打点酱油](https://bruceyuan.com/)的个人 Blog，后续有更新会优先更新于 Blog 中，原文链接[DeepSeek-GRM：Inferene-time Scaling 的 Generalist Reward Model(通用奖励模型)](https://bruceyuan.com/post/deepseek-grm-paper-reading-notes.html)，也会同步到同名[公众号-chaofa用代码打点酱油](https://bruceyuan.com/llms-zero-to-hero/chaofa-wechat-official-account.png)（仅同步）
+> 本文首发于[chaofa用代码打点酱油](https://yuanchaofa.com/)的个人 Blog，后续有更新会优先更新于 Blog 中，原文链接[DeepSeek-GRM：Inferene-time Scaling 的 Generalist Reward Model(通用奖励模型)](https://yuanchaofa.com/post/deepseek-grm-paper-reading-notes.html)，也会同步到同名[公众号-chaofa用代码打点酱油](https://yuanchaofa.com/llms-zero-to-hero/chaofa-wechat-official-account.png)（仅同步）
 > 
 > 如果不喜欢看文字的朋友，也可以看 [B站](https://www.bilibili.com/video/BV17cVdzTEac/)、[YouTube](https://youtu.be/NlIKow850w8?si=r2GFKqGl4GfsJQvw) 上的视频解读。
 
@@ -128,8 +128,8 @@ Inference-time Scaling，Voting 从  1 -> 32，效果逐步提升，并且 MetaR
 
 
 ## 其他
-最后欢迎关注我，基本全网同名 [chaofa用代码打点酱油](https://bruceyuan.com/)
-- 公众号： ![chaofa用代码打点酱油](https://bruceyuan.com/llms-zero-to-hero/chaofa-wechat-official-account.png)
+最后欢迎关注我，基本全网同名 [chaofa用代码打点酱油](https://yuanchaofa.com/)
+- 公众号： ![chaofa用代码打点酱油](https://yuanchaofa.com/llms-zero-to-hero/chaofa-wechat-official-account.png)
 - [B站-chaofa用代码打点酱油](https://space.bilibili.com/12420432)
 - [YouTube-chaofa用代码打点酱油](https://www.youtube.com/@bbruceyuan)
 - [chaofa 的 notion 简介](https://chaofa.notion.site/11a569b3ecce49b2826d679f5e2fdb54)

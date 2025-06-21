@@ -5,11 +5,11 @@ import sidebar from "./sidebar.js";
 
 export default hopeTheme({
   // basic info
-  hostname: "https://bruceyuan.com",
+  hostname: "https://yuanchaofa.com",
   favicon: "/img/icon.webp",
   author: {
     name: "Chaofa Yuan",
-    url: "https://bruceyuan.com",
+    url: "https://yuanchaofa.com",
   },
 
   logo: "/img/icon.webp",

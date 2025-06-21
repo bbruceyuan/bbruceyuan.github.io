@@ -10,7 +10,7 @@ category:
 description: 在 AI 相关的面试中，经常会有面试官让写 self-attention，但是 transformer 这篇文章其实包含很多的细节，因此可能面试官对于 self-attention 实现到什么程度是有不同的预期。因此这里想通过写不同版本的 self-attention 实现来达到不同面试官的预期，四个不同的版本，对应不同的细节程度。
 publish: true
 permalink: /hands-on-code/from-self-attention-to-multi-head-self-attention.html
-banner: https://bruceyuan.com/img/huggingface.png
+banner: https://yuanchaofa.com/img/huggingface.png
 ---
 
 ## 背景
@@ -349,8 +349,8 @@ net(x, attention_mask).shape
 
 
 ## 交个朋友🤣
-最后欢迎关注我，基本全网同名 [chaofa用代码打点酱油](https://bruceyuan.com/)
-- 公众号： ![chaofa用代码打点酱油](https://bruceyuan.com/llms-zero-to-hero/chaofa-wechat-official-account.png)
+最后欢迎关注我，基本全网同名 [chaofa用代码打点酱油](https://yuanchaofa.com/)
+- 公众号： ![chaofa用代码打点酱油](https://yuanchaofa.com/llms-zero-to-hero/chaofa-wechat-official-account.png)
 - [B站-chaofa用代码打点酱油](https://space.bilibili.com/12420432)
 - [YouTube-chaofa用代码打点酱油](https://www.youtube.com/@bbruceyuan)
 - [chaofa 的 notion 简介](https://chaofa.notion.site/11a569b3ecce49b2826d679f5e2fdb54)
