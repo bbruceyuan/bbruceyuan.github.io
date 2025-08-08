@@ -18,7 +18,7 @@ head:
 
 ## 1. 什么是 Raycast？
 
-Raycast 是一个在 **Mac 上的启动器**，类似于 Mac 自带的 「焦点（Spotlight）」。所谓的启动器（Launcher），可以理解为管理各种电脑应用（Application）的的工具，让你更加**高效的组织应用并且与应用交互**。
+Raycast 是一个在 **Mac 上的启动器**，类似于 Mac 自带的 「焦点（Spotlight）」。所谓的启动器（Launcher），可以理解为管理各种电脑应用（Application）的工具，让你更加**高效的组织应用并且与应用交互**。
 
 Raycast 作为一个很好用的启动器，具有很多基础的功能，比如查找应用、查找文件、使用计算器、历史剪切板等；除了基础功能以外，Raycast 还支持插件扩展，Raycast 的插件和一些脚本都是[开源](https://github.com/raycast/extensions)的，因此你可以根据自己的需求在[插件市场](https://www.raycast.com/store)和[脚本仓库](https://github.com/raycast/script-commands)中找到自己想要的插件和脚本；如果在插件/脚本市场中看了一圈，没有开源项目可以满足你需要的功能，那么你可以自己写一个插件或者通过一些脚本（Script）满足自己的要求。
 
