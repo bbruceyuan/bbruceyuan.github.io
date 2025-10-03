@@ -18,6 +18,7 @@ permalink: /post/from-native-rag-to-agentic-rag.html
 - 了解什么是 Agentic RAG
     - 了解企业级项目 [chatbox](https://github.com/chatbox-ai/chatbox) 的 Agentic RAG 架构和原理
     - 了解如何使用强化学习训练 Agentic RAG （Search-R1）
+- 源代码位于 Github -[动手学习大模型-中文版-第八章——rag 源代码](https://github.com/bbruceyuan/Hands-On-Large-Language-Models-CN/)
 
 ## 2. 前言
 
@@ -38,7 +39,8 @@ permalink: /post/from-native-rag-to-agentic-rag.html
 
 因此 RAG 系统架构可以如下图所示：
 
-![[Excalidraw/from-native-rag-to-agentic-rag|from-native-rag-to-agentic-rag]]
+![image.png](https://cfcdn.yuanchaofa.com/blog/2025/20251003193522.png)
+
 
 `NATIVE RAG`一般来说可以分成两个不同的链路：离线和在线。具体的代码可以参考：[动手学习大模型-中文版-第八章-native-rag 源代码](https://github.com/bbruceyuan/Hands-On-Large-Language-Models-CN/tree/master/chapter08)
 
@@ -592,6 +594,13 @@ def compute_reward(prediction, ground_truth):
 当然，基于强化学习的 Agentic RAG 也有一些挑战，例如训练成本高、数据依赖等，但目前（2025-10-03）来看，基于强化学习的 Agent 应用（包括 Agentic RAG）仍然是最主流的一种使用方式。
 
 
-## 6. Ref
+## 6. 其他
+最后欢迎关注我，基本全网同名 [chaofa用代码打点酱油](https://yuanchaofa.com/)
+- 公众号（主要是为了订阅通知，不然看 Blog 就够了）： ![chaofa用代码打点酱油](https://yuanchaofa.com/llms-zero-to-hero/chaofa-wechat-official-account.png)
+- [B站-chaofa用代码打点酱油](https://space.bilibili.com/12420432)
+- [YouTube-chaofa用代码打点酱油](https://www.youtube.com/@bbruceyuan)
+- [chaofa 的 notion 简介](https://chaofa.notion.site/11a569b3ecce49b2826d679f5e2fdb54)
+
+## 7. Ref
 
 [^1]: 以前有过好奇🤔为什么 Chatbox 的 RAG 效果在复杂场景下的 RAG 效果比其他的 chatbox 类产品效果更好，后面阅读源码之后才发现：chatbox 针对于 `file` 相关的工具做了优化，并且因为不用考虑时延等问题，很多决策都通过 `LLM` 完成。
