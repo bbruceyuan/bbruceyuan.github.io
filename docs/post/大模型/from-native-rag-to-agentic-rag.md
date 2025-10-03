@@ -409,46 +409,11 @@ def train_search_r1(model, optimizer, dataset, search_engine, epochs):
     
     return model
 
-def generate_trajectory(model, question, search_engine):
-    trajectory = []
-    actions = []
-    log_probs = []
-    state = question
-    done = False
-    
-    while not done:
-        # 模型推理
-        output, action_prob = model(state)  # 返回输出和动作概率
-        trajectory.append(output)
-        
-        # 检查是否需要搜索
-        if "<search>" in output:
-            # 记录搜索动作和概率
-            actions.append("search")
-            log_probs.append(action_prob)
-            
-            # 提取搜索查询
-            query = extract_search_query(output)
-            
-            # 执行搜索
-            search_results = search_engine.search(query)
-            
-            # 更新状态
-            state = state + output + search_results
-        else:
-            # 记录生成答案动作和概率
-            actions.append("answer")
-            log_probs.append(action_prob)
-            
-            # 生成最终答案
-            done = True
-    
-    return trajectory, actions, log_probs
 ```
 
 #### 4.4.3 最小实现示例
 
-以下是 Search-R1 的简化实现示例，展示了如何使用强化学习训练 Agentic RAG 模型：当然实际上 Search-R1 使用的 `GRPO` 算法，我这里用 policy gradient 来演示。
+以下是 Search-R1 的简化实现示例（完整实现可以参考原 [Github 实现](https://github.com/PeterGriffinJin/Search-R1)），展示了如何使用强化学习训练 Agentic RAG 模型：当然实际上 Search-R1 使用的 `GRPO` 算法，我这里用 policy gradient 来演示。
 
 ```python
 import torch
@@ -531,34 +496,6 @@ def train_rl(model, dataset, search_engine, epochs=3, lr=1e-5):
             optimizer.step()
     
     return model
-
-# 使用训练好的模型进行推理
-def inference(model, tokenizer, question, search_engine):
-    state = question
-    done = False
-    steps = []
-    
-    while not done and len(steps) < 10:
-        inputs = tokenizer(state, return_tensors="pt")
-        outputs = model.generate(**inputs, max_new_tokens=100)
-        step_output = tokenizer.decode(outputs[0])
-        steps.append(step_output)
-        
-        # 检查是否需要搜索
-        if "<search>" in step_output:
-            # 提取搜索查询
-            query = extract_search_query(step_output)
-            
-            # 执行搜索
-            search_results = search_engine.search(query)
-            
-            # 更新状态
-            state = state + step_output + search_results
-        else:
-            # 生成最终答案
-            done = True
-    
-    return steps[-1]  # 返回最终答案
 
 # 辅助函数：提取搜索查询
 def extract_search_query(text):
