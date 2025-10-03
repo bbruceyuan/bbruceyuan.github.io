@@ -187,62 +187,6 @@ ReAct 是一个常见的 Agent 实现方式，因此只要给 LLM 配备合适�
 
 ![image.png|700x889](https://cfcdn.yuanchaofa.com/blog/2025/20251003192952.png)
 
-
-```mermaid
-graph TB
-    A[用户发送消息] --> B{模型是否支持工具调用?}
-    
-    %% 支持工具调用的分支
-    B -->|支持| C[注册知识库工具集]
-    C --> D[添加系统提示:<br/>Knowledge base is available]
-    D --> E[模型自主决定是否使用工具]
-    E --> F[可能使用的工具:]
-    F --> G[query_knowledge_base<br/>语义搜索]
-    F --> H[list_files<br/>浏览文件列表]
-    F --> I[read_file_chunks<br/>读取具体内容]
-    F --> J[get_files_meta<br/>获取文件信息]
-    G --> K[基于工具结果生成回复]
-    H --> K
-    I --> K
-    J --> K
-    
-    %% 不支持工具调用的分支
-    B -->|不支持| L[发送判断 Prompt 给 LLM]
-    L --> M["系统 Prompt:<br/>As a professional knowledge base researcher,<br/>determine if searching would help..."]
-    M --> N[LLM 分析用户问题]
-    N --> O{LLM 判断结果}
-    
-    O -->|action: 'proceed'| P[直接回答，不搜索]
-    O -->|action: 'search'| Q[执行知识库语义搜索]
-    Q --> R[获取相似文档片段]
-    R --> S{是否有重排序模型?}
-    S -->|有| T[使用 Rerank 模型重排序]
-    S -->|无| U[使用向量相似度排序]
-    T --> V[将搜索结果注入到对话中]
-    U --> V
-    V --> W["构建增强 Prompt:<br/>[document 1 begin]...[document 1 end]<br/>User Message: ..."]
-    W --> X[基于搜索结果生成回答]
-    
-    %% 最终输出
-    K --> Y[返回最终回复]
-    P --> Y
-    X --> Y
-    
-    %% 样式
-    classDef userAction fill:#e1f5fe
-    classDef toolSupported fill:#e8f5e8
-    classDef toolNotSupported fill:#f3e5f5
-    classDef decision fill:#fff3e0
-    classDef output fill:#fce4ec
-    
-    class A userAction
-    class C,D,E,F,G,H,I,J,K toolSupported
-    class L,M,N,Q,R,S,T,U,V,W,X toolNotSupported
-    class B,O decision
-    class P,Y output
-
-```
-
 因此我们重点来解读 `chatbox` 到底是怎么[设置工具](https://github.com/chatboxai/chatbox/blob/9e33c9f998ebf240f31bbb439a430b4d5e5bd3e0/src/renderer/packages/knowledge-base/tools.ts#L78)，来实现更好的 `Agentic Search`，然后再给出最小示例代码：
 
 > 包括 Anthropic 的 context engineering 文章中也提到了`Agentic Seach` 对于 Agent 应用是非常重要的。
@@ -343,26 +287,6 @@ print("答案:\n", final_answer)
 Search-R1 是一个基于强化学习的框架，专为训练具备推理和搜索能力的大语言模型而设计。与传统 RAG 或基于提示词的 Agentic RAG 不同，Search-R1 让模型通过强化学习掌握"何时搜索"、"搜索什么"以及"如何利用搜索结果"的能力。
 
 ![image.png](https://cfcdn.yuanchaofa.com/blog/2025/20251003193047.png)
-
-```mermaid
-graph TB
-    A[用户问题] --> B[LLM 推理]
-    B --> C{需要搜索?}
-    C -->|是| D[生成搜索查询]
-    D --> E[执行搜索]
-    E --> F[获取搜索结果]
-    F --> G[继续推理]
-    G --> C
-    C -->|否| H[生成最终答案]
-    
-    classDef default fill:#f9f9f9,stroke:#333,stroke-width:1px;
-    classDef decision fill:#e1f5fe,stroke:#333,stroke-width:1px;
-    classDef action fill:#e8f5e9,stroke:#333,stroke-width:1px;
-    
-    class A,H default;
-    class B,D,E,F,G action;
-    class C decision;
-```
 
 Search-R1 的核心特点包括：
 
@@ -537,6 +461,7 @@ def compute_reward(prediction, ground_truth):
 - [B站-chaofa用代码打点酱油](https://space.bilibili.com/12420432)
 - [YouTube-chaofa用代码打点酱油](https://www.youtube.com/@bbruceyuan)
 - [chaofa 的 notion 简介](https://chaofa.notion.site/11a569b3ecce49b2826d679f5e2fdb54)
+
 
 ## 7. Ref
 
