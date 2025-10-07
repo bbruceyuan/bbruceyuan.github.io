@@ -156,15 +156,6 @@ print(f"\n参考文档数量: {len(docs)}")
 ```
 
 ## 4. Agentic RAG 
-
-`Agentic RAG`的核心“**不是更复杂的模型**”，而是“**让模型学会做事**”。和一次性把文档塞进 Prompt 就生成答案的 Native RAG 相比，Agentic RAG 让大模型扮演一个“决策-执行”的控制器：**先制定策略，再调用工具逐步收集证据，最后基于证据作答并给出引用**。
-
-所以说：模型通过自主决策实现的 RAG 过程，我们就可以称之为 `Agentic RAG`。无论这个过程是发现在离线入库阶段（当然 Agentic RAG 其实可以不严格区分 offline/online 截断，都可以让 Agent 自主决策），还是 RAG 生成阶段的 `search query rewrite`，`rerank` 还是 `dynamic search`等，只要有模型的自主决策过程，那么就可以称为 `Agentic RAG`。
-
-如果想了解更多的 [`Agentic RAG`的工业级别](https://github.com/chatboxai/chatbox)的实现，我觉得可以参考「[开源项目 chatbox](https://github.com/chatboxai/chatbox)」的实现，该项目是一个比较早的 LLM Chat 集成的项目，并且算是比较早的实现了 `Agentic RAG`。因为作为一个离线的 LLM chat 项目，对于时延等问题可以有更少的考虑，从而**更激进的、更早阶段将 naive chat 变成 Agentic Chat**。
-
-> 给模型更多的自主决策空间、配备合适的工具，LLM 会给你出乎意料的智能。
-
 ### 4.1 Native RAG 有哪些不够好的地方？
 
 - 一次性流水线：通常“检索→拼接→生成”一步到位，没有让模型根据需要调整检索策略、递进式地钻研文档。
@@ -175,9 +166,20 @@ print(f"\n参考文档数量: {len(docs)}")
 
 ### 4.2 什么是 Agentic RAG？
 
+`Agentic RAG`的核心“**不是更复杂的模型**”，而是“**让模型学会做事**”。和一次性把文档塞进 Prompt 就生成答案的 Native RAG 相比，Agentic RAG 让大模型扮演一个“决策-执行”的控制器：**先制定策略，再调用工具逐步收集证据，最后基于证据作答并给出引用**。
+
+所以说：模型通过自主决策实现的 RAG 过程，我们就可以称之为 `Agentic RAG`。无论这个过程是发现在离线入库阶段（当然 Agentic RAG 其实可以不严格区分 offline/online 截断，都可以让 Agent 自主决策），还是 RAG 生成阶段的 `search query rewrite`，`rerank` 还是 `dynamic search`等，只要有模型的自主决策过程，那么就可以称为 `Agentic RAG`。具体的形式可以参考 Agentic RAG 流程图（将 search 能力变成一个工具，模型可以根据需要调用）：
+
+![image.png|700x264](https://cfcdn.yuanchaofa.com/blog/2025/20251007132359.png)
+
 - 让 LLM 作为“智能体（Agent）”充当控制器，结合一组工具（检索、查看元数据、读取片段等）执行“思考→行动→观察”的循环（Reason–Act–Observe）。
 - 在回答之前，按需多轮调用工具，逐步从“找到相关文件”走到“读取关键片段”，最后基于被读取的证据组织答案，并给出引用。
-- 好处：更强的适应性（可改写查询/追加搜索）、更深的证据利用（读到再答）、更可审计（引用具体来源）。
+
+>  给模型更多的自主决策空间、配备合适的工具，LLM 会给你出乎意料的智能。
+>  好处：更强的适应性（可改写查询/追加搜索）、更深的证据利用（读到再答）、更可归因（引用具体来源）。
+
+
+如果想了解更多的 [`Agentic RAG`的工业级别](https://chatboxai.app/)的实现，我觉得可以参考「[开源项目 chatbox](https://github.com/chatboxai/chatbox)」的实现，该项目是一个比较早的 LLM Chat 集成的项目，并且算是比较早的实现了 `Agentic RAG`。因为作为一个离线的 LLM chat 项目，对于时延等问题可以有更少的考虑，从而**更激进的、更早阶段将 naive chat 变成 Agentic Chat**。
 
 ### 4.3 基于提示词和工具的 Agentic RAG
 
@@ -200,6 +202,68 @@ ReAct 是一个常见的 Agent 实现方式，因此只要给 LLM 配备合适�
 - `list_files`
 	- 列出知识库中的文件清单，作为兜底浏览或当搜索线索不充分时的探索手段。
 
+#### 4.3.1 Agentic RAG 样例
+
+这里我想通过一个例子让读者理解什么是 `Agentic RAG`。
+
+---
+
+样例 1：
+场景：用户问“LangChain 框架的函数调用功能怎么实现？”，而知识库文档使用的是“Function Calling/Tool Calling”等英文术语，导致首次中文检索相关度很低。
+
+传统 RAG 的表现：
+```
+用户查询: “LangChain 框架的函数调用功能怎么实现？”
+向量检索: 基于“LangChain”“函数调用”做相似度搜索
+检索结果: 返回3个chunk，但都不够相关（最高分 0.65）
+生成结果: “抱歉，未找到关于 LangChain 函数调用功能的具体信息...”
+```
+
+Agentic RAG 的表现（每一轮都是 LLM 根据检索反馈自动调整关键词与表达）：
+```
+第1轮搜索：
+- 工具：query_knowledge_base("LangChain 函数调用 功能 实现")
+- 观察：命中低、证据不足
+- 决策：尝试改写查询词
+
+第2轮搜索（术语同义转换）：
+- 推理：“函数调用”常见英文术语为 “Function Calling”
+- 工具：query_knowledge_base("LangChain Function Calling")
+- 观察：命中高相关chunk（相似度 0.89），含实现细节
+
+第3轮搜索（可选补充）：
+- 工具：query_knowledge_base("LangChain Tool Calling")
+- 观察：补充工具使用相关文档
+
+
+回答：
+- 基于已读取片段整理实现步骤，包含“函数调用”的最小实现片段与说明。
+```
+
+---
+
+样例 2：这里只描述 Agentic RAG 的表现，不展示具体实现。
+场景：用户提问“LangChain 框架的函数调用功能怎么实现？”，但是由于策略问题可能导致分块很细，导致检索的内容不完整。
+
+```
+Agentic RAG 的表现：
+第1轮搜索：
+- 工具：query_knowledge_base("LangChain 函数调用 功能 实现")
+- 观察：命中 chunk 8 （这个 Chunk 可能不完整）
+- 决策：chunk8 包含了函数调用的实现细节，但是上下文有些不完整，所以我需要读取 chunk8 前后两个 chunk 来补充上下文。
+
+第2轮搜索（补充上下文）：
+- 工具：read_file_chunks([{"fileId": 42, "chunkIndex": 7}, {"fileId": 42, "chunkIndex": 9}])
+- 观察：读取到 chunk 7 与 chunk 7，包含了完整的函数调用实现细节。
+- 决策：基于 chunk 7/8/9 中的信息，进行回复。
+
+回答：
+- 基于 chunk 7/8/9 中的信息，整理实现步骤，包含“函数调用”的最小实现片段与说明。
+```
+
+
+#### 4.3.2 源代码
+
 一个典型的 Agentic RAG 策略是：先粗后细 → 先找候选（query_knowledge_base / list_files）→ 看元信息（get_files_meta）→ 精读片段（read_file_chunks）→ 基于证据组织答案并给出引用。具体代码可以见：[动手学习大模型-中文版-第八章-agentic-rag 源代码](https://github.com/bbruceyuan/Hands-On-Large-Language-Models-CN/tree/master/chapter08)
 
 ```python
@@ -213,7 +277,7 @@ from langgraph.prebuilt import create_react_agent
 # - getFilesMeta(kb_id, file_ids)
 # - readFileChunks(kb_id, chunks)
 # - listFilesPaginated(kb_id, page, page_size)
-kb_controller = ...  # TODO: 替换为你的平台实例
+kb_controller = ...  # TODO: 具体可以从我的 Github: https://github.com/bbruceyuan/Hands-On-Large-Language-Models-CN/tree/master/chapter08 中找到
 knowledge_base_id = 42
 
 @tool("query_knowledge_base")
