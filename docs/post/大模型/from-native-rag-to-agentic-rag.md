@@ -18,7 +18,7 @@ permalink: /post/from-native-rag-to-agentic-rag.html
 - 了解什么是 Agentic RAG
     - 了解企业级项目 [chatbox](https://github.com/chatbox-ai/chatbox) 的 Agentic RAG 架构和原理
     - 了解如何使用强化学习训练 Agentic RAG （Search-R1）
-- 源代码位于 Github -[动手学习大模型-中文版-第八章——rag 源代码](https://github.com/bbruceyuan/Hands-On-Large-Language-Models-CN/)
+- 源代码位于 Github -[动手学习大模型-中文版-第八章——rag 源代码](https://github.com/bbruceyuan/Hands-On-Large-Language-Models-CN/tree/master/chapter08)
 
 ## 2. 前言
 
