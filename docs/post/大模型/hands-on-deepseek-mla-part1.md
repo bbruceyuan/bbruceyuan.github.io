@@ -21,8 +21,10 @@ permalink: /post/hands-on-deepseek-mla.html
 3. MLA 既然能节约 kv cache，那么具体是怎么通过矩阵吸收来做工程实现
     - 这部分Paper以及官方开源实现没有给出
 
-> 如果不想看文字，可以看B站手把手教学视频： [从零复现MLA算法](https://www.bilibili.com/video/BV19aP1epEUc)
->
+> 如果不想看文字，可以看B站手把手教学视频： 
+> [Part 1: 从零复现 DeepSeek MLA 算法-无矩阵吸收版](https://www.bilibili.com/video/BV19aP1epEUc)
+> [Part 2: 从零手撕 DeepSeek MLA 算法-矩阵吸收版](https://www.bilibili.com/video/BV1wjQvY6Enm/)
+> 
 > 也欢迎关注我的 github repo: [LLMs-zero-to-hero](https://github.com/bbruceyuan/LLMs-Zero-to-Hero)
 
 ## 原始的 MLA 算法

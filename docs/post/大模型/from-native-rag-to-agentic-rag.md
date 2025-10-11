@@ -14,11 +14,14 @@ permalink: /post/from-native-rag-to-agentic-rag.html
 
 ## 1. 阅读收获 (takeaway)
 本文旨在祛魅【Agentic RAG】的概念，因此本文的阅读收获包括：
-- 了解什么是传统 RAG（Native RAG）
+- 了解什么是传统 RAG（Native/Naive/Vanila RAG）
 - 了解什么是 Agentic RAG
     - 了解企业级项目 [chatbox](https://github.com/chatbox-ai/chatbox) 的 Agentic RAG 架构和原理
     - 了解如何使用强化学习训练 Agentic RAG （Search-R1）
-- 源代码位于 Github -[动手学习大模型-中文版-第八章——rag 源代码](https://github.com/bbruceyuan/Hands-On-Large-Language-Models-CN/tree/master/chapter08)
+- 资源信息
+    - 源代码位于 Github -[动手学习大模型-中文版-第八章——rag 源代码](https://github.com/bbruceyuan/Hands-On-Large-Language-Models-CN/tree/master/chapter08)
+    - 视频解读位于 [B 站](https://www.bilibili.com/video/BV1iLx6zRETu/) 和 [YouTube](https://youtu.be/6cuiF4Lodrs?si=e5HDOen8iliSvO89)，包含更多个人观点类内容
+    - 文章同步更新于[公众号-chaofa 用代码打点酱油](https://mp.weixin.qq.com/s/UN10QnJUrlB-Ehoi8-aOLg)
 
 ## 2. 前言
 

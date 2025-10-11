@@ -20,6 +20,10 @@ permalink: /post/hands-on-deepseek-mla-projection-absorption.html
 
 上面的公式详细的解释了MLA 的计算过程，但这是为了后续代码讲解矩阵吸收回顾使用。
 
+> 如果不想看文字，可以看B站手把手教学视频： 
+> [Part 1: 从零复现 DeepSeek MLA 算法-无矩阵吸收版](https://www.bilibili.com/video/BV19aP1epEUc)
+> [Part 2: 从零手撕 DeepSeek MLA 算法-矩阵吸收版](https://www.bilibili.com/video/BV1wjQvY6Enm/)
+> 
 > 欢迎关注我的 github repo: [LLMs-zero-to-hero](https://github.com/bbruceyuan/LLMs-Zero-to-Hero)
 
 
