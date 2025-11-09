@@ -17,6 +17,9 @@ OpenAI O系列（reasoning）模型发布后（2024-09-12），全世界都在�
 
 尽管 Kimi K1.5 效果很好，而且还是**多模态**的模型，但从网络声量上看，完全被 DeepSeek-R1 盖过去了，只能说时也命也。但事实上，对于科员人员以及算法工程是从业人员，以及想找算法工作的学生来说，[Kimi k1.5 的技术报告](https://arxiv.org/abs/2501.12599)确实更值得 follow 的，核心是里面有更多算法处理的细节，这些细节是我们可以在工作中直接 follow 使用的，而 DeepSeek R1 的 paper 中还有很多细节没有透露，从我的上一篇文章[《自顶向下方式深度解读 DeepSeek-R1》](https://yuanchaofa.com/post/deepseek-r1-paper-reading-notes.html)中就提到几个我们想知道却没说的关键点，Kimi k1.5 给了我们答案，让我们继续看下去，**怎么处理数据能够让模型可以有更强的 Reasoning 能力**。
 
+
+> 想看视频解读的可以看：[深度解读 Kimi K1.5 paper，算法工程师复现必读文章之一，了解 RL 数据如何筛选（B 站/YouTube/视频号-chaofa用代码打点酱油）](https://www.bilibili.com/video/BV1uR9JYjEAp/)
+
 ## 1. 整体架构
 
 Kimi K1.5 整体采用了和 chatGPT 一样的流程，先 pre-training，然后做 SFT，然后是强化学习。可以用[知乎大佬木尧](https://www.zhihu.com/people/muyaostudio)画的一张图讲清楚。
