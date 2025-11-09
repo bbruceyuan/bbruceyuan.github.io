@@ -1,5 +1,5 @@
 ---
-title: Kimi K2 和 Kimi-K2-Thinking 深度解读：从 Agentic Intelligence 到 Test-Time Scaling
+title: Kimi-K2 和 Kimi-K2-Thinking 深度解读：从预训练优化到 Agentic 能力训练的完整流程（含MuonClip优化、Agentic 数据合成等）
 date: 2025-15-09 17:26:00
 tag:
   - LLM
