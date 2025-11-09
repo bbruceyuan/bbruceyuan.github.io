@@ -14,11 +14,11 @@ permalink: /post/kimi-k2-and-kimi-k2-thinking-notes.html
 
 ## 0. 背景
 
-月之暗面发布的 **[Kimi K2 Thinking](https://moonshotai.github.io/Kimi-K2/thinking.html)**，在 Humanity's Last Exam (HLE) 上达到了 44.9% 的成绩，在其他的榜单上也很强，不过榜单简单看一眼即可；让我比较惊喜的是，K2 Thinking 可以执行 200-300 步连续的工具调用，有类似于 `Anthropic` 一样的长程规划和自适应推理能力。
+月之暗面发布的 **[Kimi K2 Thinking](https://moonshotai.github.io/Kimi-K2/thinking.html)**，在 Humanity's Last Exam (HLE) 上达到了 44.9% 的成绩，在多个基准测试中表现优异，不过榜单简单看一眼即可；让我比较惊喜的是，K2 Thinking 可以执行 200-300 步连续的工具调用，有类似于 `claude` 一样的长程规划和自适应推理能力。
 
 但是，K2 Thinking 的官方 blog 只展示了 benchmark 数据和 demo，并没有透露具体的技术细节。作为一个大模型从业者，看到 Twitter/知乎大家都在聊这个模型，所以我就比较好奇「模型的训练方法」以及「给我们工作学习中的启发」。
 
-好在今年早些时候发布了 **Kimi K2** 的完整[技术报告](https://arxiv.org/abs/2507.20534)和 [技术 blog](https://moonshotai.github.io/Kimi-K2/)，详细介绍了 K2 的训练方法。而 **K2 Thinking 和 K2 师出同源**，只是在 K2 的基础上增加了 thinking 能力和 test-time scaling。因此，通过深入研究 K2 的技术细节，我们就能理解 K2 Thinking 是如何炼成的。
+好在今年早些时候发布了 **Kimi K2** 的完整[技术报告](https://arxiv.org/abs/2507.20534)和 [技术 blog](https://moonshotai.github.io/Kimi-K2/)。而 **K2 Thinking 和 K2 师出同源**，只是在 K2 的基础上增加了 thinking 能力，更强的工具调用和 test-time scaling。因此，通过深入研究 K2 的技术细节，我们就能理解 K2 Thinking 是如何炼成的。
 
 我是朝发（CHAOFA）这篇文章会从 K2 的技术报告出发，结合 K2 Thinking 的特点，了解这个 SOTA 开源 thinking 模型是怎么训出来的。**核心关注三个问题**：
 
@@ -70,11 +70,11 @@ Kimi K2 Thinking 是在 K2 的基础上，通过额外的训练，让模型具�
 
 ### 2.1 基于 MuonClip 优化器的 Token 效率优化
 
-预训练是 Agentic Intelligence 的关键基础，它建立了让强化学习探索变得可行、高效和可泛化的先验知识。但是，正如 Ilya Sutskever 所说，类数据是有限的"化石燃料"，其增长速度远远落后于算力的增长。这使得**预训练阶段的 token 利用效率**成为 AI scaling laws 中的新关键系数。
+预训练是 Agentic Intelligence 的关键基础，它建立了让强化学习探索变得可行、高效和可泛化的先验知识。但是，正如 Ilya Sutskever 所说，数据是有限的"化石燃料"，其增长速度远远落后于算力的增长。这使得**预训练阶段的 token 利用效率**成为 AI scaling laws 中的新关键系数。
 
 #### 2.1.1 为什么需要更好的优化器？
 
-给定一个大致有限的预训练数据集和固定的模型配置，更 token 高效的优化器能产生更多的智能。Moonshot 之前的工作 [Moonlight](https://github.com/MoonshotAI/Moonlight) 已经证明，[Muon](https://kellerjordan.github.io/posts/muon/) 优化器在 LLM 训练中显著优于广泛使用的 AdamW 优化器，即「更低的 loss」。
+给定一个大致有限的预训练数据集和固定的模型配置，更 token 高效的优化器能产生更多的智能。Moonshot 之前的工作 [Moonlight](https://github.com/MoonshotAI/Moonlight) 已经证明，[Muon](https://kellerjordan.github.io/posts/muon/) 优化器在 LLM 训练中显著优于广泛使用的 AdamW 优化器，即“相同配置训练下有更低的 loss”。
 
 K2 的设计目标是进一步扩展 Moonlight，它采用了类似 DeepSeek-V3 的架构。基于 scaling-law 分析，他们做了两点改进（看图更清晰）：
 - 减少了 attention heads 的数量，以提高长上下文效率。
@@ -89,7 +89,7 @@ K2 的设计目标是进一步扩展 Moonlight，它采用了类似 DeepSeek-V3 
 
 为了解决这个问题，kimi 提出了 MuonClip 优化器，它通过 **qk-clip 技术**改进了 Muon。
 
-**核心思想**：qk-clip 通过在 Muon 更新后**直接重新缩放 query 和 key 投影的权重矩阵**，从源头控制 attention logits 的规模，从而稳定训练。注意：这里是更新完之后，所以不会改变这一次更新的 forward/backward 操作，影响的是下一步。
+**核心思想**：qk-clip 通过在 Muon 更新后**直接重新缩放 query 和 key 投影的权重矩阵**，从源头控制 attention logits 的规模，从而稳定训练。（注意：这里是更新完之后，所以不会改变这一次更新的 forward/backward 操作，影响的是下一步）。
 
 具体来说，query 和 key 投影按如下方式缩放：
 
@@ -126,9 +126,7 @@ $$
 **小结**：MuonClip 优化器通过 qk-clip 技术，在保持 Muon 高 token 效率的同时，解决了训练不稳定问题。这使得 K2 能够在有限的数据上训练出更强的基础模型。
 
 
-### 2.2 基于 Text 改写的优化
-
-
+### 2.2 文本的改写优化
 
 K2 相比 K1.5 的一个关键进步是引入了**合成数据生成策略**来提高 token 利用率。核心思想是：通过精心设计的改写 pipeline，在不引入显著过拟合的情况下，扩大高质量 tokens 的数量。改写（Rephrasing） 就是数据合成的一种方式，主要是为了提高「高质量数据的占比」，尤其是「知识领域」和「数学领域」。：
 
@@ -191,7 +189,7 @@ K2 的增强 Agentic 能力源于两个重要方面：
 
 这个管道的核心思想是：**系统地演化数百个领域，包含数千个工具**（包括真实的 MCP 工具和合成工具），然后生成数百个具有不同工具集的 agents。
 
-![image.png](https://cfcdn.yuanchaofa.com/blog/2025/20251109162021.png)
+![image.png|700x232](https://cfcdn.yuanchaofa.com/blog/2025/20251109175053.png)
 
 辅助看这个图：
 
@@ -205,7 +203,7 @@ K2 的增强 Agentic 能力源于两个重要方面：
 3. 模拟交互：Agents 与模拟环境和用户 agents 交互，创建真实的多轮工具使用场景
 4. LLM 评判(LLM as judge)：根据任务 rubrics 评估模拟结果，过滤出高质量的训练数据
 
-这个可扩展的管道生成了**多样化、高质量的数据**，为大规模拒绝采样和强化学习铺平了道路。
+这个可扩展的 pipeline 生成了**多样化、高质量的数据**，为大规模拒绝采样和强化学习铺平了道路。
 
 #### 3.1.2 为什么这个方法有效？
 
@@ -242,9 +240,9 @@ kimi 的解决方案是：**在可验证奖励的 on-policy rollouts 中，持�
 **小结**：通过大规模 Agentic 数据合成和通用强化学习，K2 学会了在各种场景下使用工具，并且能够处理可验证和不可验证的任务。这为 K2 Thinking 的长程推理能力打下了基础。
 
 
-## 4. K2 Thinking：K2 + Test-Time Scaling
+## 4. K2 Thinking
 
-K2 Thinking 在 K2 的基础上，增加了 **thinking 能力**和 **test-time scaling**。这使得模型能够在推理时进行长程思考和工具调用，从而解决更复杂的问题。
+K2 Thinking 在 K2 的基础上，增加了 **thinking 能力**、**更强的工具调用能力**和 **test-time scaling**。这使得模型能够在推理时进行长程思考和工具调用，从而解决更复杂的问题。
 
 ### 4.1 什么是 Test-Time Scaling？
 
@@ -287,7 +285,7 @@ K2 Thinking 在编码任务上也表现出色：
 
 ### 4.4 小结
 
-通过 test-time scaling，K2 Thinking 能够在推理时进行长程思考和工具调用，从而解决需要深度推理和多步操作的复杂问题。这使得它在 Agentic Reasoning、Agentic Search 和 Agentic Coding 任务上都达到了 SOTA 性能。（有点 anthropic 那味道了）
+通过 test-time scaling，K2 Thinking 能够在推理时进行长程思考和工具调用，从而解决需要深度推理和多步操作的复杂问题。这使得它在 Agentic Reasoning、Agentic Search 和 Agentic Coding 任务上都达到了 SOTA 性能。（有点 claude 那味道了）
 
 ## 5. 技术细节对比：K2 vs K2 Thinking
 
@@ -295,13 +293,12 @@ K2 Thinking 在编码任务上也表现出色：
 
 | 维度 | K2 (Instruct) | K2 Thinking |
 |------|---------------|-------------|
-| 模型类型 | Reflex-grade（无长思考） | Thinking model（有长思考） |
+| 模型类型 | Non-thinking（无长思考） | Thinking model（有长思考） |
 | 推理方式 | 直接生成答案 | 边思考边使用工具 |
 | 工具调用 | 支持，但步数有限（其实也挺好的） | 200-300 步连续调用 |
 | Test-Time Scaling | 不支持 | 支持（thinking tokens + 工具调用） |
 | 适用场景 | 通用对话、快速响应 | 复杂推理、长程规划 |
 
-> Reflex-grade 来自于：https://moonshotai.github.io/Kimi-K2/ 
 
 从技术角度看，K2 Thinking 是在 K2 的基础上：
 - 增加了 thinking 能力：通过额外的训练，让模型学会生成长思考过程
@@ -321,7 +318,7 @@ K2 Thinking 在编码任务上也表现出色：
 > 
 > 1. 从 K1.5 发 paper 开始，就感觉 KIMI 突然开始醒悟做社区了，OpenSource 真的是比较博好感，现在中国的开源模型真的牛皮🐂🍺
 > 
-> 2. 好像 `Anthropic` 在 coding 上的爆火让大家都领悟到了 `agentic` 能力的重要性。希望把 Claude 价格打下来，加油～
+> 2. 好像 `claude` 在 coding 上的爆火让大家都领悟到了 `agentic` 能力的重要性。希望把 Claude 价格打下来，加油～
 
 
 ## 7. 更多内容
