@@ -1,6 +1,6 @@
 ---
 title: Kimi-K2 和 Kimi-K2-Thinking 深度解读：从预训练优化到 Agentic 能力训练的完整流程（含MuonClip优化、Agentic 数据合成等）
-date: 2025-15-09 17:26:00
+date: 2025-11-09 17:26:00
 tag:
   - LLM
   - paper
@@ -18,7 +18,7 @@ permalink: /post/kimi-k2-and-kimi-k2-thinking-notes.html
 
 但是，K2 Thinking 的官方 blog 只展示了 benchmark 数据和 demo，并没有透露具体的技术细节。作为一个大模型从业者，看到 Twitter/知乎大家都在聊这个模型，所以我就比较好奇「模型的训练方法」以及「给我们工作学习中的启发」。
 
-好在今年早些时候发布了 **Kimi K2** 的完整[技术报告](https://arxiv.org/abs/2507.20534)和 [技术 blog](https://moonshotai.github.io/Kimi-K2/)。而 **K2 Thinking 和 K2 师出同源**，只是在 K2 的基础上增加了 thinking 能力，更强的工具调用和 test-time scaling。因此，通过深入研究 K2 的技术细节，我们就能理解 K2 Thinking 是如何炼成的。
+好在今年早些时候发布了 **Kimi K2** 的完整[技术报告](https://arxiv.org/abs/2507.20534)和 [技术 blog](https://moonshotai.github.io/Kimi-K2/)。而 **K2 Thinking 和 K2 师出同源**，只是在 K2 的基础上增加了 thinking 能力，更强的工具调用能力，通过 test-time scaling 实现一个更强的 Thinking Agent。因此，通过深入研究 K2 的技术细节，我们就能理解 K2 Thinking 是如何炼成的。
 
 我是朝发（CHAOFA）这篇文章会从 K2 的技术报告出发，结合 K2 Thinking 的特点，了解这个 SOTA 开源 thinking 模型是怎么训出来的。**核心关注三个问题**：
 
@@ -30,6 +30,11 @@ permalink: /post/kimi-k2-and-kimi-k2-thinking-notes.html
 > - [深度解读 Kimi-K1.5，真正了解 RL 数据是怎么筛选的](https://yuanchaofa.com/post/kimi-k1.5-paper-reading-notes.html)
 > - [自顶向下方式深度解读 DeepSeek-R1，内含大量细节](https://yuanchaofa.com/post/deepseek-r1-paper-reading-notes.html)
 > - [自适应快慢思考推理模型（Adaptive Reasoning Model）：Qwen3混合思考->字节AdaCoT->清华AdaptThinking](https://yuanchaofa.com/post/slow-fast-thinking-from-qwen3-thinking-mixed-to-adacot-to-adathinking.html)
+
+
+> 如果不喜欢看文字可以看视频解读，[B 站-chaofa用代码打点酱油](https://www.bilibili.com/video/BV1yikRBvEwy/)和 [YouTube](https://www.youtube.com/@bbruceyuan)
+>
+> [算法视角深度解读 Kimi K2 和 K2 Thinking，从预训练优化到 Agentic 能力训练的完整流程（含MuonClip优化、Agentic 数据 --bilibili](https://www.bilibili.com/video/BV1yikRBvEwy/)
 
 
 ## 1. 整体架构：从 K2 到 K2 Thinking
@@ -123,7 +128,7 @@ $$
 
 从 loss 曲线可以看出，MuonClip 的训练过程非常平滑，没有出现任何不稳定的情况。这为后续的 Agentic 能力训练打下了坚实的基础。
 
-**小结**：MuonClip 优化器通过 qk-clip 技术，在保持 Muon 高 token 效率的同时，解决了训练不稳定问题。这使得 K2 能够在有限的数据上训练出更强的基础模型。
+**小结**：MuonClip 优化器通过 qk-clip 技术，在保持 Muon 高 token 效率的同时，解决了训练不稳定问题，使得在同等条件下获得比 AdamW 更低的 loss，使得 K2 能够在有限的数据上训练出更强的基础模型。
 
 
 ### 2.2 文本的改写优化
