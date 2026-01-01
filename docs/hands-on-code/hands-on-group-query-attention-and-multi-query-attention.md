@@ -45,7 +45,7 @@ class MultiHeadAttention(nn.Module):
         self.head_dim = hidden_dim // nums_head
         self.hidden_dim = hidden_dim
 
-        # 一般默认有 bias，需要时刻主意，hidden_dim = head_dim * nums_head，所以最终是可以算成是 n 个矩阵
+        # 一般默认有 bias，需要时刻注意，hidden_dim = head_dim * nums_head，所以最终是可以算成是 n 个矩阵
         self.q_proj = nn.Linear(hidden_dim, hidden_dim)
         self.k_proj = nn.Linear(hidden_dim, hidden_dim)
         self.v_proj = nn.Linear(hidden_dim, hidden_dim)
@@ -76,7 +76,7 @@ class MultiHeadAttention(nn.Module):
         v_state = V.view(batch_size, seq_len, self.nums_head, self.head_dim).transpose(
             1, 2
         )
-        # 主意这里需要用 head_dim，而不是 hidden_dim
+        # 注意这里需要用 head_dim，而不是 hidden_dim
         attention_weight = (
             q_state @ k_state.transpose(-1, -2) / math.sqrt(self.head_dim)
         )

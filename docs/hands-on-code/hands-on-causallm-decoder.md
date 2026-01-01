@@ -50,7 +50,7 @@ class SimpleDecoder(nn.Module):
 
         self.dropout = dropout
 
-        # 这里按照 transformers 中的 decoder 来写，用 post_norm 的方式实现，主意有 残差链接
+        # 这里按照 transformers 中的 decoder 来写，用 post_norm 的方式实现注意有 残差链接
         # eps 是为了防止溢出；其中 llama 系列的模型一般用的是 RMSnorm 以及 pre-norm（为了稳定性）
         # RMSnorm 没有一个 recenter 的操作，而 layernorm 是让模型重新变成 均值为 0，方差为 1
         # RMS 使用 w平方根均值进行归一化 $\sqrt{\frac{1}{n} \sum_{1}^{n}{a_i^2} }$

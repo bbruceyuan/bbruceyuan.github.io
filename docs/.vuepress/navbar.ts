@@ -4,6 +4,10 @@ import { navbar } from "vuepress-theme-hope";
 export default navbar([
   /* 你的导航栏配置 */
   {
+    text: "ClaudeCode/CodeX API 代理「推荐」",
+    link: "https://moacode.org/register?ref=bbruceyu",
+  },
+  {
     text: "LLMs-Zero-to-Hero",
     link: "https://yuanchaofa.com/llms-zero-to-hero/",
   },
