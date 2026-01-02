@@ -18,12 +18,12 @@
   <img src="https://komarev.com/ghpvc/?username=bbruceyuan&label=Views&color=0e75b6&style=flat-square" alt="访问量" />
 </p>
 
-----
-
 **关于我：**
-- 🧑‍💻 写代码 @ [github.com/bbruceyuan](https://github.com/bbruceyuan)，使用 Claude Code；个人使用 [ClaudeCode/CodeX API 代理](https://moacode.org/register?ref=bbruceyu)
+- 🧑‍💻 Vibe Coding @ [github.com/bbruceyuan](https://github.com/bbruceyuan)
+  - 使用 [Claude Code、CodeX](https://moacode.org/register?ref=bbruceyu)、Cursor 等
+  - 个人推荐 [ClaudeCode/CodeX API 代理](https://moacode.org/register?ref=bbruceyu) 获取更好的 vibe 体验
 - 📝 写技术博客 @ [yuanchaofa.com](https://yuanchaofa.com)，专注 LLM、Agent、深度学习
-- 🎬 录视频教程 @ [B站](https://space.bilibili.com/12420432) / [YouTube](https://www.youtube.com/@bbruceyuan)，全网「[chaofa用代码打点酱油](https://yuanchaofa.com)」
+- 🎬 录视频教程 @ [B站](https://space.bilibili.com/12420432) / [YouTube](https://www.youtube.com/@bbruceyuan) / [视频号](https://yuanchaofa.com/llms-zero-to-hero/chaofa-wechat-official-account.png)，全网同名「[chaofa用代码打点酱油](https://yuanchaofa.com)」
 - 📚 开源项目：[LLMs-Zero-to-Hero](https://github.com/bbruceyuan/LLMs-Zero-to-Hero) - 从零学习大模型
 - 💬 交流微信：`bbruceyuan`（请备注来意）
 - **公众号：** 公众号同步更新 Blog 文章
