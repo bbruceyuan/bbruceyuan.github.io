@@ -26,10 +26,8 @@
 - 🎬 录视频教程 @ [B站](https://space.bilibili.com/12420432) / [YouTube](https://www.youtube.com/@bbruceyuan)，全网「[chaofa用代码打点酱油](https://yuanchaofa.com)」
 - 📚 开源项目：[LLMs-Zero-to-Hero](https://github.com/bbruceyuan/LLMs-Zero-to-Hero) - 从零学习大模型
 - 💬 交流微信：`bbruceyuan`（请备注来意）
-
-**公众号：** 同步更新 Blog 文章
-
-<img src="https://yuanchaofa.com/llms-zero-to-hero/chaofa-wechat-official-account.png" width="150" alt="公众号二维码">
+- **公众号：** 公众号同步更新 Blog 文章
+  - <img src="https://yuanchaofa.com/llms-zero-to-hero/chaofa-wechat-official-account.png" width="200" alt="公众号二维码">
 
 ----
 
