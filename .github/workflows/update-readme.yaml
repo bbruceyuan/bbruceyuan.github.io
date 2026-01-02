@@ -28,16 +28,43 @@ jobs:
       - name: Run update script
         run: python scripts/update_readme.py
 
-      - name: Check for changes
-        id: git-check
+      # 更新 bbruceyuan.github.io 的 README
+      - name: Check for blog README changes
+        id: blog-check
         run: |
           git diff --exit-code README.md || echo "changed=true" >> $GITHUB_OUTPUT
 
-      - name: Commit and push if changed
-        if: steps.git-check.outputs.changed == 'true'
+      - name: Commit and push blog README
+        if: steps.blog-check.outputs.changed == 'true'
         run: |
           git config --local user.email "github-actions[bot]@users.noreply.github.com"
           git config --local user.name "github-actions[bot]"
           git add README.md
           git commit -m "docs: auto-generate README with latest posts"
           git push
+
+      # 推送 profile_README.md 到 bbruceyuan 仓库
+      - name: Push to bbruceyuan profile repo
+        env:
+          PROFILE_REPO_TOKEN: ${{ secrets.PROFILE_REPO_TOKEN }}
+        run: |
+          # 克隆 bbruceyuan 仓库
+          git clone https://x-access-token:${PROFILE_REPO_TOKEN}@github.com/bbruceyuan/bbruceyuan.git /tmp/profile-repo
+
+          # 复制生成的 README
+          cp profile_README.md /tmp/profile-repo/README.md
+
+          # 提交并推送
+          cd /tmp/profile-repo
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git config user.name "github-actions[bot]"
+
+          # 检查是否有变化
+          if git diff --exit-code README.md; then
+            echo "No changes to profile README"
+          else
+            git add README.md
+            git commit -m "docs: auto-sync blog posts from bbruceyuan.github.io"
+            git push
+            echo "Profile README updated!"
+          fi
