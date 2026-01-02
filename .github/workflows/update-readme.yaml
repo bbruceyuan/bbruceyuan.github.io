@@ -7,6 +7,7 @@ on:
     paths:
       - 'docs/**'
       - 'scripts/update_readme.py'
+  workflow_dispatch:  # 允许手动触发
 
 jobs:
   update-readme:
