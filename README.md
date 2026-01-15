@@ -35,6 +35,7 @@
 
 | 日期 | 文章 |
 |------|------|
+| 2026-01-10 | [DPO 算法原理与代码实现：让 LLM 对齐变得简单](https://yuanchaofa.com/post/hands-on-dpo-direct-preference-optimization.html) |
 | 2026-01-01 | [从零手写 RoPE 位置编码：原理、PyTorch 源码实现与可视化理解](https://yuanchaofa.com/post/hands-on-rope-position-embedding.html) |
 | 2025-12-06 | [Keep Looking, Don't Settle：重听乔布斯演讲（25-11-月度小结）](https://yuanchaofa.com/blog/2025-11-month-summary.html) |
 | 2025-11-09 | [Kimi-K2 和 Kimi-K2-Thinking 深度解读：从预训练优化到 Agentic 能力训练的完整流程（含MuonClip优化、Agentic 数据合成等）](https://yuanchaofa.com/post/kimi-k2-and-kimi-k2-thinking-notes.html) |
@@ -84,4 +85,3 @@
 | 2021-06-10 | [倒排索引原理与python实现](https://yuanchaofa.com/post/29.html) |
 | 2021-05-30 | [我没想到我会误入相亲素材](https://yuanchaofa.com/blog/blind-date-from-bruce.html) |
 | 2021-05-29 | [崔同学视角的「我没想到我会误入相亲素材」](https://yuanchaofa.com/blog/blind-date-from-miss-cui.html) |
-| 2021-04-17 | [香格里拉封闭培训的七天](https://yuanchaofa.com/blog/27.html) |
