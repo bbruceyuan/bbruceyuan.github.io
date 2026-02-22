@@ -19,7 +19,7 @@
 </p>
 
 **关于我：**
-- 🧑‍💻 Vibe Coding @ [github.com/bbruceyuan](https://github.com/bbruceyuan)
+- 🧑‍💻 Vibe Coding @ [ApeCode.ai](https://apecode.ai)
   - 使用 [Claude Code、CodeX](https://moacode.org/register?ref=bbruceyu)、Cursor 等
   - 个人推荐 [ClaudeCode/CodeX API 代理](https://moacode.org/register?ref=bbruceyu) 获取更好的 vibe 体验
 - 📝 写技术博客 @ [yuanchaofa.com](https://yuanchaofa.com)，专注 LLM、Agent、深度学习
