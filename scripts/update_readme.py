@@ -6,17 +6,17 @@
 """
 
 import re
-from pathlib import Path
 from datetime import datetime
-from typing import Optional, List, Dict
+from pathlib import Path
+from typing import Dict, List, Optional
 
 # ============ 配置 ============
-BASE_URL = 'https://yuanchaofa.com'
+BASE_URL = "https://yuanchaofa.com"
 BLOG_LIMIT = 50
 PROFILE_LIMIT = 5
 
 # ============ bbruceyuan.github.io README 模板 ============
-BLOG_README_TEMPLATE = '''### Hi, I'm chaofa
+BLOG_README_TEMPLATE = """### Hi, I'm chaofa
 
 > chaofa用代码打点酱油 | LLM & Agent 爱好者 | 技术博主 | 瞎折腾爱好者
 
@@ -37,7 +37,7 @@ BLOG_README_TEMPLATE = '''### Hi, I'm chaofa
 </p>
 
 **关于我：**
-- 🧑‍💻 Vibe Coding @ [github.com/bbruceyuan](https://github.com/bbruceyuan)
+- 🧑‍💻 Vibe Coding @ [ApeCode.ai](https://apecode.ai)
   - 使用 [Claude Code、CodeX](https://moacode.org/register?ref=bbruceyu)、Cursor 等
   - 个人推荐 [ClaudeCode/CodeX API 代理](https://moacode.org/register?ref=bbruceyu) 获取更好的 vibe 体验
 - 📝 写技术博客 @ [yuanchaofa.com](https://yuanchaofa.com)，专注 LLM、Agent、深度学习
@@ -52,10 +52,10 @@ BLOG_README_TEMPLATE = '''### Hi, I'm chaofa
 ## 最近文章
 
 {blog_table}
-'''
+"""
 
 # ============ bbruceyuan（GitHub Profile）README 模板 ============
-PROFILE_README_TEMPLATE = '''### Hi there 👋
+PROFILE_README_TEMPLATE = """### Hi there 👋
 
 <div align="center">
 
@@ -78,7 +78,7 @@ PROFILE_README_TEMPLATE = '''### Hi there 👋
 <br />
 
 **关于我：**
-- 🧑‍💻 Vibe Coding @ [github.com/bbruceyuan](https://github.com/bbruceyuan)
+- 🧑‍💻 Vibe Coding @ [ApeCode.ai](https://apecode.ai)
   - 使用 [Claude Code、CodeX](https://moacode.org/register?ref=bbruceyu)、Cursor 等
   - 个人推荐 [ClaudeCode/CodeX API 代理](https://moacode.org/register?ref=bbruceyu) 获取更好的 vibe 体验
 - 📝 写技术博客 @ [yuanchaofa.com](https://yuanchaofa.com)，专注 LLM、Agent、深度学习
@@ -96,12 +96,12 @@ PROFILE_README_TEMPLATE = '''### Hi there 👋
 > 更多文章请访问
 > - 个人 blog [https://yuanchaofa.com](https://yuanchaofa.com)
 > - 个人公众号 [chaofa用代码打点酱油](https://yuanchaofa.com/llms-zero-to-hero/chaofa-wechat-official-account.png)
-'''
+"""
 
 
 def parse_frontmatter(content: str) -> Optional[Dict]:
     """解析 markdown 文件的 YAML frontmatter"""
-    match = re.match(r'^---\s*\n(.*?)\n---\s*\n', content, re.DOTALL)
+    match = re.match(r"^---\s*\n(.*?)\n---\s*\n", content, re.DOTALL)
     if not match:
         return None
 
@@ -109,26 +109,30 @@ def parse_frontmatter(content: str) -> Optional[Dict]:
     result = {}
 
     # 提取 title（可能带引号）
-    title_match = re.search(r'^title:\s*["\']?(.*?)["\']?\s*$', frontmatter_text, re.MULTILINE)
+    title_match = re.search(
+        r'^title:\s*["\']?(.*?)["\']?\s*$', frontmatter_text, re.MULTILINE
+    )
     if title_match:
-        result['title'] = title_match.group(1).strip().strip('"\'')
+        result["title"] = title_match.group(1).strip().strip("\"'")
 
     # 提取 date
-    date_match = re.search(r'^date:\s*(.+?)$', frontmatter_text, re.MULTILINE)
+    date_match = re.search(r"^date:\s*(.+?)$", frontmatter_text, re.MULTILINE)
     if date_match:
-        result['date'] = date_match.group(1).strip()
+        result["date"] = date_match.group(1).strip()
 
     # 提取 permalink
-    permalink_match = re.search(r'^permalink:\s*(.+?)$', frontmatter_text, re.MULTILINE)
+    permalink_match = re.search(r"^permalink:\s*(.+?)$", frontmatter_text, re.MULTILINE)
     if permalink_match:
-        result['permalink'] = permalink_match.group(1).strip()
+        result["permalink"] = permalink_match.group(1).strip()
 
     # 提取 publish 状态（默认为 true）
-    publish_match = re.search(r'^publish:\s*(true|false)', frontmatter_text, re.MULTILINE | re.IGNORECASE)
+    publish_match = re.search(
+        r"^publish:\s*(true|false)", frontmatter_text, re.MULTILINE | re.IGNORECASE
+    )
     if publish_match:
-        result['publish'] = publish_match.group(1).lower() == 'true'
+        result["publish"] = publish_match.group(1).lower() == "true"
     else:
-        result['publish'] = True
+        result["publish"] = True
 
     return result
 
@@ -136,12 +140,12 @@ def parse_frontmatter(content: str) -> Optional[Dict]:
 def parse_date(date_str: str) -> Optional[datetime]:
     """解析多种日期格式"""
     formats = [
-        '%Y-%m-%d %H:%M:%S',
-        '%Y-%m-%dT%H:%M:%S',
-        '%Y-%m-%d',
+        "%Y-%m-%d %H:%M:%S",
+        "%Y-%m-%dT%H:%M:%S",
+        "%Y-%m-%d",
     ]
 
-    date_str = date_str.strip().strip('"\'')
+    date_str = date_str.strip().strip("\"'")
 
     for fmt in formats:
         try:
@@ -151,9 +155,9 @@ def parse_date(date_str: str) -> Optional[datetime]:
 
     # 处理月份/日期无补零的情况
     try:
-        parts = date_str.replace('T', ' ').split(' ')
+        parts = date_str.replace("T", " ").split(" ")
         if len(parts) >= 1:
-            date_parts = parts[0].split('-')
+            date_parts = parts[0].split("-")
             if len(date_parts) == 3:
                 year, month, day = date_parts
                 normalized_date = f"{year}-{int(month):02d}-{int(day):02d}"
@@ -173,17 +177,18 @@ def parse_date(date_str: str) -> Optional[datetime]:
 def scan_posts_by_category(docs_dir: Path) -> Dict[str, List[Dict]]:
     """扫描博客文章，按类别分类"""
     # 技术文章目录
-    tech_dirs = ['post', 'hands-on-code', 'llms-zero-to-hero', 'introduction-to-computing-advertising']
+    tech_dirs = [
+        "post",
+        "hands-on-code",
+        "llms-zero-to-hero",
+        "introduction-to-computing-advertising",
+    ]
     # 个人生活目录
-    life_dirs = ['blog']
+    life_dirs = ["blog"]
 
-    result = {
-        'tech': [],
-        'life': [],
-        'all': []
-    }
+    result = {"tech": [], "life": [], "all": []}
 
-    all_dirs = {'tech': tech_dirs, 'life': life_dirs}
+    all_dirs = {"tech": tech_dirs, "life": life_dirs}
 
     for category, dirs in all_dirs.items():
         for subdir in dirs:
@@ -191,23 +196,23 @@ def scan_posts_by_category(docs_dir: Path) -> Dict[str, List[Dict]]:
             if not target_dir.exists():
                 continue
 
-            for md_file in target_dir.rglob('*.md'):
-                if md_file.name.lower() == 'readme.md':
+            for md_file in target_dir.rglob("*.md"):
+                if md_file.name.lower() == "readme.md":
                     continue
 
                 try:
-                    content = md_file.read_text(encoding='utf-8')
+                    content = md_file.read_text(encoding="utf-8")
                     metadata = parse_frontmatter(content)
 
                     if not metadata:
                         continue
 
-                    if not metadata.get('publish', True):
+                    if not metadata.get("publish", True):
                         continue
 
-                    title = metadata.get('title')
-                    date_str = metadata.get('date')
-                    permalink = metadata.get('permalink')
+                    title = metadata.get("title")
+                    date_str = metadata.get("date")
+                    permalink = metadata.get("permalink")
 
                     if not title or not date_str:
                         continue
@@ -219,16 +224,16 @@ def scan_posts_by_category(docs_dir: Path) -> Dict[str, List[Dict]]:
 
                     if not permalink:
                         relative_path = md_file.relative_to(docs_dir)
-                        permalink = '/' + str(relative_path).replace('.md', '.html')
+                        permalink = "/" + str(relative_path).replace(".md", ".html")
 
                     post = {
-                        'title': title,
-                        'date': parsed_date,
-                        'permalink': permalink,
-                        'category': category,
+                        "title": title,
+                        "date": parsed_date,
+                        "permalink": permalink,
+                        "category": category,
                     }
                     result[category].append(post)
-                    result['all'].append(post)
+                    result["all"].append(post)
 
                 except Exception as e:
                     print(f"Error processing {md_file}: {e}")
@@ -239,30 +244,32 @@ def scan_posts_by_category(docs_dir: Path) -> Dict[str, List[Dict]]:
 
 def generate_table(posts: List[Dict], base_url: str, limit: int) -> str:
     """生成两列 markdown 表格"""
-    sorted_posts = sorted(posts, key=lambda x: x['date'], reverse=True)[:limit]
+    sorted_posts = sorted(posts, key=lambda x: x["date"], reverse=True)[:limit]
 
     lines = [
-        '| 日期 | 文章 |',
-        '|------|------|',
+        "| 日期 | 文章 |",
+        "|------|------|",
     ]
 
     for post in sorted_posts:
-        date_str = post['date'].strftime('%Y-%m-%d')
-        title = post['title']
-        url = base_url + post['permalink']
-        lines.append(f'| {date_str} | [{title}]({url}) |')
+        date_str = post["date"].strftime("%Y-%m-%d")
+        title = post["title"]
+        url = base_url + post["permalink"]
+        lines.append(f"| {date_str} | [{title}]({url}) |")
 
-    return '\n'.join(lines)
+    return "\n".join(lines)
 
 
-def generate_two_column_table(tech_posts: List[Dict], life_posts: List[Dict], base_url: str, limit: int) -> str:
+def generate_two_column_table(
+    tech_posts: List[Dict], life_posts: List[Dict], base_url: str, limit: int
+) -> str:
     """生成两列 markdown 表格：技术文章 | 非技术文章，每行格式为 时间 + 标题"""
-    sorted_tech = sorted(tech_posts, key=lambda x: x['date'], reverse=True)[:limit]
-    sorted_life = sorted(life_posts, key=lambda x: x['date'], reverse=True)[:limit]
+    sorted_tech = sorted(tech_posts, key=lambda x: x["date"], reverse=True)[:limit]
+    sorted_life = sorted(life_posts, key=lambda x: x["date"], reverse=True)[:limit]
 
     lines = [
-        '| 技术文章 | 非技术文章 |',
-        '|----------|------------|',
+        "| 技术文章 | 非技术文章 |",
+        "|----------|------------|",
     ]
 
     max_len = max(len(sorted_tech), len(sorted_life))
@@ -271,9 +278,9 @@ def generate_two_column_table(tech_posts: List[Dict], life_posts: List[Dict], ba
         # 技术文章列
         if i < len(sorted_tech):
             tech = sorted_tech[i]
-            tech_date = tech['date'].strftime('%Y-%m-%d')
-            tech_title = tech['title']
-            tech_url = base_url + tech['permalink']
+            tech_date = tech["date"].strftime("%Y-%m-%d")
+            tech_title = tech["title"]
+            tech_url = base_url + tech["permalink"]
             tech_cell = f"{tech_date} [{tech_title}]({tech_url})"
         else:
             tech_cell = ""
@@ -281,16 +288,16 @@ def generate_two_column_table(tech_posts: List[Dict], life_posts: List[Dict], ba
         # 非技术文章列
         if i < len(sorted_life):
             life = sorted_life[i]
-            life_date = life['date'].strftime('%Y-%m-%d')
-            life_title = life['title']
-            life_url = base_url + life['permalink']
+            life_date = life["date"].strftime("%Y-%m-%d")
+            life_title = life["title"]
+            life_url = base_url + life["permalink"]
             life_cell = f"{life_date} [{life_title}]({life_url})"
         else:
             life_cell = ""
 
-        lines.append(f'| {tech_cell} | {life_cell} |')
+        lines.append(f"| {tech_cell} | {life_cell} |")
 
-    return '\n'.join(lines)
+    return "\n".join(lines)
 
 
 def generate_blog_readme(posts: List[Dict]) -> str:
@@ -301,18 +308,22 @@ def generate_blog_readme(posts: List[Dict]) -> str:
 
 def generate_profile_readme(tech_posts: List[Dict], life_posts: List[Dict]) -> str:
     """生成 bbruceyuan（GitHub Profile）的 README"""
-    two_column_table = generate_two_column_table(tech_posts, life_posts, BASE_URL, PROFILE_LIMIT)
+    two_column_table = generate_two_column_table(
+        tech_posts, life_posts, BASE_URL, PROFILE_LIMIT
+    )
     return PROFILE_README_TEMPLATE.format(four_column_table=two_column_table)
 
 
 def main():
     script_dir = Path(__file__).parent
     project_root = script_dir.parent
-    docs_dir = project_root / 'docs'
+    docs_dir = project_root / "docs"
 
     # 输出路径
-    blog_readme_path = project_root / 'README.md'
-    profile_readme_path = project_root / 'profile_README.md'  # 临时存放，后续推送到 bbruceyuan 仓库
+    blog_readme_path = project_root / "README.md"
+    profile_readme_path = (
+        project_root / "profile_README.md"
+    )  # 临时存放，后续推送到 bbruceyuan 仓库
 
     print(f"Scanning posts in {docs_dir}...")
     posts_by_category = scan_posts_by_category(docs_dir)
@@ -323,21 +334,20 @@ def main():
 
     # 生成 bbruceyuan.github.io README
     print("\nGenerating bbruceyuan.github.io README...")
-    blog_readme = generate_blog_readme(posts_by_category['all'])
-    blog_readme_path.write_text(blog_readme, encoding='utf-8')
+    blog_readme = generate_blog_readme(posts_by_category["all"])
+    blog_readme_path.write_text(blog_readme, encoding="utf-8")
     print(f"Written to {blog_readme_path}")
 
     # 生成 bbruceyuan（Profile）README
     print("\nGenerating bbruceyuan (Profile) README...")
     profile_readme = generate_profile_readme(
-        posts_by_category['tech'],
-        posts_by_category['life']
+        posts_by_category["tech"], posts_by_category["life"]
     )
-    profile_readme_path.write_text(profile_readme, encoding='utf-8')
+    profile_readme_path.write_text(profile_readme, encoding="utf-8")
     print(f"Written to {profile_readme_path}")
 
     print("\nDone!")
 
 
-if __name__ == '__main__':
+if __name__ == "__main__":
     main()

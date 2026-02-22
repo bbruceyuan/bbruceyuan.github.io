@@ -347,9 +347,10 @@ net(x, attention_mask).shape
 
 > 这里再次解释一下，为什么现在现在的代码实现都是 q k v 的投影矩阵都是分开写的，这是因为现在的模型很大，本身可能会做 张量并行，流水线并行等方式，所以分开写问题也不大（分开写很清晰），可能是加速效果并不明显。
 
-
 ## 交个朋友🤣
+
 最后欢迎关注我，基本全网同名 [chaofa用代码打点酱油](https://yuanchaofa.com/)
+
 - 公众号： ![chaofa用代码打点酱油](https://yuanchaofa.com/llms-zero-to-hero/chaofa-wechat-official-account.png)
 - [B站-chaofa用代码打点酱油](https://space.bilibili.com/12420432)
 - [YouTube-chaofa用代码打点酱油](https://www.youtube.com/@bbruceyuan)

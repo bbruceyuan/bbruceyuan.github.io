@@ -13,6 +13,7 @@ permalink: /post/hands-on-deepseek-mla.html
 
 
 在阅读本文之前，强烈建议先阅读[原始paper](https://github.com/deepseek-ai/DeepSeek-V2)和苏剑林的解读 [缓存与效果的极限拉扯：从MHA、MQA、GQA到MLA](https://kexue.fm/archives/10091)，先在脑子中对于 MLA（Multi-head Latent Attention）有一个大概的印象，然后通过阅读代码理解下面三个问题
+
 1. MLA 大概是个什么东西，核心目标是节约 kv cache
     - 可以理解为效果更好的 Group Query Self Attenion。
 2. 为什么 MLA 算法和 ROPE 位置编码不兼容，MLA 算法是通过维度分离来实现位置编码
@@ -21,10 +22,10 @@ permalink: /post/hands-on-deepseek-mla.html
 3. MLA 既然能节约 kv cache，那么具体是怎么通过矩阵吸收来做工程实现
     - 这部分Paper以及官方开源实现没有给出
 
-> 如果不想看文字，可以看B站手把手教学视频： 
+> 如果不想看文字，可以看B站手把手教学视频：
 > [Part 1: 从零复现 DeepSeek MLA 算法-无矩阵吸收版](https://www.bilibili.com/video/BV19aP1epEUc)
 > [Part 2: 从零手撕 DeepSeek MLA 算法-矩阵吸收版](https://www.bilibili.com/video/BV1wjQvY6Enm/)
-> 
+>
 > 也欢迎关注我的 github repo: [LLMs-zero-to-hero](https://github.com/bbruceyuan/LLMs-Zero-to-Hero)
 
 ## 原始的 MLA 算法
@@ -33,8 +34,8 @@ permalink: /post/hands-on-deepseek-mla.html
 
 ![llms-zero-to-hero-deepseek-v3-model-architecture](/llms-zero-to-hero/deepseek-v3-model-architecture.png)
 
-
 一些前置函数，主要是两个函数，一个 RMSNorm 的实现以及 ROPE 函数的实现，因为本次博客不涉及位置编码的解读，因此可以先简单把 ROPE 理解为一个函数，应用这个函数之后这部分张量（Tensor）就带有了位置编码的作用。
+
 ```python
 class DeepseekV2RMSNorm(nn.Module):
     def __init__(self, hidden_size, eps=1e-6):
@@ -116,8 +117,7 @@ def apply_rotary_pos_emb(q, k, cos, sin, position_ids, unsqueeze_dim=1):
     return q_embed, k_embed
 ```
 
-
-最终的代码实现，主要通过代码的注释理解，以及对应的 B站视频讲解；原始代码实现位于： https://huggingface.co/deepseek-ai/DeepSeek-V2-Chat/tree/main
+最终的代码实现，主要通过代码的注释理解，以及对应的 B站视频讲解；原始代码实现位于： <https://huggingface.co/deepseek-ai/DeepSeek-V2-Chat/tree/main>
 
 以下代码相对于官方代码实现进行了一些必要的精简，主要为了理解 MLA 算法的核心计算逻辑，对于部分工程实现进行了忽略。
 
@@ -340,12 +340,12 @@ test_mla()
 
 ## 带有矩阵吸收的 MLA 算法
 
-先参考这一篇知乎的解读： https://www.zhihu.com/question/655172528/answer/3492701118  ，之后我会做视频讲解
-
-
+先参考这一篇知乎的解读： <https://www.zhihu.com/question/655172528/answer/3492701118>  ，之后我会做视频讲解
 
 ## 其他
+
 最后欢迎关注我，基本全网同名 [chaofa用代码打点酱油](https://yuanchaofa.com/)
+
 - 公众号（主要是为了订阅通知，不然看 Blog 就够了）： ![chaofa用代码打点酱油](https://yuanchaofa.com/llms-zero-to-hero/chaofa-wechat-official-account.png)
 - [B站-chaofa用代码打点酱油](https://space.bilibili.com/12420432)
 - [YouTube-chaofa用代码打点酱油](https://www.youtube.com/@bbruceyuan)

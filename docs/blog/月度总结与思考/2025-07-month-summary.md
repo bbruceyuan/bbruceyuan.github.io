@@ -14,6 +14,7 @@ permalink: /blog/2025-07-month-summary.html
 ## 1. 总结
 
 7 月是今年来做忙的一个月，也是今年来最开心的一个月。
+
 - 最重要的是，我的女儿「袁乎乎」这个月出生了
 - 然后是，工作项目也终于有了正向收益
 - 再其次是，5 年后炒股终于回本了
@@ -53,8 +54,7 @@ permalink: /blog/2025-07-month-summary.html
 
 我追求的是：可持续、对他人有价值的内容，别人愿意二次观看的内容。就像苏神的 blog 一样，不会说看完一次就不可能再看第二遍了，好的东西都是具有很高的长尾价值的，但显然硬广不是的，所以以后会尽量少做这种尝试。还是希望能在做自己想要的内容上深耕，先提升自己才是关键。
 
->  本次视频对我最大的帮助就是让我真正开始剪辑，以前视频的剪辑一般不超过 15 分钟。
-
+> 本次视频对我最大的帮助就是让我真正开始剪辑，以前视频的剪辑一般不超过 15 分钟。
 
 ## 6. 未来的规划
 
@@ -70,10 +70,10 @@ permalink: /blog/2025-07-month-summary.html
 
 从 GitHub 提交可以看出最近的周末完全没时间自己学习，不管是 blog 还是 code，后面会好起来吧？想多多混迹开源，搞点有意思的东西，比如 RL-Zero-to-Hero？尽请期待吧
 
-
 最后欢迎来探讨对世界的认知，基本全网同名 [chaofa用代码打点酱油](https://yuanchaofa.com/) (推荐)
+
 - [公众号-chaofa用代码打点酱油](https://yuanchaofa.com/llms-zero-to-hero/chaofa-wechat-official-account.png)
-	- ![chaofa用代码打点酱油](https://yuanchaofa.com/llms-zero-to-hero/chaofa-wechat-official-account.png)
+  - ![chaofa用代码打点酱油](https://yuanchaofa.com/llms-zero-to-hero/chaofa-wechat-official-account.png)
 - [B站-chaofa用代码打点酱油](https://space.bilibili.com/12420432)
 - [YouTube-chaofa用代码打点酱油](https://www.youtube.com/@bbruceyuan)
 - [chaofa 的 notion 简介](https://chaofa.notion.site/11a569b3ecce49b2826d679f5e2fdb54)

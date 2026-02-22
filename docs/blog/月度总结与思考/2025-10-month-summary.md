@@ -16,6 +16,7 @@ permalink: /blog/2025-10-month-summary.html
 从信息传播角度，现在是一个好的社会，很多的大佬也愿意出来讲话，无论是播客还是文章，都很容易被传播到，从而得以瞥见他们的想法。这让我们看到很多。我有时候很感激，有时候又时长感慨：他们的成功真的可以复制吗？
 
 罗永浩的播客是一个挺好的东西，我几乎是每一期都听的，10 月份[和影视飓风 TIM 的采访](https://www.xiaoyuzhoufm.com/episode/68e74f521bef327f3d7ddcd7)让我很是羡慕，[潘天鸿](https://zh.wikipedia.org/zh-sg/%E5%BD%B1%E8%A7%86%E9%A3%93%E9%A3%8E)。96 年，还不到 30 岁，但现在已经彻底成功[^1]。老罗和他的对话还挺有意思的，但我主要是聊四个东西对我的启发：
+
 - TIM 超强的能量
 - 极致的数据化驱动
 - 商业化道路的选择
@@ -40,6 +41,7 @@ permalink: /blog/2025-10-month-summary.html
 自媒体似乎很光鲜亮丽，尤其是被「各种网红的造富神话」的冲击之后，现在越来越多的年轻人将「当网红」作为自己的最佳的职业选择[^4]。但大多数人只要自己尝试之后，才会发现实际上是很难赚钱的（除了那些教别人做自媒体的），或者说很难赚到自己「付出同样精力打工上班」赚到的钱。
 
 核心原因是自媒体赛道的变现问题，前段时间[王自如限高做绿皮火车吃泡面](https://cj.sina.com.cn/articles/view/5061312402/12dad7f9202002j354)的新闻就可见一斑（毕竟也是曾经的顶流）。这里主要有两个原因：
+
 - 内容行业无法规模化。TIM 在大多数影视飓风的视频中都是自己作为核心要素出镜，也就是说他是整个账号最核心的资产，所以注定了他们的视频无法做到「批量复制」，因此相对于其他的商业模式上限会更低（哪怕是一些主流的科技媒体）。
 - 靠广告挣钱很难做到「独立客观第三方」。播客中也提到了「自媒体能不能站着把钱挣了」？就连影视飓风这样的账号都很难，更不用说各种「脚部、脚底部」账号，因此到了某个层面，一定会降低公信力，从而出现信任危机与拐点。
 
@@ -51,18 +53,16 @@ permalink: /blog/2025-10-month-summary.html
 
 很多人都说 TIM 的成功当然也离不开家庭的支持，这里指的是那份底气和关键性的指导，他可以有足够的尝试，可以自由的探索。这是显然的，毕竟做成这样缺失路上任何一环都不会有现在的「影视飓风」，不过这可能是最不重要的，因为他真的很强，没有这样的家庭他也能成功，只是可能不一定有现在成功[^5]。但是无论如何，他的成功都是自己争取得到的，其他的东西只是景上添花，就算不是 29 岁，39 岁的 TIM 也一定会走上人生巅峰。RESPECT！
 
-
 ## 关注我
 
 最后欢迎来探讨对世界的认知，基本全网同名 [chaofa用代码打点酱油](https://yuanchaofa.com/) (推荐)
+
 - [公众号-chaofa用代码打点酱油](https://yuanchaofa.com/llms-zero-to-hero/chaofa-wechat-official-account.png)
-	- ![chaofa用代码打点酱油](https://yuanchaofa.com/llms-zero-to-hero/chaofa-wechat-official-account.png)
+  - ![chaofa用代码打点酱油](https://yuanchaofa.com/llms-zero-to-hero/chaofa-wechat-official-account.png)
 - [B站-chaofa用代码打点酱油](https://space.bilibili.com/12420432)
 - [YouTube-chaofa用代码打点酱油](https://www.youtube.com/@bbruceyuan)
 - [chaofa 的 notion 简介](https://chaofa.notion.site/11a569b3ecce49b2826d679f5e2fdb54)
 - [X(Twitter)-chaofa用代码打点酱油](https://x.com/bbruceyuan)
-
-
 
 ## 附录
 
@@ -73,4 +73,3 @@ Google 搜一下「chaofa 用代码打点酱油」就这么难吗？
 [^4]: 我这里并不是贬义，随着我思想的转变，我将自己也部分归类为「自媒体」，而以前我只愿意称自己为「[公开表达](https://yuanchaofa.com/blog/growth-strategies-for-ordinary-people-starting-from-scratch.html)」。
 [^5]: 备注：我觉得以 TIM的认知，他是不可能不能推测出自己家庭情况是比较有钱的，因为这东西很容易感受到，爸妈能陪你飞到国外去看看学校（校长？）一定不是 TIM 口中普通家庭可以做到的，至少不差，没 TIM 口中感受的那么差吧。
 [^6]: 我还是喜欢有温度一点的内容，不喜欢被当做数字，想要被认为是一个真正的观众，所以我永远喜欢那种真诚深度对话。备注：这个月和一个网友聊了个天还挺好的。
-

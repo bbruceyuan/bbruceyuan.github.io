@@ -24,7 +24,7 @@ publish: true
   - ...
   - 推荐自己完成 [Python-Type-Challenges](https://github.com/laike9m/Python-Type-Challenges) 上面的练习。
 
-这篇文章按照 [Python-Type-Challenges](https://github.com/laike9m/Python-Type-Challenges)[1]库的划分，一共分为四个部分。
+这篇文章按照 [Python-Type-Challenges][https://github.com/laike9m/Python-Type-Challenges](1)库的划分，一共分为四个部分。
 
 - [Python 类型体操训练（一）-- 基础篇](/post/python-type-challenge-basic.html)
 - [Python 类型体操训练（二）-- 中级篇](/post/python-type-challenge-intermediate.html)

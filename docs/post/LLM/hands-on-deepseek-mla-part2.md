@@ -13,19 +13,17 @@ permalink: /post/hands-on-deepseek-mla-projection-absorption.html
 
 ## 基础原理
 
-这里假设读者对于 MLA有一定的了解，只是不清楚 MLA 算法的实现，关于原版的 MLA 具体实现可以见 [从代码角度学习和彻底理解 DeepSeek MLA 算法](https://yuanchaofa.com/post/hands-on-deepseek-mla.html)，视频解读见：[ 完全从零实现DeepSeek MLA算法(MultiHead Latent Attention)-（无矩阵吸收版）](https://www.bilibili.com/video/BV19aP1epEUc)
-
+这里假设读者对于 MLA有一定的了解，只是不清楚 MLA 算法的实现，关于原版的 MLA 具体实现可以见 [从代码角度学习和彻底理解 DeepSeek MLA 算法](https://yuanchaofa.com/post/hands-on-deepseek-mla.html)，视频解读见：[完全从零实现DeepSeek MLA算法(MultiHead Latent Attention)-（无矩阵吸收版）](https://www.bilibili.com/video/BV19aP1epEUc)
 
 ![deepseek-mla-矩阵吸收之迷-20250316140034131](https://cfcdn.bruceyuan.com/blog/2025/deepseek-mla-矩阵吸收之迷-20250316140034131.webp)
 
 上面的公式详细的解释了MLA 的计算过程，但这是为了后续代码讲解矩阵吸收回顾使用。
 
-> 如果不想看文字，可以看B站手把手教学视频： 
+> 如果不想看文字，可以看B站手把手教学视频：
 > [Part 1: 从零复现 DeepSeek MLA 算法-无矩阵吸收版](https://www.bilibili.com/video/BV19aP1epEUc)
 > [Part 2: 从零手撕 DeepSeek MLA 算法-矩阵吸收版](https://www.bilibili.com/video/BV1wjQvY6Enm/)
-> 
+>
 > 欢迎关注我的 github repo: [LLMs-zero-to-hero](https://github.com/bbruceyuan/LLMs-Zero-to-Hero)
-
 
 ## CacheDecompressed (CD)
 
@@ -69,7 +67,6 @@ def forward(
 
 ## Cache Compressed_kv (CC)
 
-
 ```python
 # CacheCompressed
 def forward(self, hidden_states_q: torch.Tensor, q_position_ids: torch.LongTensor, compressed_kv: torch.Tensor):
@@ -94,6 +91,7 @@ def forward(self, hidden_states_q: torch.Tensor, q_position_ids: torch.LongTenso
 ## 矩阵吸收 Absorbed_CacheCompressed (A_CC)
 
 图一 37 - 47 公式中， $W^{UK}$ 可以被 $W^{UQ}$ 吸收，而 $W^{UV}$ 可以被 $W^{O}$ 吸收。具体的做法其实也比较简单，是矩阵乘法的变化。
+
 ### key 的矩阵吸收
 
 $$
@@ -137,6 +135,7 @@ u   = einsum('hdD,bhqd->bqD', W_o, o)     # (6)
 ```
 
 解释一下上面的变量：
+
 ```
 h: head_number
 d: value dim
@@ -145,9 +144,10 @@ l: seq_len
 q: seq_len
 D: output_dim/hidden_dim
 ```
-### Move Elision (A_CC_ME)
-> Absorbed_CacheCompressed_MoveElision (A_CC_ME)
 
+### Move Elision (A_CC_ME)
+>
+> Absorbed_CacheCompressed_MoveElision (A_CC_ME)
 
 上面的策略会产生大量无用的数据拷贝和广播，同时也会占用大量显存空间导致OOM。可以采用MoveElision优化策略， 即省略此处的拼接RoPE部分和非RoPE部分的过程，而是直接分别计算量部分的额Attention Score并相加（考虑 $q_t^\top k_t = {q_t^C}^\top k_t^C + {q_t^R}^\top k_t^R$）。此段内容来自于：[optimizing-mla](https://github.com/madsys-dev/deepseekv2-profile/blob/main/workspace/blog/optimizing-mla.md)。
 
@@ -174,6 +174,7 @@ def forward(...):
 > 备注：这里的主要区别就是 rope 部分和 nope 部分分开计算 Attention，算完之后两者加起来。
 
 ### 最终实现
+
 ```python
 """
 这是带有矩阵吸收的版本
@@ -375,25 +376,24 @@ test_mlav2()
 ```
 
 ### FAQ
+
 Q: 为什么明明有矩阵吸收，在 forward 实现中，还是进行了两次乘法计算？
 A: 从实际的测算中，对模型参数进行预处理，实际上耗时更久，具体测试见：[link](https://github.com/madsys-dev/deepseekv2-profile/blob/main/workspace/blog/optimizing-mla.md)
 
+## ref
 
-## ref 
 - [https://zhuanlan.zhihu.com/p/700214123](https://zhuanlan.zhihu.com/p/700214123)
 - [https://github.com/madsys-dev/deepseekv2-profile/blob/main/workspace/blog/optimizing-mla.md](https://github.com/madsys-dev/deepseekv2-profile/blob/main/workspace/blog/optimizing-mla.md)
 - [https://mp.weixin.qq.com/s/E7NwwMYw14FRT6OKzuVXFA](https://mp.weixin.qq.com/s/E7NwwMYw14FRT6OKzuVXFA)
 - [https://kexue.fm/archives/10091](https://kexue.fm/archives/10091)
 - [https://www.armcvai.cn/2025-02-10/mla-code.html](https://www.armcvai.cn/2025-02-10/mla-code.html)
-- 爱因斯坦方程的用法: https://zhuanlan.zhihu.com/p/71639781
+- 爱因斯坦方程的用法: <https://zhuanlan.zhihu.com/p/71639781>
 - 假设没有矩阵吸收，可以看我的 blog: [从代码角度学习和彻底理解 DeepSeek MLA 算法](https://yuanchaofa.com/post/hands-on-deepseek-mla.html)
 
-
-
-
-
 ## 其他
+
 最后欢迎关注我，基本全网同名 [chaofa用代码打点酱油](https://yuanchaofa.com/)
+
 - 公众号（主要是为了订阅通知，不然看 Blog 就够了）： ![chaofa用代码打点酱油](https://yuanchaofa.com/llms-zero-to-hero/chaofa-wechat-official-account.png)
 - [B站-chaofa用代码打点酱油](https://space.bilibili.com/12420432)
 - [YouTube-chaofa用代码打点酱油](https://www.youtube.com/@bbruceyuan)

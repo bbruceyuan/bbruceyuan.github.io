@@ -22,12 +22,10 @@ LoRA 有很多的优点，节约显存，训练快，效果损失较小（相对
 
 > 减少显存占用的主要原因是训练参数变小了（比如只对 qkv 层做 LoRA）
 
-
 >
 > 不喜欢看文字的同学可以看 [B站视频-chaofa用代码打点酱油](https://www.bilibili.com/video/BV1fHmkYyE2w/),
-> 
+>
 > 或者视频号：chaofa用代码打点酱油
-
 
 ## 核心原理
 
@@ -47,13 +45,13 @@ $$\text{s.t.} \quad W_0 \in \mathbb{R}^{n \times m}, \; A \in \mathbb{R}^{n \tim
 
 其中 $r << n \text{ and } r << m$，$r$ 甚至可以设置成 1。
 
-
 - 为什么说只优化 AB 两个矩阵就可以了呢？这里面的假设是什么？
 - $W$ 不是满秩的，里面有大量参数是冗余的，那么其实可以用更接近满秩的矩阵 AB 代替。
+
 > 矩阵都可以表示为若干个线性无关向量，最大的线性无关向量个数就是秩
 
-
 ## PyTorch 代码实现
+
 ```python
 import torch
 import torch.nn as nn
@@ -186,20 +184,21 @@ print("Max difference after merge/unmerge cycle:",
 - Q: 大模型的 LoRA 实现真的这么简单吗？
 - A: 原理是这么简单，但是实际实现过程中因为层很多，会有一些配置，比如 QKV 层做 LoRA 还是 FFN 层做 LoRA，这些都会增加代码的复杂性，但是核心原理就是上面的代码。
 
-
 ## References
 
 [^1]: 这里和PCA,SVD 有一些差别。前者是为了据降维/压缩，后者仅仅是为了学习低秩的矩阵（参数可以更新改变）
 
 感兴趣可以阅读我的其他文章：
+
 - [从 self-attention 到 multi-head self-attention](/hands-on-code/from-self-attention-to-multi-head-self-attention.html)
 - [手写 transformer decoder（CausalLM）](/hands-on-code/hands-on-causallm-decoder.html)
 - [LLM 大模型训练-推理显存占用分析](/post/llm-train-infer-memoery-usage-calculation.html)
 - [手写大模型组件之Group Query Attention，从 MHA，MQA 到 GQA](https://yuanchaofa.com/hands-on-code/hands-on-group-query-attention-and-multi-query-attention.html)
 
-
 ## 交个朋友🤣
+
 最后欢迎关注我，基本全网同名 [chaofa用代码打点酱油](https://yuanchaofa.com/)
+
 - 公众号： ![chaofa用代码打点酱油](https://yuanchaofa.com/llms-zero-to-hero/chaofa-wechat-official-account.png)
 - [B站-chaofa用代码打点酱油](https://space.bilibili.com/12420432)
 - [YouTube-chaofa用代码打点酱油](https://www.youtube.com/@bbruceyuan)

@@ -28,12 +28,12 @@ permalink: /blog/2025-11-month-summary.html
 > <br/><br/>
 > If you haven’t found it yet, keep looking—and don’t settle. As with all matters of the heart, you’ll know when you find it. And like any great relationship, it just gets better and better as the years roll on. So keep looking. Don’t settle.
 
-我想，尝试过寻找方向的你们一定很懂这里的话有多感人，**So keep looking. Don't settle**. 
-
+我想，尝试过寻找方向的你们一定很懂这里的话有多感人，**So keep looking. Don't settle**.
 
 ## 工作
 
 回看了一下 11 月记录的 Flomo，这个月的工作压力依然非常的巨大，这里有很多原因造成的：
+
 - 任务真的太难了（某个非常复杂的生成场景）。尽管已经通过一些方式优化最终完成了交付，但也仅仅是可以使用，真正离达到好用还有很明显的差距。
 - 标准难以定义。可执行和执行好两个完全不同的维度，尤其是这个好很难在任务中很好的定义出来，虽然有隐隐的优化方向，但是前面已经在「可执行」上花费了太多的力气导致「执行好」的进度并没有如我自己想象中的那般快。
 - 项目进展管理一直做的不太好。从今年 2 月份开始一人做一个方向，到后面两三个人一起做，我要负责整个项目的多人进展时，就会明显感觉自己在这方面的能力有所欠缺，自己也会有明显的畏难情绪。整体虽然有进步但是离目标还差太远了。
@@ -45,5 +45,3 @@ permalink: /blog/2025-11-month-summary.html
 本月出现巨额亏损，核心是因为我重仓了 FIGMA，亏成了麻瓜，我为什么要在阿里起飞之际卖出画成 FIGMA 啊，怎么买不买中概都是亏钱啊。
 
 OK，好吧，我从现在开始，我就定投纳斯达克和标普 500，慢慢彻底不玩个股了，这样的我五年后还会亏钱吗？Looking my eyes, answer me!!!!
-
-

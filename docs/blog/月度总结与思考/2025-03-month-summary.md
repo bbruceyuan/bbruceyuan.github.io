@@ -21,11 +21,12 @@ permalink: /blog/2025-03-month-summary.html
 
 先说些让人开心的事情，我收获了第一个 **1K Star** 的 GitHub Repo，[LLMs-Zero-to-Hero](https://github.com/bbruceyuan/LLMs-Zero-to-Hero)，这算是这个月最让我有成就感的事情了。
 
-从 15 年 注册 GitHub 依赖，至今快 10 年的时间，断断续续尝试过做一些开源项目，却因寥寥关注导致无疾而终。包括 18 年想做的[ LeetCode Algorithm Repo](https://github.com/bbruceyuan/algorithms-and-oj)，写了一篇知乎文章[《美化你LeetCode仓库的README》](https://zhuanlan.zhihu.com/p/33211817) 至今还有一些阅读，但后面哪怕写题了也没有往上面 push 了；硕士毕业工作后，慢慢开始接触广告算法，也想去贡献当初比较火的 [DeepCTR](https://github.com/shenweichen/DeepCTR)，后面因业务需要，工作中开始做一些召回匹配相关的事情，在一些同事带领下做了一个内部版的 [DeepMatch](https://github.com/shenweichen/DeepMatch)（最终获得了不少兄弟团队的使用，获得腾讯代码铜奖），而我想着 `deepctr` 有 PyTorch 版的，但是 `DeepMatch` 没有，因此开源了一个 [DeepMatch-Torch](https://github.com/bbruceyuan/DeepMatch-Torch)，但这些项目均没有收到什么关注，因此每每想到要做些什么就想着算了吧。
+从 15 年 注册 GitHub 依赖，至今快 10 年的时间，断断续续尝试过做一些开源项目，却因寥寥关注导致无疾而终。包括 18 年想做的[LeetCode Algorithm Repo](https://github.com/bbruceyuan/algorithms-and-oj)，写了一篇知乎文章[《美化你LeetCode仓库的README》](https://zhuanlan.zhihu.com/p/33211817) 至今还有一些阅读，但后面哪怕写题了也没有往上面 push 了；硕士毕业工作后，慢慢开始接触广告算法，也想去贡献当初比较火的 [DeepCTR](https://github.com/shenweichen/DeepCTR)，后面因业务需要，工作中开始做一些召回匹配相关的事情，在一些同事带领下做了一个内部版的 [DeepMatch](https://github.com/shenweichen/DeepMatch)（最终获得了不少兄弟团队的使用，获得腾讯代码铜奖），而我想着 `deepctr` 有 PyTorch 版的，但是 `DeepMatch` 没有，因此开源了一个 [DeepMatch-Torch](https://github.com/bbruceyuan/DeepMatch-Torch)，但这些项目均没有收到什么关注，因此每每想到要做些什么就想着算了吧。
 
 但是自从开始做 BiliBili 视频后，由于视频需要有代码分享，慢慢又把一些代码放到 GitHub，比如  [Hands-On-Large-Language-Models-CN](https://github.com/bbruceyuan/Hands-On-Large-Language-Models-CN), [AI-Interview-Code](https://github.com/bbruceyuan/AI-Interview-Code), [**bit-brain**](https://github.com/bbruceyuan/bit-brain)等，又开始受到一些朋友的关注，信心又开始积累了。此后我将投入更多地时间做一些有意义的项目，比如将 [**bit-brain**](https://github.com/bbruceyuan/bit-brain) 维护成一个超过 [minimind](https://github.com/jingyaogong/minimind) 的项目，因此 minimind 也是一个比较简单的项目，因此将其作为一个终极目标也不是不可行。
 
 ## 3. 视频
+
 本周一共更新 4 个视频，但真正算是**这个月录制且有意义**的视频其实只有 2 个，一个是【[从零手写矩阵吸收版的 MLA](https://www.bilibili.com/video/BV1wjQvY6Enm)】，一个是【[OpenManus 源代码的阅读](https://www.bilibili.com/video/BV1SrRhYmEgm)】。当然顺带写了两个文字版文章，一个是 [Kimi K1.5 论文的解读](https://yuanchaofa.com/post/kimi-k1.5-paper-reading-notes.html)，一个是 [MLA 矩阵吸收版](https://yuanchaofa.com/post/hands-on-deepseek-mla-projection-absorption.html)。
 
 这个月我有意识的给自己放松了，因为在工作上我的消耗是一直比较大的，所以我周末其实也很难有能量继续保持学习和输出，因此视频输出放一放也行吧，毕竟这东西除了虚荣心，其他方面带来的价值还是太少了。而且播放其实也不太多，所以真正关注学习的也不多，还是优先自己的学习，顺带输出才行，而不是每周末还需要思考一下这周做一个什么视频。
@@ -43,6 +44,5 @@ permalink: /blog/2025-03-month-summary.html
 3 月在投资上做得最大地决策就是慢慢清空了中概，目前富途账户已经是全量现金了（后续转去长桥）。这次不想重蹈 24 年 10 月的老路，慢慢回本，把学费挣回来，距离整体仓位回本还差 7W RMB，年底有希望变正。
 
 ![2025-03-走慢些，走远点-20250330225128586](https://cfcdn.bruceyuan.com/blog/2025/2025-03-走慢些，走远点-20250330225128586.webp)
-
 
 > 下个 Q 要重新开始锻炼了，保持良好的精神状态面对工作和未来。

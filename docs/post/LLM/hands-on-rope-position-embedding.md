@@ -22,8 +22,8 @@ permalink: /post/hands-on-rope-position-embedding.html
 * 从零手写 RoPE 实现：逐行代码讲解，可直接运行
 * bonus：可视化理解 RoPE：通过热力图和动画直观感受旋转编码
 
-> 本文代码运行于： [Featurize GPU 算力云平台](https://featurize.cn/srx/gthYt2)，有 GPU 使用需求的同学希望能使用[我的邀请链接注册](https://featurize.cn/srx/gthYt2)
-> 
+> 本文代码运行于： [Featurize 蒜粒方块 GPU 算力平台](https://featurize.cn/srx/gthYt2)，有 GPU 使用需求的同学希望能使用[我的邀请链接注册](https://featurize.cn/srx/gthYt2)
+>
 > 待更新：不喜欢看文字的同学可以看 [B站视频-chaofa用代码打点酱油](https://space.bilibili.com/12420432), [YouTube-chaofa用代码打点酱油](https://www.youtube.com/@bbruceyuan)，或视频号：chaofa用代码打点酱油
 
 ## 1. 为什么需要位置编码？
@@ -102,7 +102,6 @@ $$
 
 ![2D 向量旋转示意图](https://cfcdn.yuanchaofa.com/blog/2025/20260101165342.png)
 
-
 从图中可以看到：蓝色向量 $(x, y)$ 绕原点逆时针旋转角度 $\theta$ 后，变成红色向量 $(x', y')$。
 
 ### 2.2 RoPE 的目标与解决方案
@@ -159,7 +158,6 @@ $$
 
 **证毕**：我们把中间这个只依赖于 $(m-n)$ 的旋转矩阵记为 $R_{m-n}$，最终结果 $\mathbf{q}^T \cdot R_{m-n} \cdot \mathbf{k}$ 与 $m$ 和 $n$ 的绝对值无关，只与相对位置 $(m-n)$ 有关。
 
-
 ## 3. RoPE 的数学原理
 
 现在让我们严格推导 RoPE 的数学形式。
@@ -173,8 +171,9 @@ $$
 $$
 
 这个频率设计非常关键：
-- 低维度（小 $i$）：频率高，变化快，捕捉短距离依赖
-- 高维度（大 $i$）：频率低，变化慢，捕捉长距离依赖
+
+* 低维度（小 $i$）：频率高，变化快，捕捉短距离依赖
+* 高维度（大 $i$）：频率低，变化慢，捕捉长距离依赖
 
 ### 3.2 旋转矩阵的完整形式
 
@@ -457,12 +456,11 @@ verify_relative_position_invariance()
 
 ## 5. 为什么 RoPE 位置编码好？
 
-- 相对位置编码：内积只依赖相对位置，天然适合语言建模
-- 外推性能好：配合 NTK/YaRN 可以泛化到更长序列
-- 计算高效：不增加额外的位置嵌入，只需旋转操作
-- 无需额外参数：基于固定的三角函数，不增加可学习参数
-- 兼容 KV Cache：缓存的 K 无需重新计算位置编码
-
+* 相对位置编码：内积只依赖相对位置，天然适合语言建模
+* 外推性能好：配合 NTK/YaRN 可以泛化到更长序列
+* 计算高效：不增加额外的位置嵌入，只需旋转操作
+* 无需额外参数：基于固定的三角函数，不增加可学习参数
+* 兼容 KV Cache：缓存的 K 无需重新计算位置编码
 
 ## 6. 可视化理解 RoPE （Bonus）
 
@@ -618,7 +616,6 @@ def visualize_relative_attention():
 visualize_relative_attention()
 ```
 
-
 ### 6.4. 实际应用：集成到 Transformer
 
 最后，让我们看看如何将 RoPE 集成到完整的 Multi-Head Attention 中：
@@ -698,7 +695,6 @@ print(f"Input shape: {x.shape}")
 print(f"Output shape: {output.shape}")
 ```
 
-
 ## 7. 参考资料
 
 1. [RoFormer: Enhanced Transformer with Rotary Position Embedding](https://arxiv.org/abs/2104.09864)
@@ -709,10 +705,11 @@ print(f"Output shape: {output.shape}")
 6. [十分钟读懂旋转编码（RoPE）](https://www.zhihu.com/tardis/zm/art/647109286?source_id=1003)
 7. [解密旋转位置编码：数学基础、代码实现与绝对编码一体化探索](https://www.bilibili.com/video/BV1Xi421R7ev/?spm_id_from=333.337.search-card.all.click&vd_source=94e689689fd8909b62da4addd8635282)
 
-
 ## 8. 其他
+
 最后欢迎关注我，基本全网同名 [chaofa用代码打点酱油](https://yuanchaofa.com/)
-- 公众号： ![chaofa用代码打点酱油](https://yuanchaofa.com/llms-zero-to-hero/chaofa-wechat-official-account.png)
-- [B站-chaofa用代码打点酱油](https://space.bilibili.com/12420432)
-- [YouTube-chaofa用代码打点酱油](https://www.youtube.com/@bbruceyuan)
-- [chaofa 的 notion 简介](https://chaofa.notion.site/11a569b3ecce49b2826d679f5e2fdb54)
+
+* 公众号： ![chaofa用代码打点酱油](https://yuanchaofa.com/llms-zero-to-hero/chaofa-wechat-official-account.png)
+* [B站-chaofa用代码打点酱油](https://space.bilibili.com/12420432)
+* [YouTube-chaofa用代码打点酱油](https://www.youtube.com/@bbruceyuan)
+* [chaofa 的 notion 简介](https://chaofa.notion.site/11a569b3ecce49b2826d679f5e2fdb54)

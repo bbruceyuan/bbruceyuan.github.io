@@ -16,16 +16,20 @@ banner: https://yuanchaofa.com/img/huggingface.png
 
 
 ## 1. 阅读前提
+
 本次课一共讲解三个不同版本的 MOE，分别是基础版MOE，大模型训练用的 SparseMoE，还有 DeepSeek 用的比较多的 shared_expert 的 SparseMoE。
+
 - 基础版MOE。理解 MOE 在干什么？
 - 大模型训练用的 SparseMoE。了解大模型怎么做 MOE 训练？
 - Deepseek 用的 shared_expert SparseMoE。了解 MOE 模型如何进化？
 - 视频讲解见： [完全从零手写MOE大模型，复现 DeepSeek MOE 算法，彻底掌握 MOE 算法进化之路](https://www.bilibili.com/video/BV1ZbFpeHEYr/)
 
 ## 2. 版本1：基础版本MOE
+
 输入是一个 Token, 输出是一个 Token Embedding。暂时先不考虑 MOE 得到的  Embedding 怎么使用。
 
 因为 MOE 网络对应着 Expert，这个 Expert 一般是一个 FeadFoward Network，FFN。而为了简化，后续我们都用一层的 Linear 代替，更高级版本的 Expert 留给大家当做课后作业。下面是一个专家的定义。
+
 ```python
 class BasicExpert(nn.Module):
     # 一个 Expert 可以是一个最简单的， linear 层即可
@@ -89,10 +93,10 @@ test_basic_moe()
 ```
 
 ## 2. 版本2：SparseMoE （大模型训练使用）
+
 这个一般我们用 switch transformers 这篇文章的图作为演示，详情看：
 
 ![llms-zero-to-hero-switch-transformers-moe-model](/llms-zero-to-hero/switch-transformers-moe-model.png)
-
 
 和 Basic 区别是，MOE 选择 topK 个专家，然后对这 topK 个专家的输出进行加权求和，并且把输入样本变成了大模型中真实的输入 Shape，(batch, seq_len, hidden_dim)
 
@@ -227,8 +231,8 @@ def test_token_level_moe():
 test_token_level_moe()
 ```
 
-
 ## 3. 版本3：ShareExpert SparseMoE （deepseek 版本）
+>
 > 备注：这里是参考 deepseek moe 思想，写的一个共享 expert 的 MOE 网络，有一定的简化，但是可以方便理解训练过程。
 
 和 版本2 的 SparseMOE 区别是，这里多了一个 shared experts 的模型，这个模型是所有 token 共享的，也就是说，所有 token 都过这个 shared experts 模型，然后每个 token 会用计算的 Router 权重，来选择 topK 个专家，然后和共享的专家的输出一起加权求和。
@@ -282,9 +286,8 @@ test_share_expert_moe()
 
 ```
 
-
-
 ## 4. 模型训练测试
+
 用于测试上面的代码是否可以跑通？
 
 ```python
@@ -376,7 +379,6 @@ def test_moe_training():
 test_moe_training()
 ```
 
-
 ## 5. 课后作业
 
 1. 把 expert 改成 swishGLU 版本的 FFN 专家
@@ -386,9 +388,10 @@ test_moe_training()
    - 参考 GitHub 仓库， 【[LLMs-Zero-to-Hero](https://github.com/bbruceyuan/LLMs-Zero-to-Hero)】
 3. 自己问一下 GPT topK 是怎么实现的反向传播，了解反向传播的梯度怎么流转的？
 
-
 ## 交个朋友🤣
+
 最后欢迎关注我，基本全网同名 [chaofa用代码打点酱油](https://yuanchaofa.com/)
+
 - 公众号： ![chaofa用代码打点酱油](https://yuanchaofa.com/llms-zero-to-hero/chaofa-wechat-official-account.png)
 - [B站-chaofa用代码打点酱油](https://space.bilibili.com/12420432)
 - [YouTube-chaofa用代码打点酱油](https://www.youtube.com/@bbruceyuan)

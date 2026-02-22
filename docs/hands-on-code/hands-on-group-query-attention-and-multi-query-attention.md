@@ -15,20 +15,18 @@ banner: https://yuanchaofa.com/img/huggingface.png
 
 - GQA（Group Query Attention）的优点：效果损失小，推理的时候可以加速（来自于kvcache小，内存取数少）。
 - 仔细阅读 MHA, MQA 和 GQA的区别，就会发现 MHA 和 MQA 都是 GQA 的特殊表达形式
-    - 三者可以用同一套代码，只需要修改【GQA】代码里面的 `nums_key_value_head` 参数就可
-    - `nums_key_value_head` 设置等于 1 就是 MQA
-    - `nums_key_value_head` 设置等于 `nums_head` 就是 MHA
-
-
+  - 三者可以用同一套代码，只需要修改【GQA】代码里面的 `nums_key_value_head` 参数就可
+  - `nums_key_value_head` 设置等于 1 就是 MQA
+  - `nums_key_value_head` 设置等于 `nums_head` 就是 MHA
 
 > 如果不喜欢看文字的同学可以查看 [B站](https://space.bilibili.com/12420432) 或者 [YouTube](https://www.youtube.com/@bbruceyuan) 视频。
-> 
+>
 > B站：[https://www.bilibili.com/video/BV1ZmqpYfEGY/](https://www.bilibili.com/video/BV1ZmqpYfEGY/)
-> 
+>
 > YouTube: [https://www.youtube.com/watch?v=1jBW7qcyd7A&t=1s](https://www.youtube.com/watch?v=1jBW7qcyd7A&t=1s)
 
-
 ## multi-head self-attention
+>
 > 备注：也可以直接由 GQA 中修改参数得到。但是本代码更完整一些
 
 ```python
@@ -122,9 +120,10 @@ net = MultiHeadAttention(128, 8)
 net(x, attention_mask).shape
 ```
 
-
 ## Group Query Attention
+>
 > 备注：以下代码省略了 attention_dropout attention_mask等情况的处理，真实实现过程中需要考虑。
+
 ```python
 import torch
 import torch.nn as nn
@@ -194,11 +193,13 @@ net(x).shape
 ```
 
 ## Multi Query Attention
+
 由于 MQA 是 GQA 的一种特殊形式，因此只要在参数设置的时候将 nums_key_value_head = 1 就是 Multi Query Self-Attention。
 
-
 ## 交个朋友🤣
+
 最后欢迎关注我，基本全网同名 [chaofa用代码打点酱油](https://yuanchaofa.com/)
+
 - 公众号： ![chaofa用代码打点酱油](https://yuanchaofa.com/llms-zero-to-hero/chaofa-wechat-official-account.png)
 - [B站-chaofa用代码打点酱油](https://space.bilibili.com/12420432)
 - [YouTube-chaofa用代码打点酱油](https://www.youtube.com/@bbruceyuan)

@@ -18,14 +18,15 @@ permalink: /blog/2025-09-month-summary.html
 这个词还是来源于[孙宇晨的财富自由革命之路](https://www.youtube.com/playlist?list=PLw3aceSTE5_VezUm4WNm6Xf_aPrWP7Fbj)，我真的被孙宇晨圈粉了，甚至可以说部分行为都受其影响。
 
 我比较想提的一点是「**合法赚钱的高尚性**」，音频中提到大多数国人都有一个赚钱的羞耻心，当然我也有。首先需要科普一下什么叫做合法赚钱的高尚性。
+
 - 财富即贡献
-	- 在市场经济中，一个人能合法赚钱财富，本身意味着其产品或服务得到了市场广泛的认可，从而间接证明了对他人需求和社会的贡献。
-	- 依法交税本身对于社会就是一个重要贡献。很多企业家贡献了大量的税收，通过纳税、慈善和提供就业支撑起了部分社会的运转。
-	- 如果道理无法说服一个人，换一个地方交税本身就是最大的投票，这也就是所谓的"现实的教训比道德说教更有效"。
+  - 在市场经济中，一个人能合法赚钱财富，本身意味着其产品或服务得到了市场广泛的认可，从而间接证明了对他人需求和社会的贡献。
+  - 依法交税本身对于社会就是一个重要贡献。很多企业家贡献了大量的税收，通过纳税、慈善和提供就业支撑起了部分社会的运转。
+  - 如果道理无法说服一个人，换一个地方交税本身就是最大的投票，这也就是所谓的"现实的教训比道德说教更有效"。
 - 财富即意味着个人自由
-	- 财富自由是实现人格独立自由的先决条件。财富可以让人摆脱为生存而做出的价值观妥协（如时间、注意力、情感甚至尊严），从而更纯粹地追求理想。
-	- 通过个人奋斗获得成功、突破阶层板结，是这个世界上最体面、最值得骄傲的事情
-	- 这也许是我们所有人毕生追求的目标，让自己的注意力分配到更有价值的事情上面，实现注意力自由。
+  - 财富自由是实现人格独立自由的先决条件。财富可以让人摆脱为生存而做出的价值观妥协（如时间、注意力、情感甚至尊严），从而更纯粹地追求理想。
+  - 通过个人奋斗获得成功、突破阶层板结，是这个世界上最体面、最值得骄傲的事情
+  - 这也许是我们所有人毕生追求的目标，让自己的注意力分配到更有价值的事情上面，实现注意力自由。
 
 我个人绝不是一个[社会达尔文主义](https://zh.wikipedia.org/zh-cn/%E7%A4%BE%E4%BC%9A%E8%BE%BE%E5%B0%94%E6%96%87%E4%B8%BB%E4%B9%89)支持者，也不是优绩主义的支持者，但孙宇晨提出的合法赚钱是高尚的却击中了我。我们从小受到的教育是“只有不求汇报才是高尚的”，以至于很多人忽略了商业逻辑，只是一味的认为：
 
@@ -51,12 +52,11 @@ permalink: /blog/2025-09-month-summary.html
 出现这个问题的原因有很多：
 
 - 我听了孙宇晨的课程之后觉得我应该进行商业化
-	- 赚钱本身是很难的，只有尝试之后才知道要走通一次商业合作闭环才知道其他的艰难。
-	- 和我前面做课程付出的时间相比，这个收益虽然不值一提，但是这是我应得的合法回报。
+  - 赚钱本身是很难的，只有尝试之后才知道要走通一次商业合作闭环才知道其他的艰难。
+  - 和我前面做课程付出的时间相比，这个收益虽然不值一提，但是这是我应得的合法回报。
 - Q3 的工作实在是太忙了，根本没有时间学习输入，更不用说输出内容
-	- 7 月份我女儿出生，忙前忙后
-	- 8 9 月份因为项目太着急，经常出差，基本每天干到 12 点多[^1]。
-
+  - 7 月份我女儿出生，忙前忙后
+  - 8 9 月份因为项目太着急，经常出差，基本每天干到 12 点多[^1]。
 
 回到小标题：chaofa 做视频的初衷变了吗？
 
@@ -65,12 +65,13 @@ permalink: /blog/2025-09-month-summary.html
 那么我做视频的初衷是什么呢？
 
 去年10 月份我刚开始做视频的时候，写了一篇文章[普通人从零开始做公开表达的增长策略](https://yuanchaofa.com/blog/growth-strategies-for-ordinary-people-starting-from-scratch.html#_7-%E8%84%91%E5%AD%90%E9%87%8C%E9%9D%A2%E4%B8%8D%E8%A6%81%E5%8F%AA%E6%83%B3%E7%9D%80%E8%B5%9A%E9%92%B1%E7%9A%84%E4%BA%8B%E6%83%85)，提到，出发点主要有两个：
+
 - 满足自己的虚荣心
-	- 原文：做这些东西本质上是为了满足自己的虚荣心，得到他人的关注和肯定
-	- 例子：比如 llama_factory 的作者说我的文章写的不错，并且在要离职做事的时候主动提出要加我微信，这都是让我感到非常有成就的事情。
+  - 原文：做这些东西本质上是为了满足自己的虚荣心，得到他人的关注和肯定
+  - 例子：比如 llama_factory 的作者说我的文章写的不错，并且在要离职做事的时候主动提出要加我微信，这都是让我感到非常有成就的事情。
 - 表达能力的练习
-	- 原文: 我的目标是让更多人看到我，90% 的精力是工作，10% 写书，做视频是一种表达和总结练习。
-	- 例子：今年说话口癖少了一些，虽然现在还是不太好，但比以前好我已经很满足了。
+  - 原文: 我的目标是让更多人看到我，90% 的精力是工作，10% 写书，做视频是一种表达和总结练习。
+  - 例子：今年说话口癖少了一些，虽然现在还是不太好，但比以前好我已经很满足了。
 
 所以说等我写完书[^2]之后，我一定会更多的考虑赚钱的事情，合法赚钱本身就是高尚的。这也是我听课之后思维的变化，所以孙宇晨真的牛逼，值得学习。
 
@@ -82,40 +83,37 @@ permalink: /blog/2025-09-month-summary.html
 
 - 专业性限制了视频传播性。现在公开表达的人越来越多，粉丝数量不代表播放数据，因此甲方不会因为视频的专业性就投放你，反而会因为数据或者报价 pass 你。
 - 粉丝一样有「又怕兄弟苦、又怕兄弟开路虎」。因为大多粉丝朋友不知道中小 UP 真实收入，所以粉丝数上升之后，就会觉得 UP 赚钱了，只要视频有一点瑕疵可能就不点赞支持了。
-	- 这里可以说一下例子：我在 3k 粉丝的时候，还有不少人给我打赏（原来我还做了一个表达，大概有 3/400）；现在 30k 粉丝，就几乎没人给我打赏。（几乎可以说，粉丝上万之后，就没人打赏了）。
+  - 这里可以说一下例子：我在 3k 粉丝的时候，还有不少人给我打赏（原来我还做了一个表达，大概有 3/400）；现在 30k 粉丝，就几乎没人给我打赏。（几乎可以说，粉丝上万之后，就没人打赏了）。
 
 > 2025 年，还有遍地黄金的机会吗？我想应该是没有了。
 
 ## Q4 的规划
 
 - 月度总结我会继续写下去的 （同步更新于[公众号](https://yuanchaofa.com/llms-zero-to-hero/chaofa-wechat-official-account.png)））
-	- 虽然这些东西会让很多人很烦，如果有骚扰到可以屏蔽；但是我想说，我个人真的很爱看这些东西，比如
-		- 我今天（2025-10-04）刚发现的一个 UP 主——[久远寺千歳](https://www.bilibili.com/video/BV1MphczLEhu/)，我把他所有总结视频都看了，我真的很佩服这种人。
-		- 还有我很喜欢的 blog 作者们——[微扰理论](https://mp.weixin.qq.com/s/37J_0qqkXyIRYG4pPhRDDg)，[hawstein](https://hawstein.com/2023/07/12/five-years-of-an-indie-hacker/)，以及各种心灵按摩类的播客，比如孟岩的[无人知晓](https://www.xiaoyuzhoufm.com/podcast/611719d3cb0b82e1df0ad29e)、少楠的[奇想驿](https://www.xiaoyuzhoufm.com/podcast/6034daea97755b8fc9c66480)、厚望的[面基](https://www.xiaoyuzhoufm.com/podcast/6388760f22567e8ea6ad070f)等，当然还有很多很多... 
-	- 这些东西总能给我力量，我也想把生活、工作中的迷茫写下来，希望能把这种[力量传递下去](https://github.com/bbruceyuan/bbruceyuan.github.io/discussions/47#discussioncomment-14478259)，所以我会继续写下去
+  - 虽然这些东西会让很多人很烦，如果有骚扰到可以屏蔽；但是我想说，我个人真的很爱看这些东西，比如
+    - 我今天（2025-10-04）刚发现的一个 UP 主——[久远寺千歳](https://www.bilibili.com/video/BV1MphczLEhu/)，我把他所有总结视频都看了，我真的很佩服这种人。
+    - 还有我很喜欢的 blog 作者们——[微扰理论](https://mp.weixin.qq.com/s/37J_0qqkXyIRYG4pPhRDDg)，[hawstein](https://hawstein.com/2023/07/12/five-years-of-an-indie-hacker/)，以及各种心灵按摩类的播客，比如孟岩的[无人知晓](https://www.xiaoyuzhoufm.com/podcast/611719d3cb0b82e1df0ad29e)、少楠的[奇想驿](https://www.xiaoyuzhoufm.com/podcast/6034daea97755b8fc9c66480)、厚望的[面基](https://www.xiaoyuzhoufm.com/podcast/6388760f22567e8ea6ad070f)等，当然还有很多很多...
+  - 这些东西总能给我力量，我也想把生活、工作中的迷茫写下来，希望能把这种[力量传递下去](https://github.com/bbruceyuan/bbruceyuan.github.io/discussions/47#discussioncomment-14478259)，所以我会继续写下去
 
 ![image.png](https://cfcdn.yuanchaofa.com/blog/2025/20251004225322.png)
 
 - 工作还要坚持努力干，但是 Q4 可预期的压力就很大了，以至于我写这篇 blog 的时候就感觉到非常的痛苦，我真的没有信心完成 Q4 定的 OKR。
-	- 但[让人幸福的工作一定是存在的](https://yuanchaofa.com/blog/2025-06-month-summary.html#_1-%E5%BF%B5%E5%A4%B4%E9%80%9A%E8%BE%BE)，只是我们需要更多的思考
-	- Q4 的 Chaofa 请一定「不要用战术上勤奋，掩盖战略上的懒惰」
-		- I need more time to think about my life. 
+  - 但[让人幸福的工作一定是存在的](https://yuanchaofa.com/blog/2025-06-month-summary.html#_1-%E5%BF%B5%E5%A4%B4%E9%80%9A%E8%BE%BE)，只是我们需要更多的思考
+  - Q4 的 Chaofa 请一定「不要用战术上勤奋，掩盖战略上的懒惰」
+    - I need more time to think about my life.
 - 视频，也许会月更视频，「[动手学习大模型](https://github.com/bbruceyuan/Hands-On-Large-Language-Models-CN)」的系列我还是会坚持更新完的。
 - 写书，我要开始了。等我！
-
-
 
 ## 最后
 
 最后欢迎来探讨对世界的认知，基本全网同名 [chaofa用代码打点酱油](https://yuanchaofa.com/) (推荐)
+
 - [公众号-chaofa用代码打点酱油](https://yuanchaofa.com/llms-zero-to-hero/chaofa-wechat-official-account.png)
-	- ![chaofa用代码打点酱油](https://yuanchaofa.com/llms-zero-to-hero/chaofa-wechat-official-account.png)
+  - ![chaofa用代码打点酱油](https://yuanchaofa.com/llms-zero-to-hero/chaofa-wechat-official-account.png)
 - [B站-chaofa用代码打点酱油](https://space.bilibili.com/12420432)
 - [YouTube-chaofa用代码打点酱油](https://www.youtube.com/@bbruceyuan)
 - [chaofa 的 notion 简介](https://chaofa.notion.site/11a569b3ecce49b2826d679f5e2fdb54)
 - [X(Twitter)-chaofa用代码打点酱油](https://x.com/bbruceyuan)
-
-
 
 [^1]: 一般 10 点多下班后回家接着干到 12 点多，真的觉得干不完，压力很大。
 
