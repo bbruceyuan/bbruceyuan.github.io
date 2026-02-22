@@ -82,5 +82,10 @@ export default hopeTheme({
     searchPro: {
       autoSuggestions: false,
     },
+
+    seo: {
+      canonical: (page) =>
+        `https://yuanchaofa.com${page.path.replace(/\.html$/, "").replace(/\/$/, "") || "/"}`,
+    },
   },
 });
