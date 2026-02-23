@@ -35,6 +35,7 @@
 
 | 日期 | 文章 |
 |------|------|
+| 2026-02-23 | [2025，浪潮与拧巴](https://yuanchaofa.com/blog/2025-year-summary.html) |
 | 2026-02-22 | [Agent 系统中的 Prompt Caching 设计（下）：上下文管理与子代理架构](https://yuanchaofa.com/post/agent-context-management-and-sub-agents.html) |
 | 2026-02-22 | [Agent 系统中的 Prompt Caching 设计（上）：Cache 破坏、Prompt 布局与工具管理](https://yuanchaofa.com/post/prompt-cache-design-for-llm-agents.html) |
 | 2026-02-21 | [理解 KV Cache 与 Prompt Caching：LLM 推理加速的核心机制](https://yuanchaofa.com/post/understanding-kv-cache-and-prompt-cache-basics.html) |
@@ -84,4 +85,3 @@
 | 2021-12-31 | [2021，乌云与曙光](https://yuanchaofa.com/blog/2021-year-summary.html) |
 | 2021-10-31 | [Life Influenced By Point](https://yuanchaofa.com/blog/life-influenced-by-point.html) |
 | 2021-10-06 | [How I Met Bruce?](https://yuanchaofa.com/blog/how-i-met-bruce.html) |
-| 2021-08-21 | [和崔同学日常段子集锦](https://yuanchaofa.com/blog/joke-with-miss-cui.html) |
