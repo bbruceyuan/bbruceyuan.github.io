@@ -1,6 +1,8 @@
 name: Update README
 
 on:
+  schedule:
+    - cron: '0 2 * * 6'  # 每周六 10:00 北京时间 (UTC+8)
   push:
     branches:
       - main
@@ -26,41 +28,60 @@ jobs:
         with:
           python-version: '3.11'
 
+      # === 从 apethon 同步内容（仅定时/手动触发时执行） ===
+      - name: Clone apethon private repo
+        if: github.event_name == 'schedule' || github.event_name == 'workflow_dispatch'
+        env:
+          PROFILE_REPO_TOKEN: ${{ secrets.PROFILE_REPO_TOKEN }}
+        run: |
+          git clone --depth 1 https://x-access-token:${PROFILE_REPO_TOKEN}@github.com/ApeCodeLab/apethon.git /tmp/apethon
+
+      - name: Sync content and static from apethon
+        if: github.event_name == 'schedule' || github.event_name == 'workflow_dispatch'
+        run: |
+          # 同步文章内容: site/content/ -> docs/（保留 .vuepress/）
+          rsync -av --delete \
+            --exclude='.vuepress/' \
+            /tmp/apethon/site/content/ \
+            docs/
+
+          # 同步静态资源: site/static/ -> docs/.vuepress/public/
+          rsync -av --delete \
+            /tmp/apethon/site/static/ \
+            docs/.vuepress/public/
+
+          # 删除已废弃的 llms-zero-to-hero 目录
+          rm -rf docs/llms-zero-to-hero/
+
+      # === 生成 README ===
       - name: Run update script
         run: python scripts/update_readme.py
 
-      # 更新 bbruceyuan.github.io 的 README
-      - name: Check for blog README changes
-        id: blog-check
+      # === 提交所有变更 ===
+      - name: Check for changes
+        id: check-changes
         run: |
-          git diff --exit-code README.md || echo "changed=true" >> $GITHUB_OUTPUT
+          git add -A docs/ README.md
+          git diff --cached --exit-code || echo "changed=true" >> $GITHUB_OUTPUT
 
-      - name: Commit and push blog README
-        if: steps.blog-check.outputs.changed == 'true'
+      - name: Commit and push changes
+        if: steps.check-changes.outputs.changed == 'true'
         run: |
           git config --local user.email "github-actions[bot]@users.noreply.github.com"
           git config --local user.name "github-actions[bot]"
-          git add README.md
-          git commit -m "docs: auto-generate README with latest posts"
+          git commit -m "docs: auto-sync content from apethon and update README"
           git push
 
-      # 推送 profile_README.md 到 bbruceyuan 仓库
+      # === 推送 profile_README.md 到 bbruceyuan 仓库 ===
       - name: Push to bbruceyuan profile repo
         env:
           PROFILE_REPO_TOKEN: ${{ secrets.PROFILE_REPO_TOKEN }}
         run: |
-          # 克隆 bbruceyuan 仓库
           git clone https://x-access-token:${PROFILE_REPO_TOKEN}@github.com/bbruceyuan/bbruceyuan.git /tmp/profile-repo
-
-          # 复制生成的 README
           cp profile_README.md /tmp/profile-repo/README.md
-
-          # 提交并推送
           cd /tmp/profile-repo
           git config user.email "github-actions[bot]@users.noreply.github.com"
           git config user.name "github-actions[bot]"
-
-          # 检查是否有变化
           if git diff --exit-code README.md; then
             echo "No changes to profile README"
           else

@@ -180,7 +180,6 @@ def scan_posts_by_category(docs_dir: Path) -> Dict[str, List[Dict]]:
     tech_dirs = [
         "post",
         "hands-on-code",
-        "llms-zero-to-hero",
         "introduction-to-computing-advertising",
     ]
     # 个人生活目录
