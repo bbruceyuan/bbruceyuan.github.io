@@ -61,8 +61,6 @@
 | 2025-02-22 | [自顶向下方式深度解读 DeepSeek-R1，内含大量细节](https://yuanchaofa.com/post/deepseek-r1-paper-reading-notes.html) |
 | 2025-02-05 | [MLA(1)：从代码角度学习和彻底理解 DeepSeek MLA 算法](https://yuanchaofa.com/post/hands-on-deepseek-mla.html) |
 | 2025-02-03 | [DeepSeek-R1大模型本地部署的三种方式，总有一种适合你](https://yuanchaofa.com/post/three-ways-of-deploy-deepseek-r1-and-llm.html) |
-| 2025-01-27 | [LLM MOE的进化之路，从普通简化 MOE，到 sparse moe，再到 deepseek 使用的 share_expert sparse moe](https://yuanchaofa.com/llms-zero-to-hero/the-way-of-moe-model-evolution.html) |
-| 2025-01-27 | [LLM activate function激活函数的进化之路，从 ReLU，GELU 到 SwiGLU(swishGLU)](https://yuanchaofa.com/llms-zero-to-hero/activate-function-from-relu-gelu-to-swishglu.html) |
 | 2024-12-28 | [2024，公开表达元年](https://yuanchaofa.com/blog/2024-year-summary.html) |
 | 2024-12-08 | [手写大模型组件之Group Query Attention，从 MHA，MQA 到 GQA](https://yuanchaofa.com/hands-on-code/hands-on-group-query-attention-and-multi-query-attention.html) |
 | 2024-11-09 | [LoRA 原理和 PyTorch 代码实现](https://yuanchaofa.com/hands-on-code/hands-on-lora.html) |
@@ -85,3 +83,5 @@
 | 2021-12-31 | [2021，乌云与曙光](https://yuanchaofa.com/blog/2021-year-summary.html) |
 | 2021-10-31 | [Life Influenced By Point](https://yuanchaofa.com/blog/life-influenced-by-point.html) |
 | 2021-10-06 | [How I Met Bruce?](https://yuanchaofa.com/blog/how-i-met-bruce.html) |
+| 2021-08-21 | [和崔同学日常段子集锦](https://yuanchaofa.com/blog/joke-with-miss-cui.html) |
+| 2021-06-10 | [倒排索引原理与python实现](https://yuanchaofa.com/post/29.html) |
