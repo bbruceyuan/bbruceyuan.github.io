@@ -225,14 +225,3 @@ kimi-k1.5 的 Long2Short，实现了长链推理（Long-CoT）到短链推理（
 结合 [4.3](#4.3) 中的公式的定义，里面有一项 $(r - \hat{r})$ ，其中小于平均值 $\hat{r}$ 就是负样本。而 ReFT 是一个只用正样本，也就是只挑选好的样本的一个方法，最终结果是显示负样本也是有好处的。
 
 ![kimi-k1.5-paper-reading-20250301170806060](https://cfcdn.bruceyuan.com/blog/2025/kimi-k1.5-paper-reading-20250301170806060.webp)
-
-## 其他
-
-最后欢迎关注我，基本全网同名 [chaofa用代码打点酱油](https://yuanchaofa.com/)
-
-- 公众号： ![chaofa用代码打点酱油](https://yuanchaofa.com/llms-zero-to-hero/chaofa-wechat-official-account.png)
-- [B站-chaofa用代码打点酱油](https://space.bilibili.com/12420432)
-- [YouTube-chaofa用代码打点酱油](https://www.youtube.com/@bbruceyuan)
-- [chaofa 的 notion 简介](https://chaofa.notion.site/11a569b3ecce49b2826d679f5e2fdb54)
-
-[^1]: 一张图像后面紧接着一段对该图像内容进行描述的文本，然后再是下一张图像及对应的文本。例如，当文本提到 “一只猫在沙发上睡觉” 时，搭配相应的图像，模型可以更准确地理解 “猫”“沙发” 的具体形态以及 “睡觉” 这一动作的实际表现，从而更深入地理解文本语义。

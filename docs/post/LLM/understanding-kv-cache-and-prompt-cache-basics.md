@@ -237,13 +237,4 @@ Prompt Cache 的匹配规则非常严格：
 - [动手理解 DeepSeek MLA（Part 1）](/post/hands-on-deepseek-mla.html) - 我的博客
 - [GitHub Discussion #22: Prefill 阶段为什么需要计算所有 token 的 Q](https://github.com/bbruceyuan/bbruceyuan.github.io/discussions/22#discussioncomment-12592501)
 - [Prompt Caching 201](https://cookbook.openai.com/examples/prompt_caching_201)
-- [Prompt auto-caching with Claude](https://blog.langchain.dev/prompt-auto-caching-with-claude/)
-
-## 其他
-
-最后欢迎关注我，基本全网同名 [chaofa用代码打点酱油](https://yuanchaofa.com/)
-
-- 公众号（主要是为了订阅通知，不然看 Blog 就够了）： ![chaofa用代码打点酱油](https://yuanchaofa.com/llms-zero-to-hero/chaofa-wechat-official-account.png)
-- [B站-chaofa用代码打点酱油](https://space.bilibili.com/12420432)
-- [YouTube-chaofa用代码打点酱油](https://www.youtube.com/@bbruceyuan)
-- [chaofa 的 notion 简介](https://chaofa.notion.site/11a569b3ecce49b2826d679f5e2fdb54)
+- [Prompt auto-caching with Claude](https://platform.claude.com/docs/en/build-with-claude/prompt-caching)

@@ -705,11 +705,3 @@ print(f"Output shape: {output.shape}")
 6. [十分钟读懂旋转编码（RoPE）](https://www.zhihu.com/tardis/zm/art/647109286?source_id=1003)
 7. [解密旋转位置编码：数学基础、代码实现与绝对编码一体化探索](https://www.bilibili.com/video/BV1Xi421R7ev/?spm_id_from=333.337.search-card.all.click&vd_source=94e689689fd8909b62da4addd8635282)
 
-## 8. 其他
-
-最后欢迎关注我，基本全网同名 [chaofa用代码打点酱油](https://yuanchaofa.com/)
-
-* 公众号： ![chaofa用代码打点酱油](https://yuanchaofa.com/llms-zero-to-hero/chaofa-wechat-official-account.png)
-* [B站-chaofa用代码打点酱油](https://space.bilibili.com/12420432)
-* [YouTube-chaofa用代码打点酱油](https://www.youtube.com/@bbruceyuan)
-* [chaofa 的 notion 简介](https://chaofa.notion.site/11a569b3ecce49b2826d679f5e2fdb54)

@@ -50,14 +50,3 @@ permalink: /blog/2025-08-month-summary.html
 [^2]: 其实也有不少人和我讲，看我就是这样。但我其实真的好疲惫，累的不行
 
 [^3]: 人一旦停止输入学习就接近 35 岁了，这并不是一个客观年龄，而是和精神状态、能量、好奇心有关
-
-## 最后
-
-最后欢迎来探讨对世界的认知，基本全网同名 [chaofa用代码打点酱油](https://yuanchaofa.com/) (推荐)
-
-- [公众号-chaofa用代码打点酱油](https://yuanchaofa.com/llms-zero-to-hero/chaofa-wechat-official-account.png)
-  - ![chaofa用代码打点酱油](https://yuanchaofa.com/llms-zero-to-hero/chaofa-wechat-official-account.png)
-- [B站-chaofa用代码打点酱油](https://space.bilibili.com/12420432)
-- [YouTube-chaofa用代码打点酱油](https://www.youtube.com/@bbruceyuan)
-- [chaofa 的 notion 简介](https://chaofa.notion.site/11a569b3ecce49b2826d679f5e2fdb54)
-- [X(Twitter)-chaofa用代码打点酱油](https://x.com/bbruceyuan)

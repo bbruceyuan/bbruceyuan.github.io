@@ -524,15 +524,6 @@ def compute_reward(prediction, ground_truth):
 
 当然，基于强化学习的 Agentic RAG 也有一些挑战，例如训练成本高、数据依赖等，但目前（2025-10-03）来看，基于强化学习的 Agent 应用（包括 Agentic RAG）仍然是最主流的一种使用方式。
 
-## 6. 其他
-
-最后欢迎关注我，基本全网同名 [chaofa用代码打点酱油](https://yuanchaofa.com/)
-
-- 公众号（主要是为了订阅通知，不然看 Blog 就够了）： ![chaofa用代码打点酱油](https://yuanchaofa.com/llms-zero-to-hero/chaofa-wechat-official-account.png)
-- [B站-chaofa用代码打点酱油](https://space.bilibili.com/12420432)
-- [YouTube-chaofa用代码打点酱油](https://www.youtube.com/@bbruceyuan)
-- [chaofa 的 notion 简介](https://chaofa.notion.site/11a569b3ecce49b2826d679f5e2fdb54)
-
 ## 7. Ref
 
 [^1]: 以前有过好奇🤔为什么 Chatbox 的 RAG 效果在复杂场景下的 RAG 效果比其他的 chatbox 类产品效果更好，后面阅读源码之后才发现：chatbox 针对于 `file` 相关的工具做了优化，并且因为不用考虑时延等问题，很多决策都通过 `LLM` 完成。

@@ -133,12 +133,3 @@ Inference-time Scaling，Voting 从  1 -> 32，效果逐步提升，并且 MetaR
   - 最终重要的，RL 比 RFT 更重要， **RL is all we need**（🤣66.1 -> 68.7）。
 
 ![deepseek-grm-20250503224750765|575](https://cfcdn.bruceyuan.com/blog/2025/deepseek-grm-20250503224750765.webp)
-
-## 其他
-
-最后欢迎关注我，基本全网同名 [chaofa用代码打点酱油](https://yuanchaofa.com/)
-
-- 公众号： ![chaofa用代码打点酱油](https://yuanchaofa.com/llms-zero-to-hero/chaofa-wechat-official-account.png)
-- [B站-chaofa用代码打点酱油](https://space.bilibili.com/12420432)
-- [YouTube-chaofa用代码打点酱油](https://www.youtube.com/@bbruceyuan)
-- [chaofa 的 notion 简介](https://chaofa.notion.site/11a569b3ecce49b2826d679f5e2fdb54)

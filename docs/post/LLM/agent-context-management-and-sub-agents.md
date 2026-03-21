@@ -170,20 +170,11 @@ Manus 自 2025 年 3 月以来已**重构无数次**。每次模型能力提升�
 
 备注：本文主要受前 4 篇参考内容的启发
 
-- Thariq @trq212 - [Lessons from Building Claude Code: Prompt Caching Is Everything](https://x.com/trq212)
+- Thariq @trq212 - [Lessons from Building Claude Code: Prompt Caching Is Everything](https://x.com/trq212/status/2024574133011673516)
 - Lance Martin - [Manus webinar notes (2025.10): Context Reduction/Isolation/Offloading](https://rlancemartin.github.io/2025/10/15/manus/)
 - Manus Blog - [Context Engineering for AI Agents](https://manus.im/blog/Context-Engineering-for-AI-Agents-Lessons-from-Building-Manus)
-- Michael Bolin - [深入解析 Codex 智能体循环](https://openai.com/index/building-the-codex-agent-loop/)
-- [Effective Context Engineering for AI Agents](https://www.anthropic.com/engineering/context-engineering)
+- [深入解析 Codex 智能体循环](https://openai.com/zh-Hans-CN/index/unrolling-the-codex-agent-loop/)
+- [Effective Context Engineering for AI Agents](https://www.anthropic.com/engineering/effective-context-engineering-for-ai-agents)
 - [Agent Prompt Cache 设计（上）：Cache 破坏、Prompt 布局与工具管理](/post/prompt-cache-design-for-llm-agents.html) - 本博客
 - [理解 KV Cache 与 Prompt Cache](/post/understanding-kv-cache-and-prompt-cache-basics.html) - 本博客
 - [RAG 进化之路：传统 RAG 到 Agentic RAG](/post/from-native-rag-to-agentic-rag.html) - 本博客
-
-## 其他
-
-最后欢迎关注我，基本全网同名 [chaofa用代码打点酱油](https://yuanchaofa.com/)
-
-- 公众号（主要是为了订阅通知，不然看 Blog 就够了）： ![chaofa用代码打点酱油](https://yuanchaofa.com/llms-zero-to-hero/chaofa-wechat-official-account.png)
-- [B站-chaofa用代码打点酱油](https://space.bilibili.com/12420432)
-- [YouTube-chaofa用代码打点酱油](https://www.youtube.com/@bbruceyuan)
-- [chaofa 的 notion 简介](https://chaofa.notion.site/11a569b3ecce49b2826d679f5e2fdb54)

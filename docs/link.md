@@ -21,8 +21,8 @@ image: img/link.png
 | 名称                             | 描述                     |
 | -------------------------------- | ------------------------ |
 | [极客兔兔](https://geektutu.com) | 致力于分享有趣的技术实践 |
-| [代码笔记](https://freelifeblog.top/) | 热爱生活，保持好奇心 |
-| [科学空间](https://kexue.fm/) | 苏剑林的 blog，无需多言，他知乎更新都不如 blog 及时 |
+| [代码笔记](https://freelifeblog.top) | 热爱生活，保持好奇心 |
+| [科学空间](https://kexue.fm) | 苏剑林的 blog，无需多言，他知乎更新都不如 blog 及时 |
 
 ## 申明
 
@@ -40,6 +40,6 @@ image: img/link.png
 >
 > 站点地址：<https://yuanchaofa.com>
 >
-> 已加友链：<https://yuanchaofa.com/link.html>
+> 已加友链：<https://yuanchaofa.com/link>
 >
 > 常用网名：英文: bbruceyuan，bruce yuan，中文：用代码打点酱油，打点酱油，混学大师，chaofa用代码打点酱油，用代码打点酱油的chaofa

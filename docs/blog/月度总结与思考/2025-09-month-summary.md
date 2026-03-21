@@ -104,17 +104,6 @@ permalink: /blog/2025-09-month-summary.html
 - 视频，也许会月更视频，「[动手学习大模型](https://github.com/bbruceyuan/Hands-On-Large-Language-Models-CN)」的系列我还是会坚持更新完的。
 - 写书，我要开始了。等我！
 
-## 最后
-
-最后欢迎来探讨对世界的认知，基本全网同名 [chaofa用代码打点酱油](https://yuanchaofa.com/) (推荐)
-
-- [公众号-chaofa用代码打点酱油](https://yuanchaofa.com/llms-zero-to-hero/chaofa-wechat-official-account.png)
-  - ![chaofa用代码打点酱油](https://yuanchaofa.com/llms-zero-to-hero/chaofa-wechat-official-account.png)
-- [B站-chaofa用代码打点酱油](https://space.bilibili.com/12420432)
-- [YouTube-chaofa用代码打点酱油](https://www.youtube.com/@bbruceyuan)
-- [chaofa 的 notion 简介](https://chaofa.notion.site/11a569b3ecce49b2826d679f5e2fdb54)
-- [X(Twitter)-chaofa用代码打点酱油](https://x.com/bbruceyuan)
-
 [^1]: 一般 10 点多下班后回家接着干到 12 点多，真的觉得干不完，压力很大。
 
 [^2]: 写书虽然不赚钱，但真的很酷，一直想有一本自己的出版物。

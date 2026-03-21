@@ -380,13 +380,3 @@ $$
   - `AdaThinking` 也是通过 PPO 算法优化，把问题视为：尽量少触发 CoT 的情况下，新模型的回复大于【旧模型回答】且大于【Thinking 模式模型的回答】。
 
 [DeepSeek-R1](https://yuanchaofa.com/post/deepseek-r1-paper-reading-notes.html) 之后，真就全员 RL 啊，什么东西都用 RL 来搞一遍~ ok, `RL is all we need~`
-
-## 其他
-
-最后欢迎关注我，基本全网同名 [chaofa用代码打点酱油](https://yuanchaofa.com/) (推荐)
-
-- [公众号-chaofa用代码打点酱油](https://yuanchaofa.com/llms-zero-to-hero/chaofa-wechat-official-account.png)（仅同步）
-  - ![chaofa用代码打点酱油](https://yuanchaofa.com/llms-zero-to-hero/chaofa-wechat-official-account.png)
-- [B站-chaofa用代码打点酱油](https://space.bilibili.com/12420432)
-- [YouTube-chaofa用代码打点酱油](https://www.youtube.com/@bbruceyuan)
-- [chaofa 的 notion 简介](https://chaofa.notion.site/11a569b3ecce49b2826d679f5e2fdb54)

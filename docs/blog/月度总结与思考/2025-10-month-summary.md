@@ -53,17 +53,6 @@ permalink: /blog/2025-10-month-summary.html
 
 很多人都说 TIM 的成功当然也离不开家庭的支持，这里指的是那份底气和关键性的指导，他可以有足够的尝试，可以自由的探索。这是显然的，毕竟做成这样缺失路上任何一环都不会有现在的「影视飓风」，不过这可能是最不重要的，因为他真的很强，没有这样的家庭他也能成功，只是可能不一定有现在成功[^5]。但是无论如何，他的成功都是自己争取得到的，其他的东西只是景上添花，就算不是 29 岁，39 岁的 TIM 也一定会走上人生巅峰。RESPECT！
 
-## 关注我
-
-最后欢迎来探讨对世界的认知，基本全网同名 [chaofa用代码打点酱油](https://yuanchaofa.com/) (推荐)
-
-- [公众号-chaofa用代码打点酱油](https://yuanchaofa.com/llms-zero-to-hero/chaofa-wechat-official-account.png)
-  - ![chaofa用代码打点酱油](https://yuanchaofa.com/llms-zero-to-hero/chaofa-wechat-official-account.png)
-- [B站-chaofa用代码打点酱油](https://space.bilibili.com/12420432)
-- [YouTube-chaofa用代码打点酱油](https://www.youtube.com/@bbruceyuan)
-- [chaofa 的 notion 简介](https://chaofa.notion.site/11a569b3ecce49b2826d679f5e2fdb54)
-- [X(Twitter)-chaofa用代码打点酱油](https://x.com/bbruceyuan)
-
 ## 附录
 
 [^1]: 大约在 21 年才关注到影视飓风，真的是一路看着他成功，以后他会更成功，真的是太羡慕了，无论是才华、认知、努力还是天生的精力。

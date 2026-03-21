@@ -7,10 +7,12 @@ tag:
   - LLM
 category:
   - hands-on-code
-  - llms-zero-to-hero
 description: "主要介绍了从基础的 ReLU 到 GELU，再到现代大语言模型中广泛使用的 SwishGLU 的发展过程, 介绍了深度学习中激活函数演进历程。文章详细讲解了各个激活函数的数学原理和实现方式，并重点分析了 SwishGLU 如何结合 Swish 激活函数和 GLU 门控单元的优点。同时，文章还提供了完整的 PyTorch 代码实现，展示了如何在神经网络中使用这些激活函数，特别是在大语言模型的 FFN（前馈神经网络）层中的应用。对于想要深入理解现代深度学习模型架构的开发者和研究者来说，这是一份很有价值的参考资料。"
 publish: true
-permalink: /llms-zero-to-hero/activate-function-from-relu-gelu-to-swishglu.html
+permalink: /post/activate-function-from-relu-gelu-to-swishglu.html
+redirectFrom:
+  - /llms-zero-to-hero/activate-function-from-relu-gelu-to-swishglu.html
+  - /llms-zero-to-hero/activate-function-from-relu-gelu-to-swishglu
 banner: https://yuanchaofa.com/img/huggingface.png
 ---
 
@@ -187,10 +189,3 @@ class FFNExpert(nn.Module):
 - 非常参考阅读文章：[GLU 和 SwiGLU](https://mingchao.wang/1fb1JNJ6/) 可以写的时候没发现
 
 [^1]: <https://zhuanlan.zhihu.com/p/693332639>
-
-最后欢迎关注我，基本全网同名 [chaofa用代码打点酱油](https://yuanchaofa.com/)
-
-- 公众号： ![chaofa用代码打点酱油](https://yuanchaofa.com/llms-zero-to-hero/chaofa-wechat-official-account.png)
-- [B站-chaofa用代码打点酱油](https://space.bilibili.com/12420432)
-- [YouTube-chaofa用代码打点酱油](https://www.youtube.com/@bbruceyuan)
-- [chaofa 的 notion 简介](https://chaofa.notion.site/11a569b3ecce49b2826d679f5e2fdb54)

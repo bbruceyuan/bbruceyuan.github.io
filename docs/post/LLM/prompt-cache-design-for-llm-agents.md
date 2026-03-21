@@ -210,19 +210,10 @@ Agent 可能有 30 个工具，但不同阶段只需要一部分。如果按需�
 
 ## 参考
 
-- Thariq @trq212 - [Lessons from Building Claude Code: Prompt Caching Is Everything](https://x.com/trq212)
-- Lance Martin @RLanceMartin - [Prompt auto-caching with Claude](https://blog.langchain.dev/prompt-auto-caching-with-claude/)
+- Thariq @trq212 - [Lessons from Building Claude Code: Prompt Caching Is Everything](https://x.com/trq212/status/2024574133011673516)
+- Lance Martin @RLanceMartin - [Prompt auto-caching with Claude](https://x.com/RLanceMartin/status/2024573404888911886)
 - Manus Blog - [Context Engineering for AI Agents](https://manus.im/blog/Context-Engineering-for-AI-Agents-Lessons-from-Building-Manus)
-- Michael Bolin - [深入解析 Codex 智能体循环](https://openai.com/index/building-the-codex-agent-loop/)
+- [深入解析 Codex 智能体循环](https://openai.com/zh-Hans-CN/index/unrolling-the-codex-agent-loop/)
 - [Prompt Caching 201](https://cookbook.openai.com/examples/prompt_caching_201)
-- [Effective Context Engineering for AI Agents](https://www.anthropic.com/engineering/context-engineering)
+- [Effective Context Engineering for AI Agents](https://www.anthropic.com/engineering/effective-context-engineering-for-ai-agents)
 - [理解 KV Cache 与 Prompt Cache](/post/understanding-kv-cache-and-prompt-cache-basics.html) - 我的博客
-
-## 其他
-
-最后欢迎关注我，基本全网同名 [chaofa用代码打点酱油](https://yuanchaofa.com/)
-
-- 公众号（主要是为了订阅通知，不然看 Blog 就够了）： ![chaofa用代码打点酱油](https://yuanchaofa.com/llms-zero-to-hero/chaofa-wechat-official-account.png)
-- [B站-chaofa用代码打点酱油](https://space.bilibili.com/12420432)
-- [YouTube-chaofa用代码打点酱油](https://www.youtube.com/@bbruceyuan)
-- [chaofa 的 notion 简介](https://chaofa.notion.site/11a569b3ecce49b2826d679f5e2fdb54)

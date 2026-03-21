@@ -35,6 +35,8 @@
 
 | 日期 | 文章 |
 |------|------|
+| 2026-03-14 | [Harness Engineering — Agent 不好用，也许不是模型的问题](https://yuanchaofa.com/post/harness-engineering-for-ai-agents.html) |
+| 2026-03-01 | [Kimi K2.5 技术解读：原生多模态联合训练与并行 Agent 编排训练](https://yuanchaofa.com/post/kimi-k2-5-reading-notes.html) |
 | 2026-02-23 | [2025，浪潮与拧巴](https://yuanchaofa.com/blog/2025-year-summary.html) |
 | 2026-02-22 | [Agent 系统中的 Prompt Caching 设计（下）：上下文管理与子代理架构](https://yuanchaofa.com/post/agent-context-management-and-sub-agents.html) |
 | 2026-02-22 | [Agent 系统中的 Prompt Caching 设计（上）：Cache 破坏、Prompt 布局与工具管理](https://yuanchaofa.com/post/prompt-cache-design-for-llm-agents.html) |
@@ -61,6 +63,8 @@
 | 2025-02-22 | [自顶向下方式深度解读 DeepSeek-R1，内含大量细节](https://yuanchaofa.com/post/deepseek-r1-paper-reading-notes.html) |
 | 2025-02-05 | [MLA(1)：从代码角度学习和彻底理解 DeepSeek MLA 算法](https://yuanchaofa.com/post/hands-on-deepseek-mla.html) |
 | 2025-02-03 | [DeepSeek-R1大模型本地部署的三种方式，总有一种适合你](https://yuanchaofa.com/post/three-ways-of-deploy-deepseek-r1-and-llm.html) |
+| 2025-01-27 | [LLM MOE的进化之路，从普通简化 MOE，到 sparse moe，再到 deepseek 使用的 share_expert sparse moe](https://yuanchaofa.com/post/the-way-of-moe-model-evolution.html) |
+| 2025-01-27 | [LLM activate function激活函数的进化之路，从 ReLU，GELU 到 SwiGLU(swishGLU)](https://yuanchaofa.com/post/activate-function-from-relu-gelu-to-swishglu.html) |
 | 2024-12-28 | [2024，公开表达元年](https://yuanchaofa.com/blog/2024-year-summary.html) |
 | 2024-12-08 | [手写大模型组件之Group Query Attention，从 MHA，MQA 到 GQA](https://yuanchaofa.com/hands-on-code/hands-on-group-query-attention-and-multi-query-attention.html) |
 | 2024-11-09 | [LoRA 原理和 PyTorch 代码实现](https://yuanchaofa.com/hands-on-code/hands-on-lora.html) |
@@ -81,7 +85,3 @@
 | 2023-02-10 | [让 flomo 更好用，将 flomo 笔记导出为 markdown 格式](https://yuanchaofa.com/post/make-flomo-better.html) |
 | 2023-01-11 | [2022，激荡中的平淡](https://yuanchaofa.com/blog/2022-year-summary.html) |
 | 2021-12-31 | [2021，乌云与曙光](https://yuanchaofa.com/blog/2021-year-summary.html) |
-| 2021-10-31 | [Life Influenced By Point](https://yuanchaofa.com/blog/life-influenced-by-point.html) |
-| 2021-10-06 | [How I Met Bruce?](https://yuanchaofa.com/blog/how-i-met-bruce.html) |
-| 2021-08-21 | [和崔同学日常段子集锦](https://yuanchaofa.com/blog/joke-with-miss-cui.html) |
-| 2021-06-10 | [倒排索引原理与python实现](https://yuanchaofa.com/post/29.html) |
