@@ -3,6 +3,7 @@ name: Update README
 on:
   schedule:
     - cron: '0 2 * * 6'  # 每周六 10:00 北京时间 (UTC+8)
+    - cron: '0 2 * * 0'  # 每周日 10:00 北京时间 (UTC+8)
   push:
     branches:
       - main
