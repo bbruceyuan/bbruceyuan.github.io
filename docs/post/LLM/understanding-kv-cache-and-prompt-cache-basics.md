@@ -6,7 +6,7 @@ tag:
   - transformer
   - KV Cache
 category:
-  - hands-on-code
+  - agent system design
 description: 深入理解 KV Cache 的原理、Prefill/Decode 两阶段与 Compute Bound/Memory Bound 的关系，以及 Prompt Caching（前缀缓存）如何实现推理加速和成本节约。
 publish: true
 permalink: /post/understanding-kv-cache-and-prompt-cache-basics.html

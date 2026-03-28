@@ -7,7 +7,7 @@ tag:
   - KV Cache
   - Context Engineering
 category:
-  - hands-on-code
+  - agent system design
 description: 深入分析 AI Agent 的上下文管理策略：Context Rot 问题、Cache-Safe Compaction、Plan 模式演进、文件系统作为延展记忆、子代理 Cache 友好设计，以及 The Bitter Lesson。
 publish: true
 permalink: /post/agent-context-management-and-sub-agents.html

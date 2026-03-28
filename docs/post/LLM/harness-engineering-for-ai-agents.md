@@ -8,7 +8,7 @@ tag:
   - Context Engineering
   - Coding Agent
 category:
-  - hands-on-code
+  - agent system design
 description: "同一个模型，只改 Agent Harness，性能从 Top 30 到 Top 5。Harness Engineering 到底是什么？和 Context Engineering 什么关系？以及 The Bitter Lesson 再思考。"
 publish: true
 permalink: /post/harness-engineering-for-ai-agents.html

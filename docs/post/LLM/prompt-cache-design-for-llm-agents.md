@@ -7,7 +7,7 @@ tag:
   - KV Cache
   - Context Engineering
 category:
-  - hands-on-code
+  - agent system design
 description: 深入分析 AI Agent 为什么比 Chatbot 更需要 Prompt Caching，什么操作会破坏 Cache，以及 Claude Code、Manus、OpenAI Codex 在 Prompt 布局和工具管理上的 Cache-aware 设计实践。
 publish: true
 permalink: /post/prompt-cache-design-for-llm-agents.html
