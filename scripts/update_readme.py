@@ -78,7 +78,7 @@ PROFILE_README_TEMPLATE = """### Hi there 👋
 <br />
 
 **关于我：**
-- 🧑‍💻 Vibe Coding @ [ApeCodeAI](https://github.com/ApeCodeAI)
+- 🧑‍💻 Vibe Coding @ [ApeCode.ai](https://ApeCode.ai) & [ApeCodeAI](https://github.com/ApeCodeAI)
   - 使用 [Claude Code、CodeX](https://apecode.ai/zh/products/aperouter)、Cursor 等
   - 个人推荐 [ClaudeCode/CodeX API 代理](https://apecode.ai/zh/products/aperouter) 获取更好的 vibe 体验
 - 📝 写技术博客 @ [yuanchaofa.com](https://yuanchaofa.com)，专注 LLM、Agent、深度学习
