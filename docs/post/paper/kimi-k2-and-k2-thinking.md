@@ -8,7 +8,7 @@ category:
   - paper-reading
 description: 深度解读 Kimi K2 和 K2 Thinking 技术细节：MuonClip 优化方案、大规模 Agentic 数据合成 pipeline、通用强化学习的 Self-Judging 机制，以及 200-300 步工具调用的 Test-Time Scaling。从预训练到后训练，揭秘月之暗面如何打造 SOTA 开源 Thinking 模型。
 publish: true
-permalink: /post/kimi-k2-and-kimi-k2-thinking-notes.html
+permalink: /post/kimi-k2-and-kimi-k2-thinking-notes
 ---
 
 

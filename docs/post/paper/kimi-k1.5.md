@@ -8,7 +8,7 @@ category:
   - paper-reading
 description: 深度解读 Kimi K1.5 论文，介绍其多模态推理模型的技术原理与发展路线，涵盖预训练、监督微调、强化学习及其核心启发，提供详细的算法处理细节和数据构建方法。
 publish: true
-permalink: /post/kimi-k1.5-paper-reading-notes.html
+permalink: /post/kimi-k1.5-paper-reading-notes
 ---
 
 ## 0. 背景

@@ -8,7 +8,7 @@ category:
   - paper-reading
 description: 从自顶向下的方式深度解读 DeepSeek-R1 论文，介绍其技术原理与发展路线，涵盖 DeepSeek-R1-Zero、DeepSeek-R1 及其蒸馏模型的训练方法和核心启发。
 publish: true
-permalink: /post/deepseek-r1-paper-reading-notes.html
+permalink: /post/deepseek-r1-paper-reading-notes
 ---
 
 ## 1. 背景

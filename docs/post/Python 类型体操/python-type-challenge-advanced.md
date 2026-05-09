@@ -7,7 +7,7 @@ category: python-type-challenge
 tag:
   - python-typing-tutorial
   - python-type-tutorial
-permalink: /post/python-type-challenge-advanced.html
+permalink: /post/python-type-challenge-advanced
 publish: true
 ---
 
@@ -26,12 +26,12 @@ publish: true
 
 这篇文章按照 [Python-Type-Challenges][https://github.com/laike9m/Python-Type-Challenges](1)库的划分，一共分为四个部分。
 
-- [Python 类型体操训练（一）-- 基础篇](/post/python-type-challenge-basic.html)
-- [Python 类型体操训练（二）-- 中级篇](/post/python-type-challenge-intermediate.html)
-- [Python 类型体操训练（三）-- 高级篇](/python-type-challenge-advanced.html)（**本篇文章**）
+- [Python 类型体操训练（一）-- 基础篇](/post/python-type-challenge-basic)
+- [Python 类型体操训练（二）-- 中级篇](/post/python-type-challenge-intermediate)
+- [Python 类型体操训练（三）-- 高级篇](/python-type-challenge-advanced)（**本篇文章**）
 - [Python 类型体操训练（四）-- 究极篇](#) 博主自己暂时还没学会
 <!-- -
-- [Python 类型体操训练（四）-- 究极篇](challenge/post/python-type-challenge-extreme.html) -->
+- [Python 类型体操训练（四）-- 究极篇](challenge/post/python-type-challenge-extreme) -->
 
 ## Python Type 高级类型
 

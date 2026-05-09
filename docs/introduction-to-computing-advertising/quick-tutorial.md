@@ -2,7 +2,7 @@
 title: 快速入门
 timeline: false
 article: false
-permalink: /introduction-to-computing-advertising/quick-tutorial.html
+permalink: /introduction-to-computing-advertising/quick-tutorial
 ---
 
 ## 认识广告

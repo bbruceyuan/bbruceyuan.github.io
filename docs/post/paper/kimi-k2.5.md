@@ -10,7 +10,7 @@ category:
   - paper-reading
 description: 解读 Kimi K2.5 论文核心技术：原生多模态联合训练的反共识发现（Early Fusion + 低视觉比例优于 Late Fusion）、Zero-Vision SFT、跨模态双向迁移、Agent Swarm 并行编排框架（PARL）、Toggle Token 效率优化。关注算法与数据创新，而非 benchmark 秀肌肉。
 publish: true
-permalink: /post/kimi-k2-5-reading-notes.html
+permalink: /post/kimi-k2-5-reading-notes
 ---
 
 ## 1. TL;DR

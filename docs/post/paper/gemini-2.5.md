@@ -8,7 +8,7 @@ category:
   - paper-reading
 description: "深入解读 Gemini 2.5 技术报告，分析多模态、长上下文与思考能力等核心突破，结合个人理解与行业趋势，快速掌握最新大模型技术发展。"
 publish: true
-permalink: /post/gemini-2.5-tech-report-reading-note.html
+permalink: /post/gemini-2.5-tech-report-reading-note
 ---
 
 ## 1. 收获（takeaway）

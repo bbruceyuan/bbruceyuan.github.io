@@ -10,7 +10,7 @@ category:
   - agent system design
 description: 深入分析 AI Agent 为什么比 Chatbot 更需要 Prompt Caching，什么操作会破坏 Cache，以及 Claude Code、Manus、OpenAI Codex 在 Prompt 布局和工具管理上的 Cache-aware 设计实践。
 publish: true
-permalink: /post/prompt-cache-design-for-llm-agents.html
+permalink: /post/prompt-cache-design-for-llm-agents
 ---
 
 ## 0. 阅读收获 (takeaway)
@@ -23,7 +23,7 @@ permalink: /post/prompt-cache-design-for-llm-agents.html
 - Prompt 布局与动态信息管理的最佳实践
 - 工具管理的三种 Cache-aware 方案对比
 
-> **前置知识**：本文假设你已经理解 KV Cache、Prefill/Decode 两阶段、以及 Prompt Cache 的前缀匹配机制。如果不熟悉这些概念，建议先阅读 [理解 KV Cache 与 Prompt Caching：LLM 推理加速的核心机制](/post/understanding-kv-cache-and-prompt-cache-basics.html)。
+> **前置知识**：本文假设你已经理解 KV Cache、Prefill/Decode 两阶段、以及 Prompt Cache 的前缀匹配机制。如果不熟悉这些概念，建议先阅读 [理解 KV Cache 与 Prompt Caching：LLM 推理加速的核心机制](/post/understanding-kv-cache-and-prompt-cache-basics)。
 
 ## 1. 先说结论：Cache Rules Everything
 
@@ -206,7 +206,7 @@ Agent 可能有 30 个工具，但不同阶段只需要一部分。如果按需�
 
 本文聚焦于 Cache-aware 的 Prompt 设计和工具管理。但 Agent 还面临另一组挑战：context 越来越长怎么办？怎么压缩才不破坏 cache？子代理怎么设计？
 
-下一篇 [Agent 系统中的 Prompt Cache 设计（下）：上下文管理与子代理架构](/post/agent-context-management-and-sub-agents.html) 将深入这些话题。
+下一篇 [Agent 系统中的 Prompt Cache 设计（下）：上下文管理与子代理架构](/post/agent-context-management-and-sub-agents) 将深入这些话题。
 
 ## 参考
 
@@ -216,4 +216,4 @@ Agent 可能有 30 个工具，但不同阶段只需要一部分。如果按需�
 - [深入解析 Codex 智能体循环](https://openai.com/zh-Hans-CN/index/unrolling-the-codex-agent-loop/)
 - [Prompt Caching 201](https://cookbook.openai.com/examples/prompt_caching_201)
 - [Effective Context Engineering for AI Agents](https://www.anthropic.com/engineering/effective-context-engineering-for-ai-agents)
-- [理解 KV Cache 与 Prompt Cache](/post/understanding-kv-cache-and-prompt-cache-basics.html) - 我的博客
+- [理解 KV Cache 与 Prompt Cache](/post/understanding-kv-cache-and-prompt-cache-basics) - 我的博客

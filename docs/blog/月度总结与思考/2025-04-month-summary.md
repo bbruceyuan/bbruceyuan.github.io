@@ -8,7 +8,7 @@ tag:
   - "month-summary"
 category:
   - 月度总结
-permalink: /blog/2025-04-month-summary.html
+permalink: /blog/2025-04-month-summary
 ---
 
 ## 1. 播客

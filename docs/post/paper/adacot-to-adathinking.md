@@ -8,7 +8,7 @@ category:
   - paper-reading
 description: "深入分析三个快慢思考模型的实现：阿里Qwen3通过SFT实现的混合思考、字节AdaCoT基于RL的帕累托最优化、清华AdaThinking的受限优化框架。详细解读代码实现、训练方法和实验效果，探讨如何让模型在保持准确率的同时减少不必要的思考过程。对于想了解大模型推理优化的读者很有帮助。"
 publish: true
-permalink: /post/slow-fast-thinking-from-qwen3-thinking-mixed-to-adacot-to-adathinking.html
+permalink: /post/slow-fast-thinking-from-qwen3-thinking-mixed-to-adacot-to-adathinking
 ---
 
 ## 1. 背景

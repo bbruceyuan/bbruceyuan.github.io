@@ -8,7 +8,7 @@ category:
   - hands-on-code
 description: 从代码角度深入理解 DeepSeek MLA 算法。从代码角度详细解析 MLA（Multi-head Latent Attention）算法的核心思想，如何通过矩阵吸收来优化 KV Cache。
 publish: true
-permalink: /post/hands-on-deepseek-mla-projection-absorption.html
+permalink: /post/hands-on-deepseek-mla-projection-absorption
 ---
 
 ## 基础原理

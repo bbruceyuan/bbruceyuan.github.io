@@ -9,7 +9,7 @@ category:
   - hands-on-code
 description: "本文详细介绍了三种不同版本的混合专家模型(Mixture of Experts, MoE)实现，从基础到进阶，帮助读者全面理解 MoE 在大语言模型中的应用。主要内容包括：1. 基础版 MoE：使用简单的线性层作为专家，理解 MoE 的基本工作原理; 2. SparseMoE：大模型训练中常用的稀疏 MoE 实现，基于 Switch Transformers 的设计;3. SharedExpert SparseMoE：参考 DeepSeek 的改进版本，引入共享专家机制。文章提供了完整的 PyTorch 实现代码，包括模型定义、路由机制、负载均衡损失计算以及训练流程。同时设置了扩展性练习，帮助读者深入理解 MoE 的工作机制和优化方向。"
 publish: true
-permalink: /post/the-way-of-moe-model-evolution.html
+permalink: /post/the-way-of-moe-model-evolution
 redirectFrom:
   - /llms-zero-to-hero/the-way-of-moe-model-evolution.html
   - /llms-zero-to-hero/the-way-of-moe-model-evolution

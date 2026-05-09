@@ -9,7 +9,7 @@ category:
   - hands-on-code
 description: 深入讲解 RoPE 旋转位置编码的核心原理与 PyTorch 实现。从 2D 旋转矩阵推导相对位置编码，逐行手写代码实现 LLaMA Qwen 风格 RoPE，附热力图可视化帮助理解。适合想彻底搞懂 RoPE 位置编码的开发者。
 publish: true
-permalink: /post/hands-on-rope-position-embedding.html
+permalink: /post/hands-on-rope-position-embedding
 ---
 
 

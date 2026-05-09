@@ -3,7 +3,7 @@ title: 关于我
 date: 2019-06-30 22:18:18
 description: 做了一个播客叫做逃逸速度 Escape Velocity，平常写 Python, 对NLP、计算广告、大模型感兴趣，尝试做一些有意义的事情
 id: about
-permalink: /about.html
+permalink: /about
 article: false
 tag:
   - 关于我

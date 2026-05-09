@@ -8,7 +8,7 @@ tag:
   - "month-summary"
 category:
   - 月度总结
-permalink: /blog/2025-10-month-summary.html
+permalink: /blog/2025-10-month-summary
 ---
 
 我是朝发（chaofa），这是我 25 年第 9 次月度总结，希望还能坚持下去。

@@ -9,7 +9,7 @@ category:
   - agent system design
 description: 深入理解 KV Cache 的原理、Prefill/Decode 两阶段与 Compute Bound/Memory Bound 的关系，以及 Prompt Caching（前缀缓存）如何实现推理加速和成本节约。
 publish: true
-permalink: /post/understanding-kv-cache-and-prompt-cache-basics.html
+permalink: /post/understanding-kv-cache-and-prompt-cache-basics
 ---
 
 ## 0. 阅读收获 (takeaway)
@@ -23,8 +23,8 @@ permalink: /post/understanding-kv-cache-and-prompt-cache-basics.html
 - Prompt Caching（前缀缓存）的工作原理
 
 > KV Cache 和 Prompt Cache 对于 Agent 设计的影响：
-> - [Agent 系统中的 Prompt Caching 设计（上）：Cache 破坏、Prompt 布局与工具管理](/post/prompt-cache-design-for-llm-agents.html) —— 为什么 Agent 更需要 Cache、什么会破坏 Cache、三家工具管理方案对比
-> - [Agent 系统中的 Prompt Caching 设计（下）：上下文管理与子代理架构](/post/agent-context-management-and-sub-agents.html) —— 上下文压缩、Plan 模式演进、子代理 Cache 友好设计
+> - [Agent 系统中的 Prompt Caching 设计（上）：Cache 破坏、Prompt 布局与工具管理](/post/prompt-cache-design-for-llm-agents) —— 为什么 Agent 更需要 Cache、什么会破坏 Cache、三家工具管理方案对比
+> - [Agent 系统中的 Prompt Caching 设计（下）：上下文管理与子代理架构](/post/agent-context-management-and-sub-agents) —— 上下文压缩、Plan 模式演进、子代理 Cache 友好设计
 
 ## 1. 什么是 KV Cache？
 
@@ -91,7 +91,7 @@ $$\text{KV Cache 显存} = 4blh(s + n) \text{ bytes}$$
 - $n$ = 输出序列长度
 - 4 = 2（K 和 V）× 2（float16 占 2 bytes）
 
-> 这个公式的详细推导和具体数值例子，可以参考我之前的文章 [LLM 大模型训练-推理显存占用分析](/post/llm-train-infer-memoery-usage-calculation.html)。这里只需要记住一个直觉：**序列越长，KV Cache 越大**。这也是为什么后续会有 GQA（Grouped Query Attention）、[DeepSeek MLA](/post/hands-on-deepseek-mla.html) 等 KV Cache 压缩技术出现。
+> 这个公式的详细推导和具体数值例子，可以参考我之前的文章 [LLM 大模型训练-推理显存占用分析](/post/llm-train-infer-memoery-usage-calculation)。这里只需要记住一个直觉：**序列越长，KV Cache 越大**。这也是为什么后续会有 GQA（Grouped Query Attention）、[DeepSeek MLA](/post/hands-on-deepseek-mla) 等 KV Cache 压缩技术出现。
 
 ## 2. Prefill vs Decode：推理的两个阶段
 
@@ -228,13 +228,13 @@ Prompt Cache 的匹配规则非常严格：
 
 在接下来的两篇文章中，我会详细分析 Claude Code、Manus、OpenAI Codex 等 AI Agent 如何围绕 Prompt Cache 设计整个系统架构：
 
-- [Agent 系统中的 Prompt Cache 设计（上）：Cache 破坏、Prompt 布局与工具管理](/post/prompt-cache-design-for-llm-agents.html) —— 为什么 Agent 更需要 Cache、什么会破坏 Cache、三家工具管理方案对比
-- [Agent 系统中的 Prompt Cache 设计（下）：上下文管理与子代理架构](/post/agent-context-management-and-sub-agents.html) —— 上下文压缩、Plan 模式演进、子代理 Cache 友好设计
+- [Agent 系统中的 Prompt Cache 设计（上）：Cache 破坏、Prompt 布局与工具管理](/post/prompt-cache-design-for-llm-agents) —— 为什么 Agent 更需要 Cache、什么会破坏 Cache、三家工具管理方案对比
+- [Agent 系统中的 Prompt Cache 设计（下）：上下文管理与子代理架构](/post/agent-context-management-and-sub-agents) —— 上下文压缩、Plan 模式演进、子代理 Cache 友好设计
 
 ## 参考
 
-- [LLM 大模型训练-推理显存占用分析](/post/llm-train-infer-memoery-usage-calculation.html) - 我的博客
-- [动手理解 DeepSeek MLA（Part 1）](/post/hands-on-deepseek-mla.html) - 我的博客
+- [LLM 大模型训练-推理显存占用分析](/post/llm-train-infer-memoery-usage-calculation) - 我的博客
+- [动手理解 DeepSeek MLA（Part 1）](/post/hands-on-deepseek-mla) - 我的博客
 - [GitHub Discussion #22: Prefill 阶段为什么需要计算所有 token 的 Q](https://github.com/bbruceyuan/bbruceyuan.github.io/discussions/22#discussioncomment-12592501)
 - [Prompt Caching 201](https://cookbook.openai.com/examples/prompt_caching_201)
 - [Prompt auto-caching with Claude](https://platform.claude.com/docs/en/build-with-claude/prompt-caching)

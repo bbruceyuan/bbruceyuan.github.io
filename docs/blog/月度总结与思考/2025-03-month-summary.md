@@ -8,7 +8,7 @@ tag:
   - "month-summary"
 category:
   - 月度总结
-permalink: /blog/2025-03-month-summary.html
+permalink: /blog/2025-03-month-summary
 ---
 
 ## 1. 感想

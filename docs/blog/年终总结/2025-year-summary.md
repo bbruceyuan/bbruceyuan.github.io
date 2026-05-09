@@ -8,7 +8,7 @@ tag:
   - year-summary
 category:
   - 年终总结
-permalink: /blog/2025-year-summary.html
+permalink: /blog/2025-year-summary
 ---
 
 - 历史年终总结

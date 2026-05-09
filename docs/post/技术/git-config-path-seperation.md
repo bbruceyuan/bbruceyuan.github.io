@@ -5,7 +5,7 @@ tag:
   - git
 description: 利用 Git 的 includeIf 配置，为不同的项目设置不同的配置，通过子文件夹 .gitconfig 覆盖 Git 的 Global 相关配置，比如 name，email 等。
 publish: true
-permalink: /post/git-config-path-seperation.html
+permalink: /post/git-config-path-seperation
 ---
 
 ## 适应场景

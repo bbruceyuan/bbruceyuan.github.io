@@ -9,7 +9,7 @@ category:
   - hands-on-code
 description: DPO 让 LLM 对齐训练变得像 SFT 一样简单。本文从 RLHF 痛点讲起，手撕 DPO Loss 核心代码，用 trl 跑通完整训练流程。Bonus 包含稳定性分析和数学推导，一篇搞定 DPO。本文是「动手学大模型」系列第12章 Part2 的配套博客。
 publish: true
-permalink: /post/hands-on-dpo-direct-preference-optimization.html
+permalink: /post/hands-on-dpo-direct-preference-optimization
 ---
 
 ## 0. 阅读收获 (takeaway)

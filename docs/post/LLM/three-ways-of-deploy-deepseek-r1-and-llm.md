@@ -6,7 +6,7 @@ tag:
   - transformer
 description: 三种不同的方式部署大模型（deepseek r1），分别是 ollama, LM Studio 和 vllm，从个人测试部署到工业产品使用，让你一次性掌握大模型的不同部署方式。
 publish: true
-permalink: /post/three-ways-of-deploy-deepseek-r1-and-llm.html
+permalink: /post/three-ways-of-deploy-deepseek-r1-and-llm
 ---
 
 由于 DeepSeek-R1 爆火，导致 DeepSeek 官网用起来非常卡（至 2025 年 2 月 2 日），因此催生除了很多本地部署的需求。而这里我选用了三种最常用的部署方式，从普通人测试使用到工业界部署，让你一次性掌握大模型的部署方式。

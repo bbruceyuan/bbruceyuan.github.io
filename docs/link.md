@@ -3,7 +3,7 @@ title: 友情链接
 date: 2019-06-30 22:50:20
 description: chaofa 的友情链接, 这里记录 chaofa 的一些朋友们
 id: link
-permalink: /link.html
+permalink: /link
 article: false
 tag:
   - 友链

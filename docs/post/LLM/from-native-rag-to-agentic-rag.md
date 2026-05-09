@@ -8,7 +8,7 @@ category:
   - hands-on-code
 description: 本文深入剖析RAG技术的进化历程，从传统RAG到智能体RAG的全面升级。探索两种实现Agentic RAG的关键路径：提示工程+工具调用与强化学习驱动方法。通过解读企业级项目chatbox和Search-R1，揭示如何让大模型从"被动检索"转变为"主动决策"，实现更精准的知识获取与应用。无论你是AI研发工程师还是产品经理，这篇文章都将帮你理解RAG技术的未来发展方向，掌握构建更智能RAG系统的核心技术。
 publish: true
-permalink: /post/from-native-rag-to-agentic-rag.html
+permalink: /post/from-native-rag-to-agentic-rag
 ---
 
 

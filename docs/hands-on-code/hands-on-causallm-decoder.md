@@ -9,7 +9,7 @@ category:
   - hands-on-code
 description: 手写一个 Causal Language Model，或者说简化版的 transformer 中的 decoder。
 publish: true
-permalink: /hands-on-code/hands-on-causallm-decoder.html
+permalink: /hands-on-code/hands-on-causallm-decoder
 banner: https://yuanchaofa.com/img/huggingface.png
 ---
 

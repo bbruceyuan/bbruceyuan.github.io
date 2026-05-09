@@ -7,7 +7,7 @@ category: python-type-challenge
 tag:
   - python-typing-tutorial
   - python-type-tutorial
-permalink: /post/python-type-challenge-intermediate.html
+permalink: /post/python-type-challenge-intermediate
 publish: true
 ---
 
@@ -16,7 +16,7 @@ publish: true
 - 面向读者群体
   - 有一定Python基础，需要进阶开发中大型项目
   - 有其他静态类型语言开发经验的人，需要快速了解 Python 类型注释（type hint）
-  - 如果没有太多基础，可以先阅读 [Python 类型体操训练（一）-- 基础篇](/post/python-type-challenge-basic.html)
+  - 如果没有太多基础，可以先阅读 [Python 类型体操训练（一）-- 基础篇](/post/python-type-challenge-basic)
 - 你能学到什么？
   - Python **类变量**如何写类型注释（type hint）？
   - Python **字典类型**如何写类型注释？
@@ -28,12 +28,12 @@ publish: true
 
 这篇文章按照 [Python-Type-Challenges](https://github.com/laike9m/Python-Type-Challenges)[^1]库的划分，一共分为四个部分。
 
-- [Python 类型体操训练（一）-- 基础篇](/post/python-type-challenge-basic.html)
-- [Python 类型体操训练（二）-- 中级篇](/post/python-type-challenge-intermediate.html) （**本篇文章**）
-- [Python 类型体操训练（三）-- 高级篇](/post/python-type-challenge-advanced.html)
+- [Python 类型体操训练（一）-- 基础篇](/post/python-type-challenge-basic)
+- [Python 类型体操训练（二）-- 中级篇](/post/python-type-challenge-intermediate) （**本篇文章**）
+- [Python 类型体操训练（三）-- 高级篇](/post/python-type-challenge-advanced)
 - [Python 类型体操训练（四）-- 究极篇] TODO
 <!-- -
-- [Python 类型体操训练（四）-- 究极篇](/post/python-type-challenge-extreme.html) -->
+- [Python 类型体操训练（四）-- 究极篇](/post/python-type-challenge-extreme) -->
 
 ## 类相关类型
 
@@ -161,7 +161,7 @@ reveal_type(SubclassOfFoo().return_self())  # !!!!!最终类型是 "Foo"
 
 ## 字典类型（TypedDict）
 
-在上一篇文章 [Python 类型体操训练（一）-- 基础篇](/post/python-type-challenge-basic.html)，介绍了 `dict[key_type, value_type]`，定义一个字典，拥有特定的 `key_type` 和 `value_type`，这个字典可以拥有无数的 `key`。`TypedDict` 是为了定义【**拥有特定 key**】的字典类型，`key` 的数量是确定的。
+在上一篇文章 [Python 类型体操训练（一）-- 基础篇](/post/python-type-challenge-basic)，介绍了 `dict[key_type, value_type]`，定义一个字典，拥有特定的 `key_type` 和 `value_type`，这个字典可以拥有无数的 `key`。`TypedDict` 是为了定义【**拥有特定 key**】的字典类型，`key` 的数量是确定的。
 
 ### TypedDict-基础用法
 
@@ -262,7 +262,7 @@ b: Programer = {"name": "bbruceyuan", "age": 25}
 
 而 [Python 的写法](https://docs.python.org/3/library/typing.html#typing.Generic)和 [Scala 语言的泛型](https://docs.scala-lang.org/zh-cn/tour/generic-classes.html)更为接近，语法是几乎是一样的，用 `[T]` 来表示泛型，方括号 `[]` 是用来接收泛型参数，`T` 是一个通用的参数标识符。
 
-以下为 泛型参数的基本语法讲解，更高级用法见下一篇文章[Python 类型体操训练（三）-- 高级篇](/post/python-type-challenge-advanced.html)。
+以下为 泛型参数的基本语法讲解，更高级用法见下一篇文章[Python 类型体操训练（三）-- 高级篇](/post/python-type-challenge-advanced)。
 
 ### 推荐写法 --方括号语法 (Python >= 3.12)
 
@@ -433,7 +433,7 @@ accpet_a_func(foo2)   # 失败，因为 Callable 定义了，func 参数应该�
 
 ## 小结
 
-通过阅读这一篇文章，可以知道 Python Class Variable 可以使用 `ClassVar` 定一个一个只能由 `Class` 修改的类变量，并且介绍了 `Self` 类型（这里已经看到了 前向注释的影子，具体可以参考[下一篇](/post/python-type-challenge-advanced.html)）；此外，着重了解 `TypedDict` 如何定义特定 `Key` 的字典类型，了解 `Required` 和 `NotRequired` 的区别；然后介绍 Python Generic Type（泛型）的写法，明确了 Python 3.12 之后方括号 `[T]` 注释的写法，以及如何在 3.12 版本以前通过 `TypeVar` 定义通用类型；最后介绍了 `Literal` 和 `Callable` 两个重要且基础的 Python 类型。
+通过阅读这一篇文章，可以知道 Python Class Variable 可以使用 `ClassVar` 定一个一个只能由 `Class` 修改的类变量，并且介绍了 `Self` 类型（这里已经看到了 前向注释的影子，具体可以参考[下一篇](/post/python-type-challenge-advanced)）；此外，着重了解 `TypedDict` 如何定义特定 `Key` 的字典类型，了解 `Required` 和 `NotRequired` 的区别；然后介绍 Python Generic Type（泛型）的写法，明确了 Python 3.12 之后方括号 `[T]` 注释的写法，以及如何在 3.12 版本以前通过 `TypeVar` 定义通用类型；最后介绍了 `Literal` 和 `Callable` 两个重要且基础的 Python 类型。
 
 ## Reference
 

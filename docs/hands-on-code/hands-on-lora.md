@@ -9,7 +9,7 @@ category:
   - hands-on-code
 description: 用 PyTorch 实现从零实现 LoRA, 理解 LoRA 的原理，主要是为了展示一个 LoRA 实现的细节
 publish: true
-permalink: /hands-on-code/hands-on-lora.html
+permalink: /hands-on-code/hands-on-lora
 ---
 
 
@@ -190,7 +190,7 @@ print("Max difference after merge/unmerge cycle:",
 
 感兴趣可以阅读我的其他文章：
 
-- [从 self-attention 到 multi-head self-attention](/hands-on-code/from-self-attention-to-multi-head-self-attention.html)
-- [手写 transformer decoder（CausalLM）](/hands-on-code/hands-on-causallm-decoder.html)
-- [LLM 大模型训练-推理显存占用分析](/post/llm-train-infer-memoery-usage-calculation.html)
+- [从 self-attention 到 multi-head self-attention](/hands-on-code/from-self-attention-to-multi-head-self-attention)
+- [手写 transformer decoder（CausalLM）](/hands-on-code/hands-on-causallm-decoder)
+- [LLM 大模型训练-推理显存占用分析](/post/llm-train-infer-memoery-usage-calculation)
 - [手写大模型组件之Group Query Attention，从 MHA，MQA 到 GQA](https://yuanchaofa.com/hands-on-code/hands-on-group-query-attention-and-multi-query-attention.html)

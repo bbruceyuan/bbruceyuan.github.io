@@ -8,7 +8,7 @@ category:
   - paper-reading
 description: DeepSeek团队提出全新通用奖励模型DeepSeek-GRM，通过Self-Principled Critique Tuning（SPCT）方法实现推理时动态扩展能力。该研究突破传统规则奖励模型的局限，在角色扮演、创意写作等开放领域展现卓越性能。27B小模型效果超越340B大模型，且具备更少领域偏差。文章详解训练策略（RFT+在线强化学习）和推理优化（投票机制+元奖励引导），实验结果证实推理时扩展可显著提升效果，这是 DeepSeek-R2 的前兆吗？
 publish: true
-permalink: /post/deepseek-grm-paper-reading-notes.html
+permalink: /post/deepseek-grm-paper-reading-notes
 ---
 
 ## 1. 结论(take away)

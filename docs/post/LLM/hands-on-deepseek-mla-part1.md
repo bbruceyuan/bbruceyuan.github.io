@@ -8,7 +8,7 @@ category:
   - hands-on-code
 description: 从代码角度深入理解 DeepSeek MLA 算法。从代码角度详细解析 MLA（Multi-head Latent Attention）算法的核心思想、ROPE 位置编码的兼容性问题，以及如何通过矩阵吸收来优化 KV Cache。
 publish: true
-permalink: /post/hands-on-deepseek-mla.html
+permalink: /post/hands-on-deepseek-mla
 ---
 
 

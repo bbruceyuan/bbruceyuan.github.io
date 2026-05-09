@@ -10,7 +10,7 @@ category:
   - agent system design
 description: 深入分析 AI Agent 的上下文管理策略：Context Rot 问题、Cache-Safe Compaction、Plan 模式演进、文件系统作为延展记忆、子代理 Cache 友好设计，以及 The Bitter Lesson。
 publish: true
-permalink: /post/agent-context-management-and-sub-agents.html
+permalink: /post/agent-context-management-and-sub-agents
 ---
 
 ## 0. 阅读收获 (takeaway)
@@ -24,7 +24,7 @@ permalink: /post/agent-context-management-and-sub-agents.html
 - 子代理的 Cache 友好设计：90%+ prefix reuse 是怎么做到的
 - The Bitter Lesson：哪些设计是持久的，哪些会被模型进步淘汰
 
-> **前置知识**：本文是 [Agent 系统中的 Prompt Caching 设计（上）](/post/prompt-cache-design-for-llm-agents.html) 的续篇。如果你还没读过，建议先了解 Cache 破坏机制、Prompt 布局和工具管理策略。更基础的概念见 [理解 KV Cache 与 Prompt Caching](/post/understanding-kv-cache-and-prompt-cache-basics.html)。
+> **前置知识**：本文是 [Agent 系统中的 Prompt Caching 设计（上）](/post/prompt-cache-design-for-llm-agents) 的续篇。如果你还没读过，建议先了解 Cache 破坏机制、Prompt 布局和工具管理策略。更基础的概念见 [理解 KV Cache 与 Prompt Caching](/post/understanding-kv-cache-and-prompt-cache-basics)。
 
 ## 1. Context Rot：上下文腐烂
 
@@ -117,7 +117,7 @@ Agent 不需要把所有信息都放在 context 里——文件系统可以作�
 | Codex | AGENTS.md | shell 工具探索 |
 | Anthropic 建议 | 最少必要信息 | JIT 检索 |
 
-共同点：**用 glob/grep 搜索文件系统，无需向量索引**。这和 [Agentic RAG](/post/from-native-rag-to-agentic-rag.html) 的思路一脉相承——Agent 自主决定搜索什么，而不是被动接受检索结果。
+共同点：**用 glob/grep 搜索文件系统，无需向量索引**。这和 [Agentic RAG](/post/from-native-rag-to-agentic-rag) 的思路一脉相承——Agent 自主决定搜索什么，而不是被动接受检索结果。
 
 ## 6. 子代理架构与模型选择
 
@@ -175,6 +175,6 @@ Manus 自 2025 年 3 月以来已**重构无数次**。每次模型能力提升�
 - Manus Blog - [Context Engineering for AI Agents](https://manus.im/blog/Context-Engineering-for-AI-Agents-Lessons-from-Building-Manus)
 - [深入解析 Codex 智能体循环](https://openai.com/zh-Hans-CN/index/unrolling-the-codex-agent-loop/)
 - [Effective Context Engineering for AI Agents](https://www.anthropic.com/engineering/effective-context-engineering-for-ai-agents)
-- [Agent Prompt Cache 设计（上）：Cache 破坏、Prompt 布局与工具管理](/post/prompt-cache-design-for-llm-agents.html) - 本博客
-- [理解 KV Cache 与 Prompt Cache](/post/understanding-kv-cache-and-prompt-cache-basics.html) - 本博客
-- [RAG 进化之路：传统 RAG 到 Agentic RAG](/post/from-native-rag-to-agentic-rag.html) - 本博客
+- [Agent Prompt Cache 设计（上）：Cache 破坏、Prompt 布局与工具管理](/post/prompt-cache-design-for-llm-agents) - 本博客
+- [理解 KV Cache 与 Prompt Cache](/post/understanding-kv-cache-and-prompt-cache-basics) - 本博客
+- [RAG 进化之路：传统 RAG 到 Agentic RAG](/post/from-native-rag-to-agentic-rag) - 本博客
