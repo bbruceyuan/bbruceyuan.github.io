@@ -111,23 +111,23 @@ LangChain 做过一个实验，很好地说明了 Harness 的实际影响。
 
 具体改了什么：
 
-### 4.1 修改 1：退出前强制自检
+### 修改 1：退出前强制自检
 
 最常见的失败模式：Agent 写完代码 → 重读一遍自己的代码 → 觉得"看起来没问题" → 停止。根本没跑测试。
 
 他们加了一个 Middleware：在 Agent 试图退出时拦截，强制注入一个 checklist 让它对照任务说明验证。这本质上是一个 [Ralph Wiggum Loop](https://ghuntley.com/loop/)——hook 住退出，强制继续。
 
-### 4.2 修改 2：启动时注入环境信息
+### 修改 2：启动时注入环境信息
 
 Agent 在陌生环境中会浪费大量时间探索目录结构、找 Python 环境。他们在 Agent 启动时自动跑一些 bash 命令扫描环境，把结果注入上下文。
 
 这和我在 Prompt Caching 系列里讲的 **Just-in-Time Context** 思路一致——在正确的时机注入正确的信息，减少 Agent 自行探索的错误面。
 
-### 4.3 修改 3：死循环检测
+### 修改 3：死循环检测
 
 Agent 有时候会在同一个文件上反复做小修改，10+ 次还在原地打转。他们通过 hook 追踪每个文件的编辑次数，超过阈值就注入"考虑换个方案"的提示。
 
-### 4.4 修改 4：Reasoning Sandwich
+### 修改 4：Reasoning Sandwich
 
 还有一个有意思的发现：GPT-5.2-Codex 有 4 档推理强度（low/medium/high/xhigh），全程 xhigh 反而得分低（53.9%），因为超时了。最终他们用 xhigh → high → xhigh 的"三明治"策略——规划和验证用高推理，执行阶段用中等推理。
 
