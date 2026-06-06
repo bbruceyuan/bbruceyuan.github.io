@@ -35,6 +35,7 @@
 
 | 日期 | 文章 |
 |------|------|
+| 2026-06-01 | [从打点酱油到袁朝发（2026-05-月度小结）](https://yuanchaofa.com/blog/2026-05-month-summary) |
 | 2026-03-14 | [Harness Engineering — Agent 不好用，也许不是模型的问题](https://yuanchaofa.com/post/harness-engineering-for-ai-agents) |
 | 2026-03-01 | [Kimi K2.5 技术解读：原生多模态联合训练与并行 Agent 编排训练](https://yuanchaofa.com/post/kimi-k2-5-reading-notes) |
 | 2026-02-23 | [2025，浪潮与拧巴](https://yuanchaofa.com/blog/2025-year-summary) |
@@ -84,4 +85,3 @@
 | 2023-02-11 | [Raycast使用指南（一）--基本用法](https://yuanchaofa.com/post/raycast-tutorial-1) |
 | 2023-02-10 | [让 flomo 更好用，将 flomo 笔记导出为 markdown 格式](https://yuanchaofa.com/post/make-flomo-better) |
 | 2023-01-11 | [2022，激荡中的平淡](https://yuanchaofa.com/blog/2022-year-summary) |
-| 2021-12-31 | [2021，乌云与曙光](https://yuanchaofa.com/blog/2021-year-summary) |
