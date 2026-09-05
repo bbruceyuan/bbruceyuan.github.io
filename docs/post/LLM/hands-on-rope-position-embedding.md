@@ -26,6 +26,8 @@ permalink: /post/hands-on-rope-position-embedding
 >
 > 待更新：不喜欢看文字的同学可以看 [B站视频-chaofa用代码打点酱油](https://space.bilibili.com/12420432), [YouTube-chaofa用代码打点酱油](https://www.youtube.com/@bbruceyuan)，或视频号：chaofa用代码打点酱油
 
+> **勘误（2026-08）**：本文已修正二维推导中相对位置旋转矩阵的符号，并补充说明论文中的相邻维度布局与 Hugging Face Transformers 常见的 half-split 布局之间的区别。感谢读者在[讨论区](https://github.com/bbruceyuan/bbruceyuan.github.io/discussions/56)指出问题。
+
 ## 1. 为什么需要位置编码？
 
 在 Transformer 架构中，[Self-Attention 机制](https://yuanchaofa.com/hands-on-code/from-self-attention-to-multi-head-self-attention.html)本身是**位置无关**的。公式如下：
@@ -106,13 +108,13 @@ $$
 
 ### 2.2 RoPE 的目标与解决方案
 
-**目标**：我们希望找到一个位置编码函数 $f$，使得 query 向量 $\mathbf{q}_m$ 和 key 向量 $\mathbf{k}_n$ 的内积只依赖于它们的相对位置 $(m-n)$：
+**目标**：我们希望找到一个位置编码函数 $f$，使得 query 向量 $\mathbf{q}_m$ 和 key 向量 $\mathbf{k}_n$ 的内积只依赖于它们的有向相对位置 $\Delta = n-m$（key 位置减去 query 位置）：
 
 $$
-\langle f_q(\mathbf{q}, m), f_k(\mathbf{k}, n) \rangle = g(\mathbf{q}, \mathbf{k}, m-n)
+\langle f_q(\mathbf{q}, m), f_k(\mathbf{k}, n) \rangle = g(\mathbf{q}, \mathbf{k}, n-m)
 $$
 
-也就是说，无论 $m$ 和 $n$ 的绝对值是多少，只要 $m-n$ 相同，内积结果就相同。
+也就是说，无论 $m$ 和 $n$ 的绝对值是多少，只要 $n-m$ 相同，内积结果就相同。这里的相对位置是有方向的：交换 query 和 key 后，符号也会反过来。
 
 **解决方案**：RoPE 发现，这个函数 $f$ 就是**旋转函数**！（实际上是可以通过求解出来的，可以参考：[Transformer升级之路：2、博采众长的旋转式位置编码](https://www.spaces.ac.cn/archives/8265)），这里我们假设「知道了这么一个函数」，然后我们去证明它符合我们的需求。
 
@@ -134,7 +136,7 @@ $$
 
 ### 2.3 证明：旋转函数满足相对位置条件
 
-现在我们来证明，旋转函数确实能让内积只依赖于相对位置 $(m-n)$。
+现在我们来证明，旋转函数确实能让内积只依赖于相对位置 $(n-m)$。
 > 备注：推导有点复杂，其实看前后即可。
 
 $$
@@ -148,15 +150,15 @@ $$
 &\quad + q_2 k_2 (\sin m\theta \sin n\theta + \cos m\theta \cos n\theta) \\
 &\quad + q_1 k_2 (-\cos m\theta \sin n\theta + \sin m\theta \cos n\theta) \\
 &\quad + q_2 k_1 (-\sin m\theta \cos n\theta + \cos m\theta \sin n\theta) \\[8pt]
-&= q_1 k_1 \cos((m-n)\theta) + q_2 k_2 \cos((m-n)\theta) \\
-&\quad + q_1 k_2 \sin((m-n)\theta) - q_2 k_1 \sin((m-n)\theta) \\[8pt]
-&= (q_1 k_1 + q_2 k_2) \cos((m-n)\theta) + (q_1 k_2 - q_2 k_1) \sin((m-n)\theta) \\[8pt]
-&= \begin{pmatrix} q_1 & q_2 \end{pmatrix} \underbrace{\begin{pmatrix} \cos((m-n)\theta) & -\sin((m-n)\theta) \\ \sin((m-n)\theta) & \cos((m-n)\theta) \end{pmatrix}}_{R_{m-n}} \begin{pmatrix} k_1 \\ k_2 \end{pmatrix} \\[8pt]
-&= \mathbf{q}^T \cdot R_{m-n} \cdot \mathbf{k}
+&= q_1 k_1 \cos((n-m)\theta) + q_2 k_2 \cos((n-m)\theta) \\
+&\quad - q_1 k_2 \sin((n-m)\theta) + q_2 k_1 \sin((n-m)\theta) \\[8pt]
+&= (q_1 k_1 + q_2 k_2) \cos((n-m)\theta) + (q_2 k_1 - q_1 k_2) \sin((n-m)\theta) \\[8pt]
+&= \begin{pmatrix} q_1 & q_2 \end{pmatrix} \underbrace{\begin{pmatrix} \cos((n-m)\theta) & -\sin((n-m)\theta) \\ \sin((n-m)\theta) & \cos((n-m)\theta) \end{pmatrix}}_{R_{n-m}} \begin{pmatrix} k_1 \\ k_2 \end{pmatrix} \\[8pt]
+&= \mathbf{q}^T \cdot R_{n-m} \cdot \mathbf{k}
 \end{aligned}
 $$
 
-**证毕**：我们把中间这个只依赖于 $(m-n)$ 的旋转矩阵记为 $R_{m-n}$，最终结果 $\mathbf{q}^T \cdot R_{m-n} \cdot \mathbf{k}$ 与 $m$ 和 $n$ 的绝对值无关，只与相对位置 $(m-n)$ 有关。
+**证毕**：我们把中间这个只依赖于 $(n-m)$ 的旋转矩阵记为 $R_{n-m}$，最终结果 $\mathbf{q}^T \cdot R_{n-m} \cdot \mathbf{k}$ 与 $m$ 和 $n$ 的绝对值无关，只与相对位置 $(n-m)$ 有关。
 
 ## 3. RoPE 的数学原理
 
@@ -175,7 +177,7 @@ $$
 * 低维度（小 $i$）：频率高，变化快，捕捉短距离依赖
 * 高维度（大 $i$）：频率低，变化慢，捕捉长距离依赖
 
-### 3.2 旋转矩阵的完整形式
+### 3.2 旋转矩阵的完整形式：相邻维度布局
 
 对于位置 $m$，向量 $\mathbf{x} = [x_0, x_1, x_2, x_3, ..., x_{d-1}]$，RoPE 的旋转操作可以写成：
 
@@ -189,7 +191,9 @@ x_3 \cos(m\theta_1) + x_2 \sin(m\theta_1) \\
 \end{pmatrix}
 $$
 
-每两个维度组成一对，用对应的角度进行旋转。
+这里采用论文和复数写法中更直观的**相邻维度布局**：$(x_0,x_1)$、$(x_2,x_3)$……每两个相邻维度组成一对，用对应的角度进行旋转。
+
+需要注意的是，后面的 PyTorch 代码会采用 Hugging Face Transformers 中常见的 **half-split 布局**：$(x_0,x_{d/2})$、$(x_1,x_{d/2+1})$……两种布局都能实现 RoPE，但维度排列不同，不能把其中一种的 `rotate` 操作直接套到另一种布局上。第 4 节会详细解释它们的关系。
 
 ### 3.3 在 Attention 中的应用
 
@@ -201,7 +205,7 @@ $$
 
 其中 $Q_{\text{rope}} = \text{RoPE}(Q, m)$，$K_{\text{rope}} = \text{RoPE}(K, n)$。
 
-由于旋转的特性，$Q_{\text{rope}} \cdot K_{\text{rope}}^T$ 的结果只依赖于相对位置 $m - n$。
+由于旋转的特性，$Q_{\text{rope}} \cdot K_{\text{rope}}^T$ 的结果只依赖于相对位置 $n - m$。
 
 ## 4. 从零手写 RoPE 实现
 
@@ -251,6 +255,12 @@ print(f"Angles[1]: {angles[1][:5]}")    # 位置 1 的前 5 个维度对的角�
 
 ### 4.2 Step 2: 构建 sin/cos 缓存
 
+从这里开始，我们采用 Hugging Face Transformers 的 [Llama 实现](https://github.com/huggingface/transformers/blob/e42587f596181396e1c4b63660abf0c736b10dae/src/transformers/models/llama/modeling_llama.py#L173-L188)和 [Qwen2 实现](https://github.com/huggingface/transformers/blob/main/src/transformers/models/qwen2/modeling_qwen2.py)所使用的 **half-split 布局**。它把向量前半部分与后半部分对应配对，因此同一个频率序列需要在最后一维重复两次：
+
+$$
+[c_0,c_1,\ldots,c_{d/2-1},c_0,c_1,\ldots,c_{d/2-1}]
+$$
+
 ```python
 def get_rotary_embedding(dim: int, seq_len: int, theta: float = 10000.0):
     """
@@ -279,9 +289,9 @@ print(f"Cos shape: {cos.shape}")  # (128, 64)
 print(f"Sin shape: {sin.shape}")  # (128, 64)
 ```
 
-### 4.3 Step 3: 应用旋转变换
+### 4.3 Step 3: 应用旋转变换（half-split 布局）
 
-这是 RoPE 的核心，参考 LLaMA 的实现方式：
+这是 RoPE 的核心，参考 Hugging Face Transformers 中 Llama/Qwen2 的实现方式：
 
 ```python
 def rotate_half(x):
@@ -326,21 +336,40 @@ def apply_rotary_pos_emb(q, k, cos, sin):
 
 **为什么这个公式是对的？**
 
-回顾 2D 旋转公式：
+第 3.2 节按相邻维度 $(x_0,x_1)$、$(x_2,x_3)$ 配对；这里则把前半部分与后半部分配对。以四维向量为例：
 
-$$
-\begin{pmatrix} x' \\ y' \end{pmatrix} = \begin{pmatrix} x \cos\theta - y \sin\theta \\ x \sin\theta + y \cos\theta \end{pmatrix}
-$$
-
-对于向量 $[x, y]$，`rotate_half` 会把它变成 $[-y, x]$，所以：
-
-```
-原向量 * cos + rotate_half(原向量) * sin
-= [x, y] * cos + [-y, x] * sin
-= [x*cos - y*sin, y*cos + x*sin]
+```text
+x = [x0, x1, x2, x3]
+配对方式：(x0, x2)、(x1, x3)
+rotate_half(x) = [-x2, -x3, x0, x1]
+cos = [c0, c1, c0, c1]
+sin = [s0, s1, s0, s1]
 ```
 
-这正是旋转公式！
+代入 `x * cos + rotate_half(x) * sin`：
+
+```
+[x0*c0 - x2*s0,
+ x1*c1 - x3*s1,
+ x2*c0 + x0*s0,
+ x3*c1 + x1*s1]
+```
+
+可以看到，$(x_0,x_2)$ 使用频率 $\theta_0$ 做二维旋转，$(x_1,x_3)$ 使用频率 $\theta_1$ 做二维旋转。因此当前 `rotate_half` 与前面重复两次的 cos/sin 是互相匹配的。
+
+它与第 3.2 节的相邻维度布局并不是对同一份原始向量逐元素相等，而是相差一个固定的维度置换。设：
+
+$$
+P[x_0,x_1,x_2,x_3,\ldots]=[x_0,x_2,\ldots,x_1,x_3,\ldots]
+$$
+
+那么两种实现满足：
+
+$$
+\operatorname{RoPE}_{\text{half}}(P\mathbf{x})=P\operatorname{RoPE}_{\text{adjacent}}(\mathbf{x})
+$$
+
+也就是说，两种布局在同步调整坐标排列后是等价的；但加载已有模型权重时，必须使用该模型训练时对应的布局，不能只替换 `rotate_half`。Meta 官方 Llama 的[参考实现](https://github.com/meta-llama/llama/blob/main/llama/model.py)使用复数形式处理相邻维度，而 Hugging Face Transformers 的 Llama 实现使用这里的 half-split 形式。
 
 ### 4.4 Step 4: 完整的 RoPE 模块
 
@@ -500,9 +529,9 @@ def visualize_rope_heatmap():
     plt.show()
 
     print("观察要点：")
-    print("1. 低维度（左侧）变化快 -> 捕捉短距离依赖")
-    print("2. 高维度（右侧）变化慢 -> 捕捉长距离依赖")
-    print("3. 每个维度都是周期函数，频率不同")
+    print("1. 在每个半区内，低索引频率高，高索引频率低")
+    print("2. 后半区重复前半区的频率，这是 half-split 布局的特征")
+    print("3. 第 i 维与第 i + dim/2 维组成一对，共享同一个旋转频率")
 
 
 visualize_rope_heatmap()
