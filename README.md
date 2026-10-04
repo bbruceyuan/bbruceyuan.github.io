@@ -35,6 +35,7 @@
 
 | 日期 | 文章 |
 |------|------|
+| 2026-10-04 | [AI 狂飙，怎么才能 10 倍 or 100 倍自己的工作效率（2026-09-月度小结）](https://yuanchaofa.com/blog/2026-09-month-summary) |
 | 2026-06-01 | [从打点酱油到袁朝发（2026-05-月度小结）](https://yuanchaofa.com/blog/2026-05-month-summary) |
 | 2026-03-14 | [Harness Engineering — Agent 不好用，也许不是模型的问题](https://yuanchaofa.com/post/harness-engineering-for-ai-agents) |
 | 2026-03-01 | [Kimi K2.5 技术解读：原生多模态联合训练与并行 Agent 编排训练](https://yuanchaofa.com/post/kimi-k2-5-reading-notes) |
@@ -84,4 +85,3 @@
 | 2023-06-17 | [高考十年后](https://yuanchaofa.com/blog/ten-years-after-the-college-entrance-examination) |
 | 2023-02-11 | [Raycast使用指南（一）--基本用法](https://yuanchaofa.com/post/raycast-tutorial-1) |
 | 2023-02-10 | [让 flomo 更好用，将 flomo 笔记导出为 markdown 格式](https://yuanchaofa.com/post/make-flomo-better) |
-| 2023-01-11 | [2022，激荡中的平淡](https://yuanchaofa.com/blog/2022-year-summary) |
